@@ -1,0 +1,15 @@
+{
+  "hash": "7fa9bf0d9980acad8bec3778e58b541b",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Homework 4\"\nsubtitle: \"Regression\"\nformat: html\n---\n\n\n\n\n## Due 4/26/2024 at 9am\n\n# Instructions\n\n-   Creating a new *project.* and giving it a sensible name such as homework3 and having that project in the course folder you created.\n\n-   Create a new quarto document and give it a sensible name such as hw3.\n\n-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n```\n:::\n\n    \n-   Though the book used R code for base R, I want you to complete the exercises using functions from *tidymodels* when possible.\n-   Set a seed before each problem.\n-   Make sure your answers print results. If the output is a large table, use the head() function to shorten the output. \n\n# Exercises - NOTE THE CHAPTER NUMBER\n1.  **Complete exercise chapter 6, number 1 in ISLR.**\n\n2.  **Complete exercise chapter 6, number 8 in ISLR.**\n\n3.  **Complete exercise chapter 6, number 9 in ISLR.**\n  Skip (e) and (f) but do (g) with the models you have. \n  \n# Submission\n\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\n-   Finding the .html file in your File pane (on the bottom right of the screen)\n-   Click the check box next to the file\n-   Click the blue gear above and then click \"Export\" to download\n-   Submit your final html document to the respective assignment on [Moodle](%7B%7B%3C%20var%20course.moodle%20%3E%7D%7D)\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

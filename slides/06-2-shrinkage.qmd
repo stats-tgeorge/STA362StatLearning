@@ -1,0 +1,331 @@
+---
+title: "Chapter 6 Part 2"
+subtitle: "Shrinkage"
+format: 
+  revealjs:
+    output-file: "06-2-shrinkage.html"
+    slide-number: true
+  html:
+    output-file: "06-2-shrinkage_o.html"
+logo: "img/icon.png"
+---
+
+## Setup
+
+```{r, echo = T, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(tidymodels)
+library(gridExtra)
+library(ISLR2)
+library(leaps)
+```
+
+## Shrinkage Methods {.smaller}
+
+Ridge regression and Lasso
+- The subset selection methods use least squares to fit a linear model that contains a subset of the predictors.
+
+- As an alternative, we can fit a model containing all p predictors using a technique that constrains or regularizes the coefficient estimates, or equivalently, that shrinks the coefficient estimates towards zero.
+
+- It may not be immediately obvious why such a constraint should improve the fit, but it turns out that shrinking the coefficient estimates can significantly reduce their variance.
+
+
+## Another Reason
+
+* Sometimes we can't solve for $\hat\beta$
+
+::: question
+* Why?
+:::
+
+* We have more variables than observations ( $p > n$ )
+* The variables are linear combinations of one another
+* The variance can blow up
+
+# What can we do about this?
+
+## Ridge Regression {.small}
+
+* What if we add an additional _penalty_ to keep the $\hat\beta$ coefficients small (this will keep the variance from blowing up!)
+* Instead of minimizing $RSS$, like we do with linear regression, let's minimize $RSS$ PLUS some penalty function
+* $RSS + \underbrace{\lambda\sum_{j=1}^p\beta^2_j}_{\textrm{shrinkage penalty}}$
+
+
+::: question
+* What happens when $\lambda=0$? What happens as $\lambda\rightarrow\infty$?
+:::
+
+
+
+## Ridge Regression {.small}
+
+::: {.panel-tabset}
+
+### LR
+- Recall, the least squares fitting procedure estimates $\beta_0,...,\beta_p$ using the values that  minimize $$RSS = \sum_{i=1}^n\left(y_i-\beta_0-\sum_{j=1}^p\beta_jx_{ij}\right)^2$$
+
+
+### Ridge
+- Ridge regression coefficient estimates, $\hat{\beta}^R$ are the values that minimize 
+
+$$\sum_{i=1}^n\left(y_i-\beta_0-\sum_{j=1}^p\beta_jx_{ij}\right)^2+\lambda\sum_{j=1}^p\beta_j^2$$
+
+$$ = RSS + \lambda\sum_{j=1}^p\beta_j^2$$
+
+where $\lambda\geq 0$ is a tuning parameter, to be determined separately
+
+:::
+
+## More on Ridge
+
+- Like least squares, ridge regression seeks coefficient estimates that fit the data well by making the RSS small. 
+
+- The second term $\lambda\sum_j\beta_j^2$ is called a _shrinkage penalty_, is small when $\beta_1,...\beta_p$ are close to 0, and so it has the effect of _shrinking_ the estimates of $\beta_j$ toward 0. 
+
+## Ridge Shrinkage {.smaller}
+
+::::{.columns}
+
+:::{.column}
+
+![](img/ridge_shrink.png)
+:::
+
+:::{.column} 
+
+Each curve corresponds to the ridge regression coefficient estimate for one of the ten variables, plotted as a function of $\lambda$.
+:::
+::::
+
+## Ridge Shinkage Coeff {.smaller}
+
+::::{.columns}
+:::{.column}
+![](img/ridge_shrink_2.png)
+
+:::
+
+:::{.column}
+
+
+- This displays the same ridge coefficient estimates as the previous graphs, but instead of displaying $\lambda$ on the x-axis, we now display $||\hat{\beta}_\lambda^R||_2/||\hat{\beta}||_2$, where $\hat{\beta}$ denotes the vector of the least squares coefficient estimates. 
+
+- In statistics lingo, the ridge uses an $\ell_2$ (pronounced "ell 2") penalty of the betas, written $||\beta||_2$. 
+
+:::
+::::
+
+## Ridge - Scalling Predictors {.smaller}
+
+- The standard least squares coefficient estimates are scale
+equivalent: multiplying $X_j$ by a constant c simply leads to
+a scaling of the least squares coefficient estimates by a
+factor of $1=c$. In other words, regardless of how the $j$th
+predictor is scaled, $X_j\hat{\beta}_j$ will remain the same.
+
+- In contrast, the ridge regression coefficient estimates can
+change substantially when multiplying a given predictor by
+a constant, due to the sum of squared coefficients term in
+the penalty part of the ridge regression objective function.
+
+- Therefore, it is best to apply ridge regression after
+standardizing the predictors, using the formula 
+
+- $$\tilde{x}_{ij} = \frac{x_{ij}}{\sqrt{\frac{1}{n}\sum_{i=1}^n(x_{ij}-\bar{x}_j)^2}}$$
+
+## Ridge Regression
+
+* **IMPORTANT**: When doing ridge regression, it is important to standardize your variables (divide by the standard deviation)
+
+
+
+
+## Bias-variance tradeoff
+
+::: question
+How do you think ridge regression fits into the bias-variance trade-off?
+:::
+
+
+* As $\lambda$ `r emo::ji("point_up")`, bias `r emo::ji("point_up")`, variance `r emo::ji("point_down")`
+
+## Ridge Bias-Variance tradeoff {.smaller}
+
+
+
+![](img/RidgeBVTrade.png)
+
+- Simulated data with n = 50 observations, p = 45 predictors, all having
+nonzero coefficients. 
+- Squared bias (black), variance (green), and test
+mean squared error (purple) for the ridge regression predictions on a
+simulated data set, as a function of $\lambda$ and $||\hat{\beta}_\lambda^R||_2/||\hat{\beta}||_2$. The horizontal dashed lines indicate the minimum possible MSE. The purple crosses indicate the ridge regression models for which the MSE is smallest. 
+
+
+
+## Lasso {.smaller}
+
+- Ridge regression does have one obvious disadvantage: unlike subset selection, which will generally select models that involve just a subset of the variables, ridge regression will include all p predictors in the final model
+
+- The Lasso is a relatively recent alternative to ridge regression that overcomes this disadvantage. The lasso coefficients, $\hat{\beta}_\lambda^L$, minimize the quantity
+
+
+- $$\sum_{i=1}^n\left(y_i-\beta_0-\sum_{j=1}^p\beta_jx_{ij}\right)^2+\lambda\sum_{j=1}^p|\beta_j|= RSS + \lambda\sum_{j=1}^p|\beta_j|$$
+
+- where $\lambda\geq 0$ is a tuning parameter, to be determined separately
+
+- In statistics lingo, the lasso uses an $\ell_1$ (pronounced "ell 1") penalty instead of an $\ell_2$ penalty. The $\ell_1$ norm of a coefficient vector $\beta$ is given by $||\beta||_1 = \sum|\beta_j|$
+
+
+## Lasso Continued {.smaller}
+
+- As with ridge regression, the lasso shrinks the coefficient
+estimates towards zero.
+- In the case of the lasso, the $\ell_1$ penalty has the
+effect of forcing some of the coefficient estimates to be
+exactly equal to zero when the tuning parameter $\lambda$ is
+sufficiently large.
+- Like best subset selection, the lasso performs
+variable selection.
+- We say that the lasso yields sparse models - that is,
+models that involve only a subset of the variables.
+- As in ridge regression, selecting a good value of $\lambda$ for the
+lasso is critical; cross-validation is again the method of
+choice.
+
+## Lasso Coefficient Shrink
+
+![](img/lasso_shrink.png)
+
+## Lasso Coefficient Ratio
+
+![](img/lasso_shrink_2.png)
+
+
+## Lasso Regression
+
+* **IMPORTANT**: When doing lasso regression, it is important to standardize your variables (divide by the standard deviation)
+
+## Ridge vs Lasso
+
+:::{.question}
+Why does lasso, unlike ridge, result in coefficient estimates that are exactly zero?
+:::
+
+## Ridge vs Lasso 2 {.smaller}
+
+They each are a minimization problem
+
+Lasso: $$\text{minimize}_\beta\sum_{i=1}^n\left(y_i-\beta_0-\sum_{j=1}^p\beta_jx_{ij}\right)^2\text{ subject to }\sum_{j=1}^p|\beta_j|\leq s$$
+
+Ridge: $$\text{minimize}_\beta\sum_{i=1}^n\left(y_i-\beta_0-\sum_{j=1}^p\beta_jx_{ij}\right)^2\text{ subject to }\sum_{j=1}^p\beta_j^2\leq s$$
+
+## Ridge vs Lasso Graphs
+
+![](img/ridge_vs_lasso_graph.png)
+
+## Ridge vs Lasso $\lambda$ vs MSE
+
+::::{.columns}
+:::{.column}
+
+![](img/ridge_vs_lasso_performance.png)
+
+:::
+
+:::{.column}
+
+Plots of squared bias (black), variance (green), and test
+MSE (purple) for the lasso on simulated data set.
+
+:::
+
+::::
+
+
+## Ridge vs Lasso $R^2$ vs MSE
+
+::::{.columns}
+:::{.column}
+
+![](img/ridge_vs_lasso_performance_2.png)
+
+:::
+
+:::{.column}
+
+Comparison of squared bias, variance and test MSE between lasso (solid) and ridge (dashed). Both are plotted against their $R^2$ on the training data, as a common form of indexing. The crosses in both plots indicate the lasso model for which the MSE is smallest.
+:::
+
+::::
+
+
+
+
+
+
+## Ridge vs Lasso $\lambda$ vs MSE Ex 2
+
+::::{.columns}
+
+:::{.column}
+
+![](img/ridge_vs_lasso_performance_e2.png)
+
+:::
+
+:::{.column}
+
+Plots of squared bias (black), variance (green), and test
+MSE (purple) for the lasso. The simulated data is similar to
+that before, except that now only two predictors are related
+to the response.
+
+:::
+
+::::
+
+
+## Ridge vs Lasso $R^2$ vs MSE Ex 2
+
+::::{.columns}
+:::{.column}
+
+![](img/ridge_vs_lasso_performance_e2_2.png)
+
+:::
+
+:::{.column}
+
+Comparison of squared bias, variance
+and test MSE between lasso (solid) and ridge (dashed). Both
+are plotted against their $R^2$ on the training data, as a common
+form of indexing. The crosses in both plots indicate the lasso
+model for which the MSE is smallest.
+
+:::
+
+::::
+
+## Lasso vs Ridge Summary {.smaller}
+
+- These two examples illustrate that neither ridge regression
+nor the lasso will universally dominate the other.
+
+- In general, one might expect the lasso to perform better
+when the response is a function of only a relatively small
+number of predictors.
+
+- However, the number of predictors that is related to the
+response is never known a priori for real data sets.
+
+- A technique such as cross-validation can be used in order
+to determine which approach is better on a particular data
+set.
+
+## Choosing $\lambda$ {.smaller}
+
+* $\lambda$ is known as a **tuning parameter** and is selected using **cross validation**
+* For example, choose the $\lambda$ that results in the smallest estimated test error
+* Afterwards we refit using all available observations (from training set)
+

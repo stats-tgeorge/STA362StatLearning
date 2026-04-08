@@ -1,0 +1,150 @@
+---
+title: "Appex 11 -- Penalized Regression in R Solutions"
+subtitle: "STA 363 - Spring 2023"
+format: html
+theme: flatly
+---
+
+## Part 1
+
+1. Examine the `Hitters` dataset by running `?Hitters` in the Console
+2. We want to predict a major league player's `Salary` from all of the other 19 variables in this dataset. Create a visualization of `Salary`.
+
+```{r}
+#| message: false
+#| warning: false
+library(ISLR)
+library(tidymodels)
+library(tidyverse)
+
+ggplot(Hitters, aes(x = Salary)) +
+  geom_histogram(bins = 20)
+```
+
+3. Create a recipe to estimate this model.
+4. Add a preprocessing step to your recipe, scaling each of the predictors
+
+
+```{r}
+hitters_recipe <- recipe(Salary ~ ., data = Hitters) |>
+  step_scale(all_predictors()) 
+
+## this will run, but there is still a problem because we might have nominal variables, we will fix this in part 2
+```
+
+
+
+## Part 2
+
+1. Add a preprocessing step to your recipe to convert nominal variables into indicators
+2. Add a step to your recipe to remove missing values for the outcome
+3. Add a step to your recipe to impute missing values for the predictors using the average for the remaining values **NOTE THIS IS NOT THE BEST WAY TO DO THIS WE WILL LEARN BETTER TECHNIQUES!**
+
+```{r}
+hitters_recipe <- recipe(Salary ~ ., data = Hitters) |>
+  step_dummy(all_nominal()) |>
+  step_naomit(all_outcomes()) |>
+  step_impute_mean(all_predictors()) |>
+  step_scale(all_predictors()) 
+```
+
+
+## Part 3
+
+1. Set a seed `set.seed(1)`
+2. Create a cross validation object for the `Hitters` dataset
+
+```{r}
+set.seed(1)
+hitters_cv <- vfold_cv(Hitters, v = 5)
+```
+
+3. Using the recipe from the previous exercise, fit the model using Ridge regression with a penalty $\lambda$ = 300
+
+```{r}
+ridge_spec <- linear_reg(penalty = 300, mixture = 0) |>
+  set_engine("glmnet")
+
+hitters_fit <- fit_resamples(
+  ridge_spec,
+  preprocessor = hitters_recipe,
+  resamples = hitters_cv)
+```
+
+4. What is the estimate of the test RMSE for this model?
+
+```{r}
+collect_metrics(hitters_fit) |>
+  filter(.metric == "rmse")
+```
+The RMSE is `r collect_metrics(hitters_fit) |> filter(.metric == "rmse") |> pull(mean) |> round(2)`.
+
+## Part 4
+
+1. Using the `Hitters` cross validation object and recipe created in the previous exercise, use `tune_grid` to pick the optimal penalty and mixture values.
+
+```{r}
+tuned_spec <- linear_reg(penalty = tune(), mixture = tune()) |>
+  set_engine("glmnet")
+```
+
+2. Update the code below to create a grid that includes penalties from 0 to 50 by 1 and mixtures from 0 to 1 by 0.5.
+
+```{r}
+grid <- expand_grid(
+  penalty = seq(0, 50, by = 1),
+  mixture = seq(0, 1, by = 0.5)
+)
+```
+
+3. Use this grid in the `tune_grid` function. Then use `collect_metrics` and filter to only include the RSME estimates.
+
+```{r}
+hitters_tunedfit <- tune_grid(
+  tuned_spec,
+  preprocessor = hitters_recipe,
+  grid = grid,
+  resamples = hitters_cv
+)
+```
+
+4. Create a figure to examine the estimated test RMSE for the grid of penalty and mixture values -- which should you choose?
+
+```{r}
+collect_metrics(hitters_tunedfit) |>
+  filter(.metric == "rmse") |>
+  ggplot(aes(x = penalty, y = mean, color = factor(mixture))) +
+  geom_point() +
+  geom_line() + 
+  labs(color = expression(alpha),
+       x = expression(lambda))
+```
+
+
+## Part 5
+
+1. Using the final model specification, extract the coefficients from the model by creating a `workflow`
+
+```{r}
+final_spec <- linear_reg(penalty = 2, mixture = 1) |>
+  set_engine("glmnet")
+
+workflow() |>
+  add_recipe(hitters_recipe) |>
+  add_model(final_spec) |>
+  fit(data = Hitters) |>
+  tidy()
+```
+
+2. Filter out any coefficients exactly equal to 0
+
+```{r}
+workflow() |>
+  add_recipe(hitters_recipe) |>
+  add_model(final_spec) |>
+  fit(data = Hitters) |>
+  tidy() |>
+  filter(estimate != 0)
+```
+
+[![](img/favicon.png){width="100" fig-align="right"}](https://bit.ly/sta-363-s23)

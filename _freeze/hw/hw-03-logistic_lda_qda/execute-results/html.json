@@ -1,0 +1,17 @@
+{
+  "hash": "dccbadc064a5bec847885df7bac73716",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Homework 3\"\nsubtitle: \"Logistic, LDA, QDA, Naive Bayes, and KNN\"\nformat: html\n---\n\n\n\n\n## Due 4/23/2024 at 1pm\n\n# Instructions\n\n-   Creating a new *project.* and giving it a sensible name such as homework3 and having that project in the course folder you created.\n\n-   Create a new quarto document and give it a sensible name such as hw3.\n\n-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.\n\n\n::: {.cell}\n\n```{.r .cell-code}\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n```\n:::\n\n    \n-   Though the book used R code for base R, I want you to complete the exercises using functions from *tidymodels*.\n-   Set a seed before each problem.\n-   Make sure your answers print results. If the output is a large table, use the head() function to shorten the output. \n\n# Exercises - NOTE THE CHAPTER NUMBER\n1.  **Complete exercise chapter 5, number 5 in ISLR.**\n - Replace (b) (iii) with the following: Obtain prediction of default status of each individual in the validation set.\n\n2.  **Complete exercise chapter 4, number 12 in ISLR.**\n\n3.  **Complete exercise chapter 4, number 13 in ISLR.**\nNOTE: Confusion matrix is the two-way table. \n\n4.  **Complete exercise chapter 4, number 16 in ISLR.**\n\n# Submission\n\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\n-   Finding the .html file in your File pane (on the bottom right of the screen)\n-   Click the check box next to the file\n-   Click the blue gear above and then click \"Export\" to download\n-   Submit your final html document to the respective assignment on [Moodle](%7B%7B%3C%20var%20course.moodle%20%3E%7D%7D)\n",
+    "supporting": [
+      "hw-03-logistic_lda_qda_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

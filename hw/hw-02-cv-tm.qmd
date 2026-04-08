@@ -1,0 +1,94 @@
+---
+title: "Homework 2"
+subtitle: "Cross Validation and tidymodels"
+format: html
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+```
+
+## Due 4/18/2024 at 9am
+
+# Instructions
+
+-   Creating a new *project.* and giving it a sensible name such as *homework_2* and having that project in the course folder you created.
+
+-   Create a new quarto document and give it a sensible name such as *hw2*.
+
+-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
+
+    ```{r}
+    #| label: yaml_example
+    #| eval: false
+    ---
+    title: "Document title"
+    author: "my name"
+    format:
+      html:
+        embed-resources: true
+    ---
+    ```
+    
+-   Though the book used R code for base R, I want you to complete the exercises using functions from *tidymodels*.
+-   Set a seed before each problem.
+-   Make sure you answers print results. If the output is a large table, use the head() function to shorten the output. 
+
+# Exercises
+1.  **Complete exercise chapter 5, number 3 in ISLR.**
+
+2.  **Complete exercise chapter 5, number 8 in ISLR.**
+
+3.  The data *FirstYearGPA*, in the *Stat2Data* packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use `?FirstYearGPA` to learn about the dataset. 
+
+  a)  Split the data into training and test using 70\% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed. 
+
+  b)  Use the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE. 
+
+  c)  Now do cross validation instead of using a test and training set. Give the final CV MSE. 
+
+  d)  Which was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example? 
+
+  e)    If we had more data, how might we combine both approaches? 
+
+4.    The data *Titanic*, in the *Stat2Data* packages a list and outcomes for passengers on the Titanic.
+
+  a)    Fit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.
+
+```{r}
+#| label: log-question
+#| eval: false
+data(Titanic)
+titanic_2 <- as.data.frame(Titanic) |>
+  transform(Survived = factor(Survived))
+
+log_spec<- 
+  logistic_reg() |>
+  set_engine("glm")
+
+logistic_fit <-
+  fit(log_spec,
+    ____________ ~ ________+________,
+    data = ________)
+
+```
+
+
+  b)    Use the predict function on your model and predict for the data you used to fit the model. 
+  
+  c)    Using your predicted values, calculate the missclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match. 
+  
+  d)    Now split the data into training and test like in the previous exercise (70/30 split). Give the missclassification rate for the test set. 
+  
+  e)    Now use cross validation and give the average missclassification rate across folds (`almost` a default output of the collect_metrics function). 
+
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final html document to the respective assignment on [Moodle](%7B%7B%3C%20var%20course.moodle%20%3E%7D%7D)

@@ -1,0 +1,64 @@
+---
+title: "Appex 07 -- Linear Regression in R"
+subtitle: "STA 363 - Spring 2023"
+format: html
+theme: flatly
+---
+
+## Set up
+
+### Login to RStudio Pro
+
+- **Note:** if you are off campus, you will need to use a [VPN to connect](https://is.wfu.edu/services/vpn/)
+- Go to [rstudio.deac.wfu.edu](rstudio.deac.wfu.edu)
+
+![](img/01/rstudio-pro.png){width="1000" height="350"}
+
+#### Step 1: Create a New Project
+
+Click File > New Project
+
+![](img/01/new-project.png)
+
+#### Step 2: Click "Version Control"
+
+Click the third option.
+
+![](img/01/version-control.png)
+
+#### Step 3: Click Git
+
+Click the first option
+
+![](img/01/git.png)
+
+#### Step 4: Copy my starter files
+
+Paste this link in the top box (`Repository url`):
+
+`https://github.com/sta-363-s23/08-appex.git`
+
+![](img/01/paste-link.png)
+
+## Part 1
+
+1. Fit a linear model using the `mtcars` data frame predicting miles per gallon (`mpg`) from weight and horsepower (`wt` and `hp`), using polynomials with 4 degrees of freedom for both.
+2. Pull out the coefficients and confidence intervals using the `tidy()` function demonstrated. How do you interpret these?
+
+## Part 2
+
+1. Using the linear model you fit previously (`mpg` from `wt` and `hp`, using polynomials with 4 degrees of freedom for both with the `mtcars` data) - calculate the p-value for the coefficient for weight
+2. Interpret this value. What is the null hypothesis? What is the alternative hypothesis? Do you reject the null?
+
+## Part 3
+
+1. Using the model previously fit (`mpg` from `wt` and `hp`, using polynomials with 4 degrees of freedom for both with the `mtcars` data), estimate the training $R^2$ using the `rsq` function. 
+2. Interpret this values.
+
+## Part 4
+
+1. Create a cross validation object to do 5 fold cross validation using the `mtcars` data
+2. Refit the model on this object (using `fit_resamples`)
+3. Use `collect_metrics` to estimate the test $R^2$ - how does this compare to the training $R^2$ calculated in the previous exercise?
+
+[![](img/favicon.png){width="100" fig-align="right"}](https://bit.ly/sta-363-s23)

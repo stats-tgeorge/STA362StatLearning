@@ -1,0 +1,7 @@
+---
+title: "{{< var course.title >}}"
+---
+
+### Course Description
+
+This course will introduce students to relatively new and powerful statistical techniques used to analyze data. The course will begin with a review of linear regression and an introduction to computer-based variable and model selection methods. Other topics will include classification methods, resampling methods for model-building, non-linear models, and tree-based methods. The computer software program R will be used throughout.

@@ -1,0 +1,1318 @@
+year,shadow,name,city,region,country,latitude,longitude,is_groundhog,type,active,was_spring
+1887,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1888,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1890,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1898,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1900,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1901,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1902,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1903,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1904,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1905,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1906,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1907,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1908,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1909,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1910,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1911,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1912,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1913,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1914,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1915,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1916,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1917,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1918,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1919,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1920,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1921,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1922,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1923,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1924,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1925,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1926,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1927,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1928,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1929,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1930,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1931,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1932,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1933,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1934,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1935,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1936,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1937,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1938,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1939,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1940,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1941,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1942,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1943,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1944,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1945,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1946,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1947,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1948,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1949,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1950,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1951,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1952,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1953,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1954,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1955,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1956,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1957,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1958,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1959,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1960,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1961,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1962,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1963,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1964,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1965,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1966,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1967,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1968,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1969,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1970,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1971,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1972,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1973,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1974,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1975,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1976,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1977,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1978,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1979,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1980,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1981,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1982,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1983,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1984,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1985,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1986,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1987,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1988,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1989,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1990,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1991,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1992,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1993,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1994,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1995,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1996,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1997,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+1998,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1999,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2000,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2001,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2002,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2003,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2004,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2005,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2006,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2007,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2008,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2009,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2010,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2011,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2012,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2013,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2014,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2016,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2017,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2020,FALSE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,FALSE
+2021,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2022,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+2023,TRUE,Punxsutawney Phil,Punxsutawney,Pennsylvania,USA,40.9311988,-78.9622483,TRUE,Groundhog,TRUE,TRUE
+1926,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1929,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1931,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1932,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1933,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1934,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1935,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1936,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1937,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1938,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1939,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1940,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1941,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1942,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1944,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1945,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1946,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1947,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1948,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1949,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1950,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1951,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1952,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1953,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1954,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1955,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1956,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1957,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1958,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1959,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1960,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1961,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1962,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1963,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1964,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1965,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1966,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1967,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1968,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1969,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1970,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1971,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1972,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1973,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1974,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1975,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1977,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1978,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1979,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1980,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1981,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1982,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1983,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1984,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1985,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1986,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1987,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1988,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1989,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1990,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1991,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1992,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1993,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1995,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1996,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1997,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1998,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+1999,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2000,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2001,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2002,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2003,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2004,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2005,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2006,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2007,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2008,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2009,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2010,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2011,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2012,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2013,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2014,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2015,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2016,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2017,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2018,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2019,TRUE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,TRUE
+2020,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2022,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+2023,FALSE,Octoraro Orphie,Quarryville,Pennsylvania,USA,39.8255413,-76.0919567,FALSE,Taxidermied groundhog,TRUE,FALSE
+1955,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1956,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1959,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1960,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1961,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1962,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1966,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1968,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1969,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1970,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1971,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1972,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1973,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1974,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1975,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1976,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1978,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1979,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1980,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1983,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1984,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1985,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1986,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1987,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1988,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1989,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1990,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1991,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1992,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1993,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1994,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+1995,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1996,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1997,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1998,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1999,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2000,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2001,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2002,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2003,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2004,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2005,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2010,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2011,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2012,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2014,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2015,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2016,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2017,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2018,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2020,TRUE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+2023,FALSE,Wiarton Willie,Wiarton,Ontario,Canada,44.7438686,-81.1386838,TRUE,Groundhog,TRUE,FALSE
+1969,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1970,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1971,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1972,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1973,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1974,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1975,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1976,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1977,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1978,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1979,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1980,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1981,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1982,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1983,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1984,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1985,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1986,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1987,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1988,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1989,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1990,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1991,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1992,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1993,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1994,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1995,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1996,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1997,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1998,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+1999,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2000,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2001,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2002,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2003,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2004,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2005,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2007,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2008,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2010,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2014,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2015,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2016,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2017,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2020,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Jimmy the Groundhog,Sun Prairie,Wisconsin,USA,43.1826322,-89.2143204,TRUE,Groundhog,TRUE,FALSE
+1979,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+1980,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1981,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1982,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1983,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1984,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+1985,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1986,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1987,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1988,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+1989,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1990,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1991,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+1992,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+1993,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1994,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1995,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1996,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1997,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+1998,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+1999,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2000,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2001,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2002,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2003,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2004,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2005,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2006,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2007,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2008,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2009,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2010,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2011,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2012,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2013,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2014,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2015,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2016,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2017,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2018,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2019,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2020,TRUE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,TRUE
+2021,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2022,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+2023,FALSE,Concord Charlie,Athens,West Virginia,USA,37.4245956,-81.0095902,FALSE,Presumed groundhog,TRUE,FALSE
+1980,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1981,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1983,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+1984,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+1986,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1987,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1988,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1989,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1990,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1991,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1993,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+1994,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+1996,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1997,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1998,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1999,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2000,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2001,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2002,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2003,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2004,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2005,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2006,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2007,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2010,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2014,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2015,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2016,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2017,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2020,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Buckeye Chuck,Marion,Ohio,USA,40.6141291,-83.1321507,TRUE,Groundhog,TRUE,FALSE
+1982,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1983,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1984,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1985,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1986,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1987,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1988,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1989,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1990,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1992,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1993,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1994,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1995,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1997,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1998,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1999,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2000,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2001,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2002,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2003,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,TRUE
+2004,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2005,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2009,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2010,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,TRUE
+2012,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2013,TRUE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,TRUE
+2014,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2015,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2016,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2018,TRUE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,TRUE
+2019,TRUE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,TRUE
+2020,TRUE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+2023,FALSE,General Beauregard Lee,Jackson,Georgia,USA,33.233898,-83.9466163,TRUE,Groundhog,TRUE,FALSE
+1980,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1983,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1988,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1989,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1990,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1993,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+1994,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+1995,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1997,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1998,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+1999,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2000,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2001,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2002,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2003,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2004,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2005,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2006,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2008,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2009,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2010,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2014,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2015,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2016,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2017,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2018,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2019,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2020,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,TRUE
+2023,FALSE,French Creek Freddie,Upshur County,West Virginia,USA,38.8573662,-80.3149827,TRUE,Groundhog,TRUE,FALSE
+1993,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+1994,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+1995,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+1996,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+1997,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+1998,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+1999,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2000,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2001,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2002,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2004,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2005,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2009,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2010,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2014,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2016,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2017,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2020,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2021,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+2022,FALSE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Gertie the Groundhog,Hanna City,Illinois,USA,40.732973,-89.7383042,TRUE,Groundhog,TRUE,TRUE
+1983,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+1985,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+1987,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+1988,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2000,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2001,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2002,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2003,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2004,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2005,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2006,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2007,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2008,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2009,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2010,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2014,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2015,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2016,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2017,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2018,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2019,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2020,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,TRUE
+2023,FALSE,Dunkirk Dave,Dunkirk,New York,USA,42.4609398,-79.3944887,TRUE,Groundhog,TRUE,FALSE
+1996,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+1997,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+1998,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+1999,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2000,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2001,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2002,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2003,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2004,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2005,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2006,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2009,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2010,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2011,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2012,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2013,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2014,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2016,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2018,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2020,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Malverne Mel,Malverne,New York,USA,40.6793192,-73.6665466,TRUE,Groundhog,TRUE,TRUE
+1982,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+1984,TRUE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+1985,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+1988,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+1993,TRUE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+1994,TRUE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+1995,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+1997,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2000,TRUE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+2005,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2009,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2010,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2014,TRUE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+2015,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2016,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+2018,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2019,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2020,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+2023,FALSE,Staten Island Chuck,New York City,New York,USA,40.6251281,-74.1175587,TRUE,Groundhog,TRUE,TRUE
+1985,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+1986,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+1987,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+1994,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+1997,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+1999,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2000,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2005,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2006,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2007,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2008,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2009,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2010,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2011,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2012,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2013,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2014,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2015,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2016,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2017,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2018,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2019,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2020,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+2021,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2022,FALSE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,FALSE
+2023,TRUE,Lander Lil,Lander,Wyoming,USA,42.830629,-108.722943,FALSE,Statue of a prairie dog,TRUE,TRUE
+1996,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+1997,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+1998,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+1999,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+2000,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2001,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2002,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2003,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2004,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+2006,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2008,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+2009,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+2010,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2011,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+2012,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2013,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2014,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2015,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2016,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2017,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+2018,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2019,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2020,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2021,FALSE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,FALSE
+2022,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+2023,TRUE,Manitoba Merv,Stonewall,Manitoba,Canada,50.1738294,-97.1351477,FALSE,Groundhog golf club cover,TRUE,TRUE
+1999,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2000,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2001,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2002,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2003,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2004,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2005,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2006,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2007,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2008,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2009,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2010,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2011,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2012,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2013,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2014,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2016,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2018,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2019,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2020,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+2022,FALSE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Holtsville Hal,Holtsville,New York,USA,40.7967917,-73.0358701,TRUE,Groundhog,TRUE,TRUE
+1999,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2000,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2001,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2002,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2003,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2004,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2005,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2010,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2011,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2013,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2014,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2015,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2016,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2018,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2019,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2020,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,TRUE
+2023,TRUE,Shubenacadie Sam,Shubenacadie,Nova Scotia,Canada,45.0921321,-63.397339,TRUE,Groundhog,TRUE,FALSE
+1999,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2000,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2001,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2002,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2003,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2004,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2005,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2006,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2007,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2010,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2011,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2014,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2016,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2017,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2020,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+2021,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2022,TRUE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,TRUE
+2023,FALSE,Woody the Woodchuck,Howell,Michigan,USA,42.523758,-83.9529562,TRUE,Groundhog,TRUE,FALSE
+1999,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2001,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2002,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2003,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2004,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2005,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2007,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2010,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2011,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2012,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2014,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2016,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2017,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2019,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2020,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Woodstock Willie,Woodstock,Illinois,USA,42.3142948,-88.4477184,TRUE,Groundhog,TRUE,TRUE
+2000,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2001,FALSE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,FALSE
+2002,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2003,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2004,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2005,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2006,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2007,FALSE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,FALSE
+2008,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2009,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2010,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2011,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2012,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2013,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2014,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2015,FALSE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2016,FALSE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,FALSE
+2017,FALSE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,FALSE
+2018,FALSE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,FALSE
+2019,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2020,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+2021,FALSE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,FALSE
+2022,TRUE,Sir Walter Wally,Raleigh,North Carolina,USA,35.7821867,-78.6414861,TRUE,Groundhog,FALSE,TRUE
+1997,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2001,FALSE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,FALSE
+2002,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2003,FALSE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,FALSE
+2004,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2005,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2006,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2007,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2008,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2009,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2010,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2011,FALSE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,FALSE
+2012,FALSE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,FALSE
+2013,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,FALSE
+2014,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2015,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2016,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2017,FALSE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,FALSE
+2018,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2019,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2020,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2023,TRUE,Schnogadahl Sammi,Kresgeville,Pennsylvania,USA,40.9014222,-75.497874,FALSE,Taxidermied groundhog,TRUE,TRUE
+2001,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2004,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2005,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2006,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2007,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2008,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2009,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2010,FALSE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,FALSE
+2011,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2012,FALSE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,FALSE
+2013,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2014,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2015,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2016,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2017,FALSE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,FALSE
+2018,FALSE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,FALSE
+2019,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2020,FALSE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,FALSE
+2021,TRUE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,TRUE
+2022,FALSE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,FALSE
+2023,FALSE,Poor Richard,York,Pennsylvania,USA,39.9658603,-76.729263,FALSE,Taxidermied groundhog,TRUE,FALSE
+2004,TRUE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2005,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2006,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2008,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2009,TRUE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2010,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2011,TRUE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2012,TRUE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2013,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2014,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2015,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2016,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2017,TRUE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2018,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2019,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2020,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2021,TRUE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2022,TRUE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,TRUE
+2023,FALSE,Balzac Billy,Balzac,Alberta,Canada,51.1908339,-114.0008889,FALSE,Person in a gopher suit,TRUE,FALSE
+2004,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2005,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2006,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,FALSE
+2007,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2008,FALSE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2009,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2010,FALSE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,FALSE
+2011,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2012,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2013,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,FALSE
+2014,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2015,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2016,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2017,FALSE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,FALSE
+2018,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2019,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2020,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2022,FALSE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2023,TRUE,Uni the Groundhog,Myerstown,Pennsylvania,USA,40.4181266,-76.2999232,FALSE,Taxidermied groundhog,TRUE,TRUE
+2007,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2008,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2009,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2010,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2011,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2012,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2013,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2014,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2015,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2016,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2017,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2018,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2019,TRUE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2020,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2021,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,TRUE
+2022,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2023,FALSE,Grover and Sue,Pine Grove,Pennsylvania,USA,40.5716175,-76.3676593,FALSE,Taxidermied groundhogs,TRUE,FALSE
+2008,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,FALSE
+2009,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,FALSE
+2010,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2011,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2012,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,FALSE
+2013,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2014,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2015,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,FALSE
+2016,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2017,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2019,TRUE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2020,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,TRUE
+2023,FALSE,Ms. G,Lincoln,Massachusetts,USA,42.4094032,-71.333952300000007,TRUE,Groundhog,TRUE,FALSE
+2006,FALSE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2008,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2010,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2011,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2012,FALSE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2013,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2014,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2015,FALSE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2016,FALSE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2017,FALSE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2018,FALSE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2019,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2020,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2021,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2022,FALSE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2023,TRUE,Stormy Marmot,Aurora,Colorado,USA,39.6890151,-104.8269175,FALSE,Plush yellow-bellied marmot,TRUE,TRUE
+2008,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,TRUE
+2010,TRUE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,TRUE
+2011,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2013,TRUE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,TRUE
+2014,TRUE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,TRUE
+2016,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2018,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2019,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2020,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,TRUE
+2023,FALSE,Chuckles the Groundhog,Manchester,Connecticut,USA,41.7555391,-72.5221167,TRUE,Groundhog,TRUE,FALSE
+2008,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2009,TRUE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,TRUE
+2010,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2013,TRUE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,TRUE
+2014,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2015,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2018,TRUE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,TRUE
+2019,TRUE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,TRUE
+2020,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2023,FALSE,Stonewall Jackson,Wantage,New Jersey,USA,41.2109112,-74.6968543,TRUE,Groundhog,TRUE,FALSE
+2010,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2011,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2012,FALSE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,FALSE
+2013,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2014,FALSE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,FALSE
+2015,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2016,FALSE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,FALSE
+2017,FALSE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,FALSE
+2018,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2019,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2020,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2021,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2022,FALSE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,FALSE
+2023,TRUE,Flatiron Freddy,Boulder,Colorado,USA,40.0247794,-105.2271559,FALSE,Taxidermied yellow-bellied marmot,TRUE,TRUE
+2006,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2011,FALSE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,FALSE
+2012,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2013,FALSE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,FALSE
+2014,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2015,FALSE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,FALSE
+2016,FALSE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,FALSE
+2017,FALSE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,FALSE
+2018,FALSE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,FALSE
+2019,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2020,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2021,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2022,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2023,TRUE,Snohomish Slew,Snohomish,Washington,USA,47.812527,-122.3818957,FALSE,Bullfrog,TRUE,TRUE
+2010,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,FALSE
+2011,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,FALSE
+2012,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,FALSE
+2013,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,FALSE
+2014,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,TRUE
+2016,TRUE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,TRUE
+2017,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,FALSE
+2018,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,FALSE
+2019,TRUE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,TRUE
+2020,TRUE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,TRUE
+2023,TRUE,Two Rivers Tunnel,Cape Breton,Nova Scotia,Canada,45.9364617,-60.3005507,TRUE,Groundhog,TRUE,TRUE
+2011,TRUE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,TRUE
+2012,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2013,TRUE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,TRUE
+2014,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2015,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2016,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2017,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2018,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2019,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2020,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,TRUE
+2021,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2022,TRUE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,TRUE
+2023,FALSE,Bee Cave Bob,Bee Cave,Texas,USA,30.304515,-97.93843,FALSE,Armadillo,TRUE,FALSE
+2010,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2012,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2013,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2014,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2015,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2016,TRUE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,TRUE
+2017,TRUE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,TRUE
+2018,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2019,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,TRUE
+2020,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2021,TRUE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2022,FALSE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,FALSE
+2023,TRUE,Chilly Charlie,Woodstock,Ontario,Canada,43.124424,-80.7544241,FALSE,Person in a groundhog suit,TRUE,TRUE
+2010,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2011,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2012,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2013,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2014,FALSE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,FALSE
+2015,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2016,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2017,FALSE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,FALSE
+2018,FALSE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,FALSE
+2019,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,FALSE
+2020,FALSE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2021,FALSE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,FALSE
+2022,TRUE,Fred la Marmotte,Val-d’Espoir,Quebec,Canada,48.5143473,-64.3996831,TRUE,Groundhog,FALSE,TRUE
+2007,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2009,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,TRUE
+2010,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2011,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2012,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2013,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2015,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2016,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2017,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2018,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2021,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2022,FALSE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,FALSE
+2023,TRUE,Middlemiss Mike,Melbourne,Ontario,Canada,42.8156259,-81.5525152,FALSE,Plush prairie dog,TRUE,TRUE
+2010,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2012,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,TRUE
+2013,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,TRUE
+2014,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2016,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2017,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2018,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2019,TRUE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,TRUE
+2020,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2021,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,TRUE
+2022,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2023,FALSE,Beardsley Bart,Bridgeport,Connecticut,USA,41.2097196,-73.1843214,FALSE,Prairie dog,TRUE,FALSE
+2012,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2013,TRUE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,TRUE
+2014,TRUE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,TRUE
+2015,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2016,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2017,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2018,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2019,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2020,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2021,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,TRUE
+2022,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2023,FALSE,Sand Mountain Sam,Albertville,Alabama,USA,34.1666754,-86.1192772,FALSE,Opossum,TRUE,FALSE
+2011,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,TRUE
+2013,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,FALSE
+2014,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,TRUE
+2015,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,FALSE
+2017,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,TRUE
+2018,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,TRUE
+2019,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,TRUE
+2020,FALSE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,FALSE
+2021,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,TRUE
+2022,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,TRUE
+2023,TRUE,Bowman Bill,Stephens City,Virginia,USA,39.1014751,-78.1945146,FALSE,Groundhog puppet,TRUE,FALSE
+2013,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2014,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2015,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2016,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2017,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2019,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2020,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2021,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2022,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2023,TRUE,Buffalo Bert,Buffalo,New York,USA,42.7245868,-78.6732692,TRUE,Groundhog,TRUE,TRUE
+2011,TRUE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,TRUE
+2014,TRUE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,TRUE
+2015,FALSE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,FALSE
+2016,TRUE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,TRUE
+2017,FALSE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,FALSE
+2018,TRUE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,TRUE
+2019,FALSE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,TRUE
+2020,FALSE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,FALSE
+2021,FALSE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,FALSE
+2022,TRUE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,TRUE
+2023,FALSE,Dover Doug,Dover Township,Pennsylvania,USA,39.9979137,-76.8571679,FALSE,Person in a groundhog suit,TRUE,FALSE
+2010,TRUE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,TRUE
+2012,FALSE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,FALSE
+2013,FALSE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,FALSE
+2014,FALSE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,FALSE
+2016,TRUE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,TRUE
+2017,TRUE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,TRUE
+2018,TRUE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,TRUE
+2020,FALSE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,FALSE
+2021,FALSE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,FALSE
+2022,FALSE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,FALSE
+2023,TRUE,Fenwick Flossie,Pelham,Ontario,Canada,43.0208392,-79.3629854,FALSE,Person in a groundhog suit,TRUE,TRUE
+2013,FALSE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,FALSE
+2014,TRUE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,TRUE
+2015,FALSE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,FALSE
+2016,FALSE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,FALSE
+2017,TRUE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,TRUE
+2019,FALSE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,FALSE
+2020,FALSE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,TRUE
+2023,TRUE,Lawrenceville Lucy,Lawrenceville,Pennsylvania,USA,41.9735597,-77.201705,TRUE,Groundhog,TRUE,TRUE
+2013,TRUE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,TRUE
+2014,FALSE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,FALSE
+2015,TRUE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,TRUE
+2016,TRUE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,TRUE
+2017,FALSE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,FALSE
+2018,TRUE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,TRUE
+2019,TRUE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,TRUE
+2020,TRUE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,TRUE
+2021,FALSE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,FALSE
+2022,TRUE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,TRUE
+2023,FALSE,Mount Joy Minnie,Mount Joy,Pennsylvania,USA,40.1091208,-76.5043106,FALSE,Plush groundhog,TRUE,FALSE
+2007,TRUE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,TRUE
+2009,TRUE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,TRUE
+2010,TRUE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,TRUE
+2011,TRUE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,TRUE
+2012,TRUE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,TRUE
+2013,TRUE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,TRUE
+2015,FALSE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,FALSE
+2016,TRUE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,TRUE
+2017,FALSE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,FALSE
+2018,FALSE,Boise Bill,Boise,Idaho,USA,43.6078333,-116.2049143,FALSE,Plush prairie dog,TRUE,FALSE
+2014,TRUE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,TRUE
+2015,FALSE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,FALSE
+2016,TRUE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,TRUE
+2017,TRUE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,TRUE
+2018,FALSE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,FALSE
+2019,FALSE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,TRUE
+2020,TRUE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,TRUE
+2021,FALSE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,FALSE
+2022,FALSE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,FALSE
+2023,TRUE,Patty Pagoda,Reading,Pennsylvania,USA,40.33607,-75.9078327,FALSE,Person in a groundhog suit,TRUE,TRUE
+2011,FALSE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,FALSE
+2012,TRUE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,TRUE
+2014,FALSE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,FALSE
+2015,FALSE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,FALSE
+2017,FALSE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,FALSE
+2018,FALSE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,FALSE
+2019,FALSE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,FALSE
+2020,TRUE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,TRUE
+2022,FALSE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,TRUE
+2023,TRUE,Polk County Paula,Des Moines,Iowa,USA,41.5830468,-93.6206605,FALSE,Person in a groundhog suit,TRUE,TRUE
+2014,TRUE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,TRUE
+2015,FALSE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,FALSE
+2016,TRUE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,TRUE
+2017,FALSE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,TRUE
+2018,TRUE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,TRUE
+2020,FALSE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,FALSE
+2023,FALSE,Chesapeake Chuck,Newport News,Virginia,USA,37.0699814,-76.4818192,TRUE,Groundhog,TRUE,FALSE
+2015,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2016,FALSE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,FALSE
+2017,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2018,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2019,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2020,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2021,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2022,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2023,TRUE,Scramble the Duck,Eastford,Connecticut,USA,41.901251,-72.0815198,FALSE,Pekin duck,TRUE,TRUE
+2015,FALSE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,FALSE
+2016,FALSE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,FALSE
+2017,TRUE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,FALSE
+2018,FALSE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,FALSE
+2019,TRUE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,TRUE
+2020,TRUE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,TRUE
+2021,TRUE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,TRUE
+2022,TRUE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,TRUE
+2023,TRUE,Snerd,Garner,North Carolina,USA,35.6800912,-78.6279155,TRUE,Groundhog,TRUE,TRUE
+2015,FALSE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,FALSE
+2016,FALSE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,FALSE
+2017,TRUE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,TRUE
+2018,FALSE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,FALSE
+2019,FALSE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,FALSE
+2020,TRUE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,TRUE
+2021,FALSE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,FALSE
+2022,TRUE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,TRUE
+2023,FALSE,Snowy the Prairie Dog,Pend Oreille County,Washington,USA,48.5224835,-117.8912722,FALSE,Prairie dog,TRUE,FALSE
+2011,FALSE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,FALSE
+2012,TRUE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,TRUE
+2014,TRUE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,FALSE
+2015,TRUE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,TRUE
+2018,TRUE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,TRUE
+2019,TRUE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,TRUE
+2020,FALSE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,FALSE
+2021,FALSE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,FALSE
+2023,FALSE,Tinicum Tim,Philadelphia,Pennsylvania,USA,39.8921524,-75.2572137,FALSE,Groundhog puppet,TRUE,FALSE
+2011,FALSE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,FALSE
+2012,FALSE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,FALSE
+2017,TRUE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,TRUE
+2018,TRUE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,TRUE
+2019,TRUE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,TRUE
+2020,TRUE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,TRUE
+2021,TRUE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,TRUE
+2022,FALSE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,FALSE
+2023,TRUE,Wildwood Willie,Toledo,Ohio,USA,41.6818106,-83.6675126,FALSE,Taxidermied groundhog,TRUE,TRUE
+2015,TRUE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,TRUE
+2016,TRUE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,TRUE
+2017,FALSE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,FALSE
+2018,TRUE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,TRUE
+2019,FALSE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,TRUE
+2020,TRUE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,TRUE
+2022,FALSE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,FALSE
+2023,FALSE,Benny the Bass,Buckeye Lake,Ohio,USA,39.9335365,-82.501816,FALSE,Largemouth bass,TRUE,FALSE
+2016,TRUE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,TRUE
+2017,FALSE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,FALSE
+2018,TRUE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,TRUE
+2019,FALSE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,FALSE
+2020,FALSE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,FALSE
+2021,FALSE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,FALSE
+2022,FALSE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,FALSE
+2023,FALSE,Harleysville Hank,Harleysville,Pennsylvania,USA,40.290503,-75.3823447,FALSE,Plush groundhog,TRUE,FALSE
+2014,TRUE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,FALSE
+2015,TRUE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,TRUE
+2016,FALSE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,TRUE
+2017,TRUE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,TRUE
+2018,TRUE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,TRUE
+2019,TRUE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,TRUE
+2020,FALSE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,FALSE
+2021,FALSE,Oil Springs Ollie,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,FALSE,FALSE
+2017,TRUE,Potomac Phil,Washington DC,District of Columbia,USA,38.9097387,-77.043891,FALSE,Taxidermied groundhog,TRUE,TRUE
+2018,TRUE,Potomac Phil,Washington DC,District of Columbia,USA,38.9097387,-77.043891,FALSE,Taxidermied groundhog,TRUE,FALSE
+2019,TRUE,Potomac Phil,Washington DC,District of Columbia,USA,38.9097387,-77.043891,FALSE,Taxidermied groundhog,TRUE,TRUE
+2020,TRUE,Potomac Phil,Washington DC,District of Columbia,USA,38.9097387,-77.043891,FALSE,Taxidermied groundhog,TRUE,TRUE
+2021,FALSE,Potomac Phil,Washington DC,District of Columbia,USA,38.9097387,-77.043891,FALSE,Taxidermied groundhog,TRUE,FALSE
+2022,TRUE,Potomac Phil,Washington DC,District of Columbia,USA,38.9097387,-77.043891,FALSE,Taxidermied groundhog,TRUE,TRUE
+2023,FALSE,Potomac Phil,Washington DC,District of Columbia,USA,38.9097387,-77.043891,FALSE,Taxidermied groundhog,TRUE,FALSE
+2016,FALSE,Smith Lake Jake,Smith Lake,Alabama,USA,34.7159524,-86.5418817,TRUE,Groundhog,TRUE,FALSE
+2017,FALSE,Smith Lake Jake,Smith Lake,Alabama,USA,34.7159524,-86.5418817,TRUE,Groundhog,TRUE,FALSE
+2018,FALSE,Smith Lake Jake,Smith Lake,Alabama,USA,34.7159524,-86.5418817,TRUE,Groundhog,TRUE,FALSE
+2019,TRUE,Smith Lake Jake,Smith Lake,Alabama,USA,34.7159524,-86.5418817,TRUE,Groundhog,TRUE,TRUE
+2020,FALSE,Smith Lake Jake,Smith Lake,Alabama,USA,34.7159524,-86.5418817,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Smith Lake Jake,Smith Lake,Alabama,USA,34.7159524,-86.5418817,TRUE,Groundhog,TRUE,TRUE
+2022,TRUE,Smith Lake Jake,Smith Lake,Alabama,USA,34.7159524,-86.5418817,TRUE,Groundhog,TRUE,TRUE
+2017,FALSE,Van Island Violet,Nanaimo,British Columbia,Canada,49.159641,-124.0503748,FALSE,Vancouver Island marmot,TRUE,FALSE
+2018,FALSE,Van Island Violet,Nanaimo,British Columbia,Canada,49.159641,-124.0503748,FALSE,Vancouver Island marmot,TRUE,FALSE
+2019,TRUE,Van Island Violet,Nanaimo,British Columbia,Canada,49.159641,-124.0503748,FALSE,Vancouver Island marmot,TRUE,TRUE
+2020,TRUE,Van Island Violet,Nanaimo,British Columbia,Canada,49.159641,-124.0503748,FALSE,Vancouver Island marmot,TRUE,TRUE
+2021,FALSE,Van Island Violet,Nanaimo,British Columbia,Canada,49.159641,-124.0503748,FALSE,Vancouver Island marmot,TRUE,TRUE
+2022,TRUE,Van Island Violet,Nanaimo,British Columbia,Canada,49.159641,-124.0503748,FALSE,Vancouver Island marmot,TRUE,TRUE
+2023,TRUE,Van Island Violet,Nanaimo,British Columbia,Canada,49.159641,-124.0503748,FALSE,Vancouver Island marmot,TRUE,TRUE
+2014,TRUE,Chuck Wood,Quincy,California,USA,39.9362979,-120.9523743,FALSE,Animatronic groundhog,TRUE,TRUE
+2019,TRUE,Chuck Wood,Quincy,California,USA,39.9362979,-120.9523743,FALSE,Animatronic groundhog,TRUE,FALSE
+2020,TRUE,Chuck Wood,Quincy,California,USA,39.9362979,-120.9523743,FALSE,Animatronic groundhog,TRUE,TRUE
+2021,TRUE,Chuck Wood,Quincy,California,USA,39.9362979,-120.9523743,FALSE,Animatronic groundhog,TRUE,TRUE
+2022,TRUE,Chuck Wood,Quincy,California,USA,39.9362979,-120.9523743,FALSE,Animatronic groundhog,TRUE,TRUE
+2023,FALSE,Chuck Wood,Quincy,California,USA,39.9362979,-120.9523743,FALSE,Animatronic groundhog,TRUE,FALSE
+2018,TRUE,Concord Casimir,Concord,Ohio,USA,41.6904499,-81.2526303,FALSE,Cat,TRUE,TRUE
+2019,FALSE,Concord Casimir,Concord,Ohio,USA,41.6904499,-81.2526303,FALSE,Cat,TRUE,FALSE
+2020,TRUE,Concord Casimir,Concord,Ohio,USA,41.6904499,-81.2526303,FALSE,Cat,TRUE,TRUE
+2021,TRUE,Concord Casimir,Concord,Ohio,USA,41.6904499,-81.2526303,FALSE,Cat,TRUE,TRUE
+2022,FALSE,Concord Casimir,Concord,Ohio,USA,41.6904499,-81.2526303,FALSE,Cat,TRUE,FALSE
+2023,FALSE,Concord Casimir,Concord,Ohio,USA,41.6904499,-81.2526303,FALSE,Cat,TRUE,FALSE
+2019,FALSE,Cluxatawney Henrietta,Katonah,New York,USA,41.2634599,-73.7307821,FALSE,Ameraucana chicken,TRUE,FALSE
+2020,FALSE,Cluxatawney Henrietta,Katonah,New York,USA,41.2634599,-73.7307821,FALSE,Ameraucana chicken,TRUE,FALSE
+2021,FALSE,Cluxatawney Henrietta,Katonah,New York,USA,41.2634599,-73.7307821,FALSE,Ameraucana chicken,TRUE,FALSE
+2022,FALSE,Cluxatawney Henrietta,Katonah,New York,USA,41.2634599,-73.7307821,FALSE,Ameraucana chicken,TRUE,FALSE
+2023,FALSE,Cluxatawney Henrietta,Katonah,New York,USA,41.2634599,-73.7307821,FALSE,Ameraucana chicken,TRUE,FALSE
+2019,FALSE,Gordy the Groundhog,Milwaukee,Wisconsin,USA,43.0315284,-88.0424457,TRUE,Groundhog,TRUE,FALSE
+2020,TRUE,Gordy the Groundhog,Milwaukee,Wisconsin,USA,43.0315284,-88.0424457,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,Gordy the Groundhog,Milwaukee,Wisconsin,USA,43.0315284,-88.0424457,TRUE,Groundhog,TRUE,FALSE
+2022,FALSE,Gordy the Groundhog,Milwaukee,Wisconsin,USA,43.0315284,-88.0424457,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Gordy the Groundhog,Milwaukee,Wisconsin,USA,43.0315284,-88.0424457,TRUE,Groundhog,TRUE,TRUE
+2018,FALSE,Lucy the Lobster,Barrington,Nova Scotia,Canada,43.5128603,-65.611397,FALSE,Atlantic lobster,TRUE,FALSE
+2019,TRUE,Lucy the Lobster,Barrington,Nova Scotia,Canada,43.5128603,-65.611397,FALSE,Atlantic lobster,TRUE,TRUE
+2020,TRUE,Lucy the Lobster,Barrington,Nova Scotia,Canada,43.5128603,-65.611397,FALSE,Atlantic lobster,TRUE,TRUE
+2022,TRUE,Lucy the Lobster,Barrington,Nova Scotia,Canada,43.5128603,-65.611397,FALSE,Atlantic lobster,TRUE,TRUE
+2023,TRUE,Lucy the Lobster,Barrington,Nova Scotia,Canada,43.5128603,-65.611397,FALSE,Atlantic lobster,TRUE,TRUE
+2018,FALSE,Mount Gretna Grady,Mount Gretna,Pennsylvania,USA,40.2467673,-76.4677586,FALSE,Plush groundhog,TRUE,FALSE
+2019,FALSE,Mount Gretna Grady,Mount Gretna,Pennsylvania,USA,40.2467673,-76.4677586,FALSE,Plush groundhog,TRUE,FALSE
+2020,FALSE,Mount Gretna Grady,Mount Gretna,Pennsylvania,USA,40.2467673,-76.4677586,FALSE,Plush groundhog,TRUE,FALSE
+2022,FALSE,Mount Gretna Grady,Mount Gretna,Pennsylvania,USA,40.2467673,-76.4677586,FALSE,Plush groundhog,TRUE,FALSE
+2023,FALSE,Mount Gretna Grady,Mount Gretna,Pennsylvania,USA,40.2467673,-76.4677586,FALSE,Plush groundhog,TRUE,FALSE
+2020,FALSE,Poppy the Groundhog,Millersville,Pennsylvania,USA,40.1213254,-76.6644525,TRUE,Groundhog,TRUE,FALSE
+2021,FALSE,Poppy the Groundhog,Millersville,Pennsylvania,USA,40.1213254,-76.6644525,TRUE,Groundhog,TRUE,FALSE
+2022,TRUE,Poppy the Groundhog,Millersville,Pennsylvania,USA,40.1213254,-76.6644525,TRUE,Groundhog,TRUE,TRUE
+2023,TRUE,Poppy the Groundhog,Millersville,Pennsylvania,USA,40.1213254,-76.6644525,TRUE,Groundhog,TRUE,TRUE
+2020,FALSE,Stumptown Fil,Portland,Oregon,USA,45.5100569,-122.7158264,FALSE,Beaver,TRUE,FALSE
+2021,TRUE,Stumptown Fil,Portland,Oregon,USA,45.5100569,-122.7158264,FALSE,Beaver,TRUE,TRUE
+2022,FALSE,Stumptown Fil,Portland,Oregon,USA,45.5100569,-122.7158264,FALSE,Beaver,TRUE,FALSE
+2023,TRUE,Stumptown Fil,Portland,Oregon,USA,45.5100569,-122.7158264,FALSE,Beaver,TRUE,TRUE
+2020,FALSE,Yonah the Groundhog,Cleveland,Georgia,USA,34.6229744,-83.8676887,TRUE,Groundhog,TRUE,FALSE
+2021,TRUE,Yonah the Groundhog,Cleveland,Georgia,USA,34.6229744,-83.8676887,TRUE,Groundhog,TRUE,TRUE
+2022,FALSE,Yonah the Groundhog,Cleveland,Georgia,USA,34.6229744,-83.8676887,TRUE,Groundhog,TRUE,FALSE
+2023,FALSE,Yonah the Groundhog,Cleveland,Georgia,USA,34.6229744,-83.8676887,TRUE,Groundhog,TRUE,FALSE
+2021,TRUE,Hope the Groundhog,Hope,Indiana,USA,39.303483,-85.7731068,TRUE,Groundhog,TRUE,TRUE
+2022,FALSE,Hope the Groundhog,Hope,Indiana,USA,39.303483,-85.7731068,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Hope the Groundhog,Hope,Indiana,USA,39.303483,-85.7731068,TRUE,Groundhog,TRUE,TRUE
+2021,FALSE,MT Parker,Lancaster,Pennsylvania,USA,40.0588008,-76.3072977,FALSE,Plush groundhog,TRUE,FALSE
+2022,TRUE,MT Parker,Lancaster,Pennsylvania,USA,40.0588008,-76.3072977,FALSE,Plush groundhog,TRUE,TRUE
+2023,FALSE,MT Parker,Lancaster,Pennsylvania,USA,40.0588008,-76.3072977,FALSE,Plush groundhog,TRUE,FALSE
+2022,FALSE,Heaven’s Wildlife Harvey,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Heaven’s Wildlife Harvey,Oil Springs,Ontario,Canada,42.7669782,-82.1832562,TRUE,Groundhog,TRUE,TRUE
+2022,FALSE,Lady Edwina of Essex,West Orange,New Jersey,USA,40.7674513,-74.2839038,TRUE,Groundhog,TRUE,FALSE
+2023,TRUE,Lady Edwina of Essex,West Orange,New Jersey,USA,40.7674513,-74.2839038,TRUE,Groundhog,TRUE,TRUE
+2022,FALSE,Okanagan Okie,Vernon,British Columbia,Canada,50.2400127,-119.2915259,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2023,FALSE,Okanagan Okie,Vernon,British Columbia,Canada,50.2400127,-119.2915259,FALSE,Plush yellow-bellied marmot,TRUE,FALSE
+2022,FALSE,Pisgah Penny,Brevard,North Carolina,USA,35.243478,-82.7769959,FALSE,Tree squirrel,TRUE,FALSE
+2023,TRUE,Pisgah Penny,Brevard,North Carolina,USA,35.243478,-82.7769959,FALSE,Tree squirrel,TRUE,TRUE
+2022,FALSE,Queen City Charlie,Cumberland,Maryland,USA,39.6528658,-78.7646866,FALSE,Person in a groundhog suit,TRUE,FALSE
+2023,FALSE,Queen City Charlie,Cumberland,Maryland,USA,39.6528658,-78.7646866,FALSE,Person in a groundhog suit,TRUE,FALSE
+2022,FALSE,Unadilla Billie,Unadilla,Nebraska,USA,40.6834005,-96.2751068,FALSE,Taxidermied groundhog,TRUE,FALSE
+2023,TRUE,Unadilla Billie,Unadilla,Nebraska,USA,40.6834005,-96.2751068,FALSE,Taxidermied groundhog,TRUE,TRUE

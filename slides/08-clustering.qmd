@@ -1,0 +1,555 @@
+---
+title: "Chapter 12 - Unsupervised Learning"
+subtitle: "Clustering"
+format: 
+  revealjs:
+    output-file: "08-clustering.html"
+    slide-number: true
+  html:
+    output-file: "08-clustering_o.html"
+editor_options: 
+  chunk_output_type: console
+logo: "img/icon.png"
+---
+
+
+## Setup
+
+```{r}
+library(tidymodels)
+library(tidyverse)
+library(palmerpenguins)
+data(penguins)
+library(tidyclust)
+#install.packages('tidyclust')
+#install.packages('factoextra')
+
+```
+
+
+# Topics
+
+1. Unsupervised learning
+2. k-means clustering
+3. k-medoids clustering
+4. distance metrics
+5. hierarchical clustering
+
+
+## Unsupervised learning
+
+> Grouping or categorizing observational units (objects) without any pre-assigned labels or scores (no outcome information!)
+
+
+
+## Some examples:
+
+* Latent Dirichlet Allocation:  <a href="https://ziqixiong.shinyapps.io/TopicModeling/" target = "_blank">Topic Modeling of TSL Articles</a>
+
+* Network Analysis: <a href = "https://espresso.economist.com/6412121cbb2dc2cb9e460cfee7046be2" target = "_blank">Political Books</a>
+
+* Network & Clustering: <a href = "http://varianceexplained.org/r/love-actually-network/" target = "_blank">Characters in 'Love Actually'</a>
+
+
+
+## $k$-means Clustering
+
+$k$-means clustering is an unsupervised partitioning algorithm designed to find a partition of the observations such that the following objective function is minimized (find the smallest within cluster sum of squares):
+
+$$\text{arg}\,\min\limits_{C_1, \ldots, C_k} \Bigg\{ \sum_{k=1}^K \sum_{i \in C_k} \sum_{j=1}^p (x_{ij} - \overline{x}_{kj})^2 \Bigg\}$$
+
+
+# Monsters clustering
+
+```{r fig.cap = "Artwork by @allison_horst.", fig.alt = "Monsters as cluster centers moving around throughout the k-means algorithm.", preview = TRUE, echo = FALSE}
+knitr::include_graphics("../slides/img/kmeans.gif")
+```
+
+
+
+## A fun applet!! 
+
+<https://www.naftaliharris.com/blog/visualizing-k-means-clustering/>
+
+
+
+
+
+## **Algorithm**:   $k$-Means Clustering {.smaller}
+
+
+1. Randomly assign a number, from 1 to $k$, to each of the observations.  These serve as initial cluster assignments for the observations.
+
+. . .
+
+2. Iterate until the cluster assignments stop changing:  
+    (a) For each of the $k$ clusters, compute the cluster centroid. The $k^{th}$ cluster centroid is the vector of the $p$ feature means for the observations in the $k^{th}$ cluster.
+    
+. . .
+
+    (b) Assign each observation to the cluster whose centroid is closest (where closest is defined using Euclidean distance).
+    
+. . .
+
+3.  Ties?  Do something consistent:  for example, leave in the current cluster.
+
+
+
+
+## Convergence?  Yes!  (local...)
+
+1. If a point is "closer" to a different center, moving it will lower the objective function.
+
+2. Averages minimize squared differences, so taking the new average will result in a lower objective function.
+
+3. If a point is equidistant from two clusters, the point won't move.
+
+4. The algorithm must converge in finite number of steps because there are finitely many points.
+
+
+
+## Scaling
+
+```{r echo = FALSE}
+set.seed(47)
+norm_clust <- data.frame(
+  x1 = rnorm(1000, 0, 15),
+  x2 = c(rnorm(500, 5, 1), rnorm(500, 0, 1)))
+```
+
+
+:::{.panel-tabset}
+
+### raw data
+
+::::{.columns}
+:::{.column}
+
+```{r eval = FALSE}
+norm_clust %>%
+  kmeans(centers = 2) %>%
+  augment(norm_clust) %>%
+  ggplot() + 
+  geom_point(aes(x = x1, 
+                 y = x2, 
+                 color = .cluster)) +
+  ggtitle("k-means (k=2) on raw data")
+```
+
+:::
+
+:::{.column}
+```{r echo = FALSE}
+norm_clust %>%
+  kmeans(centers = 2) %>%
+  augment(norm_clust) %>%
+  ggplot() + 
+  geom_point(aes(x = x1, 
+                 y = x2, 
+                 color = .cluster)) +
+  ggtitle("k-means (k=2) on raw data")
+```
+
+:::
+
+::::
+
+### scalled data
+
+::::{.columns}
+:::{.column}
+
+```{r eval = FALSE}
+norm_clust %>%
+  mutate(across(everything(), 
+                scale)) %>%
+  kmeans(centers = 2) %>%
+  augment(norm_clust) %>%
+  ggplot() + 
+  geom_point(aes(x = x1, 
+                 y = x2, 
+                 color = .cluster)) +
+  ggtitle("k-means (k=2) on raw data")
+```
+
+:::
+
+:::{.column}
+```{r echo = FALSE}
+norm_clust %>%
+  mutate(across(everything(), 
+                scale)) %>%
+  kmeans(centers = 2) %>%
+  augment(norm_clust) %>%
+  ggplot() + 
+  geom_point(aes(x = x1, 
+                 y = x2, 
+                 color = .cluster)) +
+  ggtitle("k-means (k=2) on raw data")
+```
+:::
+::::
+
+:::
+
+## K-means tidymodels
+
+```{r}
+penguins_recipe <- recipe(~.,data = penguins) |>
+  update_role(all_predictors(), new_role = "predictor") |>
+  step_select(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g)|>
+  step_naomit(all_predictors()) |>
+  step_scale(all_predictors()) 
+
+kmeans_spec <- k_means(num_clusters =3)
+
+# Create a workflow
+wf <- workflow() |>
+  add_recipe(penguins_recipe) |>
+  add_model(kmeans_spec) #no engine since base R
+
+# Train the model
+km_fit <- wf |>
+  fit(data = penguins)
+
+```
+
+## k-means outputs
+
+```{r}
+extract_cluster_assignment(km_fit) |>
+  head()
+```
+
+```{r}
+extract_centroids(km_fit)
+```
+
+## k-means outputs
+
+```{r}
+km_summary<- extract_fit_summary(km_fit)
+km_summary
+```
+
+## Measuring k-means fit {.smaller}
+
+Sum of squared error
+
+- One simple metric is the within cluster sum-of-squared error (WSS), which measures the sum of all distances from observations to their cluster center. 
+
+- This is sometimes scaled with the total sum-of-squared error (TSS), the distance from all observations to the global centroid; in particular, the ratio WSS/TSS is often computed. 
+
+- Small values of WSS or of the WSS/TSS ratio suggest that the observations within clusters are closer (more similar) to each other than they are to the other clusters.
+
+- The WSS and TSS come “for free” with the model fit summary, or they can be accessed directly from the model fit.
+
+## WSS {.smaller}
+Note we use  the fit object, not summary. 
+```{r}
+km_fit |> sse_within_total()
+km_fit |> sse_total()
+km_fit |> sse_ratio()
+km_fit |> sse_within()
+
+```
+
+
+## Evaluating clustering (which $k$?) {.smaller}
+
+- Silhouette Width (use $k$ with smallest silhouette width)
+
+- Elbow plot (use $k$ at elbow on plot of $k$ vs. within cluster sum of squares)
+
+- The silhouette of a single observation is proportional to the average distance from that observation to within-cluster observations minus the average distance to outside-cluster observations; normalized by the greater of these two average.
+
+- A large silhouette (close to 1) suggests that an observation is more similar to those within its cluster than those outside its cluster.
+
+- We can average all silhouettes to get a metric for the full clustering fit. 
+
+
+
+
+## Silhouette width {.smaller}
+
+Consider observation $i \in$ cluster $C_1$.  Let
+
+$$d(i, C_k) = \mbox{average dissimilarity of } i \mbox{ to all objects in cluster } C_k$$
+$$a(i) =  \mbox{average dissimilarity of } i \mbox{ to all objects in } C_1.$$
+$$b(i) = \min_{C_k \ne C_1} d(i,C_k) = \mbox{distance to the next closest neighbor cluster}$$
+$$s(i) = \frac{b(i) - a(i)}{\max \{ a(i), b(i) \}}$$
+$$\mbox{average}_{i \in C_1} s(i) = \mbox{average silhouette width for cluster } C_1$$
+
+Note that if $a(i) < b(i)$ then $i$ is well classified with a maximum $s(i) = 1$.   If $a(i) > b(i)$ then $i$ is *not* well classified with a maximum $s(i) = -1$.
+
+## Silhouette width - tidymodels
+
+The computation of the silhouette depends on the original observation values, a dataset must also be supplied to the function.
+
+```{r}
+# only needed because I didn't split and handle NAs before
+penguins_na_drop <- penguins |> drop_na(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g) 
+
+    
+km_fit %>%
+  silhouette_avg(penguins_na_drop )
+```
+
+## K Means Clustering, find K
+
+```{r}
+
+pen_recipe2 <- recipe(~.,data = penguins_na_drop) |>
+  update_role(all_predictors(), new_role = "predictor") |>
+  step_select(bill_length_mm, bill_depth_mm, flipper_length_mm, body_mass_g)|>
+  step_scale(all_predictors()) 
+
+pen_cv <- vfold_cv(penguins_na_drop,5)
+
+km_spec2 <- k_means(num_clusters = tune())
+
+clust_num_grid <- grid_regular(num_clusters(),levels = 10)
+
+wf_tune <- workflow()|>
+  add_recipe(pen_recipe2)|>
+  add_model(km_spec2)
+  
+res <- tune_cluster(
+  wf_tune,
+  resamples = pen_cv,
+  grid = clust_num_grid,
+  control = control_grid(save_pred = TRUE, extract = identity),
+  metrics = cluster_metric_set(sse_within_total, sse_total, sse_ratio, silhouette_avg))
+```
+
+## K Means Clustering, find K
+
+```{r}
+res_metrics <- res %>% collect_metrics()
+res_metrics
+```
+
+## K Means Clustering, find K
+
+```{r}
+
+res_metrics %>%
+  filter(.metric == "silhouette_avg") %>%
+  ggplot(aes(x = num_clusters, y = mean)) +
+  geom_point() +
+  geom_line() +
+  theme_minimal() +
+  ylab("silhouette_avg") +
+  xlab("Number of clusters") +
+  scale_x_continuous(breaks = 1:10)
+```
+
+
+## Distance metric (mathematically)
+
+1. $d({\bf x}, {\bf y}) \geq 0$
+2. $d({\bf x}, {\bf y}) = d({\bf y}, {\bf x})$
+3. $d({\bf x}, {\bf y}) = 0$ iff ${\bf x} = {\bf y}$
+4. $d({\bf x}, {\bf y}) \leq d({\bf x}, {\bf z}) + d({\bf z}, {\bf y})$  for all other vectors ${\bf z}$.
+
+
+
+## Distance measures (clustering) {.smaller}
+
+* Euclidean Distance
+
+. . .
+
+$$d_E({\bf x}, {\bf y}) = \sqrt{\sum_{i=1}^p (x_i - y_i)^2}$$
+
+* Pearson Correlation Distance
+
+. . . 
+
+$$d_P({\bf x}, {\bf y}) = 1 - r_P ({\bf x}, {\bf y})$$
+$$\mbox{ or } d_P({\bf x}, {\bf y}) =  1 - |r_P ({\bf x}, {\bf y})|$$
+$$\mbox{ or } d_P({\bf x}, {\bf y}) =  1 - (r_P ({\bf x}, {\bf y}))^2$$
+
+
+## Correlation distance isn't a distance metric! {.smaller}
+
+```{r}
+x1 <- c(1,2,3)
+x2 <- c(1, 4, 10)
+x3 <- c(9, 2, 2)
+
+# d(1,2)
+1 - cor(x1, x2)
+# d(1,3)
+1 - cor(x1, x3)
+# d(2,3)
+1 - cor(x2, x3)
+
+# d(1,3) > d(1,2) + d(2,3)
+1 - cor(x1, x2) + 1 - cor(x2, x3)
+```
+
+
+## Correlation distance isn't a distance metric!
+
+Using absolute distance doesn't fix things.
+
+```{r}
+# d(1,2)
+1 - abs(cor(x1, x2))
+# d(1,3)
+1 - abs(cor(x1, x3))
+# d(2,3)
+1 - abs(cor(x2, x3))
+
+
+# d(2,3) > d(1,2) + d(1,3)
+1 - abs(cor(x1, x2)) + 1 - abs(cor(x1, x3))
+```
+
+
+## Cosine Distance  (for clustering) {.smaller}
+
+$$d_C({\bf x}, {\bf y}) =  \frac{{\bf x} \cdot {\bf y}}{|| {\bf x} ||  ||{\bf y}||}$$
+$$= \frac{\sum_{i=1}^p x_i y_i}{\sqrt{\sum_{i=1}^p x_i^2 \sum_{i=1}^p y_i^2}}$$
+$$= 1 - r_P ({\bf x}, {\bf y})  \ \ \ \ \mbox{if } \overline{\bf x} = \overline{\bf y} = 0$$
+* Hamming Distance
+
+\begin{align}
+d_H({\bf x}, {\bf y}) = \sum_{i=1}^p I(x_i \ne y_i)
+\end{align}
+
+
+```{r fig.cap = "The Hamming distance across the two DNA strands is 7.", out.width='60%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../slides/img/hamdistGCTA.png")
+```
+
+
+
+## `dist` function in R
+
+```{r fig.cap = "The function `dist` in `R` calculates the distances given above.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../slides/img/distR.png")
+```
+
+
+
+## String distances {.smaller}
+
+<https://www.kdnuggets.com/2019/01/comparison-text-distance-metrics.html>
+
+```{r fig.cap = "Comparison of string distance metrics from https://www.kdnuggets.com/2019/01/comparison-text-distance-metrics.html.", out.width='100%', fig.align='center', echo=FALSE}
+knitr::include_graphics("../slides/img/text-distance-infographics.png")
+```   
+
+
+## k-Medoids
+
+Shortcomings of k-means
+
+* Center is calculated as average (establishes Euclidean distance)
+
+* Because center changes, distances must be re-calculated
+
+* Really, only Euclidean distance makes sense
+
+
+## Partitioning Around Medoids (PAM)
+
+Find the observations (data values!) $m_k$ that solve:
+
+$$\text{arg}\,\min\limits_{C_1, \ldots, C_k} \Bigg\{ \sum_{k=1}^K \sum_{i \in C_k}d(x_i, m_k) \Bigg\}$$
+
+- Not well implemented in R
+
+## Hierarchical Clustering
+
+> is a set of nested clusters that are organized as a tree.  Note that objects that belong to a child cluster also belong to the parent cluster.
+
+Stat Quest: <https://www.youtube.com/watch?v=7xHsRkOdVwo>
+
+
+## **Algorithm**:  Agglomerative Hierarchical Clustering Algorithm {.smaller}
+
+1. Begin with $n$ observations and a measure (such as Euclidean distance) of all the ${n \choose 2} = n(n-1)/2$ pairwise dissimilarities. Treat each observation as its own cluster.
+
+. . .
+
+2. For $i = n, n - 1, \ldots , 2$:  
+   a. Examine all pairwise inter-cluster dissimilarities among the $i$ clusters and identify the pair of clusters that are least dissimilar (that is, most similar). Fuse these two clusters. The dissimilarity between these two clusters indicates the height in the dendrogram at which the fusion should be placed. 
+   
+. . .
+
+   b. Compute the new pairwise inter-cluster dissimilarities among the $i - 1$ remaining clusters.
+
+
+
+
+## Definitions {.smaller}
+
+**Agglomerative** methods start with each object (e.g., gene, penguin, etc.) in its own group.  Groups are merged until all objects are together in one group.
+
+**Divisive** methods start with all objects in one group and break up the groups sequentially until all objects are individuals.
+
+**Single Linkage** algorithm defines the distance between groups as that of the closest pair of individuals.
+
+**Complete Linkage** algorithm defines the distance between groups as that of the farthest pair of individuals.
+
+**Average Linkage** algorithm defines the distance between groups as the average of the distances between all pairs of individuals across the groups.
+
+
+
+## Hierarchical clustering in R - tidymodels {.smaller}
+
+```{r}
+# Define a hierarchical clustering model
+hc_spec <- hier_clust(linkage_method = "complete",
+                      num_clusters = 3)
+
+# Create a workflow
+workflow <- workflow() |>
+  add_recipe(pen_recipe2) |>
+  add_model(hc_spec)
+
+# fit
+hc_fit <- workflow |>
+  fit(data = penguins_na_drop)
+
+
+```
+
+## Output {.smaller}
+
+```{r}
+hc_summary <- hc_fit %>% extract_fit_summary()
+hc_summary %>% str()
+```
+
+```{r}
+# This depends on our linkage chosen
+hc_preds <- hc_fit %>% predict(penguins_na_drop)
+hc_preds
+```
+
+```{r}
+hc_fit  |> extract_cluster_assignment(num_clusters = 3)
+hc_preds <- hc_fit |> augment(penguins_na_drop)
+head(hc_preds)
+```
+
+
+## Graph {.smaller}
+
+```{r}
+library(factoextra)
+
+hc_fit  %>%
+  extract_fit_engine() %>%
+  fviz_dend(main = "complete", k = 3)
+
+```
+
+
+## <i class="fas fa-laptop"></i> `Clustering`
+
+- Perform Kmeans and Hierarchical Clustering on the `iris` dataset (use `data("iris")`)

@@ -1,0 +1,365 @@
+---
+title: "Homework 4 Solutions"
+editor: 
+  markdown: 
+    wrap: 72
+editor_options: 
+  chunk_output_type: console
+---
+
+### 1.
+
+**We perform best subset, forward stepwise, and backward stepwise
+selection on a single data set. For each approach, we obtain p + 1
+models, containing** $0, 1, 2, . . . ,p$ **predictors.**
+
+**Explain your answers:**
+
+**(a) Which of the three models with k predictors has the smallest
+training RSS?**
+
+Best subsets since it considers every possible combination. It is
+possible both forward and backward stepwise pick the same k predictor
+model and have the same training RSS.
+
+(b) **Which of the three models with k predictors has the smallest test
+    RSS?**
+    
+You cannot determine this to be sure. It depends if the best subset choice on the training set overfit. If it did, one of the other approach models could perform better. 
+
+
+(c) **True or False:**
+
+i.  **The predictors in the k-variable model identified by forward
+    stepwise are a subset of the predictors in the (k+1)-variable model
+    identified by forward stepwise selection.**
+
+True, FSR keeps all k predictors from the previous step and adds an additional variable. 
+
+ii. **The predictors in the k-variable model identified by backward
+    stepwise are a subset of the predictors in the (k + 1)- variable
+    model identified by backward stepwise selection.**
+    
+True, BSR drops 1 variable form a k+1 predictor model and goes down to a k variable model. The k variables must be in the k+1 variable model. 
+
+
+iii. **The predictors in the k-variable model identified by backward
+     stepwise are a subset of the predictors in the (k + 1)- variable
+     model identified by forward stepwise selection.**
+
+False, not always true. 
+
+iv. **The predictors in the k-variable model identified by forward
+    stepwise are a subset of the predictors in the (k+1)-variable model
+    identified by backward stepwise selection.**
+    
+False, not always true. 
+
+v.  **The predictors in the k-variable model identified by best subset
+    are a subset of the predictors in the (k + 1)-variable model
+    identified by best subset selection.**
+    
+False, not always true. 
+
+### **8.**
+
+**In this exercise, we will generate simulated data, and will then use
+this data to perform best subset selection.**
+
+(a) **Use the rnorm() function to generate a predictor X of length n =
+    100, as well as a noise vector $\epsilon$ of length n = 100.**
+    
+    
+```{r}
+X <- rnorm(100, mean = 10, sd = 10) 
+ep <- rnorm(100,sd = 30)
+```
+
+
+(b) **Generate a response vector** $Y$ **of length** $n=100$ **according
+    to the model**
+
+$$Y=\beta_0 + \beta_1X+\beta_2X^2+\beta_3X^3+\epsilon,$$
+
+**where** $\beta_0,\beta_1,$ **and** $\beta_3$ **are constants of your
+choice.**
+
+```{r}
+Y = 5 + 3*X + 10*X^2+ 2*X^3 + ep
+```
+
+
+
+(c) **Use the regsubsets() function to perform best subset selection in
+    order to choose the best model containing the predictors $X$,$X^2$, . . .
+    ,$X^{10}$. What is the best model obtained according to $C_p$, BIC, and
+    adjusted $R^2$? Show some plots to provide evidence for your answer,
+    and report the coefficients of the best model obtained. Note you
+    will need to use the data.frame() function to create a single data
+    set containing both X and Y .**
+    
+```{r}
+simdata <- data.frame(ysim = Y,xsim = X)
+
+head(simdata)
+```
+
+```{r}
+create_metrics_table <- function(X){
+  K <- length(X$rsq)
+  metrics_df <- data.frame(num_pred= 1:K, # K different models
+                           Rsq = X$rsq,
+                           rss = X$rss,
+                           adjr2 = X$adjr2,
+                           cp = X$cp,
+                           bic = X$bic) |>
+    tidyr::pivot_longer(cols=Rsq:bic,
+                 names_to = "metric",values_to = "metric_val")
+  # This pivot puts the metric values in 1 column 
+  # and creates another column for the name of 
+  # the metric
+  return(metrics_df)
+}
+```
+
+```{r}
+library(leaps)
+bss_fit <- regsubsets(ysim~poly(xsim,10),data = simdata)
+bss_fit
+
+bss_summary <- summary(bss_fit)
+
+bss_summary
+
+```
+
+
+
+```{r}
+library(ggplot2)
+bss_full_data_metrics <- create_metrics_table(bss_summary)
+head(bss_full_data_metrics)
+
+bss_full_data_metrics |> 
+  ggplot(aes(y=metric_val,x=num_pred))+
+    geom_line() + geom_point()+
+    facet_wrap(~metric,scales = "free_y")+
+    labs(title="Best Subset Regression",
+         subtitle = "On Full Data")
+```
+
+According to $C_p$, BIC, and adjusted $R^2$ the best model is the three variable model. On the adjusted $R^$ graph you can see substantial improvements in the value between the 1 and 2 variable and the 2 and 3 variable model, and then little to no improvements beyond 3 variables. With $C_p$ and BIC we see the same behavior with with substantial decreases in the values between 1 and 2 variable models and then again between 2 and 3 variable models. All 3 metrics agree that the best model is a model with 3 variables. 
+
+
+(d) **Repeat (c), using forward stepwise selection and also using
+    backwards stepwise selection. How does your answer compare to the
+    results in (c)?**
+    
+```{r}
+fsw_fit <- regsubsets(ysim~poly(xsim,10),data = simdata,method = "forward")
+fsw_fit
+
+fsw_summary <- summary(fsw_fit)
+
+fsw_summary
+
+fsw_full_data_metrics <- create_metrics_table(fsw_summary)
+head(fsw_full_data_metrics)
+
+fsw_full_data_metrics |> 
+  ggplot(aes(y=metric_val,x=num_pred))+
+    geom_line() + geom_point()+
+    facet_wrap(~metric,scales = "free_y")+
+    labs(title="Forward Stepwise Regression",
+         subtitle = "On Full Data")
+```
+
+```{r}
+bsw_fit <- regsubsets(ysim~poly(xsim,10),data = simdata,method = "backward")
+fsw_fit
+
+bsw_summary <- summary(bsw_fit)
+
+bsw_summary
+
+bsw_full_data_metrics <- create_metrics_table(bsw_summary)
+head(bsw_full_data_metrics)
+
+bsw_full_data_metrics |> 
+  ggplot(aes(y=metric_val,x=num_pred))+
+    geom_line() + geom_point()+
+    facet_wrap(~metric,scales = "free_y")+
+    labs(title="Backward Stepwise Regression",
+         subtitle = "On Full Data")
+```
+
+With both forward and backwards stepwise regression we see identical behavior of BIC, $C_p$ and adjusted $R^2$ as with the best subset regression, the best model is with 3 predictors. 
+
+(e) **Now fit a lasso model to the simulated data, again using $X$,$X^2$, . .
+    . ,$X^{10}$ as predictors. Use cross-validation to select the optimal
+    value of $\lambda$. Create plots of the cross-validation error as a function
+    of $\lambda$. Report the resulting coefficient estimates, and discuss the
+    results obtained.**
+    
+```{r}
+library(tidymodels)
+set.seed(434)
+
+simdat_alt <- simdata|>
+  bind_cols(poly(simdata$xsim,degree=10,simple = T,raw = T))|>
+  select(-xsim)
+
+sim_cv <- vfold_cv(simdat_alt, v = 5)
+
+lasso_spec <- 
+  linear_reg(penalty = tune(), mixture = 1) |> 
+  set_engine("glmnet") 
+
+lam_grid <- expand_grid(penalty = seq(0, 325, by = 10))
+
+
+rec <- recipe(ysim ~ ., data = simdat_alt) |>
+  step_normalize(all_predictors())
+
+results <- tune_grid(lasso_spec,
+                     preprocessor = rec,
+                     grid = lam_grid, 
+                     resamples = sim_cv)
+
+metrics<- results |>
+            collect_metrics()
+
+metrics
+
+metrics |> 
+  filter(.metric =="rmse") |> 
+  group_by(penalty)|>
+  summarise(penalty = min(penalty),
+            mean = mean(mean))|>
+  ggplot(aes(x=penalty,y=mean)) +
+    geom_point()+
+    labs(title = "Lasso Penalty vs RMSE")
+
+
+
+final_spec <- linear_reg(penalty = 0, mixture = 1) |>
+  set_engine("glmnet")
+
+final_lasso_workflow <- workflow()|>
+  add_model(final_spec) |> 
+  add_recipe(rec)
+
+final_lasso_fit <- final_lasso_workflow|>
+  fit(data =simdat_alt)
+
+final_lasso_fit |> tidy()
+
+```
+
+Lasso regression keeps only variables $X^2$ and $X^3$ which misses X. 
+
+
+(f) **Now generate a response vector Y according to the model**
+
+$$Y=\beta_0 + \beta_7X^7 + \epsilon$$
+
+**and perform best subset selection and the lasso. Discuss the results
+obtained.**
+
+New Sim Data
+```{r}
+Y2 = 5 + 3*X + 5*X^7 + ep
+
+simdata_2 <- data.frame(ysim = Y2,xsim = X)
+
+
+## This is to fit the model with the polynomials
+simdat_alt_2 <- simdata_2|>
+  bind_cols(poly(simdata$xsim,degree=10,simple = T,raw = T))|>
+  select(-xsim)
+
+```
+
+
+### Best Subsets
+
+```{r}
+bss_fit_2 <- regsubsets(ysim~.,data = simdat_alt_2)
+bss_fit_2
+
+bss_summary_2 <- summary(bss_fit_2)
+
+bss_summary_2
+
+bss_full_data_metrics_2 <- create_metrics_table(bss_summary_2)
+
+head(bss_full_data_metrics_2)
+
+bss_full_data_metrics_2 |> 
+  ggplot(aes(y=metric_val,x=num_pred))+
+    geom_line() + geom_point()+
+    facet_wrap(~metric,scales = "free_y")+
+    labs(title="Best Subset Regression",
+         subtitle = "On Full Data")
+```
+
+
+Best subsets indicates that either two or eight coefficients should be kept. If we choose 2, the  model would be X and $X^7$, the correct model. If we choose predictors then we would keep all but $X^4$, $X^5$ and $X^6$. 
+
+
+### Lasso
+```{r}
+library(tidymodels)
+set.seed(434)
+
+sim_cv <- vfold_cv(simdat_alt_2, v = 5)
+
+lasso_spec <- 
+  linear_reg(penalty = tune(), mixture = 1) |> 
+  set_engine("glmnet") 
+
+lam_grid <- expand_grid(penalty = seq(0, 100, by = 10))
+
+
+rec <- recipe(ysim ~ ., data = simdat_alt_2) |>
+  step_scale(all_predictors())
+
+results <- tune_grid(lasso_spec,
+                     preprocessor = rec,
+                     grid = lam_grid, 
+                     resamples = sim_cv)
+
+metrics<- results |>
+            collect_metrics()
+
+metrics
+
+metrics |> 
+  filter(.metric =="rmse") |> 
+  group_by(penalty)|>
+  summarise(penalty = min(penalty),
+            mean = mean(mean))|>
+  ggplot(aes(x=penalty,y=mean)) +
+    geom_line()+
+    labs(title = "Lasso Penalty vs RMSE")
+
+metrics |> filter(.metric=="rmse") |>
+  arrange(mean)
+
+# Choose lambda = 81
+
+final_spec <- linear_reg(penalty = 0, mixture = 1) |>
+  set_engine("glmnet")
+
+final_lasso_workflow <- workflow()|>
+  add_model(final_spec) |> 
+  add_recipe(rec)
+
+final_lasso_fit <- final_lasso_workflow|>
+  fit(data =simdat_alt_2)
+
+final_lasso_fit |> tidy()
+```
+
+In this case, lasso keeps the intercept and coefficients for $X^6$, $X^7$ and $X^8$. Best subsets did a better job. 
+

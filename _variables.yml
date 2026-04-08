@@ -1,0 +1,37 @@
+author: Tyler George
+
+instructor:
+  name: Dr. Tyler George
+  name_no_title: Tyler George
+  email: tgeorge@cornellcollege.edu
+  url: "https://stats-tgeorge.github.io/personal_website/"
+  moodle: "https://moodle.cornellcollege.edu/course/view.php?id=7669#section-0"
+  twitter: stats_tgeorge
+  github: stats-tgeorge
+  office: "West 311"
+  officehrs: "MWTh 3:05pm-4:05pm and by appt."
+  appointment_url: "https://calendar.app.google/3AF98Uc9VdLwRdp39"
+
+course:
+  title: "Introduction to Statistical Learning"
+  subtitle: "Learn the concepts behind and apply statistical and machine learning techniques. The course will use the statistical computing language R."
+  number: "STA 362"
+  semester: "Spring 2024 Block 8"
+  time: "M-F,9am-11am and 1pm-2pm"
+  location: "West 201"
+  github: "https://github.com/STA362-SB8-24/STA362StatLearning"
+  coursecal: "https://calendar.google.com/calendar/u/0?cid=Y19hMDllY2RmYTIyMjMyMTY1YWQwNTE0YjI0Y2FmNjMyMWM1N2YwY2M3MjExNmQ2MjAxMzQxZDdlMTFmZTZiZTUwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
+  moodle: "https://moodle.cornellcollege.edu/course/view.php?id=7669#section-0"
+  url: "https://sta362-sb8-24.github.io/STA362StatLearning/"
+  copyright_year: "2024"
+  text: | 
+    The main text book is: [An Introduction to Statistical Learning with Applications in R](https://hastie.su.domains/ISLR2/ISLRv2_corrected_June_2023.pdf.download.html)  by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani -- it is freely available online.
+  text2: |
+    The secondary text is R resource: [Tidy Modeling with R](https://www.tmwr.org/) by Max Kuhn and Julia Silge -- it is freely available online.
+  
+college:
+  name: Cornell College
+  url: "www.cornellcollege.edu"
+
+citation:
+  websource: Dr. Lucy D’Agostino McGowan

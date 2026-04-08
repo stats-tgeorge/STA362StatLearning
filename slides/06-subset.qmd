@@ -1,0 +1,376 @@
+---
+title: "Chapter 6 Part 1"
+subtitle: "Subset Selection"
+format: 
+  revealjs:
+    output-file: "06-subset.html"
+    slide-number: true
+  html:
+    output-file: "06-subset_o.html"
+logo: "img/icon.png"
+---
+
+## Setup
+
+```{r, echo = T, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(tidymodels)
+library(gridExtra)
+library(ISLR2)
+library(leaps)
+```
+
+## Recall
+
+-   Linear model $$Y = \beta_0 + \beta_1X_1+...\beta_pX_p+\epsilon \text{ where }\epsilon \sim N(0,\sigma_{\epsilon})$$
+
+-   Despite its simplicity, the linear model has distinct advantages in terms of its interpretability and often shows good predictive performance.
+
+::: question
+-   How can we improve it?
+:::
+
+## Why
+
+-   Prediction accuracy when $p>n$, to control variance
+
+-   Removing irrelevant features, we can get a simpler model to interpret
+
+-   Automating this procedure, by doing *feature selection*
+
+## Three classes of models
+
+-   Subset Selection (today)
+
+-   Shrinkage
+
+-   Dimension Reduction
+
+## Today example: Credit
+
+```{r}
+data("Credit")
+set.seed(343543)
+c_split <- initial_split(Credit,.75)
+c_train <- training(c_split)
+c_test <- testing(c_split)
+```
+
+
+## Subset Selection
+
+-   Identify a subset of the $p$ predictors that we believe are related to the response
+
+-   Generally going to use least squares, with more or less predictors and compare
+
+## Best Subset Selection {.smaller}
+
+1.  Start with a null, constant model. Uses mean to predict for all values of response. Call it $\mathcal{M}_0$
+2.  For each $k=1,2,...,p$:
+a)  Fit all $\binom{p}{k}$ models that contain exactly $k$ predictors
+b)  Pick the best model among them, *best* according to smallest RSS or largest $R^2$. Call it $\mathcal{M}_k$
+3.  Select a single best model among $\mathcal{M}_0, \mathcal{M}_1,...,\mathcal{M}_p$ using cross-validation prediction error, $C_p$, AIC, BIC, or adjusted $R^2$
+
+## Example - Credit Data {.smaller}
+
+:::: {.columns}
+::: {.column}
+
+![](img/bestss.png)
+
+:::
+
+::: {.column}
+
+-   RSS and $R^2$ are displayed.
+-   Red frontier tracks the best model for a given number of predictors, according to RSS and $R^2$.
+-   Data set contains only ten predictors, the x-axis ranges from 1 to 11, since one of the variables is categorical and takes on three values, leading to the creation of two dummy variables
+
+:::
+::::
+
+## Extensions
+
+-   These approaches can be applied to other types of regression such as logistic
+-   In other models, you would use *deviance* instead of RSS (lower is still better)
+
+
+
+
+## Best Subsets - not tidymodels {.smaller}
+
+- Predict `balance` based on `Income`, `Limit`, `Rating`, `Cards`, `Age`, `Education`, `Own`, `Married`, and `Region`
+
+- Not in `tidymodels`
+
+- (*) indicates the given variable is in the corresponding model 
+
+```{r}
+#| code-fold: true
+best_ss_model <- regsubsets(Balance ~.,data = c_train )
+
+summary(best_ss_model)
+  
+```
+## Best Subsets
+
+- Save the summary and see whats included
+```{r}
+#| code-fold: true
+reg_summary <- summary(best_ss_model)
+names(reg_summary) # See what metrics are included 
+```
+
+- We can access each of these with `$`
+- This gives you the value for each of the best models with different number of predictors
+```{r}
+#| code-fold: true
+reg_summary$rsq
+```
+
+
+## Best Subsets - function
+
+- Let's make the plots we saw before to help us choose. 
+```{r}
+#| code-fold: true
+create_metrics_table <- function(X){
+  K <- length(X$rsq)
+  metrics_df <- data.frame(num_pred= 1:K, # K different models
+                           Rsq = X$rsq,
+                           rss = X$rss,
+                           adjr2 = X$adjr2,
+                           cp = X$cp,
+                           bic = X$bic) |>
+    pivot_longer(cols=Rsq:bic,
+                 names_to = "metric",values_to = "metric_val")
+    # This pivot puts the metric values in 1 column 
+        # and creates another column for the name of 
+        # the metric
+   return(metrics_df)
+}
+```
+
+
+## Best Subsets - Graph
+```{r}
+#| code-fold: true
+metrics_df <- create_metrics_table(reg_summary)
+
+metrics_df |> 
+  ggplot(aes(y=metric_val,x=num_pred))+
+    geom_line() + geom_point()+
+    facet_wrap(~metric,scales = "free_y")
+```
+
+## Best Subsets - Best Values
+
+- We can use the which function to tell us the vector element that has a max or min
+```{r}
+#| code-fold: true
+which.max(reg_summary$rsq)
+```
+
+## Best Subsets - Looking at model
+
+- We can use the `coef` function to look at the coefficients of a model
+```{r}
+#| code-fold: true
+coef(best_ss_model,8)
+```
+
+- Once we choose the best model, we can refit it with tidymodels!
+
+## `r fontawesome::fa("laptop")` `Application Exercise`
+
+Try best subset regression on the `penguins` data in the `palmerpenguins` package to find the best model to predict weight. 
+
+## Stepwise Selection {.smaller}
+
+::: question
+Why is Best Subsets not ideal?
+:::
+
+-   Best subsets does not work well when $p$ is large as it increases the chance we $overfit$ on training data.
+
+-   There is large search space for models!
+
+-   High variance of coefficient estimates
+
+-   *stepwise* methods, are far more restrictive and more attractable
+
+## Forward Stepwise Selection
+
+-   Begins with a model containing no predictors, and then adds predictors to the model, one-at-a-time, until all of the predictors are in the model.
+
+-   At each step the variable that gives the greatest additional improvement to the fit is added to the model.
+
+## Forward Stepwise Selection {.smaller}
+
+1.  Start with a null, constant model. Uses mean to predict for all values of response. Call it $\mathcal{M}_0$
+2.  For each $k=0,1,2,...,p-1$:
+a)  Fit all $p-k$ models that augment the predictors in $\mathcal{M}_k$ with one additional predictor.
+b)  Chose the best model among the $p-k$ models and call it $\mathcal{M}_{k+1}$, *best* according to smallest RSS or largest $R^2$.
+3.  Select a single best model among $\mathcal{M}_0, \mathcal{M}_1,...,\mathcal{M}_p$ using cross-validation prediction error, $C_p$, AIC, BIC, or adjusted $R^2$
+
+## Forward Stepwise Selection
+
+-   Computational advantage over best subset
+
+-   Not guaranteed to find the best model of all $2^p$ subsets of predictors.
+
+::: question
+-   Why not?
+:::
+
+## Forward Stepwise Credit Example {.smaller}
+
+| Num Variables | Best Subset                   | Forward Stepwise              |
+|---------------|-------------------------------|-------------------------------|
+| One           | `rating`                      | `rating`                      |
+| Two           | `rating`, `income`            | `rating`, `income`            |
+| Three         | `rating`, `income`, `student` | `rating`, `income`, `student` |
+| Four          | `student`, `limit`            | `student`, `limit`            |
+
+The first four selected models for best subset selection and forward stepwise selection on the Credit data set. 
+
+- The first three models are identical but the fourth models differ.
+
+## Backward Stepwise Selection
+
+- Like forward stepwise selection, backward stepwise selection provides an efficient alternative to best subset selection.
+- Unlike forward stepwise selection, it begins with the full least squares model containing all p predictors, and then iteratively removes the least useful predictor, one-at-a-time.
+
+## Backward Stepwise Selection {.smaller}
+
+1.  Let $\mathcal{M}_p$ denote the _full_ model, which contains $p$ predictors
+2.  For each $k=p,p-1,...,1$:
+a)  Fit all $k$ models that contain all but one of the predictors in $\mathcal{M}_k$, for a total of $k-1$ predictors
+b)  Chose the best model among the $k$ models and call it $\mathcal{M}_{k-1}$, *best* according to smallest RSS or largest $R^2$.
+3.  Select a single best model among $\mathcal{M}_0, \mathcal{M}_1,...,\mathcal{M}_p$ using cross-validation prediction error, $C_p$, AIC, BIC, or adjusted $R^2$
+
+## Backward Stepwise Selection {.smaller}
+
+- Like forward stepwise selection, the backward selection approach searches through only $1+ p(p + 1)=2$ models, and so can be applied in settings where $p$ is too large to apply
+best subset selection
+
+- Like forward stepwise selection, backward stepwise selection is not guaranteed to yield the best model containing a subset of the $p$ predictors.
+
+- Backward selection requires that the number of samples $n$ is larger than the number of variables $p$ (so that the full model can be fit). In contrast, forward stepwise can be used even when $n < p$, and so is the only viable subset method when $p$ is very large.
+
+## Choosing an Optimal Model
+
+- The model containing all of the predictors will always have the smallest RSS and the largest $R^2$, since these quantities are related to the training error.
+
+- We wish to choose a model with low test error, not a model with low training error. Recall that training error is usually a poor estimate of test error.
+
+- Thus RSS and $R^2$ are not suitable for selecting the best model among a collection of models with different numbers of predictors.
+
+## Estimating Test error
+
+- We can indirectly estimate test error by making an adjustment to the training error to account for the bias due to overfitting.
+
+- We can directly estimate the test error, using either a validation set approach or a cross-validation approach, as discussed in previous lectures.
+
+## $C_p$, AIC, BIC, Adjusted $R^2$
+
+- These adjust the training error for the model size, and can be used to select among a set of models with different numbers of variables.
+
+## $C_p$, AIC, BIC, Adjusted $R^2${.smaller}
+
+This displays $C_p$, BIC, and adjusted $R^2$ for the best model of each size produced by best subset selection on the Credit data set.
+
+![](img/TestMetrics.png)
+
+## Mallow's $C_p$
+
+$$C_p = \frac{1}{n}(RSS + 2d\hat{\sigma}^2)$$
+
+- where $d$ is the total number of parameters used and $\hat{\sigma}^2$ is an estimate of the variance of the error $\epsilon$ associated with each response measurement.
+
+## Akaike information criterion (AIC)
+
+- Defined for large class of models fit by maximum likelihood:
+
+- $$AIC = -2log(L)+2\cdot d$$ where $L$ is the maximized value of the likelihood function for the estimated model. 
+
+- In the case linear models with normal errors, maximum likelihood and  least squares are the same thing, and $C_p$ and AIC are equal. 
+
+
+## Bayesian information criterion (BIC) {.smaller}
+
+- $$BIC = \frac{1}{n}(RSS + log(n)d\hat{\sigma}^2)$$
+
+- Like $C_p$, the BIC will tend to take on a small value for a model with low test error, and so generally we select the model that has the _lowest_ BIC value
+
+- Note that BIC replaces the $2d\hat{\sigma}^2$ used by $C_p$ with a $log(n)d\hat{\sigma}^2$ term, where $n$ is the number of observations
+
+- Since $log(n)>2$ for any $n>7$, the BIC statistics places a heavier penalty on models with many variance and hence results in the selection of smaller models than $C_p$
+
+
+## Adjusted $R^2${.smaller}
+
+- For _least squares model_ with $d$ variables, the adjusted $R^2$ is
+
+- $$\text{Adjusted } R^2 = 1-\frac{RSS/(n-d-1)}{TSS/(n-1)}$$
+
+- Unlike $C_p$, AIC, and BIC, for which a small value indicates a model with a low test error, a large value of adjusted $R^2$ indicates a model with a small test error.
+
+- Maximizing the adjusted $R^2$ is equivalent to minimizing $\frac{RSS}{n-d-1}$. While RSS always decreases as the number of variables in the model increases, $\frac{RSS}{n-d-1}$ may increase or decrease, due to the presence of $d$ in the denominator.
+
+- Unlike the $R^2$ statistic, the adjusted $R^2$ statistic pays a price for the inclusion of unnecessary variables in the model.
+
+## Validation and CV Sets {.smaller}
+
+- Each of the procedures returns a sequence of models $\mathcal{M}_k$ indexed by model size $k = 0, 1, 2,,,$. We want to select $\hat{k}$. Once selected, we will return model $\mathcal{M}_{\hat{k}}$
+
+- We compute the validation set error or the cross-validation error for each model $\mathcal{M}_k$ under consideration, and then select the $k$ for which the resulting estimated test error is smallest.
+
+- This procedure has an advantage relative to AIC, BIC, $C_p$, and adjusted R2, in that it provides a direct estimate of the test error, and doesn't require an estimate of the error
+variance $\sigma^2$.
+
+- It can also be used in a wider range of model selection tasks, even in cases where it is hard to pinpoint the model degrees of freedom (e.g. the number of predictors in the
+model) or hard to estimate the error variance $\sigma^2$
+
+## Compare Credit Example {.smaller}
+
+::: {.panel-tabset}
+
+### Figure
+
+- ![](img/compare_metrics.png)
+
+### Intepretation
+
+- The validation errors were calculated by randomly selecting three-quarters of the observations as the training set, and the remainder as the validation set.
+
+- The cross-validation errors were computed using $k = 10 folds$. In this case, the validation and cross-validation methods both result in a six-variable model.
+
+- However, all three approaches suggest that the four-, five-, and six-variable models are roughly equivalent in terms of their test errors.
+
+- In this setting, we can select a model using the one-standard-error rule. We first calculate the standard error of the estimated test RSS for each model size, and then select the smallest model for which the estimated test error is within one standard error of the lowest point on the curve.
+
+:::
+
+## Forward Stepwise in R
+
+```{r}
+fsw_model <- regsubsets(Balance ~.,data = c_train,method="forward")
+
+summary(fsw_model)
+  
+```
+
+
+## Backward Stepwise in R
+
+
+```{r}
+bsw_model <- regsubsets(Balance ~.,data = c_train,method="backward")
+
+summary(bsw_model)
+```
+
+## `r fontawesome::fa("laptop")` `Application Exercise`
+
+Perform forward stepwise and backward stepwise on the penguins dataset to find the best model to predict weight. 

@@ -1,0 +1,100 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+  resources:
+    - "img/"
+    - "www/"
+  output-dir: docs
+  
+website:
+  title: "{{< var course.title >}}"
+  site-url: https://sta362-sb8-24.github.io/STA362StatLearning/
+      
+  sidebar:
+    background: "#BBBCBC"
+    logo: "img/favicon.png" # This is where I put my hex
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.com/DSC223-SB7-2024/DSC223_S24_website
+        text: "GitHub organization"
+      - icon: code-square
+        href: http://turing.cornellcollege.edu:8787/
+        text: "RStudio Server"
+      - icon: person-fill
+        text: "Moodle"
+        menu:
+          - text: Announcements
+            url: https://moodle.cornellcollege.edu/mod/forum/view.php?id=262697
+          - text: Gradebook
+            url: https://moodle.cornellcollege.edu/grade/report/grader/index.php?id=7669
+          - text: Homepage
+            url: https://moodle.cornellcollege.edu/course/view.php?id=7669
+      - icon: calendar
+        href: https://calendar.google.com/calendar/u/0?cid=Y19hMDllY2RmYTIyMjMyMTY1YWQwNTE0YjI0Y2FmNjMyMWM1N2YwY2M3MjExNmQ2MjAxMzQxZDdlMTFmZTZiZTUwQGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20
+        text: Course Calendar
+
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - section: "Course Contents"
+        contents:
+          - href: index.qmd
+            text: Schedule & Assignments
+          - href: course-links.qmd
+            text: Useful links
+          - href: project.qmd
+            text: Project
+      #     - href: project/1-working-collaboratively.qmd
+      #       text: Working Together Lab
+            
+      - section: "Course information"
+        contents:
+          - href: syllabus.qmd
+            text: Syllabus
+          - href: course-overview.qmd
+            text: Overview
+          - href: course-support.qmd
+            text: Support
+          - href: course-instructor.qmd
+            text: Instructor
+          - href: computing-access.qmd
+            text: R/RStudio Access
+     
+      
+      
+      
+      
+
+  page-footer:
+    left: "Content {{< fa brands creative-commons >}} {{< var course.copyright_year >}} by [{{< var instructor.name_no_title >}}]({{< var instructor.url >}})"
+    right: |
+      Made with {{< fa brands r-project >}} and [Quarto](https://quarto.org/)<br>
+      [View the source at {{< fa brands github >}} GitHub]({{< var course.github >}})
+
+  favicon: "/img/favicon.png"
+  twitter-card:
+    image: "/img/twitter.png"
+    card-style: summary_large_image
+    creator: "@stats_tgeorge"
+  open-graph:
+    image: "/img/twitter.png"
+    locale: en_US
+    
+format:
+  html:
+    theme:
+      - united
+      - www/style.scss
+    toc: true
+    highlight-style: monokai
+
+execute:
+  freeze: auto
+
+
+    
+

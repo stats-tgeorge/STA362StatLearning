@@ -1,0 +1,698 @@
+---
+title: "Chapter 6 Part 3"
+subtitle: "tidymodels and shrinkage"
+format: 
+  revealjs:
+    output-file: "06-3-lasso_ridge_tm.html"
+    slide-number: true
+  html:
+    output-file: "06-3-lasso_ridge_tm_o.html"
+editor_options: 
+  chunk_output_type: console
+logo: "img/icon.png"
+---
+
+
+## Setup
+
+```{r, echo = T, message = FALSE, warning = FALSE}
+library(tidyverse)
+library(tidymodels)
+library(ISLR2)
+```
+
+## Lasso and Ridge - Statquest
+
+<https://www.youtube.com/watch?v=Q81RR3yKn30&t=7s> 
+
+<https://www.youtube.com/watch?v=NGf0voTMlcs>
+
+On your own:
+
+Ridge Vs Lasso
+<https://www.youtube.com/watch?v=Xm2C_gTAl8c>
+
+Elastic Net
+<https://www.youtube.com/watch?v=1dKRdX9bfIo>
+
+
+## Ridge Regression {.small}
+
+:::: columns
+
+::: column
+
+### Pros
+
+* Can be used when $p > n$
+* Can be used to help with multicollinearity
+* Will decrease variance
+(as $\lambda \rightarrow \infty$ )
+
+:::
+
+::: column
+
+### Cons
+
+* Will have increased bias (compared to least squares)
+* Does not really help with variable selection (all variables are included in _some_ regard, even if their $\beta$ coefficients are really small)
+
+:::
+
+::::
+
+
+
+## Lasso {.small}
+
+:::: columns
+
+::: column
+
+### Pros
+
+* Can be used when $p > n$
+* Can be used to help with multicollinearity
+* Will decrease variance
+(as $\lambda \rightarrow \infty$ )
+* Can be used for variable selection, since it will make some $\beta$ coefficients exactly 0
+
+:::
+
+::: column
+
+### Cons
+
+* Will have increased bias (compared to least squares)
+* If $p>n$ the lasso can select **at most** $n$ variables
+
+:::
+
+::::
+
+
+
+
+
+
+## What if we want to do both? {.small}
+
+* Elastic net!
+
+* $RSS + \lambda_1\sum_{j=1}^p\beta^2_j+\lambda_2\sum_{j=1}^p|\beta_j|$
+
+. . .
+
+::: question
+What is the $\ell_1$ part of the penalty?
+:::
+
+. . .
+
+::: question
+What is the $\ell_2$ part of the penalty
+:::
+
+
+
+## Elastic net {.small}
+
+$$RSS + \lambda_1\sum_{j=1}^p\beta^2_j+\lambda_2\sum_{j=1}^p|\beta_j|$$
+
+::: question
+When will this be equivalent to Ridge Regression?
+:::
+
+
+
+## Elastic net {.small}
+
+$$RSS + \lambda_1\sum_{j=1}^p\beta^2_j+\lambda_2\sum_{j=1}^p|\beta_j|$$
+
+::: question
+When will this be equivalent to Lasso?
+:::
+
+
+
+## Elastic Net {.small}
+
+$$RSS + \lambda_1\sum_{j=1}^p\beta^2_j+\lambda_2\sum_{j=1}^p|\beta_j|$$
+
+
+* The $\ell_1$ part of the penalty will generate a **sparse** model (shrink some $\beta$ coefficients to exactly 0)
+* The $\ell_2$ part of the penalty removes the limitation on the number of variables selected (can be $>n$ now)
+
+
+## tidymodels
+
+
+```{r}
+lm_spec <- 
+  linear_reg() |> # Pick linear regression
+  set_engine(engine = "lm") # set engine
+lm_spec
+```
+
+```{r}
+lm_fit <- fit(lm_spec,
+              mpg ~ horsepower,
+              data = Auto)
+```
+
+
+
+## Validation set approach {.smaller}
+
+```{r}
+Auto_split <- initial_split(Auto, prop = 0.5)
+Auto_split
+```
+
+. . .
+
+Extract the training and testing data
+
+```{r, eval = FALSE}
+training(Auto_split)
+testing(Auto_split)
+```
+
+
+## A faster way! {.smaller}
+
+* You can use `last_fit()` and specify the split
+* This will automatically train the data on the `train` data from the split
+* Instead of specifying which metric to calculate (with `rmse` as before) you can just use `collect_metrics()` and it will automatically calculate the metrics on the `test` data from the split
+
+## A faster way! 
+
+```{r}
+set.seed(100000)
+
+Auto_split <- initial_split(Auto, prop = 0.5)
+lm_fit <- last_fit(lm_spec,
+                   mpg ~ horsepower,
+                   split = Auto_split) 
+
+lm_fit |>
+  collect_metrics() 
+```
+
+
+
+## What about cross validation?
+
+```{r}
+Auto_cv <- vfold_cv(Auto, v = 5)
+Auto_cv
+```
+
+
+
+## What if we wanted to do some _preprocessing_ {.smaller}
+
+* For the shrinkage methods we discussed it was important to _scale_ the variables
+
+. . .
+
+
+::: question
+* What would happen if we scale **before** doing cross-validation? Will we get different answers?
+:::
+
+
+
+## What if we wanted to do some _preprocessing_ {.smaller}
+
+
+```{r}
+Auto_scaled <- Auto |>
+  mutate(horsepower = scale(horsepower))
+
+sd(Auto_scaled$horsepower)
+```
+
+
+```{r}
+Auto_cv_scaled <- vfold_cv(Auto_scaled, v = 5)
+
+# Will not actually use:
+map_dbl(Auto_cv_scaled$splits,
+        function(x) {
+          dat <- as.data.frame(x)$horsepower
+          sd(dat)
+        })
+```
+
+
+
+
+
+## What if we wanted to do some _preprocessing_ {.smaller}
+
+* `recipe()`!
+* Using the `recipe()` function along with `step_*()` functions, we can specify _preprocessing_ steps and R will automagically apply them to each fold appropriately.
+
+. . .
+
+```{r}
+rec <- recipe(mpg ~ horsepower, data = Auto) |>
+  step_scale(horsepower) 
+```
+
+
+* You can find all of the potential preprocessing steps here: <https://tidymodels.github.io/recipes/reference/index.html>
+
+## Where do we plug in this recipe? {.smaller}
+
+* The `recipe` gets plugged into the `fit_resamples()` function
+
+. . .
+
+```{r}
+Auto_cv <- vfold_cv(Auto, v = 5)
+
+rec <- recipe(mpg ~ horsepower, data = Auto) |>
+  step_scale(horsepower)
+
+results <- fit_resamples(lm_spec,
+                         preprocessor = rec,
+                         resamples = Auto_cv)
+
+results |>
+  collect_metrics()
+```
+
+
+
+## What if we want to predict mpg with more variables {.smaller}
+
+* Now we still want to add a step to _scale_ predictors
+* We could either write out all predictors individually to scale them
+* OR we could use the `all_predictors()` short hand.
+
+. . .
+
+```{r}
+rec <- recipe(mpg ~ horsepower + displacement + weight, data = Auto) |>
+  step_scale(all_predictors())
+```
+
+
+
+## Putting it together  {.smaller}
+
+```{r}
+rec <- recipe(mpg ~ horsepower + displacement + weight, data = Auto) |>
+  step_scale(all_predictors())
+
+results <- fit_resamples(lm_spec,
+                         preprocessor = rec,
+                         resamples = Auto_cv)
+
+results |>
+  collect_metrics()
+```
+
+## {{< fa laptop >}} `Application Exercise` {.smaller}
+
+::: nonincremental
+
+1. Examine the `Hitters` dataset by running `?Hitters` in the Console
+2. We want to predict a major league player's `Salary` from all of the other 19 variables in this dataset. Create a visualization of `Salary`.
+3. Create a recipe to estimate this model.
+4. Add a preprocessing step to your recipe, scaling each of the predictors
+
+:::
+
+
+
+## What if we have categorical variables?
+
+* We can turn the categorical variables into indicator ("dummy") variables in the recipe
+
+. . .
+
+```{r}
+rec <- recipe(mpg ~ horsepower + displacement + weight, data = Auto) |>
+  step_dummy(all_nominal()) |>
+  step_scale(all_predictors())
+```
+
+## What if we have missing data?
+
+* We can remove any rows with missing data
+
+. . .
+
+```{r}
+rec <- recipe(mpg ~ horsepower + displacement + weight, data = Auto) |>
+  step_dummy(all_nominal()) |>
+  step_naomit(everything()) |>
+  step_scale(all_predictors())
+```
+
+
+## What if we have missing data?
+
+
+```{r}
+rec <- recipe(mpg ~ horsepower + displacement + weight, data = Auto) |>
+  step_dummy(all_nominal()) |>
+  step_naomit(all_outcomes()) |>
+  step_impute_mean(all_predictors()) |>
+  step_scale(all_predictors())
+```
+
+## {{< fa laptop >}} `Application Exercise` {.smaller}
+
+::: nonincremental
+
+1. Add a preprocessing step to your recipe to convert nominal variables into indicators
+2. Add a step to your recipe to remove missing values for the outcome
+3. Add a step to your recipe to impute missing values for the predictors using the average for the remaining values **NOTE THIS IS NOT THE BEST WAY TO DO THIS!**
+
+
+:::
+
+
+## Ridge, Lasso, and Elastic net  {.smaller}
+
+When specifying your model, you can indicate whether you would like to use ridge, lasso, or elastic net. We can write a general equation to minimize:
+
+$$RSS + \lambda\left((1-\alpha)\sum_{i=1}^p\beta_j^2+\alpha\sum_{i=1}^p|\beta_j|\right)$$
+
+
+```{r}
+lm_spec <- linear_reg() |>
+  set_engine("glmnet") 
+```
+
+* First specify the engine. We'll use `glmnet`
+* The `linear_reg()` function has two additional parameters, `penalty` and `mixture`
+* `penalty` is $\lambda$ from our equation. 
+* `mixture` is a number between 0 and 1 representing $\alpha$
+
+## Ridge, Lasso, and Elastic net {.small}
+
+
+$$RSS + \lambda\left((1-\alpha)\sum_{i=1}^p\beta_j^2+\alpha\sum_{i=1}^p|\beta_j|\right)$$
+
+
+::: question
+What would we set `mixture` to in order to perform Ridge regression?
+:::
+
+. . .
+
+
+```{r}
+ridge_spec <- linear_reg(penalty = 100, mixture = 0) |> 
+  set_engine("glmnet") 
+```
+
+
+## {{< fa laptop >}} `Application Exercise` {.small}
+
+::: nonincremental
+
+1. Set a seed `set.seed(1)`
+2. Create a cross validation object for the `Hitters` dataset
+3. Using the recipe from the previous exercise, fit the model using Ridge regression with a penalty $\lambda$ = 300
+4. What is the estimate of the test RMSE for this model?
+
+:::
+
+
+## Ridge, Lasso, and Elastic net
+
+
+$$RSS + \lambda\left((1-\alpha)\sum_{i=1}^p\beta_j^2+\alpha\sum_{i=1}^p|\beta_j|\right)$$
+
+
+```{r}
+ridge_spec <- linear_reg(penalty = 100, mixture = 0) |> 
+  set_engine("glmnet") 
+```
+
+. . .
+
+```{r}
+lasso_spec <- linear_reg(penalty = 5, mixture = 1) |>
+  set_engine("glmnet") 
+```
+
+. . .
+```{r}
+enet_spec <- linear_reg(penalty = 60, mixture = 0.7) |> 
+  set_engine("glmnet") 
+```
+
+
+
+## Okay, but we wanted to look at 3 different models! {.small}
+
+
+```{r, eval = FALSE}
+ridge_spec <- linear_reg(penalty = 100, mixture = 0) |>
+  set_engine("glmnet") 
+
+results <- fit_resamples(ridge_spec,
+                         preprocessor = rec,
+                         resamples = Auto_cv)
+```
+
+
+
+. . .
+
+```{r, eval = FALSE}
+lasso_spec <- linear_reg(penalty = 5, mixture = 1) |>
+  set_engine("glmnet") 
+
+results <- fit_resamples(lasso_spec,
+                         preprocessor = rec,
+                         resamples = Auto_cv)
+```
+
+. . .
+
+```{r, eval = FALSE}
+elastic_spec <- linear_reg(penalty = 40, mixture = 0.1) |>
+  set_engine("glmnet") 
+
+results <- fit_resamples(elastic_spec,
+                         preprocessor = rec,
+                         resamples = Auto_cv)
+```
+
+* `r emo::ji("scream")` this looks like copy + pasting!
+
+
+
+## tune `r emo::ji("notes")`
+
+
+```{r}
+penalty_spec <- 
+  linear_reg(penalty = tune(), mixture = tune()) |> 
+  set_engine("glmnet") 
+```
+
+
+* Notice the code above has `tune()` for the the penalty and the mixture. Those are the things we want to vary!
+
+
+
+##  tune `r emo::ji("notes")` {.small}
+
+* Now we need to create a grid of potential penalties ( $\lambda$ ) and mixtures ( $\alpha$ ) that we want to test
+* Instead of `fit_resamples()` we are going to use `tune_grid()`
+
+. . .
+
+```{r tune, cache = TRUE, message = FALSE, warning = FALSE}
+grid <- expand_grid(penalty = seq(0, 100, by = 10),
+                    mixture = seq(0, 1, by = 0.25))
+
+results <- tune_grid(penalty_spec,
+                     preprocessor = rec,
+                     grid = grid, 
+                     resamples = Auto_cv)
+```
+
+##  tune autoplot
+
+```{r}
+autoplot(results)+ ## ggplot function
+  theme_classic()
+```
+
+
+## tune `r emo::ji("notes")` {.small}
+
+```{r}
+results |>
+  collect_metrics()
+```
+
+
+
+## Subset results {.small}
+
+```{r}
+results |>
+  collect_metrics() |>
+  filter(.metric == "rmse") |>
+  arrange(mean)
+```
+
+* Since this is a data frame, we can do things like filter and arrange!
+
+## Subset results {.small}
+
+```{r}
+results |>
+  collect_metrics() |>
+  filter(.metric == "rmse") |>
+  arrange(mean)
+```
+
+::: question
+Which would you choose?
+:::
+
+
+
+## {.small}
+
+```{r}
+results |>
+  collect_metrics() |>
+  filter(.metric == "rmse") |>
+  ggplot(aes(penalty, mean, color = factor(mixture), group = factor(mixture))) +
+  geom_line() +
+  geom_point() + 
+  labs(y = "RMSE")
+```
+
+
+
+```{r mtcars, echo = FALSE, cache = TRUE, message = FALSE, warning = FALSE}
+mtcars_cv <- vfold_cv(mtcars, v = 5)
+rec <- recipe(mpg ~ ., mtcars) |>
+  step_dummy(all_nominal()) |>
+  step_scale(all_predictors())
+results <- tune_grid(penalty_spec,
+                     rec,
+                     grid = grid,
+                     resamples = mtcars_cv)
+results |>
+  collect_metrics() |>
+  filter(.metric == "rmse") |>
+  ggplot(aes(penalty, mean, color = factor(mixture), group = factor(mixture))) +
+  geom_line() +
+  geom_point() + 
+  labs(y = "RMSE")
+```
+
+
+
+
+
+## {{< fa laptop >}} `Application Exercise` {.small}
+
+::: small
+::: nonincremental
+
+1. Using the `Hitters` cross validation object and recipe created in the previous exercise, use `tune_grid` to pick the optimal penalty and mixture values.
+2. Update the code below to create a grid that includes penalties from 0 to 50 by 1 and mixtures from 0 to 1 by 0.5.
+3. Use this grid in the `tune_grid` function. Then use `collect_metrics` and filter to only include the RSME estimates.
+4. Create a figure to examine the estimated test RMSE for the grid of penalty and mixture values -- which should you choose?
+:::
+:::
+
+```{r}
+#| eval: false
+grid <- expand_grid(penalty = seq(0, ----),
+                    mixture = seq(0, 1, by = ----))
+```
+
+
+## Putting it all together {.small}
+
+* Often we can use a combination of all of these tools together
+* First split our data
+* Do cross validation on _just the training data_ to tune the parameters
+* Use `last_fit()` with the selected parameters, specifying the split data so that it is evaluated on the left out test sample
+
+
+
+## Putting it all together {.small}
+
+
+```{r all, cache = TRUE, message = FALSE, warning = FALSE}
+auto_split <- initial_split(Auto, prop = 0.5)
+auto_train <- training(auto_split)
+auto_cv <- vfold_cv(auto_train, v = 5)
+
+rec <- recipe(mpg ~ horsepower + displacement + weight, data = auto_train) |>
+  step_scale(all_predictors())
+
+tuning <- tune_grid(penalty_spec,
+                     rec,
+                     grid = grid,
+                     resamples = auto_cv)
+
+tuning |>
+  collect_metrics() |>
+  filter(.metric == "rmse") |>
+  arrange(mean)
+```
+
+
+
+## Putting it all together {.small}
+
+
+```{r}
+final_spec <- linear_reg(penalty = 0, mixture = 0) |>
+  set_engine("glmnet")
+fit <- last_fit(final_spec, 
+                rec,
+                split = auto_split) 
+fit |>
+  collect_metrics()
+```
+
+## Extracting coefficients {.small}
+
+* We can use `workflow()` to combine the recipe and the model specification to pass to a `fit` object.
+
+. . .
+
+```{r}
+training_data <- training(auto_split)
+
+workflow() |>
+  add_recipe(rec) |>
+  add_model(final_spec) |>
+  fit(data = training_data) |>
+  tidy()
+```
+
+## {{< fa laptop >}} `Application Exercise` {.small}
+
+::: small
+::: nonincremental
+
+1. Using the final model specification, extract the coefficients from the model by creating a `workflow`
+2. Filter out any coefficients exactly equal to 0
+:::
+:::
+
+
+
+

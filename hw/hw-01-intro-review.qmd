@@ -1,0 +1,235 @@
+---
+title: "Homework 1"
+subtitle: "Review on R, RStudio, and ggplot + Bias-Varinace Trade Off"
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+```
+
+# Introduction
+
+::: column-margin
+R is the name of the programming language itself and RStudio is a convenient interface.
+:::
+
+The main goal of this homework is to re-introduce you to R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.
+
+As the homework's progress, you are encouraged to explore beyond what the homework dictates; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.
+
+# Getting started
+
+## This One Time
+
+-   Go to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+
+-   Click `File` tab on the bottom right and then click the work `Home`.
+
+-   Create a new folder using the little folder icon with the green plus on it. Use STA 362 in the folder name.
+
+## Every Homework/lab/activity
+
+Each of your assignments will begin with the following steps.
+
+-   Finding the instructions on our website: [https://sta362-sb8-24.github.io/STA362StatLearning/](%7B%7B%3C%20var%20course.url%20%3E%7D%7D)
+
+-   Going to our RStudio Server at <http://turing.cornellcollege.edu:8787/>
+
+-   Creating a new *project.* and giving it a sensible name such as *homework_1* and having that project in the course folder you created.
+
+-   Create a new quarto document and give it a sensible name such as *hw1*.
+
+-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
+
+    ```{r}
+    #| label: yaml_example
+    #| eval: false
+    ---
+    title: "Document title"
+    author: "my name"
+    format:
+      html:
+        embed-resources: true
+    ---
+    ```
+
+# Instructions
+
+Be sure to include the relevant R code as well as full sentences answering each of the questions (i.e. if I ask for the average, you can output the answer in R but **also** write a full sentence with the answer). Be sure to frequently save your files!
+
+# Packages
+
+In this homework, we will work with two packages: `ISLR` which is a package that accompanies your textbook and `tidyverse` which is a collection of packages for doing data analysis in a "tidy" way.
+
+Call these packages in with:
+
+```{r}
+#| label: load-packages
+#| eval: false
+library(tidyverse) 
+library(ISLR)
+```
+
+::: column-margin
+The top portion of your Quarto file (between the three dashed lines) is called YAML. It stands for "YAML Ain't Markup Language". It is a human-friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta-information about your document.
+:::
+
+## YAML
+
+In your Quarto (qmd) file in your project, change the author name to your name, and render the document. Make sure that you also have added the extra YAML clode above. 
+
+# Data
+
+The data frame we will be working with today is called `Smarket` and it's in the `ISLR` package.
+
+::: column-margin
+Remember: The Console is at the bottom of your RStudio workspace. Things you type in the Console will not be in your final report. This is a good place to peek at data (using the `glimpse()` funtion for example) and look at help files with the `?`.
+:::
+
+To find out more about the dataset, type the following in your Console: `?Smarket`. A question mark before the name of an object will always bring up its help file. This command must be ran in the Console. You can also use the `glimpse()` function to learn more about the dataset. Run `glimpse(Smarket)` in the Console.
+
+::: column-margin
+This dataset contains daily percentage returns for the S&P 500 stock index between 2001 and 2005.
+:::
+
+1.  **Based on the help function, how many rows (n) and columns (p) does the `Smarket` file have? What are the variables included in the data frame? Add your responses to your homework.**
+
+# Add a variable
+
+2.  **Add a variable called `day` to the `Smarket` data. This variable will range from 1 to `n()` within each `Year` where `n` is the number of observations in the given year.**
+
+Below is the code you will need to complete this exercise. The answer is already given, but you need to include relevant bits in your `qmd` document and successfully render it and view the results.
+
+Start with the `Smarket` dataset and pipe it into the `group_by` function to group by Year. Then pipe this into the `mutate` function to create a new variable called `day`. Overwrite the `Smarket` data frame with this new data frame that includes the added variable.
+
+::: column-margin
+Run this code in your Console and then run `Smarket` to see the new data frame.
+:::
+
+```{r}
+#| label: add_day
+#| eval: false
+Smarket <- Smarket |>
+  group_by(Year) |>
+  mutate(day = 1:n())
+```
+
+There is a lot going on here, so let's slow down and unpack it a bit.
+
+First, the pipe operator: `|>`, takes what comes before it and sends it as the first argument to what comes after it (this is the same as `%>%` we have used in the past). So here, we're saying take the `Smarket` data frame and `group_by` `Year`. Then take that output and `mutate` it to add a column called `day` that ranges from `1:n()` for each year.
+
+Second, the assignment operator: `<-`, assigns the name `Smarket` to the updated data frame.
+
+# Data visualization
+
+3.  **Plot `Volume` versus `day` for the `Year` 2001. Then calculate the average `Volume` in 2001.**
+
+Below is the code you will need to complete this exercise. The answer is already given, but you need to include relevant bits in your `qmd` document and successfully render it and view the results. Be sure to write a full sentence with the answer to the question (i.e. The average volume in 2001 is...), do not *only* output the R code.
+
+Start with the `Smarket` dataset and pipe it into the `filter` function to filter for observations where the `Year` column is equal to 2001. Store the resulting filtered data frame as a new data frame called `smarket_2001`.
+
+::: column-margin
+Notice we used `==` to check whether the year was equal to 2001. In your Console run `?Comparison` to see other relational operators that R uses.
+:::
+
+```{r}
+#| label: try_filter
+#| eval: false
+smarket_2001 <- Smarket |>
+  filter(Year == 2001)
+```
+
+Again, the pipe operator: `|>`, takes what comes before it and sends it as the first argument to what comes after it. So here, we're saying `filter` the `Smarket` data frame for observations where the column `Year` is equal to 2001.
+
+Then the assignment operator: `<-`, assigns the name `smarket_2001` to the filtered data frame.
+
+Now let's create a visualization We will use the `ggplot` function for this. Its first argument is the data you're visualizing. Next, we define the `aes`thetic mappings. In other words, the columns of the data that get mapped to certain aesthetic features of the plot, e.g. the `x` axis will represent the variable called `day` and the `y` axis will represent the variable called `Volume`. Then, we add another layer to this plot where we define which `geom`etric shapes we want to use to represent each observation in the data. In this case, we want these to be points, hence `geom_point`.
+
+```{r fig.fullwidth=TRUE}
+#| label: try_ggplot
+#| eval: false
+ggplot(data = smarket_2001, mapping = aes(x = day, y = Volume)) +
+  geom_point() + 
+  labs(title = "Volume for 2001")
+```
+
+a\) **Interpret the graph.**
+
+If this seems like a lot, you likely need to do some additional review beyond this homework!
+
+Finally, we use the `summarize()` function to take the `mean()` of the `Volume` variable. We have named this new variable `avg_volume`.
+
+```{r, eval = FALSE}
+#| label: try_summarize
+#| eval: false
+smarket_2001 |>
+  summarize(avg_volume = mean(Volume))
+```
+
+b\) **Discuss the summary.**
+
+4.  **Plot `Volume` vs. `day` for the year 2002. Calculate the average `Volume` in 2002. You can (and should) reuse code we introduced above, just replace the year with the desired year. How does this plot compare to 2001?**
+
+5.  **Plot `Volume` vs. `day` for the year 2005. You can (and should) reuse code we introduced above, just replace the year with the desired year. How does this plot compare to 2001 and 2002?**
+
+6.  **Finally, let's look at all the years at once. To create this plot we will make use of faceting. How do the plots compare to each other across years? How does the average `Volume` compare across years?**
+
+```{r}
+#| label: try_facet
+#| eval: false
+ggplot(Smarket, aes(x = day, y = Volume, color = Year)) + 
+  geom_point() + 
+  facet_wrap(~ Year, ncol = 2) + 
+  theme(legend.position = "none")
+```
+
+::: column-margin
+This facets by the `Year` variable, and places the plots in a 2-column grid, with no legend.
+:::
+
+a\) **Interpret the graphs.**
+
+And we can use the `group_by()` function to generate the average `Volume` by `Year`.
+
+```{r}
+#| label: try_group_by
+#| eval: false
+Smarket |>
+  group_by(Year) |>
+  summarise(avg_volume = mean(Volume))
+```
+
+b\) **Interpret the grouped summary.**
+
+7.  **Complete exercise chapter 2, number 1 in ISLR.** 
+8.  **Complete exercise chapter 2, number 4 in ISLR.**
+9.  **Complete exercise chapter 2, number 5 in ISLR.**
+10. **Complete exercise chapter 2, number 10 in ISLR.**
+    Hint:  In `b`, try the `ggpairs` function from library `GGally`.
+
+### Need More Review?
+
+There are a couple of very good sources of information that you may have forgotten.
+
+1.  Complete the Data Science in a Box Tutorials. Do them in order.
+    1.  ggplot: <https://minecr.shinyapps.io/dsbox-02-accidents/>
+    2.  ggplot + mutate + filter: <https://minecr.shinyapps.io/dsbox-03-collegemajors/>
+    3.  summarize + arrange + operators: <https://minecr.shinyapps.io/dsbox-03-collegemajors/#section-introduction>
+    4.  group_by and counts: <https://minecr.shinyapps.io/dsbox-04-legosales/#section-introduction>
+2.  Cheatsheets: We will make use of `dplyr`, and `ggplot2` often. Look over their vignettes and cheatsheets in depth.
+    1.  dplyr: <https://rstudio.github.io/cheatsheets/html/data-transformation.html>
+    2.  ggplot2: <https://rstudio.github.io/cheatsheets/html/data-visualization.html>
+3.  As a solid general general reference check out <https://r4ds.hadley.nz/>. Make use of the search on the left as needed.
+
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}})
+
+<br><br><br> Homework adapted from <a href="https://sta-363-s23.github.io/website/syllabus.html" target="_blank">Statistical Learning</a> by Dr. Lucy D'Agostino McGowan

@@ -1,0 +1,1 @@
+Sitemap: https://sta362-sb8-24.github.io/STA362StatLearning/sitemap.xml

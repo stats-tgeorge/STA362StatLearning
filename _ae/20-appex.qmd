@@ -1,0 +1,78 @@
+---
+title: "Appex 17 -- Decision Trees"
+subtitle: "STA 363 - Spring 2023"
+format: html
+theme: flatly
+---
+
+## Set up
+
+### Login to RStudio Pro
+
+- **Note:** if you are off campus, you will need to use a [VPN to connect](https://is.wfu.edu/services/vpn/)
+- Go to [rstudio.deac.wfu.edu](rstudio.deac.wfu.edu)
+
+![](img/01/rstudio-pro.png){width="1000" height="350"}
+
+#### Step 1: Create a New Project
+
+Click File > New Project
+
+![](img/01/new-project.png)
+
+#### Step 2: Click "Version Control"
+
+Click the third option.
+
+![](img/01/version-control.png)
+
+#### Step 3: Click Git
+
+Click the first option
+
+![](img/01/git.png)
+
+#### Step 4: Copy my starter files
+
+Paste this link in the top box (`Repository url`):
+
+`https://github.com/sta-363-s23/appex-20.git`
+
+![](img/01/paste-link.png)
+
+
+## Part 1
+
+1. Pull in the application exercise files from:
+
+```bash
+https://github.com/sta-363-s23/appex-20.git
+```
+
+2. Run `install.packages("keras")` once in the console
+3. Run `keras::install_keras()` once in the console
+4. When it asks if you want to install Miniconda type `Y`
+
+## Part 2
+
+1. Create a recipe that uses all of the included variables to predict Salary 
+4. Remove any missing data for the outcome, impute data for the remaining predictors (HINT: in `step_naomit()` set `skip = FALSE` to make sure it does this when we are prepping the data)
+5. Make all nominal variables dummy variables
+6.  Normalize all predictors using `step_normalize()`
+
+## Part 3
+
+1. Using the Hitters data, split into 2/3 training and 1/3 testing data
+2. Create datasets for the training and testing data
+1. Run the recipe on the training and testing data
+2. Extract *just* the predictors into a data frame and then convert this into a matrix for both the training and testing pre-processed data
+
+## Part 4
+
+1. Fit a model with 40 activations in a hidden layer with 50% dropout and a batch size of 30
+2. Run your model for 1,000 iterations (epochs)
+3. Use your testing data as validation
+4. Plot the output
+
+
+[![](img/favicon.png){width="100" fig-align="right"}](https://bit.ly/sta-363-s23)

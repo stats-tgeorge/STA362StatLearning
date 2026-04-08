@@ -1,0 +1,83 @@
+---
+title: "Homework 5"
+subtitle: "Trees"
+format: html
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+hw_num <- 5
+```
+
+## Due 5/6/2024 at 9am
+
+# Instructions
+
+-   Creating a new *project.* and giving it a sensible name such as `r paste0("homework",hw_num)` and having that project in the course folder you created.
+
+-   Create a new quarto document and give it a sensible name such as `r paste0("hw",hw_num)`.
+
+-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
+
+```{r}
+#| label: yaml_example
+#| eval: false
+---
+title: "Document title"
+author: "Your Name"
+format:
+  html:
+    embed-resources: true
+---
+```
+    
+-   Though the book used R code for base R, I want you to complete the exercises using functions from *tidymodels* when possible.
+-   Set a seed before each problem.
+-   Make sure your answers print results. If the output is a large table, use the head() function to shorten the output. 
+
+# Exercises
+
+9. This problem involves the `OJ` data set which is part of the `ISLR2` package.
+
+(a) Create a training set containing 80% of the observations. 
+
+(b) Fit a tree to the training data, with `Purchase` as the response and the other variables as predictors. Use the `summary()` function to produce summary statistics about the tree, and describe the results obtained. What is the training error rate? How many terminal nodes does the tree have?
+
+(c) Type in the name of the tree object in order to get a detailed text output. 
+
+(d) Create a plot of the tree, and interpret the results. Pick one of the terminal nodes, and interpret the information displayed.
+
+
+(e) Predict the response on the test data, and produce a confusion matrix comparing the test labels to the predicted test labels. What is the test error rate?
+
+(f) Use cross validation on the training set in order to determine the optimal tree size.
+
+(g) Produce a plot with tree size on the x-axis and cross-validated classification error rate on the y-axis.
+
+(h) Which tree size corresponds to the lowest cross-validated classification error rate?
+
+(i) Produce a pruned tree corresponding to the optimal tree size obtained using cross-validation. If cross-validation does not lead to selection of a pruned tree, then create a pruned tree with five terminal nodes.
+
+(j) Compare the training error rates between the pruned and unpruned trees. Which is higher? 
+
+(k) Compare the test error rates between the pruned and unpruned trees. Which is higher?
+
+(l) Fit a bagged tree model using the training data (you do not need to use cross validation). You will need to change the `mtry` argument to the correct number. What is the test error rate?
+
+(m) Fit a random forest model using the training data (you do not need to use cross validation). You will need to change the `mtry` argument to the correct number. What is the test error rate?
+
+(n) Fit a tree model using cross validation on the training set to tune the `mtry` argument. With your best `mtry` value, refit the model on the whole training set. What is the test error rate?
+
+(o) Finally, create a table that includes the test error for all of the models included above. Give each a name that is clear and include any tuned values. Which model is best and why? 
+
+  
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final html document to the respective assignment on [Moodle](%7B%7B%3C%20var%20course.moodle%20%3E%7D%7D)

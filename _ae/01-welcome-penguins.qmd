@@ -1,0 +1,51 @@
+---
+title: "Appex 01 -- Welcome Penguins!"
+subtitle: "STA 363 - Spring 2023"
+format: html
+theme: flatly
+---
+
+## Set up
+
+### Login to RStudio Pro
+
+- **Note:** if you are off campus, you will need to use a [VPN to connect](https://is.wfu.edu/services/vpn/)
+- Go to [rstudio.deac.wfu.edu](rstudio.deac.wfu.edu)
+
+![](img/01/rstudio-pro.png){width="1000" height="350"}
+
+#### Step 1: Create a New Project
+
+Click File > New Project
+
+![](img/01/new-project.png)
+
+#### Step 2: Click "Version Control"
+
+Click the third option.
+
+![](img/01/version-control.png)
+
+#### Step 3: Click Git
+
+Click the first option
+
+![](img/01/git.png)
+
+#### Step 4: Copy my starter files
+
+Paste this link in the top box (`Repository url`):
+
+`https://github.com/sta-363-s23/appex-01-welcome-penguins.git`
+
+![](img/01/paste-link.png)
+
+## Your Turn
+
+- Once you log on to RStudio Pro, create a new project from version control (Git)
+- Paste `https://github.com/sta-363-s23/appex-01-welcome-penguins.git` in the Repository url box
+- Find the file pane (on the bottom right). Click the `welcome-penguins.qmd` file
+- Click the "Render" button
+- Go back to the file and change your name on top (in the `yaml` -- we'll talk about what this means later) and render again.
+- Then, scroll to the `plot` chunk, below **Palmer Penguins**. Instead of looking at the relationship between flipper length and bill length, plot the relationship between flipper length and bill **depth**. _Hint, look at the full dataset at the bottom of the document for variable names, update the captions to match your new plot_. 
+- Render again & voila!

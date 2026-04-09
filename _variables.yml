@@ -23,7 +23,7 @@ course:
   github: "https://github.com/stats-tgeorge/STA362StatLearning"
   coursecal: "https://calendar.google.com/calendar/u/0?cid=Y19iNzQyZDhhMjMyYTkyZTNiMDQyZWU3NjA5NWE4MWUzNDY0ZTI0Yjk4YWFhODY0OTg0NGU3YmY1M2JhNDZhYmU5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20"
   moodle: "https://moodle.cornellcollege.edu/course/view.php?id=9434"
-  url: "https://sta362-sb8-24.github.io/STA362StatLearning/"
+  url: "https://stats-tgeorge.github.io/STA362StatLearning/"
   copyright_year: "2026"
   text: | 
     The main text book is: [An Introduction to Statistical Learning with Applications in R](https://www.statlearning.com/)  by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani -- it is freely available online.

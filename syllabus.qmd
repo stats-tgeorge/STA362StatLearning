@@ -3,6 +3,7 @@ title: "{{< var course.title >}}"
 subtitle: "Spring {{< var course.copyright_year >}} Block 8"
 format:
   html: default
+  pdf: default
 ---
 
 ```{r setup, message=FALSE, warning=FALSE, include=FALSE}

@@ -1,6 +1,6 @@
 ---
 title: "{{< var course.title >}}"
-subtitle: "Spring 2024 Block 8"
+subtitle: "Spring {{< var course.copyright_year >}} Block 8"
 format:
   html: default
 ---
@@ -32,11 +32,11 @@ Instructor [Dr. Tyler George]({{< var instructor.url >}})
 
 ### Class Meetings
 
-April 15th - May 8th
+{{< var course.dates >}}
 
-`r fontawesome::fa("clock")` &nbsp; 9am-11am & 1pm-2pm
+`r fontawesome::fa("clock")` &nbsp; {{< var course.time >}}
 
-`r fontawesome::fa("location-dot")` &nbsp; West 201
+`r fontawesome::fa("location-dot")` &nbsp; {{< var course.location >}}
 
 `r fontawesome::fa("calendar-alt")` &nbsp; [Course Calendar]({{< var course.coursecal >}})
 
@@ -57,27 +57,27 @@ April 15th - May 8th
 
 :::
 
-I am available far beyond these times listed. Please email me and we can set up a time to chat about class material or whatever you prefer! I will generally announce changes to office hours in class but I still suggest checking the [Course Calendar]({{< var course.coursecal >}}) to verify availability. 
+I am available far beyond the listed times. Please email me, and we can set up a time to chat about class material or whatever you prefer! I will generally announce changes to office hours in class, but I still suggest checking the [Course Calendar]({{< var course.coursecal >}}) to verify availability. 
 
 ### You Are A Priority
 
-My goal this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus are unique and may learn uniquely. Additionally, your health and wellbeing are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That all being said, I have structured the class in a way that I, from experience teaching and learning myself, think will be most beneficial for the majority of students. I promise you that I will do my best to create an inclusive and engaging learning environment. I ask that you keep an open line of communication between us for when you may need help and/or flexibility. You and your learning are why I am here.
+My goal for this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus unique, and may learn uniquely. Additionally, your health and well-being are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That being said, I have structured the class in a way that, based on my experience teaching and learning, I believe will be most beneficial for most students. I promise to do my best to create an inclusive and engaging learning environment. I kindly request that you maintain an open line of communication with me when you need help or require flexibility. You and your learning are why I am here.
 
 ### Course Description
 
-This course will introduce students to relatively new and powerful statistical techniques used to analyze data. The course will begin with a review of linear regression and an introduction to computer-based variable and model selection methods. Other topics will include classification methods, resampling methods for model-building, non-linear models, and tree-based methods. The computer software program R will be used throughout.
+This course will introduce students to relatively new and powerful statistical techniques for analyzing data. The course will begin with a review of linear regression and an introduction to computer-based methods for variable and model selection. Other topics will include classification methods, resampling methods for model-building, non-linear models, and tree-based methods. The R software will be used throughout.
 
 ### Learning Objectives
 
-At the end of this course I would like you conceptually understand, be able to use apply, and interpret the results of
+At the end of this course, I would like you to conceptually understand, be able to apply, and interpret the results of
 
 1) The variance/bias trade-off
 2) Measuring quality of fits
 3) Linear model selection and regularization
-4) Classification including K nearest neighbors 
-5) Cross validation
+4) Classification, including K nearest neighbors 
+5) Cross-validation
 6) Dimension reduction
-7) Tree based methods
+7) Tree-based methods
 8) Unsupervised learning
 
 ### Prerequisite
@@ -86,7 +86,7 @@ To be successful in this class, you should have completed STA 201, STA 202, and 
 
 ### Open Access Books – Free!
 
-All of materials for this class are free. 
+All of the materials for this class are free. 
 
 {{< var course.text >}}
 
@@ -98,22 +98,22 @@ Our course will run from a combination of [Moodle]({{< var course.moodle >}}) an
 
 ### Software – No need to install
 
-We will use a combination of technologies in this course including R, and RStudio (server).  Luckily for you I have put lots of effort into setting all of this on a machine we have on campus that we will all access with a web browser! You don’t need to install any – in fact for a while I prefer you don’t. More on this in class. If you are an off campus student, please let me know right away, as you may need to checkout a laptop (free) from IT to work on homework from home. 
+We will use a combination of technologies in this course, including R and RStudio (server).  Luckily for you, I have put a lot of effort into setting all of this up on a machine we have on campus that we will all access via a web browser! You don’t need to install any – in fact, for a while, I prefer you don’t. More on this in class. If you are an off-campus student, please let me know right away. 
 
-**If you have any technical problems you should contact IT as soon as possible**. [Submit a Work Order](https://www.cornellcollege.edu/information-technology/index.shtml)!
+**If you have any technical problems, you should contact IT as soon as possible**. [Submit a Work Order](https://www.cornellcollege.edu/information-technology/index.shtml)!
 
 ### Group Work
 
-In this class, I would like you to work in groups for a variety of reasons. A large part of this class is communicating analysis – not just completing analysis. At the beginning of the block, groups will be formed. You should expect to work with this group every day. When we work in groups in class we will decide on roles, specifically who is controlling the one screen will rotate). Group members will rotate roles between tasks to help make sure everybody is sharing work. You won’t be working in a group for everything; any quizzes, and exams may be individual. 
+In this class, I would like you to work in groups for several reasons. A large part of this class is communicating analysis, not just completing analysis. At the beginning of the block, groups will be formed. You should expect to work with this group most days. You won’t be working in a group for everything; any quizzes and exams may be individual. 
 
 ### Evaluations and grades
 
 ```{r assignments-grades, include=FALSE}
 assignments <- tibble::tribble(
   ~Points,  ~Assignment,
-  200 , "Homework",
-  100 ,   "Participation",
-  300      ,  "Project",
+  300 , "Homework",
+  100,   "Labs & Class Participation",
+  200      ,  "Mini Projects",
   400      ,  "Exams, two 200pts exams",
 )
 
@@ -125,7 +125,6 @@ grading <- tibble::tribble(
   "B",  "83-86%",  "D", "63-66%",
   "B-",  "80-82%",   "D-", "60-62%",
   "C+",  "77-79%",   "F",  "<60%"
-  
 )
 ```
 
@@ -133,19 +132,19 @@ grading <- tibble::tribble(
 
 ##### Homework:
 
-Homeworks will be graded for correctness. The goal is the practice the application of the method and then be able to interpret the result. 
+Homeworks will be graded for correctness. The goal is to practice applying the method and then interpret the result. 
 
 ##### Participation
 
-This will be measured by attending class and working on the work given including labs and class examples. 
+This will be measured by attending class and completing the assigned in-class work, including labs and class examples. 
 
-##### Project
+##### Mini Projects
 
-This will entail multiple stages of submission with details accessed through "Project" on the left side of the course website (once available). Some class time will be given for discussing projects with me but not enough to complete the project during class times. I do not anticipate we will start these until week 3. 
+This class includes a variety of related techniques; generally, only one is the correct one for a particular research question. For this reason, we will do labs following a single concept and mini "projects" at the end of each primary new method or collection of methods. With labs, the data will be provided. With mini-projects, you may need to find and clean data. The mini projects will be primarily completed in class and will include exploratory analysis, model identification, fitting, and evaluation, interpretation of results, a short presentation, and a brief report. Completed in groups. 
 
 ##### Exams
 
-There will be a Midterm exam (4/26) and a final exam (morning of 5/8). 
+There will be a Midterm exam (4/22) and a final exam (morning of 5/6). Each exam will consist of two components. 
 
 
 <div class="centered-table">
@@ -158,7 +157,7 @@ bind_rows(assignments, assignments_total) %>%
   select(Assignment, Points) %>% 
   pandoc.table(justify = "lc", missing = "—")
 ```
-</div>
+<div>
 
 <div class="centered-table">
 
@@ -172,21 +171,17 @@ grading %>%
 
 ### Use of AI
 
-I expect you to generate your own work in this class. When you submit any kind of work (including projects, exams, homeworks), you are asserting that you have generated and written the text, and **code**, unless you indicate otherwise by the use of quotation marks and proper attribution for the source. Submitting content as your own that has been generated by someone other than you, or was created or assisted by a computer application or tool, including artificial intelligence (AI) tools such as ChatGPT is cheating and constitutes a violation of our Academic Honesty policy. You may use simple word processing tools to update spelling and grammar in your assignments, but unless given permission otherwise, you may not use AI tools to draft your work, even if you edit, revise, or paraphrase it. There may be opportunities for you to use AI tools in this class. Where they exist, I will clearly specify when and in what capacity it is permissible for you to use these tools.
+I expect you to generate your own work in this class. When you submit any kind of work (including projects, exams, homeworks), you are asserting that you have generated and written the text, and **code**, unless you indicate otherwise by the use of quotation marks and proper attribution for the source. Submitting content as your own that has been generated by someone other than you, or was created or assisted by a computer application or tool, including artificial intelligence (AI) tools such as ChatGPT, is cheating and constitutes a violation of our Academic Honesty policy. You may use simple word processing tools to update spelling and grammar in your assignments, but unless given permission otherwise, you may not use AI tools to draft your work, even if you edit, revise, or paraphrase it. There may be opportunities for you to use AI tools in this class. Where they exist, I will clearly specify when and in what capacity it is permissible for you to use these tools.
 
 
-### DISABILITIES AND ACCOMODATIONS POLICY
+### DISABILITIES AND ACCOMMODATIONS POLICY
 
 Cornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability related accommodations within the first three days of the term for which the accommodations are required, due to the fast pace of the block format. For more [information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.](http://www.cornellcollege.edu/academic-support-and-advising/disabilities/index.shtml)
 
 ### ACADEMIC HONESTY POLICY
 
-Cornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is her or his work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College's requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty."
+Cornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is his or her work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College's requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty."
 
-### Illness Policy
-
-If you are experiencing COVID-19 symptoms, do not attend class. Perform a home test or contact Director of Student Health Services Lynn O’Brien at **student_health@cornellcollege.edu** immediately to arrange a COVID-19 test at the Health Center.
-If you need to isolate due to COVID-19, or if you become unable to attend class for any other health reason, contact me as soon as possible to determine if you are able to continue in the class. A Withdrawal for Health Reasons may be required.
 
 ### Mandatory Reporter Reminder
 

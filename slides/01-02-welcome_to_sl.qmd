@@ -2,9 +2,16 @@
 title: "Chapter 1 and 2"
 format: 
   revealjs:
+    output-file: "01-02-welcome_to_sl.html"
+    slide-number: true
     echo: false
     message: false
     warning: false
+  html:
+    output-file: "01-02-welcome_to_sl_o.html"
+editor_options: 
+  chunk_output_type: console
+logo: "img/icon.png"
 ---
 
 ```{r child = "setup.Rmd"}

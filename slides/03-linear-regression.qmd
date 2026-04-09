@@ -6,6 +6,9 @@ format:
     slide-number: true
   html:
     output-file: "03-linear_regression_o.html"
+editor_options: 
+  chunk_output_type: console
+logo: "img/icon.png"
 ---
 
 ## {{< fa laptop >}} `Application Exercise` {.small}

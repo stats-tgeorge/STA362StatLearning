@@ -2,8 +2,13 @@
 title: "Chapter 5 and tidymodels"
 format: 
   revealjs:
+    output-file: "05-cv-tidymodels.html"
     slide-number: true
-    chalkboard: true
+  html:
+    output-file: "05-cv-tidymodels_o.html"
+editor_options: 
+  chunk_output_type: console
+logo: "img/icon.png"
 ---
 
 ## Setup

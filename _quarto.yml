@@ -7,6 +7,7 @@ project:
     - "www/"
   output-dir: docs
   
+  
 website:
   title: "STA 362: Statistical Learning"
   site-url: https://sta362-sb8-24.github.io/STA362StatLearning/

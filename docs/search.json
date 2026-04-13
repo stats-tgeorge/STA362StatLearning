@@ -4,7 +4,7 @@
     "href": "syllabus.html",
     "title": "Introduction to Statistical Learning",
     "section": "",
-    "text": "Instructor\nInstructor Dr. Tyler George\n   Cornell College, West 311\n    tgeorge@cornellcollege.edu \n\n\n\nClass Meetings\nApril 13th to May 6th\n   M-F,9am-11am and 1pm-3pm\n   West 302\n   Course Calendar\n\n\n\nOffice Hours\n   MWTh 3:05pm-4:05pm and by appt.\n   West 311\n   Optional Appointment\n\n\n\nI am available far beyond the listed times. Please email me, and we can set up a time to chat about class material or whatever you prefer! I will generally announce changes to office hours in class, but I still suggest checking the Course Calendar to verify availability.\n\nYou Are A Priority\nMy goal for this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus unique, and may learn uniquely. Additionally, your health and well-being are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That being said, I have structured the class in a way that, based on my experience teaching and learning, I believe will be most beneficial for most students. I promise to do my best to create an inclusive and engaging learning environment. I kindly request that you maintain an open line of communication with me when you need help or require flexibility. You and your learning are why I am here.\n\n\nCourse Description\nThis course will introduce students to relatively new and powerful statistical techniques for analyzing data. The course will begin with a review of linear regression and an introduction to computer-based methods for variable and model selection. Other topics will include classification methods, resampling methods for model-building, non-linear models, and tree-based methods. The R software will be used throughout.\n\n\nLearning Objectives\nAt the end of this course, I would like you to conceptually understand, be able to apply, and interpret the results of\n\nThe variance/bias trade-off\nMeasuring quality of fits\nLinear model selection and regularization\nClassification, including K nearest neighbors\nCross-validation\nDimension reduction\nTree-based methods\nUnsupervised learning\n\n\n\nPrerequisite\nTo be successful in this class, you should have completed STA 201, STA 202, and DSC 223.\n\n\nOpen Access Books – Free!\nAll of the materials for this class are free.\nThe main text book is: An Introduction to Statistical Learning with Applications in R by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani – it is freely available online.\nThe secondary text is R resource: Tidy Modeling with R by Max Kuhn and Julia Silge – it is freely available online.\n\n\nCourse Site and Moodle\nOur course will run from a combination of Moodle and the course website at https://stats-tgeorge.github.io/STA362StatLearning/.\n\n\nSoftware – No need to install\nWe will use a combination of technologies in this course, including R and RStudio (server). Luckily for you, I have put a lot of effort into setting all of this up on a machine we have on campus that we will all access via a web browser! You don’t need to install any – in fact, for a while, I prefer you don’t. More on this in class. If you are an off-campus student, please let me know right away.\nIf you have any technical problems, you should contact IT as soon as possible. Submit a Work Order!\n\n\nGroup Work\nIn this class, I would like you to work in groups for several reasons. A large part of this class is communicating analysis, not just completing analysis. At the beginning of the block, groups will be formed. You should expect to work with this group most days. You won’t be working in a group for everything; any quizzes and exams may be individual.\n\n\nEvaluations and grades\n\nGrade Category Descriptions\n\nHomework:\nHomeworks will be graded for correctness. The goal is to practice applying the method and then interpret the result.\n\n\nParticipation\nThis will be measured by attending class and completing the assigned in-class work, including labs and class examples.\n\n\nMini Projects\nThis class includes a variety of related techniques; generally, only one is the correct one for a particular research question. For this reason, we will do labs following a single concept and mini “projects” at the end of each primary new method or collection of methods. With labs, the data will be provided. With mini-projects, you may need to find and clean data. The mini projects will be primarily completed in class and will include exploratory analysis, model identification, fitting, and evaluation, interpretation of results, a short presentation, and a brief report. Completed in groups.\n\n\nExams\nThere will be a Midterm exam (4/22) and a final exam (morning of 5/6). Each exam will consist of two components.\n\n\n\n\n\n\n\n\nAssignment\nPoints\n\n\n\n\nHomework\n300\n\n\nLabs & Class Participation\n100\n\n\nMini Projects\n200\n\n\nExams, two 200pts exams\n400\n\n\nTotal\n1000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrade\nRange\nGrade\nRange\n\n\n\n\nA\n93-100%\nC\n73-76%\n\n\nA-\n90–92%\nC-\n70-72%\n\n\nB+\n87–89%\nD+\n67-69%\n\n\nB\n83-86%\nD\n63-66%\n\n\nB-\n80-82%\nD-\n60-62%\n\n\nC+\n77-79%\nF\n&lt;60%\n\n\n\n\n\nUse of AI\nI expect you to generate your own work in this class. When you submit any kind of work (including projects, exams, homeworks), you are asserting that you have generated and written the text, and code, unless you indicate otherwise by the use of quotation marks and proper attribution for the source. Submitting content as your own that has been generated by someone other than you, or was created or assisted by a computer application or tool, including artificial intelligence (AI) tools such as ChatGPT, is cheating and constitutes a violation of our Academic Honesty policy. You may use simple word processing tools to update spelling and grammar in your assignments, but unless given permission otherwise, you may not use AI tools to draft your work, even if you edit, revise, or paraphrase it. There may be opportunities for you to use AI tools in this class. Where they exist, I will clearly specify when and in what capacity it is permissible for you to use these tools.\n\n\nDISABILITIES AND ACCOMMODATIONS POLICY\nCornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability related accommodations within the first three days of the term for which the accommodations are required, due to the fast pace of the block format. For more information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.\n\n\nACADEMIC HONESTY POLICY\nCornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is his or her work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College’s requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty.”\n\n\nMandatory Reporter Reminder\nIt is my goal that you feel supported and able to share information related to your life experiences during classroom discussions, in your written work, and in any one-on-one meetings with me. You should also know that all Cornell College faculty and staff are mandatory reporters. This means that I will keep information you share with me private to the greatest extent possible. However, I am required to share information regarding sexual assault, abuse, criminal behavior, or about a student who may be a danger to themselves or to others. If you wish to speak to someone confidentially who is not a mandatory reporter, you can schedule an appointment with one of the counselors in the Ebersole Health and Wellbeing Center or contact the College Chaplain, Rev. Melea White, at mwhite@cornelllcollege.edu.",
+    "text": "Instructor\nInstructor Dr. Tyler George\n   Cornell College, West 311\n    tgeorge@cornellcollege.edu \n\n\n\nClass Meetings\nApril 13th to May 6th\n   M-F,9am-11am and 1pm-3pm\n   West 302\n   Course Calendar\n\n\n\nOffice Hours\n   MWThF 8:00am-8:55am and by appt.\n   West 311\n   Optional Appointment\n\n\n\nI am available far beyond the listed times. Please email me, and we can set up a time to chat about class material or whatever you prefer! I will generally announce changes to office hours in class, but I still suggest checking the Course Calendar to verify availability.\n\nYou Are A Priority\nMy goal for this block is to help you learn the material. I want to first and foremost recognize that you are an individual and thus unique, and may learn uniquely. Additionally, your health and well-being are priority one. Learning cannot happen effectively if you don’t meet your other personal needs. That being said, I have structured the class in a way that, based on my experience teaching and learning, I believe will be most beneficial for most students. I promise to do my best to create an inclusive and engaging learning environment. I kindly request that you maintain an open line of communication with me when you need help or require flexibility. You and your learning are why I am here.\n\n\nCourse Description\nThis course will introduce students to relatively new and powerful statistical techniques for analyzing data. The course will begin with a review of linear regression and an introduction to computer-based methods for variable and model selection. Other topics will include classification methods, resampling methods for model-building, non-linear models, and tree-based methods. The R software will be used throughout.\n\n\nLearning Objectives\nAt the end of this course, I would like you to conceptually understand, be able to apply, and interpret the results of\n\nThe variance/bias trade-off\nMeasuring quality of fits\nLinear model selection and regularization\nClassification, including K nearest neighbors\nCross-validation\nDimension reduction\nTree-based methods\nUnsupervised learning\n\n\n\nPrerequisite\nTo be successful in this class, you should have completed STA 201, STA 202, and DSC 223.\n\n\nOpen Access Books – Free!\nAll of the materials for this class are free.\nThe main text book is: An Introduction to Statistical Learning with Applications in R by Gareth James, Daniela Witten, Trevor Hastie, and Robert Tibshirani – it is freely available online.\nThe secondary text is R resource: Tidy Modeling with R by Max Kuhn and Julia Silge – it is freely available online.\n\n\nCourse Site and Moodle\nOur course will run from a combination of Moodle and the course website at https://stats-tgeorge.github.io/STA362StatLearning/.\n\n\nSoftware – No need to install\nWe will use a combination of technologies in this course, including R and RStudio (server). Luckily for you, I have put a lot of effort into setting all of this up on a machine we have on campus that we will all access via a web browser! You don’t need to install any – in fact, for a while, I prefer you don’t. More on this in class. If you are an off-campus student, please let me know right away.\nIf you have any technical problems, you should contact IT as soon as possible. Submit a Work Order!\n\n\nGroup Work\nIn this class, I would like you to work in groups for several reasons. A large part of this class is communicating analysis, not just completing analysis. At the beginning of the block, groups will be formed. You should expect to work with this group most days. You won’t be working in a group for everything; any quizzes and exams may be individual.\n\n\nEvaluations and grades\n\nGrade Category Descriptions\n\nHomework:\nHomeworks will be graded for correctness. The goal is to practice applying the method and then interpret the result.\n\n\nParticipation\nThis will be measured by attending class and completing the assigned in-class work, including labs and class examples.\n\n\nMini Projects\nThis class includes a variety of related techniques; generally, only one is the correct one for a particular research question. For this reason, we will do labs following a single concept and mini “projects” at the end of each primary new method or collection of methods. With labs, the data will be provided. With mini-projects, you may need to find and clean data. The mini projects will be primarily completed in class and will include exploratory analysis, model identification, fitting, and evaluation, interpretation of results, a short presentation, and a brief report. Completed in groups.\n\n\nExams\nThere will be a Midterm exam (4/22) and a final exam (morning of 5/6). Each exam will consist of two components.\n\n\n\n\n\n\n\n\nAssignment\nPoints\n\n\n\n\nHomework\n300\n\n\nLabs & Class Participation\n100\n\n\nMini Projects\n200\n\n\nExams, two 200pts exams\n400\n\n\nTotal\n1000\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrade\nRange\nGrade\nRange\n\n\n\n\nA\n93-100%\nC\n73-76%\n\n\nA-\n90–92%\nC-\n70-72%\n\n\nB+\n87–89%\nD+\n67-69%\n\n\nB\n83-86%\nD\n63-66%\n\n\nB-\n80-82%\nD-\n60-62%\n\n\nC+\n77-79%\nF\n&lt;60%\n\n\n\n\n\nUse of AI\nI expect you to generate your own work in this class. When you submit any kind of work (including projects, exams, homeworks), you are asserting that you have generated and written the text, and code, unless you indicate otherwise by the use of quotation marks and proper attribution for the source. Submitting content as your own that has been generated by someone other than you, or was created or assisted by a computer application or tool, including artificial intelligence (AI) tools such as ChatGPT, is cheating and constitutes a violation of our Academic Honesty policy. You may use simple word processing tools to update spelling and grammar in your assignments, but unless given permission otherwise, you may not use AI tools to draft your work, even if you edit, revise, or paraphrase it. There may be opportunities for you to use AI tools in this class. Where they exist, I will clearly specify when and in what capacity it is permissible for you to use these tools.\n\n\nDISABILITIES AND ACCOMMODATIONS POLICY\nCornell College makes reasonable accommodations for persons with disabilities. Students should notify the Office of Academic Support and Advising and their course instructor of any disability related accommodations within the first three days of the term for which the accommodations are required, due to the fast pace of the block format. For more information on the documentation required to establish the need for accommodations and the process of requesting the accommodations.\n\n\nACADEMIC HONESTY POLICY\nCornell College expects all members of the Cornell community to act with academic integrity. An important aspect of academic integrity is respecting the work of others. A student is expected to explicitly acknowledge ideas, claims, observations, or data of others, unless generally known. When a piece of work is submitted for credit, a student is asserting that the submission is his or her work unless there is a citation of a specific source. If there is no appropriate acknowledgment of sources, whether intended or not, this may constitute a violation of the College’s requirement for honesty in academic work and may be treated as a case of academic dishonesty. The procedures regarding how the College deals with cases of academic dishonesty appear in The Catalog, under the heading “Academic Honesty.”\n\n\nMandatory Reporter Reminder\nIt is my goal that you feel supported and able to share information related to your life experiences during classroom discussions, in your written work, and in any one-on-one meetings with me. You should also know that all Cornell College faculty and staff are mandatory reporters. This means that I will keep information you share with me private to the greatest extent possible. However, I am required to share information regarding sexual assault, abuse, criminal behavior, or about a student who may be a danger to themselves or to others. If you wish to speak to someone confidentially who is not a mandatory reporter, you can schedule an appointment with one of the counselors in the Ebersole Health and Wellbeing Center or contact the College Chaplain, Rev. Melea White, at mwhite@cornelllcollege.edu.",
     "crumbs": [
       "Course information",
       "Syllabus"
@@ -1303,7 +1303,7 @@
     "href": "slides/01-02-welcome_to_sl.html#section",
     "title": "Chapter 1 and 2",
     "section": "👋",
-    "text": "👋\nTyler George\n   tgeorge@cornellcollege.edu\n   MWTh 3:05pm-4:05pm and by appt."
+    "text": "👋\nTyler George\n   tgeorge@cornellcollege.edu\n   MWThF 8:00am-8:55am and by appt."
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#course-website",
@@ -1366,7 +1366,7 @@
     "href": "slides/01-02-welcome_to_sl.html#supervised-learning-1",
     "title": "Chapter 1 and 2",
     "section": "Supervised Learning",
-    "text": "Supervised Learning\n\nWhat do you think are some objectives here?\n\nObjectives\n\nAccurately predict unseen test cases\nUnderstand which inputs affect the outcome, and how\nAssess the quality of our predictions and inferences\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani"
+    "text": "Supervised Learning\n\nWhat do you think are some objectives here?\n\n\nObjectives\n\nAccurately predict unseen test cases\nUnderstand which inputs affect the outcome, and how\nAssess the quality of our predictions and inferences\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#unsupervised-learning",
@@ -1394,14 +1394,14 @@
     "href": "slides/01-02-welcome_to_sl.html#regression-and-classification-1",
     "title": "Chapter 1 and 2",
     "section": "Regression and Classification",
-    "text": "Regression and Classification\n\nWhat would be an example of a regression problem?\n\n\nRegression: quantitative response\nClassification: qualitative (categorical) response"
+    "text": "Regression and Classification\n\nWhat would be an example of a regression problem?\n\n\nRegression: quantitative response"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#regression-and-classification-2",
     "href": "slides/01-02-welcome_to_sl.html#regression-and-classification-2",
     "title": "Chapter 1 and 2",
     "section": "Regression and Classification",
-    "text": "Regression and Classification\n\nWhat would be an example of a classification problem?\n\n\nRegression: quantitative response\nClassification: qualitative (categorical) response"
+    "text": "Regression and Classification\n\nWhat would be an example of a classification problem?\n\n\nClassification: qualitative (categorical) response"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#auto-data",
@@ -1457,7 +1457,7 @@
     "href": "slides/01-02-welcome_to_sl.html#regression-function-fx",
     "title": "Chapter 1 and 2",
     "section": "Regression function, \\(f(X)\\)",
-    "text": "Regression function, \\(f(X)\\)\n\nAlso works or a vector, \\(X\\), for example,\n\n\\[f(x) = f(x_1, x_2, x_3) = E[Y | X_1 = x_1, X_2 = x_2, X_3 = x_3]\\]\n\nThis is the optimal predictor of \\(Y\\) in terms of mean-squared prediction error"
+    "text": "Regression function, \\(f(X)\\)\n\nAlso works or a vector, \\(X\\), for example,\n\n\n\\[f(x) = f(x_1, x_2, x_3) = E[Y | X_1 = x_1, X_2 = x_2, X_3 = x_3]\\]\n\nThis is the optimal predictor of \\(Y\\) in terms of mean-squared prediction error"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#regression-function-fx-1",
@@ -1478,28 +1478,35 @@
     "href": "slides/01-02-welcome_to_sl.html#regression-function-fx-3",
     "title": "Chapter 1 and 2",
     "section": "Regression function, \\(f(X)\\)",
-    "text": "Regression function, \\(f(X)\\)\n\n\nUsing these points, how would I calculate the regression function?\n\n\n\nTake the average! \\(f(100) = E[\\texttt{mpg}|\\texttt{horsepower} = 100] = 19.6\\)"
+    "text": "Regression function, \\(f(X)\\)\n\n\nUsing these points, how would I calculate the regression function?\n\n\nTake the average! \\(f(100) = E[\\texttt{mpg}|\\texttt{horsepower} = 100] = \\hat{f}(X_h=100)=19.6\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#regression-function-fx-4",
     "href": "slides/01-02-welcome_to_sl.html#regression-function-fx-4",
     "title": "Chapter 1 and 2",
     "section": "Regression function, \\(f(X)\\)",
-    "text": "Regression function, \\(f(X)\\)\n\n\nThis point has a \\(Y\\) value of 32.9. What is \\(\\hat\\varepsilon\\)?\n\n\n\n\n\\(\\hat\\varepsilon = Y - \\hat{f}(X) = 32.9 - 19.6 = \\color{red}{13.3}\\)"
+    "text": "Regression function, \\(f(X)\\)\n\n\nThis point has a \\(Y\\) value of 32.9. What is \\(\\hat\\varepsilon\\)?\n\n\n\n\n\\(\\hat\\varepsilon = Y - \\hat{f}(X_h=100) = 32.9 - 19.6 = \\color{red}{13.3}\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#the-error",
     "href": "slides/01-02-welcome_to_sl.html#the-error",
     "title": "Chapter 1 and 2",
     "section": "The error",
-    "text": "The error\nFor any estimate, \\(\\hat{f}(x)\\), of \\(f(x)\\), we have\n\\[E[(Y - \\hat{f}(x))^2 | X = x] = \\underbrace{[f(x) - \\hat{f}(x)]^2}_{\\textrm{reducible error}} + \\underbrace{Var(\\varepsilon)}_{\\textrm{irreducible error}}\\]\n\n\n\nAssume for a moment that both \\(\\hat{f}\\) and X are fixed.\n\\(E(Y − \\hat{Y})^2\\) represents the average, or expected value, of the squared difference between the predicted and actual value of Y, and Var( \\(\\varepsilon\\) ) represents the variance associated with the error term\nThe focus of this class is on techniques for estimating f with the aim of minimizing the reducible error.\nthe irreducible error will always provide an upper bound on the accuracy of our prediction for Y\nThis bound is almost always unknown in practice"
+    "text": "The error\nFor any estimate, \\(\\hat{f}(x)\\), of \\(f(x)\\), we have\n\\[E[(Y - \\hat{f}(x))^2 | X = x] = \\underbrace{[f(x) - \\hat{f}(x)]^2}_{\\textrm{reducible error}} + \\underbrace{Var(\\varepsilon)}_{\\textrm{irreducible error}}\\]\n\n\n\nAssume for a moment that both \\(\\hat{f}\\) and X are fixed.\n\\(E(Y − \\hat{Y})^2\\) represents the average, or expected value, of the squared difference between the predicted and actual value of Y, and Var( \\(\\varepsilon\\) ) represents the variance associated with the error term\nThe focus of this class is on techniques for estimating f with the aim of minimizing the reducible error.\nThe irreducible error will always provide an upper bound on the accuracy of our prediction for \\(Y\\). This bound is almost always unknown in practice"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#estimating-f",
     "href": "slides/01-02-welcome_to_sl.html#estimating-f",
     "title": "Chapter 1 and 2",
     "section": "Estimating \\(f\\)",
-    "text": "Estimating \\(f\\)\n\nTypically we have very few (if any!) data points at \\(X=x\\) exactly, so we cannot compute \\(E[Y|X=x]\\)\nFor example, what if we were interested in estimating miles per gallon when horsepower was 104.\n\n\n\n\n\n\n\n\n\n\n\n\n\n💡 We can relax the definition and let\n\\[\\hat{f}(x) = E[Y | X\\in \\mathcal{N}(x)]\\]\n\n\n\nWhere \\(\\mathcal{N}(x)\\) is some neighborhood of \\(x\\)"
+    "text": "Estimating \\(f\\)\n\nTypically we have very few (if any!) data points at \\(X=x\\) exactly, so we cannot compute \\(E[Y|X=x]\\)\nFor example, what if we were interested in estimating miles per gallon when horsepower was 104."
+  },
+  {
+    "objectID": "slides/01-02-welcome_to_sl.html#estimating-f-1",
+    "href": "slides/01-02-welcome_to_sl.html#estimating-f-1",
+    "title": "Chapter 1 and 2",
+    "section": "Estimating \\(f\\)",
+    "text": "Estimating \\(f\\)\n💡 We can relax the definition and let\n\\[\\hat{f}(x) = E[Y | X\\in \\mathcal{N}(x)]\\]\n\n\n\nWhere \\(\\mathcal{N}(x)\\) is some neighborhood of \\(x\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#notation-pause",
@@ -1509,8 +1516,8 @@
     "text": "Notation pause!\n\n\\[\\hat{f}(x) = \\underbrace{E}_{\\textrm{The expectation}}[\\underbrace{Y}_{\\textrm{of Y}} \\underbrace{|}_{\\textrm{given}} \\underbrace{X\\in \\mathcal{N}(x)}_{\\textrm{X is in the neighborhood of x}}]\\]\n\n\n🚨 If you need a notation pause at any point during this class, please let me know!"
   },
   {
-    "objectID": "slides/01-02-welcome_to_sl.html#estimating-f-1",
-    "href": "slides/01-02-welcome_to_sl.html#estimating-f-1",
+    "objectID": "slides/01-02-welcome_to_sl.html#estimating-f-2",
+    "href": "slides/01-02-welcome_to_sl.html#estimating-f-2",
     "title": "Chapter 1 and 2",
     "section": "Estimating \\(f\\)",
     "text": "Estimating \\(f\\)\n💡 We can relax the definition and let\n\\[\\hat{f}(x) = E[Y | X\\in \\mathcal{N}(x)]\\]\n\n\n\nNearest neighbor averaging does pretty well with small \\(p\\) ( \\(p\\leq 4\\) ) and large \\(n\\)\nNearest neighbor is not great when \\(p\\) is large because of the curse of dimensionality (because nearest neighbors tend to be far away in high dimensions)\n\n\n\n\n\nWhat do I mean by \\(p\\)? What do I mean by \\(n\\)?"
@@ -1527,7 +1534,7 @@
     "href": "slides/01-02-welcome_to_sl.html#section-1",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "The  red  points are simulated values for income from the model:\n\n\\[\\texttt{income} = f(\\texttt{education, senority}) + \\varepsilon\\]\n\n\\(f\\) is the  blue  surface"
+    "text": "The  red  points are simulated values for income from the model:\n\n\n\\[\\texttt{income} = f(\\texttt{education, senority}) + \\varepsilon\\]\n\n\\(f\\) is the  blue  surface"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#section-2",
@@ -1562,21 +1569,21 @@
     "href": "slides/01-02-welcome_to_sl.html#accuracy",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nWe can measure accuracy as the average squared prediction error over that train data\n\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]\n\n\nWhat can go wrong here?\n\n\n\n\nThis may be biased towards overfit models"
+    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nWe can measure accuracy as the average squared prediction error over that train data\n\n\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]\n\n\n\nWhat can go wrong here?\n\n\n\n\nThis may be biased towards overfit models"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#accuracy-1",
     "href": "slides/01-02-welcome_to_sl.html#accuracy-1",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\n\nI have some train data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]"
+    "text": "Accuracy\n\n\nI have some training data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#accuracy-2",
     "href": "slides/01-02-welcome_to_sl.html#accuracy-2",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\n\nI have some train data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{train} = \\textrm{Ave}_{i\\in\\texttt{train}}[y_i-\\hat{f}(x_i)]^2\\]"
+    "text": "Accuracy\n\n\nI have some training data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{train} = \\textrm{Ave}_{i\\in\\texttt{train}}[y_i-\\hat{f}(x_i)]^2\\]"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#accuracy-3",
@@ -1597,7 +1604,7 @@
     "href": "slides/01-02-welcome_to_sl.html#accuracy-5",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nInstead of measuring accuracy as the average squared prediction error over that train data, we can compute it using fresh test data.\n\n\\[MSE_{\\texttt{test}} = \\textrm{Ave}_{test}[y_i-\\hat{f}(x_i)]^2\\]"
+    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nInstead of measuring accuracy as the average squared prediction error over that train data, we can compute it using fresh test data.\n\n\n\\[MSE_{\\texttt{test}} = \\textrm{Ave}_{test}[y_i-\\hat{f}(x_i)]^2\\]"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#section-6",
@@ -1625,7 +1632,7 @@
     "href": "slides/01-02-welcome_to_sl.html#bias-variance-trade-off",
     "title": "Chapter 1 and 2",
     "section": "Bias-variance trade-off",
-    "text": "Bias-variance trade-off\n\n\n\nWe’ve fit a model, \\(\\hat{f}(x)\\), to some training data\nLet’s pull a test observation from this population ( \\(x_0, y_0\\) )\nThe true model is \\(Y = f(x) + \\varepsilon\\)\n\\(f(x) = E[Y|X=x]\\)\n\n\n\n\n\\[E(y_0 - \\hat{f}(x_0))^2 = \\textrm{Var}(\\hat{f}(x_0)) + [\\textrm{Bias}(\\hat{f}(x_0))]^2 + \\textrm{Var}(\\varepsilon)\\]\n\n\nThe expectation averages over the variability of \\(y_0\\) as well as the variability of the training data. \\(\\textrm{Bias}(\\hat{f}(x_0)) =E[\\hat{f}(x_0)]-f(x_0)\\)\n\n\n\nAs flexibility of \\(\\hat{f}\\) \\(\\uparrow\\), its variance \\(\\uparrow\\) and its bias \\(\\downarrow\\)\nchoosing the flexibility based on average test error amounts to a bias-variance trade-off\n\n\n\n\n\nThat U-shape we see for the test MSE curves is due to this bias-variance trade-off\nThe expected test MSE for a given \\(x_0\\) can be decomposed into three components: the variance of \\(\\hat{f}(x_o)\\), the squared bias of \\(\\hat{f}(x_o)\\) and t4he variance of the error term \\(\\varepsilon\\)\nHere the notation \\(E[y_0 − \\hat{f}(x_0)]^2\\) defines the expected test MSE, and refers to the average test MSE that we would obtain if we repeatedly estimated \\(f\\) using a large number of training sets, and tested each at \\(x_0\\)\nThe overall expected test MSE can be computed by averaging \\(E[y_0 − \\hat{f}(x_0)]^2\\) over all possible values of \\(x_0\\) in the test set.\nSO we want to minimize the expected test error, so to do that we need to pick a statistical learning method to simultenously acheive low bias and low variance.\nSince both of these quantities are non-negative, the expected test MSE can never fall below Var( \\(\\varepsilon\\) )"
+    "text": "Bias-variance trade-off\n\n\n\nWe’ve fit a model, \\(\\hat{f}(x)\\), to some training data\nLet’s pull a test observation from this population ( \\(x_0, y_0\\) )\nThe true model is \\(Y = f(x) + \\varepsilon\\) and \\(f(x) = E[Y|X=x]\\)\n\n\n\n\n\\[E(y_0 - \\hat{f}(x_0))^2 = \\textrm{Var}(\\hat{f}(x_0)) + [\\textrm{Bias}(\\hat{f}(x_0))]^2 + \\textrm{Var}(\\varepsilon)\\]\n\n\nThe expectation averages over the variability of \\(y_0\\) as well as the variability of the training data. \\(\\textrm{Bias}(\\hat{f}(x_0)) =E[\\hat{f}(x_0)]-f(x_0)\\)\n\n\n\nAs flexibility of \\(\\hat{f}\\) \\(\\uparrow\\), its variance \\(\\uparrow\\) and its bias \\(\\downarrow\\)\nchoosing the flexibility based on average test error amounts to a bias-variance trade-off\n\n\n\n\n\nThat U-shape we see for the test MSE curves is due to this bias-variance trade-off\nThe expected test MSE for a given \\(x_0\\) can be decomposed into three components: the variance of \\(\\hat{f}(x_o)\\), the squared bias of \\(\\hat{f}(x_o)\\) and t4he variance of the error term \\(\\varepsilon\\)\nHere the notation \\(E[y_0 − \\hat{f}(x_0)]^2\\) defines the expected test MSE, and refers to the average test MSE that we would obtain if we repeatedly estimated \\(f\\) using a large number of training sets, and tested each at \\(x_0\\)\nThe overall expected test MSE can be computed by averaging \\(E[y_0 − \\hat{f}(x_0)]^2\\) over all possible values of \\(x_0\\) in the test set.\nSO we want to minimize the expected test error, so to do that we need to pick a statistical learning method to simultenously acheive low bias and low variance.\nSince both of these quantities are non-negative, the expected test MSE can never fall below Var( \\(\\varepsilon\\) )"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#bias-variance-trade-off-1",
@@ -1660,14 +1667,14 @@
     "href": "slides/01-02-welcome_to_sl.html#section-9",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n\n\nHow do you think we could calculate this?\n\n\n\n\nIn the plot, you could examine the mini-barplot at \\(x = 5\\)"
+    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n\n\nHow do you think we could calculate this?\n\n\nIn the plot, you could examine the mini-barplot at \\(x = 5\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#section-10",
     "href": "slides/01-02-welcome_to_sl.html#section-10",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n\nThe Bayes optimal classifier at \\(x\\) is\n\n\\[\\mathcal{C}(x) = j \\textrm{ if } p_j(x) = \\textrm{max}\\{p_1(x), p_2(x), \\dots, p_K(x)\\}\\]\n\n\nNotice that probability is a conditional probability\nIt is the probability that Y equals k given the observed preditor vector, \\(x\\)\nLet’s say we were using a Bayes Classifier for a two class problem, Y is 1 or 2. We would predict that the class is one if \\(P(Y=1|X=x_0)&gt;0.5\\) and 2 otherwise"
+    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n\nThe Bayes optimal classifier at \\(x\\) is\n\n\\[\\mathcal{C}(x) = j \\textrm{ if } p_j(x) = \\textrm{max}\\{p_1(x), p_2(x), \\dots, p_K(x)\\}\\]\n\n\nNotice that probability is a conditional probability\nIt is the probability that Y equals k given the observed preditor vector, \\(x\\)\nLet’s say we were using a Bayes Classifier for a two class problem, Y is 1 or 2. We would predict that the class is one if \\(P(Y=1|X=x_0)&gt;0.5\\) and 2 otherwise"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl.html#section-11",
@@ -1681,21 +1688,21 @@
     "href": "slides/01-02-welcome_to_sl.html#accuracy-6",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\nMisclassification error rate\n\n\\[Err_{\\texttt{test}} = \\frac{\\#correct predictions}{total predictions} = \\textrm{Ave}_{test}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\] &gt; * \\(I(\\cdot)\\) is an indicator function and will only be eitehr 0 or 1.\n\n\n\nThe Bayes Classifier using the true \\(p_k(x)\\) has the smallest error\nSome of the methods we (may) learn build structured models for \\(\\mathcal{C}(x)\\) (support vector machines, for example)\nSome build structured models for \\(p_k(x)\\) (logistic regression, for example)\n\n\n\n\n\nthe test error rate \\(\\textrm{Ave}_{i\\in\\texttt{test}}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\) is minimized on average by very simple classifier that assigns each observation to the most likely class, given its predictor values (that’s the Bayes classifier)"
+    "text": "Accuracy\n\nMisclassification error rate\n\n\n\\[Err_{\\texttt{test}} = \\frac{\\#correct predictions}{total predictions} = \\textrm{Ave}_{test}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\] &gt; * \\(I(\\cdot)\\) is an indicator function and will only be eitehr 0 or 1.\n\n\n\nThe Bayes Classifier using the true \\(p_k(x)\\) has the smallest error\nSome of the methods we (may) learn build structured models for \\(\\mathcal{C}(x)\\) (support vector machines, for example)\nSome build structured models for \\(p_k(x)\\) (logistic regression, for example)\n\n\n\n\n\nthe test error rate \\(\\textrm{Ave}_{i\\in\\texttt{test}}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\) is minimized on average by very simple classifier that assigns each observation to the most likely class, given its predictor values (that’s the Bayes classifier)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html",
     "href": "slides/01-02-welcome_to_sl_o.html",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "tgeorge@cornellcollege.edu\n   MWTh 3:05pm-4:05pm and by appt.\n\n\n\n\nhttps://stats-tgeorge.github.io/STA362StatLearning/\n\n\n\n\nName\nMajor\nFun OR boring fact\n\n\n\n\n\n\n\nIdentify risk factors for breast cancer\n\n\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani\n\n\n\n\n\n\n\nCustomize an email spam detection system\n\n\n\nData: 4601 labeled emails sent to George who works at HP Labs\nInput features: frequencies of words and punctuation\n\n\n\n\n\n\n—\ngeorge\nyou\nhp\nfree\n!\nedu\nremove\n\n\n\n\nspam\n0.00\n2.26\n0.02\n0.52\n0.51\n0.01\n0.28\n\n\nemail\n2.27\n1.27\n0.90\n0.07\n0.11\n0.29\n0.01\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani\n\n\n\n\n\n\n\nIdentify numbers in handwritten zip code\n\n\n\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani\n\n\n\n\n\n\nEstablish the relationship between variables in population survey data\n\nIncome survey data for males from the central Atlantic region of US, 2009\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani"
+    "text": "tgeorge@cornellcollege.edu\n   MWThF 8:00am-8:55am and by appt.\n\n\n\n\nhttps://stats-tgeorge.github.io/STA362StatLearning/\n\n\n\n\nName\nMajor\nFun OR boring fact\n\n\n\n\n\n\n\nIdentify risk factors for breast cancer\n\n\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani\n\n\n\n\n\n\n\nCustomize an email spam detection system\n\n\n\nData: 4601 labeled emails sent to George who works at HP Labs\nInput features: frequencies of words and punctuation\n\n\n\n\n\n\n—\ngeorge\nyou\nhp\nfree\n!\nedu\nremove\n\n\n\n\nspam\n0.00\n2.26\n0.02\n0.52\n0.51\n0.01\n0.28\n\n\nemail\n2.27\n1.27\n0.90\n0.07\n0.11\n0.29\n0.01\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani\n\n\n\n\n\n\n\nIdentify numbers in handwritten zip code\n\n\n\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani\n\n\n\n\n\n\nEstablish the relationship between variables in population survey data\n\nIncome survey data for males from the central Atlantic region of US, 2009\n\n\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#section",
     "href": "slides/01-02-welcome_to_sl_o.html#section",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "tgeorge@cornellcollege.edu\n   MWTh 3:05pm-4:05pm and by appt."
+    "text": "tgeorge@cornellcollege.edu\n   MWThF 8:00am-8:55am and by appt."
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#course-website",
@@ -1758,7 +1765,7 @@
     "href": "slides/01-02-welcome_to_sl_o.html#supervised-learning-1",
     "title": "Chapter 1 and 2",
     "section": "Supervised Learning",
-    "text": "Supervised Learning\n\nWhat do you think are some objectives here?\n\n\nObjectives\n\nAccurately predict unseen test cases\nUnderstand which inputs affect the outcome, and how\nAssess the quality of our predictions and inferences\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani"
+    "text": "Supervised Learning\n\nWhat do you think are some objectives here?\n\n. . .\n\nObjectives\n\nAccurately predict unseen test cases\nUnderstand which inputs affect the outcome, and how\nAssess the quality of our predictions and inferences\n\n\nDr. Tyler George adapted from slides by Hastie & Tibshirani"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#unsupervised-learning",
@@ -1786,14 +1793,14 @@
     "href": "slides/01-02-welcome_to_sl_o.html#regression-and-classification-1",
     "title": "Chapter 1 and 2",
     "section": "Regression and Classification",
-    "text": "Regression and Classification\n\nWhat would be an example of a regression problem?\n\n\nRegression: quantitative response\nClassification: qualitative (categorical) response"
+    "text": "Regression and Classification\n\nWhat would be an example of a regression problem?\n\n\nRegression: quantitative response"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#regression-and-classification-2",
     "href": "slides/01-02-welcome_to_sl_o.html#regression-and-classification-2",
     "title": "Chapter 1 and 2",
     "section": "Regression and Classification",
-    "text": "Regression and Classification\n\nWhat would be an example of a classification problem?\n\n\nRegression: quantitative response\nClassification: qualitative (categorical) response"
+    "text": "Regression and Classification\n\nWhat would be an example of a classification problem?\n\n\nClassification: qualitative (categorical) response"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#auto-data",
@@ -1849,7 +1856,7 @@
     "href": "slides/01-02-welcome_to_sl_o.html#regression-function-fx",
     "title": "Chapter 1 and 2",
     "section": "Regression function, \\(f(X)\\)",
-    "text": "Regression function, \\(f(X)\\)\n\nAlso works or a vector, \\(X\\), for example,\n\n\\[f(x) = f(x_1, x_2, x_3) = E[Y | X_1 = x_1, X_2 = x_2, X_3 = x_3]\\]\n\nThis is the optimal predictor of \\(Y\\) in terms of mean-squared prediction error"
+    "text": "Regression function, \\(f(X)\\)\n\nAlso works or a vector, \\(X\\), for example,\n\n. . .\n\\[f(x) = f(x_1, x_2, x_3) = E[Y | X_1 = x_1, X_2 = x_2, X_3 = x_3]\\]\n\nThis is the optimal predictor of \\(Y\\) in terms of mean-squared prediction error"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#regression-function-fx-1",
@@ -1870,28 +1877,35 @@
     "href": "slides/01-02-welcome_to_sl_o.html#regression-function-fx-3",
     "title": "Chapter 1 and 2",
     "section": "Regression function, \\(f(X)\\)",
-    "text": "Regression function, \\(f(X)\\)\n\n\n\n\n\n\n\n\n\n\nUsing these points, how would I calculate the regression function?\n\n. . .\n\nTake the average! \\(f(100) = E[\\texttt{mpg}|\\texttt{horsepower} = 100] = 19.6\\)"
+    "text": "Regression function, \\(f(X)\\)\n\n\n\n\n\n\n\n\n\n\nUsing these points, how would I calculate the regression function?\n\n\nTake the average! \\(f(100) = E[\\texttt{mpg}|\\texttt{horsepower} = 100] = \\hat{f}(X_h=100)=19.6\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#regression-function-fx-4",
     "href": "slides/01-02-welcome_to_sl_o.html#regression-function-fx-4",
     "title": "Chapter 1 and 2",
     "section": "Regression function, \\(f(X)\\)",
-    "text": "Regression function, \\(f(X)\\)\n\n\n\n\n\n\n\n\n\n\nThis point has a \\(Y\\) value of 32.9. What is \\(\\hat\\varepsilon\\)?\n\n\n\n\\(\\hat\\varepsilon = Y - \\hat{f}(X) = 32.9 - 19.6 = \\color{red}{13.3}\\)"
+    "text": "Regression function, \\(f(X)\\)\n\n\n\n\n\n\n\n\n\n\nThis point has a \\(Y\\) value of 32.9. What is \\(\\hat\\varepsilon\\)?\n\n\n\n\\(\\hat\\varepsilon = Y - \\hat{f}(X_h=100) = 32.9 - 19.6 = \\color{red}{13.3}\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#the-error",
     "href": "slides/01-02-welcome_to_sl_o.html#the-error",
     "title": "Chapter 1 and 2",
     "section": "The error",
-    "text": "The error\nFor any estimate, \\(\\hat{f}(x)\\), of \\(f(x)\\), we have\n\\[E[(Y - \\hat{f}(x))^2 | X = x] = \\underbrace{[f(x) - \\hat{f}(x)]^2}_{\\textrm{reducible error}} + \\underbrace{Var(\\varepsilon)}_{\\textrm{irreducible error}}\\]\n\n\nAssume for a moment that both \\(\\hat{f}\\) and X are fixed.\n\\(E(Y − \\hat{Y})^2\\) represents the average, or expected value, of the squared difference between the predicted and actual value of Y, and Var( \\(\\varepsilon\\) ) represents the variance associated with the error term\nThe focus of this class is on techniques for estimating f with the aim of minimizing the reducible error.\nthe irreducible error will always provide an upper bound on the accuracy of our prediction for Y\nThis bound is almost always unknown in practice"
+    "text": "The error\nFor any estimate, \\(\\hat{f}(x)\\), of \\(f(x)\\), we have\n\\[E[(Y - \\hat{f}(x))^2 | X = x] = \\underbrace{[f(x) - \\hat{f}(x)]^2}_{\\textrm{reducible error}} + \\underbrace{Var(\\varepsilon)}_{\\textrm{irreducible error}}\\]\n\n\nAssume for a moment that both \\(\\hat{f}\\) and X are fixed.\n\\(E(Y − \\hat{Y})^2\\) represents the average, or expected value, of the squared difference between the predicted and actual value of Y, and Var( \\(\\varepsilon\\) ) represents the variance associated with the error term\nThe focus of this class is on techniques for estimating f with the aim of minimizing the reducible error.\nThe irreducible error will always provide an upper bound on the accuracy of our prediction for \\(Y\\). This bound is almost always unknown in practice"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#estimating-f",
     "href": "slides/01-02-welcome_to_sl_o.html#estimating-f",
     "title": "Chapter 1 and 2",
     "section": "Estimating \\(f\\)",
-    "text": "Estimating \\(f\\)\n\nTypically we have very few (if any!) data points at \\(X=x\\) exactly, so we cannot compute \\(E[Y|X=x]\\)\nFor example, what if we were interested in estimating miles per gallon when horsepower was 104.\n\n\n\n\n\n\n\n\n\n\n\n\n. . .\n💡 We can relax the definition and let\n\\[\\hat{f}(x) = E[Y | X\\in \\mathcal{N}(x)]\\]\n\n\nWhere \\(\\mathcal{N}(x)\\) is some neighborhood of \\(x\\)"
+    "text": "Estimating \\(f\\)\n\nTypically we have very few (if any!) data points at \\(X=x\\) exactly, so we cannot compute \\(E[Y|X=x]\\)\nFor example, what if we were interested in estimating miles per gallon when horsepower was 104.\n\n. . ."
+  },
+  {
+    "objectID": "slides/01-02-welcome_to_sl_o.html#estimating-f-1",
+    "href": "slides/01-02-welcome_to_sl_o.html#estimating-f-1",
+    "title": "Chapter 1 and 2",
+    "section": "Estimating \\(f\\)",
+    "text": "Estimating \\(f\\)\n💡 We can relax the definition and let\n\\[\\hat{f}(x) = E[Y | X\\in \\mathcal{N}(x)]\\]\n\n\nWhere \\(\\mathcal{N}(x)\\) is some neighborhood of \\(x\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#notation-pause",
@@ -1901,8 +1915,8 @@
     "text": "Notation pause!\n\n\\[\\hat{f}(x) = \\underbrace{E}_{\\textrm{The expectation}}[\\underbrace{Y}_{\\textrm{of Y}} \\underbrace{|}_{\\textrm{given}} \\underbrace{X\\in \\mathcal{N}(x)}_{\\textrm{X is in the neighborhood of x}}]\\]\n. . .\n\n🚨 If you need a notation pause at any point during this class, please let me know!"
   },
   {
-    "objectID": "slides/01-02-welcome_to_sl_o.html#estimating-f-1",
-    "href": "slides/01-02-welcome_to_sl_o.html#estimating-f-1",
+    "objectID": "slides/01-02-welcome_to_sl_o.html#estimating-f-2",
+    "href": "slides/01-02-welcome_to_sl_o.html#estimating-f-2",
     "title": "Chapter 1 and 2",
     "section": "Estimating \\(f\\)",
     "text": "Estimating \\(f\\)\n💡 We can relax the definition and let\n\\[\\hat{f}(x) = E[Y | X\\in \\mathcal{N}(x)]\\]\n\n\nNearest neighbor averaging does pretty well with small \\(p\\) ( \\(p\\leq 4\\) ) and large \\(n\\)\nNearest neighbor is not great when \\(p\\) is large because of the curse of dimensionality (because nearest neighbors tend to be far away in high dimensions)\n\n\n. . .\n\nWhat do I mean by \\(p\\)? What do I mean by \\(n\\)?"
@@ -1919,7 +1933,7 @@
     "href": "slides/01-02-welcome_to_sl_o.html#section-1",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "The  red  points are simulated values for income from the model:\n\n\\[\\texttt{income} = f(\\texttt{education, senority}) + \\varepsilon\\]\n\n\\(f\\) is the  blue  surface"
+    "text": "The  red  points are simulated values for income from the model:\n\n. . .\n\\[\\texttt{income} = f(\\texttt{education, senority}) + \\varepsilon\\]\n\n\\(f\\) is the  blue  surface"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#section-2",
@@ -1954,21 +1968,21 @@
     "href": "slides/01-02-welcome_to_sl_o.html#accuracy",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nWe can measure accuracy as the average squared prediction error over that train data\n\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]\n. . .\n\nWhat can go wrong here?\n\n\n\nThis may be biased towards overfit models"
+    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nWe can measure accuracy as the average squared prediction error over that train data\n\n. . .\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]\n. . .\n\nWhat can go wrong here?\n\n\n\nThis may be biased towards overfit models"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#accuracy-1",
     "href": "slides/01-02-welcome_to_sl_o.html#accuracy-1",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\n\n\n\n\n\n\n\n\n\nI have some train data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]"
+    "text": "Accuracy\n\n\n\n\n\n\n\n\n\n\nI have some training data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{\\texttt{train}} = \\textrm{Ave}_{train}[y_i-\\hat{f}(x_i)]^2\\]"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#accuracy-2",
     "href": "slides/01-02-welcome_to_sl_o.html#accuracy-2",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\n\n\n\n\n\n\n\n\n\nI have some train data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{train} = \\textrm{Ave}_{i\\in\\texttt{train}}[y_i-\\hat{f}(x_i)]^2\\]"
+    "text": "Accuracy\n\n\n\n\n\n\n\n\n\n\nI have some training data, plotted above. What \\(\\hat{f}(x)\\) would minimize the \\(MSE_{\\texttt{train}}\\)?\n\n\\[MSE_{train} = \\textrm{Ave}_{i\\in\\texttt{train}}[y_i-\\hat{f}(x_i)]^2\\]"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#accuracy-3",
@@ -1989,7 +2003,7 @@
     "href": "slides/01-02-welcome_to_sl_o.html#accuracy-5",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nInstead of measuring accuracy as the average squared prediction error over that train data, we can compute it using fresh test data.\n\n\\[MSE_{\\texttt{test}} = \\textrm{Ave}_{test}[y_i-\\hat{f}(x_i)]^2\\]"
+    "text": "Accuracy\n\nWe’ve fit a model \\(\\hat{f}(x)\\) to some training data.\nInstead of measuring accuracy as the average squared prediction error over that train data, we can compute it using fresh test data.\n\n. . .\n\\[MSE_{\\texttt{test}} = \\textrm{Ave}_{test}[y_i-\\hat{f}(x_i)]^2\\]"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#section-6",
@@ -2017,7 +2031,7 @@
     "href": "slides/01-02-welcome_to_sl_o.html#bias-variance-trade-off",
     "title": "Chapter 1 and 2",
     "section": "Bias-variance trade-off",
-    "text": "Bias-variance trade-off\n\n\nWe’ve fit a model, \\(\\hat{f}(x)\\), to some training data\nLet’s pull a test observation from this population ( \\(x_0, y_0\\) )\nThe true model is \\(Y = f(x) + \\varepsilon\\)\n\\(f(x) = E[Y|X=x]\\)\n\n\n. . .\n\\[E(y_0 - \\hat{f}(x_0))^2 = \\textrm{Var}(\\hat{f}(x_0)) + [\\textrm{Bias}(\\hat{f}(x_0))]^2 + \\textrm{Var}(\\varepsilon)\\]\n. . .\nThe expectation averages over the variability of \\(y_0\\) as well as the variability of the training data. \\(\\textrm{Bias}(\\hat{f}(x_0)) =E[\\hat{f}(x_0)]-f(x_0)\\)\n\n\nAs flexibility of \\(\\hat{f}\\) \\(\\uparrow\\), its variance \\(\\uparrow\\) and its bias \\(\\downarrow\\)\nchoosing the flexibility based on average test error amounts to a bias-variance trade-off\n\n\n\n\nThat U-shape we see for the test MSE curves is due to this bias-variance trade-off\nThe expected test MSE for a given \\(x_0\\) can be decomposed into three components: the variance of \\(\\hat{f}(x_o)\\), the squared bias of \\(\\hat{f}(x_o)\\) and t4he variance of the error term \\(\\varepsilon\\)\nHere the notation \\(E[y_0 − \\hat{f}(x_0)]^2\\) defines the expected test MSE, and refers to the average test MSE that we would obtain if we repeatedly estimated \\(f\\) using a large number of training sets, and tested each at \\(x_0\\)\nThe overall expected test MSE can be computed by averaging \\(E[y_0 − \\hat{f}(x_0)]^2\\) over all possible values of \\(x_0\\) in the test set.\nSO we want to minimize the expected test error, so to do that we need to pick a statistical learning method to simultenously acheive low bias and low variance.\nSince both of these quantities are non-negative, the expected test MSE can never fall below Var( \\(\\varepsilon\\) )"
+    "text": "Bias-variance trade-off\n\n\nWe’ve fit a model, \\(\\hat{f}(x)\\), to some training data\nLet’s pull a test observation from this population ( \\(x_0, y_0\\) )\nThe true model is \\(Y = f(x) + \\varepsilon\\) and \\(f(x) = E[Y|X=x]\\)\n\n\n. . .\n\\[E(y_0 - \\hat{f}(x_0))^2 = \\textrm{Var}(\\hat{f}(x_0)) + [\\textrm{Bias}(\\hat{f}(x_0))]^2 + \\textrm{Var}(\\varepsilon)\\]\n. . .\nThe expectation averages over the variability of \\(y_0\\) as well as the variability of the training data. \\(\\textrm{Bias}(\\hat{f}(x_0)) =E[\\hat{f}(x_0)]-f(x_0)\\)\n\n\nAs flexibility of \\(\\hat{f}\\) \\(\\uparrow\\), its variance \\(\\uparrow\\) and its bias \\(\\downarrow\\)\nchoosing the flexibility based on average test error amounts to a bias-variance trade-off\n\n\n\n\nThat U-shape we see for the test MSE curves is due to this bias-variance trade-off\nThe expected test MSE for a given \\(x_0\\) can be decomposed into three components: the variance of \\(\\hat{f}(x_o)\\), the squared bias of \\(\\hat{f}(x_o)\\) and t4he variance of the error term \\(\\varepsilon\\)\nHere the notation \\(E[y_0 − \\hat{f}(x_0)]^2\\) defines the expected test MSE, and refers to the average test MSE that we would obtain if we repeatedly estimated \\(f\\) using a large number of training sets, and tested each at \\(x_0\\)\nThe overall expected test MSE can be computed by averaging \\(E[y_0 − \\hat{f}(x_0)]^2\\) over all possible values of \\(x_0\\) in the test set.\nSO we want to minimize the expected test error, so to do that we need to pick a statistical learning method to simultenously acheive low bias and low variance.\nSince both of these quantities are non-negative, the expected test MSE can never fall below Var( \\(\\varepsilon\\) )"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#bias-variance-trade-off-1",
@@ -2052,14 +2066,14 @@
     "href": "slides/01-02-welcome_to_sl_o.html#section-9",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n. . .\n\nHow do you think we could calculate this?\n\n. . .\n\nIn the plot, you could examine the mini-barplot at \\(x = 5\\)"
+    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n. . .\n\nHow do you think we could calculate this?\n\n\nIn the plot, you could examine the mini-barplot at \\(x = 5\\)"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#section-10",
     "href": "slides/01-02-welcome_to_sl_o.html#section-10",
     "title": "Chapter 1 and 2",
     "section": "",
-    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n\nThe Bayes optimal classifier at \\(x\\) is\n\n\\[\\mathcal{C}(x) = j \\textrm{ if } p_j(x) = \\textrm{max}\\{p_1(x), p_2(x), \\dots, p_K(x)\\}\\]\n\n\nNotice that probability is a conditional probability\nIt is the probability that Y equals k given the observed preditor vector, \\(x\\)\nLet’s say we were using a Bayes Classifier for a two class problem, Y is 1 or 2. We would predict that the class is one if \\(P(Y=1|X=x_0)&gt;0.5\\) and 2 otherwise"
+    "text": "Suppose there are \\(K\\) elements in \\(\\mathcal{C}\\), numbered \\(1, 2, \\dots, K\\)\n. . .\n\\[p_k(x) = P(Y = k|X=x), k = 1, 2, \\dots, K\\] These are conditional class probabilities at \\(x\\)\n\nThe Bayes optimal classifier at \\(x\\) is\n\n\\[\\mathcal{C}(x) = j \\textrm{ if } p_j(x) = \\textrm{max}\\{p_1(x), p_2(x), \\dots, p_K(x)\\}\\]\n\n\nNotice that probability is a conditional probability\nIt is the probability that Y equals k given the observed preditor vector, \\(x\\)\nLet’s say we were using a Bayes Classifier for a two class problem, Y is 1 or 2. We would predict that the class is one if \\(P(Y=1|X=x_0)&gt;0.5\\) and 2 otherwise"
   },
   {
     "objectID": "slides/01-02-welcome_to_sl_o.html#section-11",
@@ -2073,7 +2087,7 @@
     "href": "slides/01-02-welcome_to_sl_o.html#accuracy-6",
     "title": "Chapter 1 and 2",
     "section": "Accuracy",
-    "text": "Accuracy\n\nMisclassification error rate\n\n\\[Err_{\\texttt{test}} = \\frac{\\#correct predictions}{total predictions} = \\textrm{Ave}_{test}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\] &gt; * \\(I(\\cdot)\\) is an indicator function and will only be eitehr 0 or 1.\n\n\nThe Bayes Classifier using the true \\(p_k(x)\\) has the smallest error\nSome of the methods we (may) learn build structured models for \\(\\mathcal{C}(x)\\) (support vector machines, for example)\nSome build structured models for \\(p_k(x)\\) (logistic regression, for example)\n\n\n\n\nthe test error rate \\(\\textrm{Ave}_{i\\in\\texttt{test}}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\) is minimized on average by very simple classifier that assigns each observation to the most likely class, given its predictor values (that’s the Bayes classifier)"
+    "text": "Accuracy\n\nMisclassification error rate\n\n. . .\n\\[Err_{\\texttt{test}} = \\frac{\\#correct predictions}{total predictions} = \\textrm{Ave}_{test}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\] &gt; * \\(I(\\cdot)\\) is an indicator function and will only be eitehr 0 or 1.\n\n\nThe Bayes Classifier using the true \\(p_k(x)\\) has the smallest error\nSome of the methods we (may) learn build structured models for \\(\\mathcal{C}(x)\\) (support vector machines, for example)\nSome build structured models for \\(p_k(x)\\) (logistic regression, for example)\n\n\n\n\nthe test error rate \\(\\textrm{Ave}_{i\\in\\texttt{test}}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\) is minimized on average by very simple classifier that assigns each observation to the most likely class, given its predictor values (that’s the Bayes classifier)"
   },
   {
     "objectID": "labs/05-dt.html",
@@ -2351,14 +2365,14 @@
     "href": "hw/hw-01-intro-review.html#this-one-time",
     "title": "Homework 1",
     "section": "This One Time",
-    "text": "This One Time\n\nGo to our RStudio Server at http://turing.cornellcollege.edu:8787/\nClick File tab on the bottom right and then click the work Home.\nCreate a new folder using the little folder icon with the green plus on it. Use STA 362 in the folder name."
+    "text": "This One Time\n\nGo to our RStudio Server at &lt;https://10.101.128.72:8787&gt;\nClick File tab on the bottom right and then click the work Home.\nCreate a new folder using the little folder icon with the green plus on it. Use STA 362 in the folder name."
   },
   {
     "objectID": "hw/hw-01-intro-review.html#every-homeworklabactivity",
     "href": "hw/hw-01-intro-review.html#every-homeworklabactivity",
     "title": "Homework 1",
     "section": "Every Homework/lab/activity",
-    "text": "Every Homework/lab/activity\nEach of your assignments will begin with the following steps.\n\nFinding the instructions on our website: https://sta362-sb8-24.github.io/STA362StatLearning/\nGoing to our RStudio Server at http://turing.cornellcollege.edu:8787/\nCreating a new project. and giving it a sensible name such as homework_1 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw1.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+    "text": "Every Homework/lab/activity\nEach of your assignments will begin with the following steps.\n\nFinding the instructions on our website: &lt;https://stats-tgeorge.github.io/STA362StatLearning/&gt;\nGoing to our RStudio Server at &lt;https://10.101.128.72:8787&gt;\nCreating a new project. and giving it a sensible name such as homework_1 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw1.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
   },
   {
     "objectID": "hw/hw-01-intro-review.html#yaml",
@@ -2379,7 +2393,7 @@
     "href": "index.html",
     "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n15 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n16 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n17 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n18 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n19 April\nCh 4 - LDA, QDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n22 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n24 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n25 April\nTidymodel recipies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n26 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n29 April\nCh 6 - Dimension Reduction, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n30 April\nCh 8 - Decision Trees, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n1 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n2 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n3 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n6 May\nCh 12 - PCA or Clustering, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n7 May\nFinish Up, watch project videos, surveys etc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n8 May\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n15 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n16 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n17 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n18 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n19 April\nCh 4 - LDA, QDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n22 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n24 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n25 April\nTidymodel recipies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n26 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n29 April\nCh 6 - Dimension Reduction, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n30 April\nCh 8 - Decision Trees, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n1 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n2 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n3 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n6 May\nCh 12 - PCA or Clustering, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n7 May\nFinish Up, watch project videos, surveys etc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n8 May\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"

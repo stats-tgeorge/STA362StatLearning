@@ -9,7 +9,7 @@ instructor:
   twitter: stats_tgeorge
   github: stats-tgeorge
   office: "West 311"
-  officehrs: "MWTh 3:05pm-4:05pm and by appt."
+  officehrs: "MWThF 8:00am-8:55am and by appt."
   appointment_url: "https://calendar.app.google/HDUTUGigjhrLvP2u5"
 
 course:
@@ -36,3 +36,6 @@ college:
 
 citation:
   websource: Dr. Lucy D’Agostino McGowan
+  
+server:
+  url: "https://10.101.128.72:8787"

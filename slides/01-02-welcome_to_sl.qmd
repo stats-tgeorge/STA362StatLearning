@@ -184,6 +184,8 @@ observations (examples, instances) of these measurements
 What do you think are some objectives here?
 :::
 
+. . .
+
 ### Objectives
 
 - Accurately predict unseen test cases
@@ -250,7 +252,6 @@ What would be an example of a **regression** problem?
 :::
 
 - Regression: quantitative response
-- Classification: qualitative (categorical) response
 
 
 
@@ -261,7 +262,6 @@ What would be an example of a **regression** problem?
 What would be an example of a **classification** problem?
 :::
 
-- Regression: quantitative response
 - Classification: qualitative (categorical) response
 
 
@@ -393,6 +393,8 @@ This ideal $f(x) = E(Y | X = x)$ is called the **regression function**
 
 * Also works or a vector, $X$, for example,
 
+. . .
+
 $$f(x) = f(x_1, x_2, x_3) = E[Y | X_1 = x_1, X_2 = x_2, X_3 = x_3]$$
 
 * This is the **optimal** predictor of $Y$ in terms of **mean-squared prediction error**
@@ -439,9 +441,7 @@ Auto %>%
 Using these points, how would I calculate the **regression function**?
 :::
 
-. . .
-
-* Take the average! $f(100) = E[\texttt{mpg}|\texttt{horsepower} = 100] = 19.6$
+* Take the average! $f(100) = E[\texttt{mpg}|\texttt{horsepower} = 100] = \hat{f}(X_h=100)=19.6$
 
 ## Regression function, $f(X)$ {.small}
 
@@ -459,7 +459,7 @@ This point has a $Y$ value of 32.9. What is $\hat\varepsilon$?
 :::
 
 
-> * $\hat\varepsilon = Y - \hat{f}(X) = 32.9 - 19.6 = \color{red}{13.3}$
+> * $\hat\varepsilon = Y - \hat{f}(X_h=100) = 32.9 - 19.6 = \color{red}{13.3}$
 
 
 
@@ -472,14 +472,15 @@ $$E[(Y - \hat{f}(x))^2 | X = x] = \underbrace{[f(x) - \hat{f}(x)]^2}_{\textrm{re
 > * Assume for a moment that both $\hat{f}$ and X are fixed.
 > * $E(Y − \hat{Y})^2$ represents the average, or expected value, of the squared difference between the predicted and actual value of Y, and Var( $\varepsilon$ ) represents the variance associated with the error term
 > * The focus of this class is on techniques for estimating f with the aim of minimizing the **reducible error**. 
-> * the **irreducible error** will always provide an upper bound on the accuracy of our prediction for Y
-* This bound is almost always unknown in practice
+> * The **irreducible error** will always provide an upper bound on the accuracy of our prediction for $Y$. This bound is almost always unknown in practice
 
 
 ## Estimating $f$ {.smaller}
 
 * Typically we have very few (if any!) data points at $X=x$ exactly, so we cannot compute $E[Y|X=x]$
 * For example, what if we were interested in estimating miles per gallon when horsepower was 104.
+
+. . .
 
 ::: center
 
@@ -494,7 +495,9 @@ ggplot(Auto, aes(horsepower, mpg)) +
 
 :::
 
-. . .
+
+
+## Estimating $f$ {.smaller}
 
 `r emo::ji("bulb")` We can _relax_ the definition and let
 
@@ -556,6 +559,8 @@ $$f(X) = \beta_0 + \beta_1X_1 + \beta_2X_2 + \dots + \beta_pX_p$$
 
 * The <font color = "red"> red </font> points are simulated values for `income` from the model:
 
+. . .
+
 $$\texttt{income} = f(\texttt{education, senority}) + \varepsilon$$
 
 * $f$ is the <font color = "blue"> blue </font> surface
@@ -613,6 +618,8 @@ are not
 
 * We can measure **accuracy** as the average squared prediction error over that `train` data
 
+. . .
+
 $$MSE_{\texttt{train}} = \textrm{Ave}_{train}[y_i-\hat{f}(x_i)]^2$$
 
 . . .
@@ -639,7 +646,7 @@ ggplot(df, aes(x, y)) +
 ```
 
 ::: question
-I have some `train` data, plotted above. What $\hat{f}(x)$ would minimize the $MSE_{\texttt{train}}$?
+I have some *training* data, plotted above. What $\hat{f}(x)$ would minimize the $MSE_{\texttt{train}}$?
 :::
 
 $$MSE_{\texttt{train}} = \textrm{Ave}_{train}[y_i-\hat{f}(x_i)]^2$$
@@ -655,7 +662,7 @@ ggplot(df, aes(x, y)) +
 ```
 
 ::: question
-I have some `train` data, plotted above. What $\hat{f}(x)$ would minimize the $MSE_{\texttt{train}}$?
+I have some *training* data, plotted above. What $\hat{f}(x)$ would minimize the $MSE_{\texttt{train}}$?
 :::
 
 $$MSE_{train} = \textrm{Ave}_{i\in\texttt{train}}[y_i-\hat{f}(x_i)]^2$$
@@ -700,6 +707,8 @@ If we get a new sample, that overfit model is probably going to be terrible!
 * We've fit a model $\hat{f}(x)$ to some `training data`.
 * Instead of measuring **accuracy** as the average squared prediction error over that `train` data, we can compute it using fresh `test` data.
 
+. . .
+
 $$MSE_{\texttt{test}} = \textrm{Ave}_{test}[y_i-\hat{f}(x_i)]^2$$
 
 ##
@@ -726,8 +735,7 @@ Here the truth is wiggly and the noise is low, so the more flexible fits do the 
 
 > * We've fit a model, $\hat{f}(x)$, to some training data
 > * Let's pull a test observation from this population ( $x_0, y_0$ )
-> * The _true_ model is $Y = f(x) + \varepsilon$
-> * $f(x) = E[Y|X=x]$
+> * The _true_ model is $Y = f(x) + \varepsilon$ and $f(x) = E[Y|X=x]$
 
 . . .
 
@@ -800,8 +808,6 @@ These are **conditional class probabilities** at $x$
 How do you think we could calculate this?
 :::
 
-. . .
-
 * In the plot, you could examine the mini-barplot at $x = 5$
 
 
@@ -812,6 +818,8 @@ How do you think we could calculate this?
 </center>
 
 Suppose there are $K$ elements in $\mathcal{C}$, numbered $1, 2, \dots, K$
+
+. . .
 
 $$p_k(x) = P(Y = k|X=x), k = 1, 2, \dots, K$$
 These are **conditional class probabilities** at $x$
@@ -845,6 +853,8 @@ What if this was our data and there were no points at exactly $x = 5$? Then how 
 ## Accuracy {.smaller}
 
 * Misclassification error rate
+
+. . .
 
 $$Err_{\texttt{test}} = \frac{\#correct predictions}{total predictions} = \textrm{Ave}_{test}I[y_i\neq \mathcal{\hat{C}}(x_i)]$$
 > * $I(\cdot)$ is an indicator function and will only be eitehr 0 or 1.

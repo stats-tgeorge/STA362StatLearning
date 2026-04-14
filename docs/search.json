@@ -3300,7 +3300,7 @@
     "href": "slides/05-cv-tidymodels_o.html#cross-validation-3",
     "title": "Chapter 5 and tidymodels",
     "section": "Cross validation",
-    "text": "Cross validation\n\n💡 Big idea\n\n\nWe have determined that it is sensible to use a test set to calculate metrics like prediction error\nWhat if we don’t have a separate data set to test our model on?\n🎉 We can use resampling methods to estimate the test-set prediction error"
+    "text": "Cross validation\n\n💡 Big idea\n\nWe have determined that it is sensible to use a test set to calculate metrics like prediction error\nWhat if we don’t have a separate data set to test our model on?\n🎉 We can use resampling methods to estimate the test-set prediction error"
   },
   {
     "objectID": "slides/05-cv-tidymodels_o.html#training-error-versus-test-error",
@@ -3391,14 +3391,7 @@
     "href": "slides/05-cv-tidymodels_o.html#estimating-prediction-error-quantitative-outcome",
     "title": "Chapter 5 and tidymodels",
     "section": "Estimating prediction error (quantitative outcome)",
-    "text": "Estimating prediction error (quantitative outcome)\n\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_{(K)} = \\sum_{k=1}^K\\frac{n_k}{n}MSE_k\\)\n\\(MSE_k = \\sum_{i \\in C_k} (y_i - \\hat{y}_i)^2/n_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed\nIf we set \\(K = n\\), we’d have \\(n-fold\\) cross validation which is the same as leave-one-out cross validation (LOOCV)"
-  },
-  {
-    "objectID": "slides/05-cv-tidymodels_o.html#estimating-prediction-error-quantitative-outcome-1",
-    "href": "slides/05-cv-tidymodels_o.html#estimating-prediction-error-quantitative-outcome-1",
-    "title": "Chapter 5 and tidymodels",
-    "section": "Estimating prediction error (quantitative outcome)",
-    "text": "Estimating prediction error (quantitative outcome)\n\n\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_{(K)} = \\sum_{k=1}^K\\frac{n_k}{n}MSE_k\\)\n\\(MSE_k = \\sum_{i \\in C_k} (y_i - \\hat{y}_i)^2/n_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed\nIf we set \\(K = n\\), we’d have \\(n-fold\\) cross validation which is the same as leave-one-out cross validation (LOOCV)"
+    "text": "Estimating prediction error (quantitative outcome)\n\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(MSE_k = \\sum_{i \\in C_k} (y_i - \\hat{y}_i)^2/n_k\\)\n\\(CV_{(K)} = \\sum_{k=1}^K\\frac{n_k}{n}MSE_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed\nIf we set \\(K = n\\), we’d have \\(n-fold\\) cross validation which is the same as leave-one-out cross validation (LOOCV)"
   },
   {
     "objectID": "slides/05-cv-tidymodels_o.html#leave-one-out-cross-validation",
@@ -3440,14 +3433,7 @@
     "href": "slides/05-cv-tidymodels_o.html#estimating-prediction-error-qualitative-outcome",
     "title": "Chapter 5 and tidymodels",
     "section": "Estimating prediction error (qualitative outcome)",
-    "text": "Estimating prediction error (qualitative outcome)\n\nThe premise is the same as cross valiation for quantitative outcomes\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_K = \\sum_{k=1}^K\\frac{n_k}{n}Err_k\\)\n\\(Err_k = \\sum_{i\\in C_k}I(y_i\\neq\\hat{y}_i)/n_k\\) (misclassification rate)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed"
-  },
-  {
-    "objectID": "slides/05-cv-tidymodels_o.html#estimating-prediction-error-qualitative-outcome-1",
-    "href": "slides/05-cv-tidymodels_o.html#estimating-prediction-error-qualitative-outcome-1",
-    "title": "Chapter 5 and tidymodels",
-    "section": "Estimating prediction error (qualitative outcome)",
-    "text": "Estimating prediction error (qualitative outcome)\n\n\nThe premise is the same as cross valiation for quantitative outcomes\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_K = \\sum_{k=1}^K\\frac{n_k}{n}Err_k\\)\n\\(Err_k = \\sum_{i\\in C_k}I(y_i\\neq\\hat{y}_i)/n_k\\) (misclassification rate)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed"
+    "text": "Estimating prediction error (qualitative outcome)\n\nThe premise is the same as cross validation for quantitative outcomes\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(Err_k = \\sum_{i\\in C_k}I(y_i\\neq\\hat{y}_i)/n_k\\) (misclassification rate)\n\\(CV_K = \\sum_{k=1}^K\\frac{n_k}{n}Err_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed"
   },
   {
     "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-1",
@@ -3510,7 +3496,7 @@
     "href": "slides/05-cv-tidymodels_o.html#application-exercise-2",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
-    "text": "Application Exercise\n\n\nWrite a pipe that creates a model that uses lm() to fit a linear regression using tidymodels. Save it as lm_spec and look at the object. What does it return?\n\n\nHint: you’ll need https://www.tidymodels.org"
+    "text": "Application Exercise\n\nWrite a pipe that creates a model that uses linear_reg() and engine lm to fit a linear regression using tidymodels. Save it as lm_spec and look at the object. What does it return?\n\nHint: you’ll need https://www.tidymodels.org"
   },
   {
     "objectID": "slides/05-cv-tidymodels_o.html#answer",
@@ -3531,7 +3517,7 @@
     "href": "slides/05-cv-tidymodels_o.html#application-exercise-3",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
-    "text": "Application Exercise\n\n\nFit the model:\n\n\nlibrary(ISLR)\nlm_fit &lt;- fit(lm_spec,\n              mpg ~ horsepower,\n              data = Auto)\nlm_fit\n\nDoes this give the same results as\n\nlm(mpg ~ horsepower, data = Auto)"
+    "text": "Application Exercise\n\n\nFit the model:\n\n\nlibrary(ISLR)\nlm_fit &lt;- fit(lm_spec,\n              mpg ~ horsepower,\n              data = Auto)\nlm_fit\n\n\nDoes this give the same results as\n\n\nlm(mpg ~ horsepower, data = Auto)"
   },
   {
     "objectID": "slides/05-cv-tidymodels_o.html#answer-1",
@@ -3560,13 +3546,6 @@
     "title": "Chapter 5 and tidymodels",
     "section": "Get predictions",
     "text": "Get predictions\n\nlm_fit |&gt;\n  predict(new_data = Auto) |&gt;\n  bind_cols(Auto)\n\n# A tibble: 392 × 10\n   .pred   mpg cylinders displacement horsepower weight acceleration  year origin name    \n * &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt;   \n 1 19.4     18         8          307        130   3504         12      70      1 chevrol…\n 2 13.9     15         8          350        165   3693         11.5    70      1 buick s…\n 3 16.3     18         8          318        150   3436         11      70      1 plymout…\n 4 16.3     16         8          304        150   3433         12      70      1 amc reb…\n 5 17.8     17         8          302        140   3449         10.5    70      1 ford to…\n 6  8.68    15         8          429        198   4341         10      70      1 ford ga…\n 7  5.21    14         8          454        220   4354          9      70      1 chevrol…\n 8  6.00    14         8          440        215   4312          8.5    70      1 plymout…\n 9  4.42    14         8          455        225   4425         10      70      1 pontiac…\n10  9.95    15         8          390        190   3850          8.5    70      1 amc amb…\n# ℹ 382 more rows\n\n\n\nWhich column has the predicted values?"
-  },
-  {
-    "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-4",
-    "href": "slides/05-cv-tidymodels_o.html#application-exercise-4",
-    "title": "Chapter 5 and tidymodels",
-    "section": " Application Exercise",
-    "text": "Application Exercise\n\n\n\n\n\n\n\nEdit the code below to add the original data to the predicted data.\n\n\n\nmpg_pred &lt;- lm_fit |&gt; \n  predict(new_data = Auto) |&gt; \n  ---"
   },
   {
     "objectID": "slides/05-cv-tidymodels_o.html#get-predictions-3",
@@ -3618,11 +3597,11 @@
     "text": "Validation set approach\n\nAuto_train &lt;- training(Auto_split)\n\n\nAuto_train\n\n\n\n# A tibble: 196 × 9\n     mpg cylinders displacement horsepower weight acceleration  year origin name          \n   &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt;         \n 1  37.7         4           89         62   2050         17.3    81      3 toyota tercel \n 2  27           4           97         60   1834         19      71      2 volkswagen mo…\n 3  22           6          232        112   2835         14.7    82      1 ford granada l\n 4  16           6          250        100   3781         17      74      1 chevrolet che…\n 5  25           4           90         71   2223         16.5    75      2 volkswagen da…\n 6  18           6          232        100   2945         16      73      1 amc hornet    \n 7  38.1         4           89         60   1968         18.8    80      3 toyota coroll…\n 8  23           4           97         54   2254         23.5    72      2 volkswagen ty…\n 9  15           8          302        130   4295         14.9    77      1 mercury couga…\n10  34           4          108         70   2245         16.9    82      3 toyota corolla\n# ℹ 186 more rows"
   },
   {
-    "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-5",
-    "href": "slides/05-cv-tidymodels_o.html#application-exercise-5",
+    "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-4",
+    "href": "slides/05-cv-tidymodels_o.html#application-exercise-4",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
-    "text": "Application Exercise\n\n\nCopy the code below, fill in the blanks to fit a model on the training data then calculate the test RMSE.\n\n\nset.seed(100)\nAuto_split  &lt;- ________\nAuto_train  &lt;- ________\nAuto_test   &lt;- ________\nlm_fit      &lt;- fit(lm_spec, \n                   mpg ~ horsepower, \n                   data = ________)\nmpg_pred  &lt;- ________ |&gt; \n  predict(new_data = ________) |&gt; \n  bind_cols(________)\nrmse(________, truth = ________, estimate = ________)"
+    "text": "Application Exercise\n\nCopy the code below, fill in the blanks to fit a model on the training data then calculate the test RMSE.\n\nset.seed(100)\nAuto_split  &lt;- ________\nAuto_train  &lt;- ________\nAuto_test   &lt;- ________\nlm_fit      &lt;- fit(lm_spec, \n                   mpg ~ horsepower, \n                   data = ________)\nmpg_pred  &lt;- ________ |&gt; \n  predict(new_data = ________) |&gt; \n  bind_cols(________)\nrmse(________, truth = ________, estimate = ________)"
   },
   {
     "objectID": "slides/05-cv-tidymodels_o.html#a-faster-way",
@@ -3664,11 +3643,11 @@
     "href": "slides/05-cv-tidymodels_o.html#what-about-cross-validation-2",
     "title": "Chapter 5 and tidymodels",
     "section": "What about cross validation?",
-    "text": "What about cross validation?\n\nHow do we get the metrics out? With collect_metrics() again!\n\n. . .\n\nresults &lt;- fit_resamples(lm_spec,\n                         mpg ~ horsepower,\n                         resamples = Auto_cv)\n\nresults |&gt;\n  collect_metrics()\n\n# A tibble: 2 × 6\n  .metric .estimator  mean     n std_err .config        \n  &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1 rmse    standard   4.88      5  0.385  pre0_mod0_post0\n2 rsq     standard   0.616     5  0.0220 pre0_mod0_post0"
+    "text": "What about cross validation?\n\nHow do we get the metrics out?\n\nWith collect_metrics() again!\n\n\n. . .\n\nresults &lt;- fit_resamples(lm_spec,\n                         mpg ~ horsepower,\n                         resamples = Auto_cv)\n\nresults |&gt;\n  collect_metrics()\n\n# A tibble: 2 × 6\n  .metric .estimator  mean     n std_err .config        \n  &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1 rmse    standard   4.88      5  0.385  pre0_mod0_post0\n2 rsq     standard   0.616     5  0.0220 pre0_mod0_post0"
   },
   {
-    "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-6",
-    "href": "slides/05-cv-tidymodels_o.html#application-exercise-6",
+    "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-5",
+    "href": "slides/05-cv-tidymodels_o.html#application-exercise-5",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
     "text": "Application Exercise\n\n\n\n\n\n\n\nEdit the code below to get the 5-fold cross validation error rate for the following model:\n\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\epsilon\\)\n\nAuto_cv &lt;- vfold_cv(Auto, v = 5)\n\nresults &lt;- fit_resamples(lm_spec,\n                         ----,\n                         resamples = ---)\n\nresults |&gt;\n  collect_metrics()\n\n\nWhat do you think rsq is?"
@@ -3681,8 +3660,8 @@
     "text": "Answer\n\nAuto_cv &lt;- vfold_cv(Auto, v = 5)\n\nresults &lt;- fit_resamples(lm_spec,\n                         mpg ~ horsepower + I(horsepower^2),\n                         resamples = Auto_cv)\n\nresults |&gt;\n  collect_metrics()\n\n# A tibble: 2 × 6\n  .metric .estimator  mean     n std_err .config        \n  &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1 rmse    standard   4.36      5  0.241  pre0_mod0_post0\n2 rsq     standard   0.688     5  0.0208 pre0_mod0_post0"
   },
   {
-    "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-7",
-    "href": "slides/05-cv-tidymodels_o.html#application-exercise-7",
+    "objectID": "slides/05-cv-tidymodels_o.html#application-exercise-6",
+    "href": "slides/05-cv-tidymodels_o.html#application-exercise-6",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
     "text": "Application Exercise\n\n\nFit 3 models on the data using 5 fold cross validation:\n\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\epsilon\\)\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\epsilon\\)\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\beta_3 horsepower^3 +\\epsilon\\)\n\nCollect the metrics from each model, saving the results as results_1, results_2, results_3\nWhich model is “best”?"
@@ -3811,14 +3790,7 @@
     "href": "slides/05-cv-tidymodels.html#estimating-prediction-error-quantitative-outcome",
     "title": "Chapter 5 and tidymodels",
     "section": "Estimating prediction error (quantitative outcome)",
-    "text": "Estimating prediction error (quantitative outcome)\n\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_{(K)} = \\sum_{k=1}^K\\frac{n_k}{n}MSE_k\\)\n\\(MSE_k = \\sum_{i \\in C_k} (y_i - \\hat{y}_i)^2/n_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed\nIf we set \\(K = n\\), we’d have \\(n-fold\\) cross validation which is the same as leave-one-out cross validation (LOOCV)"
-  },
-  {
-    "objectID": "slides/05-cv-tidymodels.html#estimating-prediction-error-quantitative-outcome-1",
-    "href": "slides/05-cv-tidymodels.html#estimating-prediction-error-quantitative-outcome-1",
-    "title": "Chapter 5 and tidymodels",
-    "section": "Estimating prediction error (quantitative outcome)",
-    "text": "Estimating prediction error (quantitative outcome)\n\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_{(K)} = \\sum_{k=1}^K\\frac{n_k}{n}MSE_k\\)\n\\(MSE_k = \\sum_{i \\in C_k} (y_i - \\hat{y}_i)^2/n_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed\nIf we set \\(K = n\\), we’d have \\(n-fold\\) cross validation which is the same as leave-one-out cross validation (LOOCV)"
+    "text": "Estimating prediction error (quantitative outcome)\n\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(MSE_k = \\sum_{i \\in C_k} (y_i - \\hat{y}_i)^2/n_k\\)\n\\(CV_{(K)} = \\sum_{k=1}^K\\frac{n_k}{n}MSE_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed\nIf we set \\(K = n\\), we’d have \\(n-fold\\) cross validation which is the same as leave-one-out cross validation (LOOCV)"
   },
   {
     "objectID": "slides/05-cv-tidymodels.html#leave-one-out-cross-validation",
@@ -3860,14 +3832,7 @@
     "href": "slides/05-cv-tidymodels.html#estimating-prediction-error-qualitative-outcome",
     "title": "Chapter 5 and tidymodels",
     "section": "Estimating prediction error (qualitative outcome)",
-    "text": "Estimating prediction error (qualitative outcome)\n\nThe premise is the same as cross valiation for quantitative outcomes\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_K = \\sum_{k=1}^K\\frac{n_k}{n}Err_k\\)\n\\(Err_k = \\sum_{i\\in C_k}I(y_i\\neq\\hat{y}_i)/n_k\\) (misclassification rate)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed"
-  },
-  {
-    "objectID": "slides/05-cv-tidymodels.html#estimating-prediction-error-qualitative-outcome-1",
-    "href": "slides/05-cv-tidymodels.html#estimating-prediction-error-qualitative-outcome-1",
-    "title": "Chapter 5 and tidymodels",
-    "section": "Estimating prediction error (qualitative outcome)",
-    "text": "Estimating prediction error (qualitative outcome)\n\nThe premise is the same as cross valiation for quantitative outcomes\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(CV_K = \\sum_{k=1}^K\\frac{n_k}{n}Err_k\\)\n\\(Err_k = \\sum_{i\\in C_k}I(y_i\\neq\\hat{y}_i)/n_k\\) (misclassification rate)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed"
+    "text": "Estimating prediction error (qualitative outcome)\n\nThe premise is the same as cross validation for quantitative outcomes\nSplit the data into K parts, where \\(C_1, C_2, \\dots, C_k\\) indicate the indices of observations in part \\(k\\)\n\\(Err_k = \\sum_{i\\in C_k}I(y_i\\neq\\hat{y}_i)/n_k\\) (misclassification rate)\n\\(CV_K = \\sum_{k=1}^K\\frac{n_k}{n}Err_k\\)\n\\(n_k\\) is the number of observations in group \\(k\\)\n\\(\\hat{y}_i\\) is the fit for observation \\(i\\) obtained from the data with the part \\(k\\) removed"
   },
   {
     "objectID": "slides/05-cv-tidymodels.html#application-exercise-1",
@@ -3930,7 +3895,7 @@
     "href": "slides/05-cv-tidymodels.html#application-exercise-2",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
-    "text": "Application Exercise\n\nWrite a pipe that creates a model that uses lm() to fit a linear regression using tidymodels. Save it as lm_spec and look at the object. What does it return?\n\nHint: you’ll need https://www.tidymodels.org"
+    "text": "Application Exercise\nWrite a pipe that creates a model that uses linear_reg() and engine lm to fit a linear regression using tidymodels. Save it as lm_spec and look at the object. What does it return?\nHint: you’ll need https://www.tidymodels.org"
   },
   {
     "objectID": "slides/05-cv-tidymodels.html#answer",
@@ -3951,7 +3916,7 @@
     "href": "slides/05-cv-tidymodels.html#application-exercise-3",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
-    "text": "Application Exercise\n\nFit the model:\n\n\nlibrary(ISLR)\nlm_fit &lt;- fit(lm_spec,\n              mpg ~ horsepower,\n              data = Auto)\nlm_fit\n\nDoes this give the same results as\n\nlm(mpg ~ horsepower, data = Auto)"
+    "text": "Application Exercise\n\nFit the model:\n\n\nlibrary(ISLR)\nlm_fit &lt;- fit(lm_spec,\n              mpg ~ horsepower,\n              data = Auto)\nlm_fit\n\n\nDoes this give the same results as\n\n\nlm(mpg ~ horsepower, data = Auto)"
   },
   {
     "objectID": "slides/05-cv-tidymodels.html#answer-1",
@@ -3980,13 +3945,6 @@
     "title": "Chapter 5 and tidymodels",
     "section": "Get predictions",
     "text": "Get predictions\n\nlm_fit |&gt;\n  predict(new_data = Auto) |&gt;\n  bind_cols(Auto)\n\n# A tibble: 392 × 10\n   .pred   mpg cylinders displacement horsepower weight acceleration  year origin name    \n * &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt;   \n 1 19.4     18         8          307        130   3504         12      70      1 chevrol…\n 2 13.9     15         8          350        165   3693         11.5    70      1 buick s…\n 3 16.3     18         8          318        150   3436         11      70      1 plymout…\n 4 16.3     16         8          304        150   3433         12      70      1 amc reb…\n 5 17.8     17         8          302        140   3449         10.5    70      1 ford to…\n 6  8.68    15         8          429        198   4341         10      70      1 ford ga…\n 7  5.21    14         8          454        220   4354          9      70      1 chevrol…\n 8  6.00    14         8          440        215   4312          8.5    70      1 plymout…\n 9  4.42    14         8          455        225   4425         10      70      1 pontiac…\n10  9.95    15         8          390        190   3850          8.5    70      1 amc amb…\n# ℹ 382 more rows\n\n\n\nWhich column has the predicted values?"
-  },
-  {
-    "objectID": "slides/05-cv-tidymodels.html#application-exercise-4",
-    "href": "slides/05-cv-tidymodels.html#application-exercise-4",
-    "title": "Chapter 5 and tidymodels",
-    "section": " Application Exercise",
-    "text": "Application Exercise\n\n\n\n\n\n\nEdit the code below to add the original data to the predicted data.\n\n\nmpg_pred &lt;- lm_fit |&gt; \n  predict(new_data = Auto) |&gt; \n  ---"
   },
   {
     "objectID": "slides/05-cv-tidymodels.html#get-predictions-3",
@@ -4038,11 +3996,11 @@
     "text": "Validation set approach\n\nAuto_train &lt;- training(Auto_split)\n\n\nAuto_train\n\n\n\n# A tibble: 196 × 9\n     mpg cylinders displacement horsepower weight acceleration  year origin name          \n   &lt;dbl&gt;     &lt;dbl&gt;        &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;        &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;fct&gt;         \n 1  37.7         4           89         62   2050         17.3    81      3 toyota tercel \n 2  27           4           97         60   1834         19      71      2 volkswagen mo…\n 3  22           6          232        112   2835         14.7    82      1 ford granada l\n 4  16           6          250        100   3781         17      74      1 chevrolet che…\n 5  25           4           90         71   2223         16.5    75      2 volkswagen da…\n 6  18           6          232        100   2945         16      73      1 amc hornet    \n 7  38.1         4           89         60   1968         18.8    80      3 toyota coroll…\n 8  23           4           97         54   2254         23.5    72      2 volkswagen ty…\n 9  15           8          302        130   4295         14.9    77      1 mercury couga…\n10  34           4          108         70   2245         16.9    82      3 toyota corolla\n# ℹ 186 more rows"
   },
   {
-    "objectID": "slides/05-cv-tidymodels.html#application-exercise-5",
-    "href": "slides/05-cv-tidymodels.html#application-exercise-5",
+    "objectID": "slides/05-cv-tidymodels.html#application-exercise-4",
+    "href": "slides/05-cv-tidymodels.html#application-exercise-4",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
-    "text": "Application Exercise\n\nCopy the code below, fill in the blanks to fit a model on the training data then calculate the test RMSE.\n\n\nset.seed(100)\nAuto_split  &lt;- ________\nAuto_train  &lt;- ________\nAuto_test   &lt;- ________\nlm_fit      &lt;- fit(lm_spec, \n                   mpg ~ horsepower, \n                   data = ________)\nmpg_pred  &lt;- ________ |&gt; \n  predict(new_data = ________) |&gt; \n  bind_cols(________)\nrmse(________, truth = ________, estimate = ________)"
+    "text": "Application Exercise\nCopy the code below, fill in the blanks to fit a model on the training data then calculate the test RMSE.\n\nset.seed(100)\nAuto_split  &lt;- ________\nAuto_train  &lt;- ________\nAuto_test   &lt;- ________\nlm_fit      &lt;- fit(lm_spec, \n                   mpg ~ horsepower, \n                   data = ________)\nmpg_pred  &lt;- ________ |&gt; \n  predict(new_data = ________) |&gt; \n  bind_cols(________)\nrmse(________, truth = ________, estimate = ________)"
   },
   {
     "objectID": "slides/05-cv-tidymodels.html#a-faster-way",
@@ -4084,11 +4042,11 @@
     "href": "slides/05-cv-tidymodels.html#what-about-cross-validation-2",
     "title": "Chapter 5 and tidymodels",
     "section": "What about cross validation?",
-    "text": "What about cross validation?\n\nHow do we get the metrics out? With collect_metrics() again!\n\n\n\nresults &lt;- fit_resamples(lm_spec,\n                         mpg ~ horsepower,\n                         resamples = Auto_cv)\n\nresults |&gt;\n  collect_metrics()\n\n# A tibble: 2 × 6\n  .metric .estimator  mean     n std_err .config        \n  &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1 rmse    standard   4.88      5  0.385  pre0_mod0_post0\n2 rsq     standard   0.616     5  0.0220 pre0_mod0_post0"
+    "text": "What about cross validation?\n\nHow do we get the metrics out?\n\nWith collect_metrics() again!\n\n\n\n\nresults &lt;- fit_resamples(lm_spec,\n                         mpg ~ horsepower,\n                         resamples = Auto_cv)\n\nresults |&gt;\n  collect_metrics()\n\n# A tibble: 2 × 6\n  .metric .estimator  mean     n std_err .config        \n  &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1 rmse    standard   4.88      5  0.385  pre0_mod0_post0\n2 rsq     standard   0.616     5  0.0220 pre0_mod0_post0"
   },
   {
-    "objectID": "slides/05-cv-tidymodels.html#application-exercise-6",
-    "href": "slides/05-cv-tidymodels.html#application-exercise-6",
+    "objectID": "slides/05-cv-tidymodels.html#application-exercise-5",
+    "href": "slides/05-cv-tidymodels.html#application-exercise-5",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
     "text": "Application Exercise\n\n\n\n\n\n\nEdit the code below to get the 5-fold cross validation error rate for the following model:\n\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\epsilon\\)\n\nAuto_cv &lt;- vfold_cv(Auto, v = 5)\n\nresults &lt;- fit_resamples(lm_spec,\n                         ----,\n                         resamples = ---)\n\nresults |&gt;\n  collect_metrics()\n\n\nWhat do you think rsq is?"
@@ -4101,8 +4059,8 @@
     "text": "Answer\n\nAuto_cv &lt;- vfold_cv(Auto, v = 5)\n\nresults &lt;- fit_resamples(lm_spec,\n                         mpg ~ horsepower + I(horsepower^2),\n                         resamples = Auto_cv)\n\nresults |&gt;\n  collect_metrics()\n\n# A tibble: 2 × 6\n  .metric .estimator  mean     n std_err .config        \n  &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1 rmse    standard   4.36      5  0.241  pre0_mod0_post0\n2 rsq     standard   0.688     5  0.0208 pre0_mod0_post0"
   },
   {
-    "objectID": "slides/05-cv-tidymodels.html#application-exercise-7",
-    "href": "slides/05-cv-tidymodels.html#application-exercise-7",
+    "objectID": "slides/05-cv-tidymodels.html#application-exercise-6",
+    "href": "slides/05-cv-tidymodels.html#application-exercise-6",
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
     "text": "Application Exercise\n\nFit 3 models on the data using 5 fold cross validation:\n\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\epsilon\\)\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\epsilon\\)\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\beta_3 horsepower^3 +\\epsilon\\)\n\nCollect the metrics from each model, saving the results as results_1, results_2, results_3\nWhich model is “best”?"

@@ -856,7 +856,7 @@ What if this was our data and there were no points at exactly $x = 5$? Then how 
 
 . . .
 
-$$Err_{\texttt{test}} = \frac{\#correct predictions}{total predictions} = \textrm{Ave}_{test}I[y_i\neq \mathcal{\hat{C}}(x_i)]$$
+$$Err_{\texttt{test}} = \frac{\#incorrect predictions}{total predictions} = \textrm{Ave}_{test}I[y_i\neq \mathcal{\hat{C}}(x_i)]$$
 > * $I(\cdot)$ is an indicator function and will only be eitehr 0 or 1.
 
 > * The **Bayes Classifier** using the true $p_k(x)$ has the smallest error

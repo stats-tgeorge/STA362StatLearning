@@ -12,6 +12,8 @@ gs4_deauth()
 d <- read_sheet("https://docs.google.com/spreadsheets/d/1VC0F31pzRgeXaIQMgZlWZSfAJbyCxo8iryWrxJfseBU/edit?usp=sharing")
 ```
 
+
+
 ```{r, echo = FALSE}
 d %>% 
   mutate(

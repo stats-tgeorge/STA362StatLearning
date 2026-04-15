@@ -7,6 +7,11 @@ $presentation-heading-color: #523178;
 $body-color: #404040;
 $link-color: #3A5883;
 
+
+.reveal .slide :not(pre) > code {
+  color: #8e44ad;   // change inline code text color
+}
+
 /*$code-block-bg: white;*/
 
 /*$code-block-color: #523178;*/

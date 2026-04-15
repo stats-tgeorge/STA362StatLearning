@@ -1,0 +1,107 @@
+---
+title: "Lab 01"
+subtitle: "Cross Validation and tidymodels"
+author: "{{< var citation.websource >}} modfied by {{< var instructor.name >}}"
+format: html
+---
+
+```{r include=FALSE}
+#| label: load-pack
+
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+```
+
+# Getting started
+
+Go to our RStudio and create a new R project inside your class folder.
+
+# Packages
+
+In this lab we will work with three packages: **ISLR** which is a package that accompanies your textbook, **tidyverse** which is a collection of packages for doing data analysis in a "tidy" way, and **tidymodels** a collection of packages for statistical modeling.
+
+```{r eval = FALSE}
+library(tidyverse) 
+library(tidymodels)
+library(ISLR)
+```
+
+
+## YAML: 
+
+Open the **.qmd** file in your project, make sure the author is your name, and Render the document.
+
+# Data
+
+For this lab, we are using the **Auto** data from the **ISLR** package.
+
+# Exercises
+
+## Conceptual questions
+
+1. Explain how k-fold Cross Validation is implemented.
+
+2. What are the advantages / disadvantages of k-fold Cross Validation compared to the Validation Set approach? What are the advantages / disadvantages of k-fold Cross Validation compared to Leave-one-out Cross Validation?
+
+## Data exploration
+
+3. For this analysis, we are using the **Auto** dataset from the **ISLR** package. How many rows are in this dataset? How many columns? Is there any missing data?
+
+4. Our outcome of interest is miles per gallon: **mpg**. Create a publication-ready figure examining the distribution of this variable.
+
+5. Our main predictor of interest is **horsepower**. Create a publication-ready figure looking at the relationship between miles per gallon and horsepower.
+
+
+## K-fold cross validation
+
+We are trying to decide between three models of varying flexibility:
+
+* **Model 1:** $\texttt{mpg} = \beta_0 + \beta_1 \texttt{horsepower} + \epsilon$
+* **Model 2:** $\texttt{mpg} = \beta_0 + \beta_1 \texttt{horsepower} + \beta_2 \texttt{horsepower}^2 + \epsilon$
+* **Model 3:** $\texttt{mpg} = \beta_0 + \beta_1 \texttt{horsepower} + \beta_2 \texttt{horsepower}^2 + \beta_3 \texttt{horsepower}^3 + \epsilon$
+
+6. Using the **Auto** data, split the data into **two groups** a training data set, saved as **Auto_train** and a testing data set, saved as **Auto_test**. _Be sure to set a seed to ensure that you get the same result each time you Render your document_.
+
+
+
+::: column-margin
+You can use the **poly()** function to fit a model with a polynomial term. For example, to fit the model $y = \beta_0 + \beta_1 \texttt{x} + \beta_2 \texttt{x}^2 + \beta_3 \texttt{x}^3 + \epsilon$, you would run
+**fit(lm_spec, y ~ poly(x, 3), data = data)**
+:::
+
+7. Fit the three models outlined above on the **training** data. Using the model created on the training data, predict **mpg** in the test data set for each model. What is the test RMSE for the three models? Which model would you choose?
+
+8. Fit the same three models, but instead of the validation set approach, perform 5-fold cross validation. Make sure to set a seed so you get the same answer each time you run the analysis. Calculate the overall 5-fold cross validation error for each of the three models. Which model would you chose?
+
+9. The tidymodels package allows you to do this faster! Instead of having a fit 3 (or more!) different models to determine the best flexibility, you can (1) create a **recipe** to specify how you would like to fit a model and then (2) **tune** this model to determine the best output. Copy the code below. What do you think the line **step_poly(horsepower, degree = tune())** does? Hint: you can run **?step_poly** in the Console to learn more about this function.
+
+```{r}
+auto_prep <- Auto |>
+  recipe(mpg ~ horsepower) |>
+  step_poly(horsepower, degree = tune())
+```
+
+
+10. To **tune** this model, you will replace **fit_resamples** with **tune_grid**. The pseudo code to do this is below - you may need to update some names to match what you have named objects in your document. Add the code to **tune** your model based on the code below.
+
+```{r, eval = FALSE}
+auto_tune <- tune_grid(lm_spec,
+          auto_prep,
+          resamples = auto_cv)
+```
+
+11. Using the **collect_metrics** function, look at the RMSE for **auto_tune**. Which **degree** is preferable?
+
+
+12. You can plot the output from Exercise 11 to make it a bit easier to determine. First, save your output from Exercise 11 as **auto_metrics**. Then _filter_ this data frame to only include rows where **.metric == "rmse"**. Save this filtered data frame as **auto_rmse**. Edit the code below to plot the **degree** on the x-axis and **mean** on the y-axis. Describe what this plot shows.
+
+```{r, eval = FALSE}
+ggplot(auto_rmse, aes(x = ----, y = ----)) + 
+  geom_line() +
+  geom_pointrange(aes(ymin = mean - std_err, ymax = mean + std_err)) + 
+  labs(x = "Degree",
+       y = "Cross validation error",
+       title = ---)
+```
+

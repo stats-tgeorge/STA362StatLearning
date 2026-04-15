@@ -1,0 +1,87 @@
+---
+title: "Lab 05 - Decision Trees"
+author: "{{< var citation.websource >}} modfied by {{< var instructor.name >}}"
+format: 
+  html:
+    embed-resources: true
+    warning: false
+---
+
+# Getting started
+
+Go to our RStudio and create a new R project inside your class folder.
+Create a `.qmd` file for your lab.
+
+## YAML: 
+
+Now, make sure the author is your name, title is appropriate and then Render the document.
+
+
+# Packages
+In this lab we will work with four packages: `ISLR` for the data, `visdat` to visualize the dataset, `tidyverse` which is a collection of packages for doing data analysis in a "tidy" way, and `tidymodels` for statistical modeling.
+
+```{r}
+library(tidyverse) 
+library(tidymodels)
+library(ISLR)
+library(visdat)
+```
+
+
+You may need to install the package to perform boosting. You can do this by running the following **once** in the console:
+
+```{r, eval = FALSE}
+#install.packages("xgboost")
+#install.packages("visdat")
+```
+
+# Data
+
+For this lab, we are using `Carseats` data from the `ISLR` package.
+
+# Exercises
+
+1. Examine the `Carseats` data set using the `visdat` package. How many variables are there? What are the variable types? Is there any missing data? 
+
+2. Our outcome for this lab is `Sales`. Create a visualization examining the distribution of this variable.
+
+3. Create a recipe to predict `Sales` from the remain variables. We are going to be fitting bagged decision trees, random forests, boosted decision trees, and penalized regression. Make sure to perform any preprocessing steps necessary for each of these models (i.e. normalizing the data, creating dummy variables, etc.). Add this recipe to a workflow.
+
+4. Set a seed to `7`. Fit a **bagged** decision tree estimating the car seat `Sales` using the remaining 10 variables. You may specify the parameters in any way that you'd like, but **tune** the number of trees (`trees`), examining 10, 25, 50, 100, 200, 300, and 1000 trees. Add this model specification to your workflow and fit the model to find the best parameters for a bagged decision tree. 
+
+
+5. Collect the metrics from the bagged tree and filter them to only include the root mean squared error. Fill in the code below to plot these results. Describe what you see.
+
+
+```{r, eval = FALSE}
+ggplot(---, aes(x = trees, y = mean)) + 
+  geom_point() + 
+  geom_line() + 
+  labs(y = ---)
+```
+
+6. Update the model in your workflow to fit a **random forest** estimating the car seat `Sales` using the remaining 10 variables. You may specify the parameters in any way that you'd like, but **tune** the number of trees (`trees`), examining 10, 25, 50, 100, 200, 300, and 1000 trees.(See `update_model`)
+
+7. Collect the metrics from the random forest tree and filter them to only include the root mean squared error. Using similar code as in Exercise 5, plot these results. Describe what you see.
+
+8. Update the model in your workflow to fit a **boosted tree** estimating the car seat `Sales` using the remaining 10 variables. Specify the tree depth to be 1, the learn rate to 0.1, and **tune** the number of trees (`trees`), examining 10, 25, 50, 100, 200, 300, and 1000 trees.
+
+9. Collect the metrics from the boosted tree and filter them to only include the root mean squared error. Using similar code as in Exercise 5, plot these results. Describe what you see.
+
+10. Based on the exercises above and the number of trees attempted, which method would you prefer? What seems to be the optimal number of trees?
+
+11. Update the model in your workflow to fit a penalized regression model using Elastic Net to estimate the car seat `Sales` using the remaining 10 variables. Use the following grid:
+
+```{r}
+grid <- expand_grid(
+  penalty = seq(0, 0.1, by = 0.01),
+  mixture = c(0, 0.5, 1)
+)
+```
+
+12. Collect the metrics from the penalized regression and filter them to only include the root mean squared error. Using similar code as in Exercise 5, plot these results. Describe what you see.
+
+13. Which model is best as measured by both `RMSE`? Discuss. 
+
+
+Look over a different way to complete this sort of process. <https://workflowsets.tidymodels.org/articles/tuning-and-comparing-models.html>

@@ -10,15 +10,13 @@ library(tidymodels)
 library(ISLR)
 ```
 
-## Due 4/18/2024 at 9am
-
 # Instructions
 
--   Creating a new *project.* and giving it a sensible name such as *homework_2* and having that project in the course folder you created.
+-   Creating a new *project.* and giving it a sensible name such as *homework_2*.
 
 -   Create a new quarto document and give it a sensible name such as *hw2*.
 
--   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
+-   In the **YAML** add the following (add what you don't have). The embed-resources component will make your final rendered **html** self-contained.
 
     ```{r}
     #| label: yaml_example
@@ -37,25 +35,72 @@ library(ISLR)
 -   Make sure you answers print results. If the output is a large table, use the head() function to shorten the output. 
 
 # Exercises
-1.  **Complete exercise chapter 5, number 3 in ISLR.**
 
-2.  **Complete exercise chapter 5, number 8 in ISLR.**
+1. (ISLR 3) We now review *k*-fold cross-validation.
 
-3.  The data *FirstYearGPA*, in the *Stat2Data* packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use `?FirstYearGPA` to learn about the dataset. 
+    a) Explain how *k*-fold cross-validation is implemented.
 
-  a)  Split the data into training and test using 70\% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed. 
+    b) What are the advantages and disadvantages of *k*-fold cross-validation relative to:
 
-  b)  Use the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE. 
+      - The validation set approach?
+  
+      - LOOCV?
 
-  c)  Now do cross validation instead of using a test and training set. Give the final CV MSE. 
+2. (ISLR 8) We will now perform cross-validation on a simulated data set.
 
-  d)  Which was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example? 
+    a) Generate a simulated data set as follows below. In this data set, what is $n$ and what is $p$? Write out the model used to generate the data in equation form.
 
-  e)    If we had more data, how might we combine both approaches? 
+```{r, eval =F}
+set.seed(1)
+x <- rnorm(100)
+y <- x - 2 * x^2 + rnorm(100)
+```
 
-4.    The data *Titanic*, in the *Stat2Data* packages a list and outcomes for passengers on the Titanic.
 
-  a)    Fit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.
+
+
+
+2. Continued 
+
+    b) Create a scatterplot of $X$ against $Y$. Comment on what you find.
+
+    c) Set a random seed, and then compute the LOOCV errors that result from fitting the following four models using least squares:
+
+    m1. $Y = \beta_0 + \beta_1 X + \epsilon$
+    
+    m2. $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \epsilon$
+    
+    m3. $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \epsilon$
+    
+    m4. $Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \beta_4 X^4 + \epsilon$
+
+:::{.callout-tip}
+You may find it helpful to use the **data.frame()** function to create a single data set containing both $X$ and $Y$.
+:::
+
+2. Continued 
+
+    d) Repeat (c) using another random seed, and report your results. Are your results the same as what you got in (c)? Why?
+
+    e) Which of the models in (c) had the smallest LOOCV error? Is this what you expected? Explain your answer.
+
+    f) Comment on the statistical significance of the coefficient estimates that result from fitting each of the models in (c) using least squares. Do these results agree with the conclusions drawn based on the cross-validation results?
+
+3.  The data *FirstYearGPA*, in the *Stat2Data* packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use **?FirstYearGPA** to learn about the dataset. 
+
+    a)  Split the data into training and test using 70\% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed. 
+
+    b)  Use the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE. 
+
+    c)  Now do cross validation instead of using a test and training set. Give the final CV MSE. 
+
+    d)  Which was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example? 
+
+    e)    If we had more data, how might we combine both approaches? 
+
+4. The data *Titanic*, in the *Stat2Data* packages a list and outcomes for passengers on the Titanic.
+
+    a)  Fit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.
 
 ```{r}
 #| label: log-question
@@ -75,14 +120,15 @@ logistic_fit <-
 
 ```
 
+4. Continued
 
-  b)    Use the predict function on your model and predict for the data you used to fit the model. 
+    b)  Use the predict function on your model and predict for the data you used to fit the model. 
   
-  c)    Using your predicted values, calculate the missclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match. 
+    c)  Using your predicted values, calculate the misclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match. 
   
-  d)    Now split the data into training and test like in the previous exercise (70/30 split). Give the missclassification rate for the test set. 
+    d)  Now split the data into training and test like in the previous exercise (70/30 split). Give the misclassification rate for the test set. 
   
-  e)    Now use cross validation and give the average missclassification rate across folds (`almost` a default output of the collect_metrics function). 
+    e)    Now use cross validation and give the average misclassification rate across folds (**almost** a default output of the collect_metrics function). 
 
 # Submission
 

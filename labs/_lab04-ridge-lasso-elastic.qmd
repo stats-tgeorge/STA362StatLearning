@@ -1,0 +1,72 @@
+---
+title: "Lab 04 - Ridge Lasso Elastic Net"
+author: "{{< var citation.websource >}} modfied by {{< var instructor.name >}}"
+format: 
+  html:
+    embed-resources: true
+    warning: false
+---
+
+# Getting started
+
+Go to our RStudio and create a new R project inside your class folder.
+Create a `.qmd` file for your lab.
+
+## YAML: 
+
+Now, make sure the author is your name, title is appropriate and Render the document.
+
+
+# Packages
+In this lab we will work with two packages: `tidyverse` which is a collection of packages for doing data analysis in a "tidy" way and `tidymodels` for statistical modeling.
+
+```{r}
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+```
+
+
+# Data
+
+For this lab, we are using a data frame currently in `music.csv`. You will need to copy it into your project directory. This data frame includes 72 predictors that are components of audio files and one outcome, `lat`, the latitude of where the music originated. We are trying to predict the location of the music's origin using audio components of the music.
+
+# Exercises
+
+1. Set a seed of `7`. Split the `music` data into a training and test set with 75% of the data in the training and 25% in the testing. Call your training set `music_train` and your testing set `music_test`. Describe these data sets (how many observations, how many variables).
+
+
+```{r split, eval = FALSE}
+music <- read_csv("music.csv")
+```
+
+2. We are interested in predicting the latitude (`lat`) of the music's origin from all other variables. Using the training data only, examine a visualization of the outcome.
+
+3. Fit a linear model using least squares on the training set. Report the test root mean squared error obtained (rmse). 
+
+4.  Fit a ridge regression model on the training set with $\lambda$ chosen using 10-fold cross validation. 
+  -   Report the $\lambda$ chosen. 
+  -   Report the estimated test root mean square error from the cross validation **and** the test root mean squared error obtained using testing portion of the initially split data frame.
+
+5. Using the model chosen above on the training data, which variables were included in the final model?
+
+6. Fit a lasso model on the training set with $\lambda$ chosen using cross validation. 
+  -   Report the $\lambda$ chosen. 
+  -   Report the estimated test root mean square error from the cross validation **and** the test root mean squared error obtained using testing portion of the initially split data frame.
+
+7. Using the model chosen above on the training data, which variables were included in the final model?
+
+
+8. Fit an elastic net model on the training set with $\lambda$ and $\alpha$ chosen using cross validation. Create a Figure with the estimated test root mean squared error on the y-axis and $\lambda$ on the x-axis with lines colored by the mixture chosen. 
+
+9. Report the $\lambda$ that you would choose from the previous exercise and explain why. Report the estimated test root mean square error from the cross validation **and** the test root mean squared error obtained using testing portion of the initially split data frame.
+
+10. Using the model chosen above on the training data, which variables were included in the final model?
+
+11. Comment on the results obtained. How well can we predict the latitude of where the music originated? Is there much difference among the test errors resulting from these four approaches?
+
+12. Fit a Principal Component Regression (PCR) model on this data. 
+
+13. Fit a Partial Least Squares (PLS) model on this data. Now discuss the results of the PCR and PLS. How do they compare? Regression approach is best. Do not only consider metrics but model complexity and interpretation. 
+
+

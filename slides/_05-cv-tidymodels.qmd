@@ -95,7 +95,7 @@ What is the difference? Which is typically larger?
 . . .
 
 ::: question
-If we have a **quantitative predictor** what metric would we use to calculate this test error?
+If we have a **quantitative response** what metric would we use to calculate this test error?
 :::
 
 
@@ -111,7 +111,7 @@ If we have a **quantitative predictor** what metric would we use to calculate th
 :::
 
 ::: question
-If we have a **qualitative predictor** what metric would we use to calculate this test error?
+If we have a **qualitative response** what metric would we use to calculate this test error?
 :::
 
 

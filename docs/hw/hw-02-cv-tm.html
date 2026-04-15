@@ -106,6 +106,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Homework 2 – STA 362: Statistical Learning">
 <meta property="og:description" content="Cross Validation and tidymodels">
@@ -258,8 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#due-4182024-at-9am" id="toc-due-4182024-at-9am" class="nav-link active" data-scroll-target="#due-4182024-at-9am">Due 4/18/2024 at 9am</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
@@ -288,15 +316,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="due-4182024-at-9am" class="level2">
-<h2 class="anchored" data-anchor-id="due-4182024-at-9am">Due 4/18/2024 at 9am</h2>
-</section>
 <section id="instructions" class="level1">
 <h1>Instructions</h1>
 <ul>
-<li><p>Creating a new <em>project.</em> and giving it a sensible name such as <em>homework_2</em> and having that project in the course folder you created.</p></li>
+<li><p>Creating a new <em>project.</em> and giving it a sensible name such as <em>homework_2</em>.</p></li>
 <li><p>Create a new quarto document and give it a sensible name such as <em>hw2</em>.</p></li>
-<li><p>In the <code>YAML</code> add the following (add what you don’t have). The embed-resources component will make your final rendered <code>html</code> self-contained.</p>
+<li><p>In the <strong>YAML</strong> add the following (add what you don’t have). The embed-resources component will make your final rendered <strong>html</strong> self-contained.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="sc">---</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>title<span class="sc">:</span> <span class="st">"Document title"</span></span>
@@ -314,42 +339,91 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercises" class="level1">
 <h1>Exercises</h1>
 <ol type="1">
-<li><p><strong>Complete exercise chapter 5, number 3 in ISLR.</strong></p></li>
-<li><p><strong>Complete exercise chapter 5, number 8 in ISLR.</strong></p></li>
-<li><p>The data <em>FirstYearGPA</em>, in the <em>Stat2Data</em> packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use <code>?FirstYearGPA</code> to learn about the dataset.</p></li>
+<li><p>(ISLR 3) We now review <em>k</em>-fold cross-validation.</p>
+<ol type="a">
+<li><p>Explain how <em>k</em>-fold cross-validation is implemented.</p></li>
+<li><p>What are the advantages and disadvantages of <em>k</em>-fold cross-validation relative to:</p></li>
 </ol>
+<ul>
+<li><p>The validation set approach?</p></li>
+<li><p>LOOCV?</p></li>
+</ul></li>
+<li><p>(ISLR 8) We will now perform cross-validation on a simulated data set.</p>
+<ol type="a">
+<li>Generate a simulated data set as follows below. In this data set, what is <span class="math inline">\(n\)</span> and what is <span class="math inline">\(p\)</span>? Write out the model used to generate the data in equation form.</li>
+</ol></li>
+</ol>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>x <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>y <span class="ot">&lt;-</span> x <span class="sc">-</span> <span class="dv">2</span> <span class="sc">*</span> x<span class="sc">^</span><span class="dv">2</span> <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">100</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<ol start="2" type="1">
+<li><p>Continued</p>
+<ol start="2" type="a">
+<li><p>Create a scatterplot of <span class="math inline">\(X\)</span> against <span class="math inline">\(Y\)</span>. Comment on what you find.</p></li>
+<li><p>Set a random seed, and then compute the LOOCV errors that result from fitting the following four models using least squares:</p></li>
+</ol>
+<p>m1. <span class="math inline">\(Y = \beta_0 + \beta_1 X + \epsilon\)</span></p>
+<p>m2. <span class="math inline">\(Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \epsilon\)</span></p>
+<p>m3. <span class="math inline">\(Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \epsilon\)</span></p>
+<p>m4. <span class="math inline">\(Y = \beta_0 + \beta_1 X + \beta_2 X^2 + \beta_3 X^3 + \beta_4 X^4 + \epsilon\)</span></p></li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You may find it helpful to use the <strong>data.frame()</strong> function to create a single data set containing both <span class="math inline">\(X\)</span> and <span class="math inline">\(Y\)</span>.</p>
+</div>
+</div>
+<ol start="2" type="1">
+<li><p>Continued</p>
+<ol start="4" type="a">
+<li><p>Repeat (c) using another random seed, and report your results. Are your results the same as what you got in (c)? Why?</p></li>
+<li><p>Which of the models in (c) had the smallest LOOCV error? Is this what you expected? Explain your answer.</p></li>
+<li><p>Comment on the statistical significance of the coefficient estimates that result from fitting each of the models in (c) using least squares. Do these results agree with the conclusions drawn based on the cross-validation results?</p></li>
+</ol></li>
+<li><p>The data <em>FirstYearGPA</em>, in the <em>Stat2Data</em> packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use <strong>?FirstYearGPA</strong> to learn about the dataset.</p>
 <ol type="a">
 <li><p>Split the data into training and test using 70% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed.</p></li>
 <li><p>Use the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE.</p></li>
 <li><p>Now do cross validation instead of using a test and training set. Give the final CV MSE.</p></li>
 <li><p>Which was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example?</p></li>
 <li><p>If we had more data, how might we combine both approaches?</p></li>
-</ol>
-<ol start="4" type="1">
-<li>The data <em>Titanic</em>, in the <em>Stat2Data</em> packages a list and outcomes for passengers on the Titanic.</li>
-</ol>
+</ol></li>
+<li><p>The data <em>Titanic</em>, in the <em>Stat2Data</em> packages a list and outcomes for passengers on the Titanic.</p>
 <ol type="a">
 <li>Fit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.</li>
+</ol></li>
 </ol>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Titanic)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>titanic_2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(Titanic) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform</span>(<span class="at">Survived =</span> <span class="fu">factor</span>(Survived))</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>log_spec<span class="ot">&lt;-</span> </span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>)</span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>logistic_fit <span class="ot">&lt;-</span></span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(log_spec,</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    ____________ <span class="sc">~</span> ________<span class="sc">+</span>________,</span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> ________)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">data</span>(Titanic)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>titanic_2 <span class="ot">&lt;-</span> <span class="fu">as.data.frame</span>(Titanic) <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">transform</span>(<span class="at">Survived =</span> <span class="fu">factor</span>(Survived))</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>log_spec<span class="ot">&lt;-</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">set_engine</span>(<span class="st">"glm"</span>)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>logistic_fit <span class="ot">&lt;-</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">fit</span>(log_spec,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    ____________ <span class="sc">~</span> ________<span class="sc">+</span>________,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> ________)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+<ol start="4" type="1">
+<li><p>Continued</p>
 <ol start="2" type="a">
 <li><p>Use the predict function on your model and predict for the data you used to fit the model.</p></li>
-<li><p>Using your predicted values, calculate the missclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match.</p></li>
-<li><p>Now split the data into training and test like in the previous exercise (70/30 split). Give the missclassification rate for the test set.</p></li>
-<li><p>Now use cross validation and give the average missclassification rate across folds (<code>almost</code> a default output of the collect_metrics function).</p></li>
+<li><p>Using your predicted values, calculate the misclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match.</p></li>
+<li><p>Now split the data into training and test like in the previous exercise (70/30 split). Give the misclassification rate for the test set.</p></li>
+<li><p>Now use cross validation and give the average misclassification rate across folds (<strong>almost</strong> a default output of the collect_metrics function).</p></li>
+</ol></li>
 </ol>
 </section>
 <section id="submission" class="level1">

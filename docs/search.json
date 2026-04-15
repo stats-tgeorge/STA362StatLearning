@@ -2094,7 +2094,7 @@
     "href": "labs/lab01-cv-tm.html",
     "title": "Lab 01",
     "section": "",
-    "text": "Go to our RStudio and create a new R project inside your class folder."
+    "text": "Go to our RStudio and create a new R project inside your class folder.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n::: {.cell}\n\n```{.r .cell-code}\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---\n```\n:::"
   },
   {
     "objectID": "labs/lab01-cv-tm.html#yaml",

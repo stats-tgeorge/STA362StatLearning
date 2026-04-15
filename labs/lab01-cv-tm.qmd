@@ -17,6 +17,20 @@ library(ISLR)
 
 Go to our RStudio and create a new R project inside your class folder.
 
+In the *YAML* add the following (add what you don't have). The embed-resources component will make your final rendered *html* self-contained.
+
+    ```{r}
+    #| label: yaml_example
+    #| eval: false
+    ---
+    title: "Document title"
+    author: "my name"
+    format:
+      html:
+        embed-resources: true
+    ---
+    ```
+    
 # Packages
 
 In this lab we will work with three packages: **ISLR** which is a package that accompanies your textbook, **tidyverse** which is a collection of packages for doing data analysis in a "tidy" way, and **tidymodels** a collection of packages for statistical modeling.
@@ -105,3 +119,11 @@ ggplot(auto_rmse, aes(x = ----, y = ----)) +
        title = ---)
 ```
 
+# Submission
+
+When you are finished, Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}})

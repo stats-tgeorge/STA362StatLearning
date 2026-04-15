@@ -19,17 +19,17 @@ Go to our RStudio and create a new R project inside your class folder.
 
 In the *YAML* add the following (add what you don't have). The embed-resources component will make your final rendered *html* self-contained.
 
-    ```{r}
-    #| label: yaml_example
-    #| eval: false
-    ---
-    title: "Document title"
-    author: "my name"
-    format:
-      html:
-        embed-resources: true
-    ---
-    ```
+```{r}
+#| label: yaml_example
+#| eval: false
+---
+title: "Document title"
+author: "my name"
+format:
+  html:
+    embed-resources: true
+---
+```
     
 # Packages
 

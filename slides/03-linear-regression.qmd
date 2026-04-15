@@ -378,7 +378,7 @@ The probability of getting a statistic as extreme or more extreme than the obser
 
 
 
-## Confidence Intervals {.center}
+## Confidence Intervals {.smaller}
 
 If we use the same sampling method to select different samples and computed an interval estimate for each sample, we would expect the true population parameter ( $\beta_1$ ) to fall within the interval estimates 95% of the time.
 
@@ -390,6 +390,7 @@ If we use the same sampling method to select different samples and computed an i
 $$\Huge \hat\beta_1 \pm t^∗ \times SE_{\hat\beta_1}$$
 
 * $t^*$ is the critical value for the $t_{n−p-1}$ density curve to obtain the desired confidence level
+
 * Often we want a **95% confidence level**.  
 
 

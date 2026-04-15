@@ -5,43 +5,47 @@
     <lastmod>2026-04-09T16:41:26.211Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb.html</loc>
-    <lastmod>2026-04-08T16:38:51.109Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-logistic.qmd.html</loc>
+    <lastmod>2026-04-08T16:38:51.111Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb_o.html</loc>
-    <lastmod>2026-04-08T16:38:51.109Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-logistic_o.qmd.html</loc>
+    <lastmod>2026-04-08T16:38:51.111Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/project.html</loc>
-    <lastmod>2026-04-08T16:38:51.098Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-2-lda-qda.qmd.html</loc>
+    <lastmod>2026-04-08T16:38:51.106Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/index.html</loc>
-    <lastmod>2026-04-15T13:51:45.284Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-2-lda-qda_o.qmd.html</loc>
+    <lastmod>2026-04-08T16:38:51.106Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-04-regression_sol.html</loc>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/01-02-welcome_to_sl.html</loc>
+    <lastmod>2026-04-15T12:25:06.438Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/01-02-welcome_to_sl_o.html</loc>
+    <lastmod>2026-04-15T12:25:06.438Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/labs/lab01-cv-tm.html</loc>
+    <lastmod>2026-04-15T13:49:27.720Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-05-trees.html</loc>
+    <lastmod>2026-04-08T16:38:51.093Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-04-regression.html</loc>
     <lastmod>2026-04-08T16:38:51.092Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-03-logistic_lda_qda.html</loc>
-    <lastmod>2026-04-08T16:38:51.092Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-02-cv-tm.html</loc>
+    <lastmod>2026-04-15T13:13:19.236Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-01-intro-review.html</loc>
-    <lastmod>2026-04-13T12:49:36.199Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/course-overview.html</loc>
-    <lastmod>2026-04-08T16:38:50.800Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/course-instructor.html</loc>
-    <lastmod>2026-04-08T16:38:50.800Z</lastmod>
-  </url>
-  <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/computing-access.html</loc>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/course-support.html</loc>
     <lastmod>2026-04-08T16:38:50.800Z</lastmod>
   </url>
   <url>
@@ -49,39 +53,59 @@
     <lastmod>2026-04-08T16:38:50.800Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/course-support.html</loc>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/computing-access.html</loc>
     <lastmod>2026-04-08T16:38:50.800Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-02-cv-tm.html</loc>
-    <lastmod>2026-04-15T13:13:19.236Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/course-instructor.html</loc>
+    <lastmod>2026-04-08T16:38:50.800Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-04-regression.html</loc>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/course-overview.html</loc>
+    <lastmod>2026-04-08T16:38:50.800Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-01-intro-review.html</loc>
+    <lastmod>2026-04-13T12:49:36.199Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-03-logistic_lda_qda.html</loc>
     <lastmod>2026-04-08T16:38:51.092Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-05-trees.html</loc>
-    <lastmod>2026-04-08T16:38:51.093Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-04-regression_sol.html</loc>
+    <lastmod>2026-04-08T16:38:51.092Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/labs/lab01-cv-tm.html</loc>
-    <lastmod>2026-04-15T13:49:27.720Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/index.html</loc>
+    <lastmod>2026-04-15T13:51:45.284Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-2-lda-qda_o.qmd.html</loc>
-    <lastmod>2026-04-08T16:38:51.106Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/project.html</loc>
+    <lastmod>2026-04-08T16:38:51.098Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-2-lda-qda.qmd.html</loc>
-    <lastmod>2026-04-08T16:38:51.106Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/03-linear_regression_o.html</loc>
+    <lastmod>2026-04-15T13:56:49.815Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-logistic_o.qmd.html</loc>
-    <lastmod>2026-04-08T16:38:51.111Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/03-linear_regression.html</loc>
+    <lastmod>2026-04-15T13:56:49.815Z</lastmod>
   </url>
   <url>
-    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-logistic.qmd.html</loc>
-    <lastmod>2026-04-08T16:38:51.111Z</lastmod>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb_o.html</loc>
+    <lastmod>2026-04-08T16:38:51.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb.html</loc>
+    <lastmod>2026-04-08T16:38:51.109Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/05-cv-tidymodels_o.html</loc>
+    <lastmod>2026-04-15T12:24:37.159Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/05-cv-tidymodels.html</loc>
+    <lastmod>2026-04-15T12:24:37.159Z</lastmod>
   </url>
 </urlset>

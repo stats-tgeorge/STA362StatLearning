@@ -11,697 +11,697 @@
     ]
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#recap",
-    "href": "slides/04-logistic.qmd.html#recap",
+    "objectID": "slides/04-logistic.html#recap",
+    "href": "slides/04-logistic.html#recap",
     "title": "Chapter 4 Part 1",
     "section": "Recap",
-    "text": "Recap\n\nWe had a linear regression refresher\nLinear regression is a great tool when we have a continuous outcome\nWe are going to learn some fancy ways to do even better in the future\n\nSetup:\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)"
+    "text": "Recap\n\nWe had a linear regression refresher\nLinear regression is a great tool when we have a continuous outcome\nWe are going to learn some fancy ways to do even better in the future\n\n\nSetup:\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#classification-1",
-    "href": "slides/04-logistic.qmd.html#classification-1",
+    "objectID": "slides/04-logistic.html#classification-1",
+    "href": "slides/04-logistic.html#classification-1",
     "title": "Chapter 4 Part 1",
     "section": "Classification",
     "text": "Classification\n\nWhat are some examples of classification problems?\n\n\nQualitative response variable in an unordered set, \\(\\mathcal{C}\\)\neye color \\(\\in\\) {blue, brown, green}\nemail \\(\\in\\) {spam, not spam}\nResponse, \\(Y\\) takes on values in \\(\\mathcal{C}\\)\nPredictors are a vector, \\(X\\)\nThe task: build a function \\(C(X)\\) that takes \\(X\\) and predicts \\(Y\\), \\(C(X)\\in\\mathcal{C}\\)\nMany times we are actually more interested in the probabilities that \\(X\\) belongs to each category in \\(\\mathcal{C}\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#example-credit-card-default",
-    "href": "slides/04-logistic.qmd.html#example-credit-card-default",
+    "objectID": "slides/04-logistic.html#example-credit-card-default",
+    "href": "slides/04-logistic.html#example-credit-card-default",
     "title": "Chapter 4 Part 1",
     "section": "Example: Credit card default",
     "text": "Example: Credit card default\n\n\nCode\nset.seed(1)\nDefault |&gt;\n  sample_frac(size = 0.25) |&gt;\n  ggplot(aes(balance, income, color = default)) +\n  geom_point(pch = 4) +\n  scale_color_manual(values = c(\"cornflower blue\", \"red\")) +\n  theme_classic() +\n  theme(legend.position = \"top\") -&gt; p1\n\np2 &lt;- ggplot(Default, aes(x = default, y = balance, fill = default)) +\n  geom_boxplot() +\n  scale_fill_manual(values = c(\"cornflower blue\", \"red\")) +\n  theme_classic() +\n  theme(legend.position = \"none\")\n\np3 &lt;- ggplot(Default, aes(x = default, y = income, fill = default)) +\n  geom_boxplot() +\n  scale_fill_manual(values = c(\"cornflower blue\", \"red\")) +\n  theme_classic() +\n  theme(legend.position = \"none\")\ngrid.arrange(p1, p2, p3, ncol = 3, widths = c(2, 1, 1))"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#can-we-use-linear-regression",
-    "href": "slides/04-logistic.qmd.html#can-we-use-linear-regression",
+    "objectID": "slides/04-logistic.html#can-we-use-linear-regression",
+    "href": "slides/04-logistic.html#can-we-use-linear-regression",
     "title": "Chapter 4 Part 1",
     "section": "Can we use linear regression?",
     "text": "Can we use linear regression?\nWe can code Default as\n\\[Y = \\begin{cases} 0 & \\textrm{if }\\texttt{No}\\\\ 1&\\textrm{if }\\texttt{Yes}\\end{cases}\\] Can we fit a linear regression of \\(Y\\) on \\(X\\) and classify as Yes if \\(\\hat{Y}&gt; 0.5\\)?\n\nIn this case of a binary outcome, linear regression is okay (it is equivalent to linear discriminant analysis, you can read more about that in your book!)\n\\(E[Y|X=x] = P(Y=1|X=x)\\), so it seems like this is a pretty good idea!\nThe problem: Linear regression can produce probabilities less than 0 or greater than 1 😱"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#can-we-use-linear-regression-1",
-    "href": "slides/04-logistic.qmd.html#can-we-use-linear-regression-1",
+    "objectID": "slides/04-logistic.html#can-we-use-linear-regression-1",
+    "href": "slides/04-logistic.html#can-we-use-linear-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Can we use linear regression?",
     "text": "Can we use linear regression?\nWe can code Default as\n\\[Y = \\begin{cases} 0 & \\textrm{if }\\texttt{No}\\\\ 1&\\textrm{if }\\texttt{Yes}\\end{cases}\\] Can we fit a linear regression of \\(Y\\) on \\(X\\) and classify as Yes if \\(\\hat{Y}&gt; 0.5\\)?\n\nWhat may do a better job?\n\n\nLogistic regression!"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#linear-versus-logistic-regression",
-    "href": "slides/04-logistic.qmd.html#linear-versus-logistic-regression",
+    "objectID": "slides/04-logistic.html#linear-versus-logistic-regression",
+    "href": "slides/04-logistic.html#linear-versus-logistic-regression",
     "title": "Chapter 4 Part 1",
     "section": "Linear versus logistic regression",
     "text": "Linear versus logistic regression\n\n\nCode\nDefault &lt;- Default |&gt;\n  mutate(\n  p = glm(default ~ balance, data = Default, family = \"binomial\") |&gt;\n  predict(type = \"response\"),\n  p2 = lm(I(default == \"Yes\") ~ balance, data = Default) |&gt; predict(),\n  def = ifelse(default == \"Yes\", 1, 0)\n)\n\n\nDefault |&gt;\n  sample_frac(0.25) |&gt;\nggplot(aes(balance, p2)) +\n  geom_hline(yintercept = c(0, 1), lty = 2, size = 0.2) +\n  geom_line(color = \"cornflower blue\") +\n  geom_point(aes(balance, def), shape = \"|\", color = \"orange\") +\n  theme_classic() +\n  labs(y = \"probability of default\") -&gt; p1\n\nDefault |&gt;\n  sample_frac(0.25) |&gt;\nggplot(aes(balance, p)) +\n  geom_hline(yintercept = c(0, 1), lty = 2, size = 0.2) +\n  geom_line(color = \"cornflower blue\") +\n  geom_point(aes(balance, def), shape = \"|\", color = \"orange\") +\n  theme_classic() +\n  labs(y = \"probability of default\") -&gt; p2\n\ngrid.arrange(p1, p2, ncol = 2)\n\n\n\n\nWhich does a better job at predicting the probability of default?\n\n\nThe orange marks represent the response \\(Y\\in\\{0,1\\}\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#linear-regression",
-    "href": "slides/04-logistic.qmd.html#linear-regression",
+    "objectID": "slides/04-logistic.html#linear-regression",
+    "href": "slides/04-logistic.html#linear-regression",
     "title": "Chapter 4 Part 1",
     "section": "Linear Regression",
     "text": "Linear Regression\nWhat if we have \\(&gt;2\\) possible outcomes? For example, someone comes to the emergency room and we need to classify them according to their symptoms\n\\[\n\\begin{align}\nY = \\begin{cases} 1& \\textrm{if }\\texttt{stroke}\\\\2&\\textrm{if }\\texttt{drug overdose}\\\\3&\\textrm{if }\\texttt{epileptic seizure}\\end{cases}\n\\end{align}\n\\]\n\nWhat could go wrong here?\n\n\nThe coding implies an ordering\nThe coding implies equal spacing (that is the difference between stroke and drug overdose is the same as drug overdose and epileptic seizure)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#linear-regression-1",
-    "href": "slides/04-logistic.qmd.html#linear-regression-1",
+    "objectID": "slides/04-logistic.html#linear-regression-1",
+    "href": "slides/04-logistic.html#linear-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Linear Regression",
     "text": "Linear Regression\nWhat if we have \\(&gt;2\\) possible outcomes? For example, someone comes to the emergency room and we need to classify them according to their symptoms\n\\[\n\\begin{align}\nY = \\begin{cases} 1& \\textrm{if }\\texttt{stroke}\\\\2&\\textrm{if }\\texttt{drug overdose}\\\\3&\\textrm{if }\\texttt{epileptic seizure}\\end{cases}\n\\end{align}\n\\]\n\nLinear regression is not appropriate here\nMutliclass logistic regression or discriminant analysis are more appropriate"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#logistic-regression",
-    "href": "slides/04-logistic.qmd.html#logistic-regression",
+    "objectID": "slides/04-logistic.html#logistic-regression",
+    "href": "slides/04-logistic.html#logistic-regression",
     "title": "Chapter 4 Part 1",
     "section": "Logistic Regression",
     "text": "Logistic Regression\n\\[\np(X) = \\frac{e^{\\beta_0+\\beta_1X}}{1+e^{\\beta_0+\\beta_1X}}\n\\]\n\nNote: \\(p(X)\\) is shorthand for \\(P(Y=1|X)\\)\nNo matter what values \\(\\beta_0\\), \\(\\beta_1\\), or \\(X\\) take \\(p(X)\\) will always be between 0 and 1"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#logistic-regression-1",
-    "href": "slides/04-logistic.qmd.html#logistic-regression-1",
+    "objectID": "slides/04-logistic.html#logistic-regression-1",
+    "href": "slides/04-logistic.html#logistic-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Logistic Regression",
     "text": "Logistic Regression\n\\[\np(X) = \\frac{e^{\\beta_0+\\beta_1X}}{1+e^{\\beta_0+\\beta_1X}}\n\\]\nWe can rearrange this into the following form:\n\\[\n\\log\\left(\\frac{p(X)}{1-p(X)}\\right) = \\beta_0 + \\beta_1 X\n\\]\n\nWhat is this transformation called?\n\n\nThis is a log odds or logit transformation of \\(p(X)\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#linear-versus-logistic-regression-1",
-    "href": "slides/04-logistic.qmd.html#linear-versus-logistic-regression-1",
+    "objectID": "slides/04-logistic.html#linear-versus-logistic-regression-1",
+    "href": "slides/04-logistic.html#linear-versus-logistic-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Linear versus logistic regression",
     "text": "Linear versus logistic regression\n\nLogistic regression ensures that our estimates for \\(p(X)\\) are between 0 and 1 🎉"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#maximum-likelihood",
-    "href": "slides/04-logistic.qmd.html#maximum-likelihood",
+    "objectID": "slides/04-logistic.html#maximum-likelihood",
+    "href": "slides/04-logistic.html#maximum-likelihood",
     "title": "Chapter 4 Part 1",
     "section": "Maximum Likelihood",
     "text": "Maximum Likelihood\n\nRefresher: How did we estimate \\(\\hat\\beta\\) in linear regression?"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#maximum-likelihood-1",
-    "href": "slides/04-logistic.qmd.html#maximum-likelihood-1",
+    "objectID": "slides/04-logistic.html#maximum-likelihood-1",
+    "href": "slides/04-logistic.html#maximum-likelihood-1",
     "title": "Chapter 4 Part 1",
     "section": "Maximum Likelihood",
     "text": "Maximum Likelihood\n\nRefresher: How did we estimate \\(\\hat\\beta\\) in linear regression?\n\nIn logistic regression, we use maximum likelihood to estimate the parameters\n\\[\\mathcal{l}(\\beta_0,\\beta_1)=\\prod_{i:y_i=1}p(x_i)\\prod_{i:y_i=0}(1-p(x_i))\\]\n\nThis likelihood give the probability of the observed ones and zeros in the data\nWe pick \\(\\beta_0\\) and \\(\\beta_1\\) to maximize the likelihood\nWe’ll let R do the heavy lifting here"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#lets-see-it-in-r",
-    "href": "slides/04-logistic.qmd.html#lets-see-it-in-r",
+    "objectID": "slides/04-logistic.html#lets-see-it-in-r",
+    "href": "slides/04-logistic.html#lets-see-it-in-r",
     "title": "Chapter 4 Part 1",
     "section": "Let’s see it in R",
     "text": "Let’s see it in R\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(default ~ balance, \n      data = Default) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term         estimate std.error statistic   p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept) -10.7      0.361        -29.5 3.62e-191\n2 balance       0.00550  0.000220      25.0 1.98e-137\n\n\n\nUse the logistic_reg() function in R with the glm engine"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#making-predictions",
-    "href": "slides/04-logistic.qmd.html#making-predictions",
+    "objectID": "slides/04-logistic.html#making-predictions",
+    "href": "slides/04-logistic.html#making-predictions",
     "title": "Chapter 4 Part 1",
     "section": "Making predictions",
     "text": "Making predictions\n\nWhat is our estimated probability of default for someone with a balance of $1000?\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.6513306\n0.3611574\n-29.49221\n0\n\n\nbalance\n0.0054989\n0.0002204\n24.95309\n0\n\n\n\n\n\n\n\\[\n\\hat{p}(X) = \\frac{e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}{1+e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}=\\frac{e^{-10.65+0.0055\\times 1000}}{1+e^{-10.65+0.0055\\times 1000}}=0.006\n\\]"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#making-predictions-1",
-    "href": "slides/04-logistic.qmd.html#making-predictions-1",
+    "objectID": "slides/04-logistic.html#making-predictions-1",
+    "href": "slides/04-logistic.html#making-predictions-1",
     "title": "Chapter 4 Part 1",
     "section": "Making predictions",
     "text": "Making predictions\n\nWhat is our estimated probability of default for someone with a balance of $2000?\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.6513306\n0.3611574\n-29.49221\n0\n\n\nbalance\n0.0054989\n0.0002204\n24.95309\n0\n\n\n\n\n\n\n\\[\n\\hat{p}(X) = \\frac{e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}{1+e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}=\\frac{e^{-10.65+0.0055\\times 2000}}{1+e^{-10.65+0.0055\\times 2000}}=0.586\n\\]"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#logistic-regression-example",
-    "href": "slides/04-logistic.qmd.html#logistic-regression-example",
+    "objectID": "slides/04-logistic.html#logistic-regression-example",
+    "href": "slides/04-logistic.html#logistic-regression-example",
     "title": "Chapter 4 Part 1",
     "section": "Logistic regression example",
     "text": "Logistic regression example\nLet’s refit the model to predict the probability of default given the customer is a student\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-3.5041278\n0.0707130\n-49.554219\n0.0000000\n\n\nstudentYes\n0.4048871\n0.1150188\n3.520181\n0.0004313\n\n\n\n\n\n\\[P(\\texttt{default = Yes}|\\texttt{student = Yes}) = \\frac{e^{-3.5041+0.4049\\times1}}{1+e^{-3.5041+0.4049\\times1}}=0.0431\\]\n\n\nHow will this change if student = No?\n\n\n\n\\[P(\\texttt{default = Yes}|\\texttt{student = No}) = \\frac{e^{-3.5041+0.4049\\times0}}{1+e^{-3.5041+0.4049\\times0}}=0.0292\\]"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#potential-confounding",
-    "href": "slides/04-logistic.qmd.html#potential-confounding",
+    "objectID": "slides/04-logistic.html#potential-confounding",
+    "href": "slides/04-logistic.html#potential-confounding",
     "title": "Chapter 4 Part 1",
     "section": "Potential Confounding",
     "text": "Potential Confounding\n\n\nWhat is going on here?"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#confounding",
-    "href": "slides/04-logistic.qmd.html#confounding",
+    "objectID": "slides/04-logistic.html#confounding",
+    "href": "slides/04-logistic.html#confounding",
     "title": "Chapter 4 Part 1",
     "section": "Confounding",
     "text": "Confounding\n\n\nStudents tend to have higher balances than non-students\nTheir marginal default rate is higher\nFor each level of balance, students default less\nTheir conditional default rate is lower"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#a-bit-about-odds",
-    "href": "slides/04-logistic.qmd.html#a-bit-about-odds",
+    "objectID": "slides/04-logistic.html#a-bit-about-odds",
+    "href": "slides/04-logistic.html#a-bit-about-odds",
     "title": "Chapter 4 Part 1",
     "section": "A bit about “odds”",
     "text": "A bit about “odds”\n\nThe “odds” tell you how likely an event is\n🌂 Let’s say there is a 60% chance of rain today * What is the probability that it will rain?\n\\(p = 0.6\\)\nWhat is the probability that it won’t rain?\n\\(1-p = 0.4\\)\nWhat are the odds that it will rain?\n3 to 2, 3:2, \\(\\frac{0.6}{0.4} = 1.5\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#transforming-logs",
-    "href": "slides/04-logistic.qmd.html#transforming-logs",
+    "objectID": "slides/04-logistic.html#transforming-logs",
+    "href": "slides/04-logistic.html#transforming-logs",
     "title": "Chapter 4 Part 1",
     "section": "Transforming logs",
     "text": "Transforming logs\n\nHow do you “undo” a \\(\\log\\) base \\(e\\)?\nUse \\(e\\)! For example:\n\\(e^{\\log(10)} = 10\\)\n\\(e^{\\log(1283)} = 1283\\)\n\\(e^{\\log(x)} = x\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#transforming-logs-1",
-    "href": "slides/04-logistic.qmd.html#transforming-logs-1",
+    "objectID": "slides/04-logistic.html#transforming-logs-1",
+    "href": "slides/04-logistic.html#transforming-logs-1",
     "title": "Chapter 4 Part 1",
     "section": "Transforming logs",
     "text": "Transforming logs\n\nHow would you get the odds from the log(odds)?\n\n\nHow do you “undo” a \\(\\log\\) base \\(e\\)?\nUse \\(e\\)! For example:\n\\(e^{\\log(10)} = 10\\)\n\\(e^{\\log(1283)} = 1283\\)\n\\(e^{\\log(x)} = x\\)\n\n\n\\(e^{\\log(odds)}\\) = odds"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#transforming-odds",
-    "href": "slides/04-logistic.qmd.html#transforming-odds",
+    "objectID": "slides/04-logistic.html#transforming-odds",
+    "href": "slides/04-logistic.html#transforming-odds",
     "title": "Chapter 4 Part 1",
     "section": "Transforming odds",
     "text": "Transforming odds\n\nodds = \\(\\frac{\\pi}{1-\\pi}\\)\nSolving for \\(\\pi\\)\n\\(\\pi = \\frac{\\textrm{odds}}{1+\\textrm{odds}}\\)\nPlugging in \\(e^{\\log(odds)}\\) = odds\n\\(\\pi = \\frac{e^{\\log(odds)}}{1+e^{\\log(odds)}}\\)\nPlugging in \\(\\log(odds) = \\beta_0 + \\beta_1x\\)\n\\(\\pi = \\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#the-logistic-model",
-    "href": "slides/04-logistic.qmd.html#the-logistic-model",
+    "objectID": "slides/04-logistic.html#the-logistic-model",
+    "href": "slides/04-logistic.html#the-logistic-model",
     "title": "Chapter 4 Part 1",
     "section": "The logistic model",
-    "text": "The logistic model\n\n✌️ forms\n\n\n\n\n\n\n\n\nForm\nModel\n\n\n\n\nLogit form\n\\(\\log\\left(\\frac{\\pi}{1-\\pi}\\right) = \\beta_0 + \\beta_1x\\)\n\n\nProbability form\n\\(\\Large\\pi = \\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
+    "text": "The logistic model\n\n✌️ forms\n\n\n\n\n\n\n\n\n\nForm\nModel\n\n\n\n\nLogit form\n\\(\\log\\left(\\frac{\\pi}{1-\\pi}\\right) = \\beta_0 + \\beta_1x\\)\n\n\nProbability form\n\\(\\Large\\pi = \\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#the-logistic-model-1",
-    "href": "slides/04-logistic.qmd.html#the-logistic-model-1",
+    "objectID": "slides/04-logistic.html#the-logistic-model-1",
+    "href": "slides/04-logistic.html#the-logistic-model-1",
     "title": "Chapter 4 Part 1",
     "section": "The logistic model",
     "text": "The logistic model\n\n\n\nprobability\nodds\nlog(odds)\n\n\n\n\n\\(\\pi\\)\n\\(\\frac{\\pi}{1-\\pi}\\)\n\\(\\log\\left(\\frac{\\pi}{1-\\pi}\\right)=l\\)\n\n\n\n⬅️\n\n\n\nlog(odds)\nodds\nprobability\n\n\n\n\n\\(l\\)\n\\(e^l\\)\n\\(\\frac{e^l}{1+e^l} = \\pi\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#the-logistic-model-2",
-    "href": "slides/04-logistic.qmd.html#the-logistic-model-2",
+    "objectID": "slides/04-logistic.html#the-logistic-model-2",
+    "href": "slides/04-logistic.html#the-logistic-model-2",
     "title": "Chapter 4 Part 1",
     "section": "The logistic model",
     "text": "The logistic model\n\n✌️ forms\nlog(odds): \\(l = \\beta_0 + \\beta_1x\\)\nP(Outcome = Yes): \\(\\Large\\pi =\\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios",
-    "href": "slides/04-logistic.qmd.html#odds-ratios",
+    "objectID": "slides/04-logistic.html#odds-ratios",
+    "href": "slides/04-logistic.html#odds-ratios",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later. (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-1",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-1",
+    "objectID": "slides/04-logistic.html#odds-ratios-1",
+    "href": "slides/04-logistic.html#odds-ratios-1",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat is the explanatory variable?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-2",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-2",
+    "objectID": "slides/04-logistic.html#odds-ratios-2",
+    "href": "slides/04-logistic.html#odds-ratios-2",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat type of variable is this?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-3",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-3",
+    "objectID": "slides/04-logistic.html#odds-ratios-3",
+    "href": "slides/04-logistic.html#odds-ratios-3",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat is the outcome variable?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-4",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-4",
+    "objectID": "slides/04-logistic.html#odds-ratios-4",
+    "href": "slides/04-logistic.html#odds-ratios-4",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat type of variable is this?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-5",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-5",
+    "objectID": "slides/04-logistic.html#odds-ratios-5",
+    "href": "slides/04-logistic.html#odds-ratios-5",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\nWe can compare the results using odds\nWhat are the odds of being pain-free for the placebo group?\n\\((22/100)/(78/100) = 22/78 = 0.282\\)\nWhat are the odds of being pain-free for the treatment group?\n\\(39/61 = 0.639\\)\nComparing the odds what can we conclude?\nTMS increases the likelihood of success"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-6",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-6",
+    "objectID": "slides/04-logistic.html#odds-ratios-6",
+    "href": "slides/04-logistic.html#odds-ratios-6",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\nWe can summarize this relationship with an odds ratio: the ratio of the two odds\n\\(\\Large OR = \\frac{39/61}{22/78} = \\frac{0.639}{0.282} = 2.27\\)\n“the odds of being pain free were 2.27 times higher with TMS than with the placebo”"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-7",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-7",
+    "objectID": "slides/04-logistic.html#odds-ratios-7",
+    "href": "slides/04-logistic.html#odds-ratios-7",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat if we wanted to calculate this in terms of Not pain-free (with pain-free) as the referent?\n\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\n\\(\\Large OR = \\frac{61/39}{78/22} = \\frac{1.564}{3.545} = 0.441\\)\nthe odds for still being in pain for the TMS group are 0.441 times the odds of being in pain for the placebo group"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-8",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-8",
+    "objectID": "slides/04-logistic.html#odds-ratios-8",
+    "href": "slides/04-logistic.html#odds-ratios-8",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat changed here?\n\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\n\\(\\Large OR = \\frac{78/22}{61/39} = \\frac{3.545}{1.564} = 2.27\\)\nthe odds for still being in pain for the placebo group are 2.27 times the odds of being in pain for the TMS group"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-9",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-9",
+    "objectID": "slides/04-logistic.html#odds-ratios-9",
+    "href": "slides/04-logistic.html#odds-ratios-9",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nIn general, it’s more natural to interpret odds ratios &gt; 1, you can flip the referent to do so\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\\(\\Large OR = \\frac{78/22}{61/39} = \\frac{3.545}{1.564} = 2.27\\)\nthe odds for still being in pain for the placebo group are 2.27 times the odds of being in pain for the TMS group"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-10",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-10",
+    "objectID": "slides/04-logistic.html#odds-ratios-10",
+    "href": "slides/04-logistic.html#odds-ratios-10",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nLet’s look at some Titanic data. We are interested in whether the passenger reported being female is related to whether they survived.\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-11",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-11",
+    "objectID": "slides/04-logistic.html#odds-ratios-11",
+    "href": "slides/04-logistic.html#odds-ratios-11",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat are the odds of surviving for females versus males?\n\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313\n\n\n\n\\[\\Large OR = \\frac{308/154}{142/709} = \\frac{2}{0.2} = 9.99\\]"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-12",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-12",
+    "objectID": "slides/04-logistic.html#odds-ratios-12",
+    "href": "slides/04-logistic.html#odds-ratios-12",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nHow do you interpret this?\n\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313\n\n\n\n\\[\\Large OR = \\frac{308/154}{142/709} = \\frac{2}{0.2} = 9.99\\] the odds of surviving for the female passengers was 9.99 times the odds of surviving for the male passengers"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-13",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-13",
+    "objectID": "slides/04-logistic.html#odds-ratios-13",
+    "href": "slides/04-logistic.html#odds-ratios-13",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat if we wanted to fit a model? What would the equation be?\n\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313\n\n\n\n\n\\[\\Large \\log(\\textrm{odds of survival}) = \\beta_0 + \\beta_1 \\textrm{Female}\\]"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-14",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-14",
+    "objectID": "slides/04-logistic.html#odds-ratios-14",
+    "href": "slides/04-logistic.html#odds-ratios-14",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\\[\\Large \\log(\\textrm{odds of survival}) = \\beta_0 + \\beta_1 \\textrm{Female}\\]\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    -1.61    0.0919     -17.5 1.70e-68\n2 Sexfemale       2.30    0.135       17.1 2.91e-65"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-15",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-15",
+    "objectID": "slides/04-logistic.html#odds-ratios-15",
+    "href": "slides/04-logistic.html#odds-ratios-15",
     "title": "Chapter 4 Part 1",
     "section": "Odds Ratios",
     "text": "Odds Ratios\n\nHow do you interpret this result?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    -1.61    0.0919     -17.5 1.70e-68\n2 Sexfemale       2.30    0.135       17.1 2.91e-65"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-16",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-16",
+    "objectID": "slides/04-logistic.html#odds-ratios-16",
+    "href": "slides/04-logistic.html#odds-ratios-16",
     "title": "Chapter 4 Part 1",
     "section": "Odds Ratios",
     "text": "Odds Ratios\n\nHow do you interpret this result?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy(exponentiate = TRUE) \n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    0.200    0.0919     -17.5 1.70e-68\n2 Sexfemale      9.99     0.135       17.1 2.91e-65\n\nexp(2.301176)\n\n[1] 9.99"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-17",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-17",
+    "objectID": "slides/04-logistic.html#odds-ratios-17",
+    "href": "slides/04-logistic.html#odds-ratios-17",
     "title": "Chapter 4 Part 1",
     "section": "Odds Ratios",
     "text": "Odds Ratios\n\nHow do you interpret this result?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy(exponentiate = TRUE) \n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    0.200    0.0919     -17.5 1.70e-68\n2 Sexfemale      9.99     0.135       17.1 2.91e-65\n\nexp(2.301176)\n\n[1] 9.99\n\n\nthe odds of surviving for the female passengers was 9.99 times the odds of surviving for the male passengers"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-18",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-18",
+    "objectID": "slides/04-logistic.html#odds-ratios-18",
+    "href": "slides/04-logistic.html#odds-ratios-18",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nWhat if the explanatory variable is continuous?\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA, data = MedGPA) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   -19.2       5.63     -3.41 0.000644\n2 GPA             5.45      1.58      3.45 0.000553\n\n\nA one unit increase in GPA yields a 5.45 increase in the log odds of acceptance"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-19",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-19",
+    "objectID": "slides/04-logistic.html#odds-ratios-19",
+    "href": "slides/04-logistic.html#odds-ratios-19",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nWhat if the explanatory variable is continuous?\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA, data = MedGPA) |&gt;\n  tidy(exponentiate = TRUE) \n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)  4.56e-9      5.63     -3.41 0.000644\n2 GPA          2.34e+2      1.58      3.45 0.000553\n\n\nA one unit increase in GPA yields a 234-fold increase in the odds of acceptance\n\n😱 that seems huge! Remember: the interpretation of these coefficients depends on your units (the same as in ordinary linear regression)."
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-20",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-20",
+    "objectID": "slides/04-logistic.html#odds-ratios-20",
+    "href": "slides/04-logistic.html#odds-ratios-20",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nHow could we get the odds associated with increasing GPA by 0.1?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA, data = MedGPA) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   -19.2       5.63     -3.41 0.000644\n2 GPA             5.45      1.58      3.45 0.000553\n\n\n\nexp(5.454) ## a one unit increase in GPA\n\n[1] 234\n\nexp(5.454 * 0.1) ## a 0.1 increase in GPA\n\n[1] 1.73\n\n\nA one-tenth unit increase in GPA yields a 1.73-fold increase in the odds of acceptance"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#odds-ratios-21",
-    "href": "slides/04-logistic.qmd.html#odds-ratios-21",
+    "objectID": "slides/04-logistic.html#odds-ratios-21",
+    "href": "slides/04-logistic.html#odds-ratios-21",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nHow could we get the odds associated with increasing GPA by 0.1?\n\n\nMedGPA &lt;- MedGPA |&gt;\n  mutate(GPA_10 = GPA * 10)\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA_10, data = MedGPA) |&gt;\n  tidy(exponentiate = TRUE)\n\n# A tibble: 2 × 5\n  term             estimate std.error statistic  p.value\n  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept) 0.00000000456     5.63      -3.41 0.000644\n2 GPA_10      1.73              0.158      3.45 0.000553\n\n\nA one-tenth unit increase in GPA yields a 1.73-fold increase in the odds of acceptance"
   },
   {
-    "objectID": "slides/04-logistic.qmd.html#application-exercise",
-    "href": "slides/04-logistic.qmd.html#application-exercise",
+    "objectID": "slides/04-logistic.html#application-exercise",
+    "href": "slides/04-logistic.html#application-exercise",
     "title": "Chapter 4 Part 1",
     "section": " Application Exercise",
-    "text": "Application Exercise\nUsing the Default data from the ISLR package. Fit two logistic regression models that predict whether a customer defaults\n\nOne model with student as a predictor. Interpret the coefficient of studentYes.\nAnother model with balance as a predictor. Interpret the coefficient of balance.\n\nHere is some code to get you started:\n\nlibrary(ISLR)\ndata(\"Default\")"
+    "text": "Application Exercise\nUsing the Default data from the ISLR package. Fit two logistic regression models that predict whether a customer defaults\n\nOne model with student as a predictor. Interpret the coefficient of studentYes.\nAnother model with balance as a predictor. Interpret the coefficient of balance.\n\n\nHere is some code to get you started:\n\nlibrary(ISLR)\ndata(\"Default\")"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html",
-    "href": "slides/04-logistic_o.qmd.html",
+    "objectID": "slides/04-logistic_o.html",
+    "href": "slides/04-logistic_o.html",
     "title": "Chapter 4 Part 1",
     "section": "",
-    "text": "We had a linear regression refresher\nLinear regression is a great tool when we have a continuous outcome\nWe are going to learn some fancy ways to do even better in the future\n\nSetup:\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)"
+    "text": "We had a linear regression refresher\nLinear regression is a great tool when we have a continuous outcome\nWe are going to learn some fancy ways to do even better in the future\n\n. . .\nSetup:\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#recap",
-    "href": "slides/04-logistic_o.qmd.html#recap",
+    "objectID": "slides/04-logistic_o.html#recap",
+    "href": "slides/04-logistic_o.html#recap",
     "title": "Chapter 4 Part 1",
     "section": "",
-    "text": "We had a linear regression refresher\nLinear regression is a great tool when we have a continuous outcome\nWe are going to learn some fancy ways to do even better in the future\n\nSetup:\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)"
+    "text": "We had a linear regression refresher\nLinear regression is a great tool when we have a continuous outcome\nWe are going to learn some fancy ways to do even better in the future\n\n. . .\nSetup:\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#classification-1",
-    "href": "slides/04-logistic_o.qmd.html#classification-1",
+    "objectID": "slides/04-logistic_o.html#classification-1",
+    "href": "slides/04-logistic_o.html#classification-1",
     "title": "Chapter 4 Part 1",
     "section": "Classification",
     "text": "Classification\n\nWhat are some examples of classification problems?\n\n\nQualitative response variable in an unordered set, \\(\\mathcal{C}\\)\neye color \\(\\in\\) {blue, brown, green}\nemail \\(\\in\\) {spam, not spam}\nResponse, \\(Y\\) takes on values in \\(\\mathcal{C}\\)\nPredictors are a vector, \\(X\\)\nThe task: build a function \\(C(X)\\) that takes \\(X\\) and predicts \\(Y\\), \\(C(X)\\in\\mathcal{C}\\)\nMany times we are actually more interested in the probabilities that \\(X\\) belongs to each category in \\(\\mathcal{C}\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#example-credit-card-default",
-    "href": "slides/04-logistic_o.qmd.html#example-credit-card-default",
+    "objectID": "slides/04-logistic_o.html#example-credit-card-default",
+    "href": "slides/04-logistic_o.html#example-credit-card-default",
     "title": "Chapter 4 Part 1",
     "section": "Example: Credit card default",
     "text": "Example: Credit card default\n\n\nCode\nset.seed(1)\nDefault |&gt;\n  sample_frac(size = 0.25) |&gt;\n  ggplot(aes(balance, income, color = default)) +\n  geom_point(pch = 4) +\n  scale_color_manual(values = c(\"cornflower blue\", \"red\")) +\n  theme_classic() +\n  theme(legend.position = \"top\") -&gt; p1\n\np2 &lt;- ggplot(Default, aes(x = default, y = balance, fill = default)) +\n  geom_boxplot() +\n  scale_fill_manual(values = c(\"cornflower blue\", \"red\")) +\n  theme_classic() +\n  theme(legend.position = \"none\")\n\np3 &lt;- ggplot(Default, aes(x = default, y = income, fill = default)) +\n  geom_boxplot() +\n  scale_fill_manual(values = c(\"cornflower blue\", \"red\")) +\n  theme_classic() +\n  theme(legend.position = \"none\")\ngrid.arrange(p1, p2, p3, ncol = 3, widths = c(2, 1, 1))"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#can-we-use-linear-regression",
-    "href": "slides/04-logistic_o.qmd.html#can-we-use-linear-regression",
+    "objectID": "slides/04-logistic_o.html#can-we-use-linear-regression",
+    "href": "slides/04-logistic_o.html#can-we-use-linear-regression",
     "title": "Chapter 4 Part 1",
     "section": "Can we use linear regression?",
     "text": "Can we use linear regression?\nWe can code Default as\n\\[Y = \\begin{cases} 0 & \\textrm{if }\\texttt{No}\\\\ 1&\\textrm{if }\\texttt{Yes}\\end{cases}\\] Can we fit a linear regression of \\(Y\\) on \\(X\\) and classify as Yes if \\(\\hat{Y}&gt; 0.5\\)?\n\nIn this case of a binary outcome, linear regression is okay (it is equivalent to linear discriminant analysis, you can read more about that in your book!)\n\\(E[Y|X=x] = P(Y=1|X=x)\\), so it seems like this is a pretty good idea!\nThe problem: Linear regression can produce probabilities less than 0 or greater than 1 😱"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#can-we-use-linear-regression-1",
-    "href": "slides/04-logistic_o.qmd.html#can-we-use-linear-regression-1",
+    "objectID": "slides/04-logistic_o.html#can-we-use-linear-regression-1",
+    "href": "slides/04-logistic_o.html#can-we-use-linear-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Can we use linear regression?",
     "text": "Can we use linear regression?\nWe can code Default as\n\\[Y = \\begin{cases} 0 & \\textrm{if }\\texttt{No}\\\\ 1&\\textrm{if }\\texttt{Yes}\\end{cases}\\] Can we fit a linear regression of \\(Y\\) on \\(X\\) and classify as Yes if \\(\\hat{Y}&gt; 0.5\\)?\n\nWhat may do a better job?\n\n\nLogistic regression!"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#linear-versus-logistic-regression",
-    "href": "slides/04-logistic_o.qmd.html#linear-versus-logistic-regression",
+    "objectID": "slides/04-logistic_o.html#linear-versus-logistic-regression",
+    "href": "slides/04-logistic_o.html#linear-versus-logistic-regression",
     "title": "Chapter 4 Part 1",
     "section": "Linear versus logistic regression",
     "text": "Linear versus logistic regression\n\n\nCode\nDefault &lt;- Default |&gt;\n  mutate(\n  p = glm(default ~ balance, data = Default, family = \"binomial\") |&gt;\n  predict(type = \"response\"),\n  p2 = lm(I(default == \"Yes\") ~ balance, data = Default) |&gt; predict(),\n  def = ifelse(default == \"Yes\", 1, 0)\n)\n\n\nDefault |&gt;\n  sample_frac(0.25) |&gt;\nggplot(aes(balance, p2)) +\n  geom_hline(yintercept = c(0, 1), lty = 2, size = 0.2) +\n  geom_line(color = \"cornflower blue\") +\n  geom_point(aes(balance, def), shape = \"|\", color = \"orange\") +\n  theme_classic() +\n  labs(y = \"probability of default\") -&gt; p1\n\nDefault |&gt;\n  sample_frac(0.25) |&gt;\nggplot(aes(balance, p)) +\n  geom_hline(yintercept = c(0, 1), lty = 2, size = 0.2) +\n  geom_line(color = \"cornflower blue\") +\n  geom_point(aes(balance, def), shape = \"|\", color = \"orange\") +\n  theme_classic() +\n  labs(y = \"probability of default\") -&gt; p2\n\ngrid.arrange(p1, p2, ncol = 2)\n\n\n\n\n\n\n\n\n\n\nWhich does a better job at predicting the probability of default?\n\n\nThe orange marks represent the response \\(Y\\in\\{0,1\\}\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#linear-regression",
-    "href": "slides/04-logistic_o.qmd.html#linear-regression",
+    "objectID": "slides/04-logistic_o.html#linear-regression",
+    "href": "slides/04-logistic_o.html#linear-regression",
     "title": "Chapter 4 Part 1",
     "section": "Linear Regression",
     "text": "Linear Regression\nWhat if we have \\(&gt;2\\) possible outcomes? For example, someone comes to the emergency room and we need to classify them according to their symptoms\n\\[\n\\begin{align}\nY = \\begin{cases} 1& \\textrm{if }\\texttt{stroke}\\\\2&\\textrm{if }\\texttt{drug overdose}\\\\3&\\textrm{if }\\texttt{epileptic seizure}\\end{cases}\n\\end{align}\n\\]\n\nWhat could go wrong here?\n\n\nThe coding implies an ordering\nThe coding implies equal spacing (that is the difference between stroke and drug overdose is the same as drug overdose and epileptic seizure)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#linear-regression-1",
-    "href": "slides/04-logistic_o.qmd.html#linear-regression-1",
+    "objectID": "slides/04-logistic_o.html#linear-regression-1",
+    "href": "slides/04-logistic_o.html#linear-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Linear Regression",
     "text": "Linear Regression\nWhat if we have \\(&gt;2\\) possible outcomes? For example, someone comes to the emergency room and we need to classify them according to their symptoms\n\\[\n\\begin{align}\nY = \\begin{cases} 1& \\textrm{if }\\texttt{stroke}\\\\2&\\textrm{if }\\texttt{drug overdose}\\\\3&\\textrm{if }\\texttt{epileptic seizure}\\end{cases}\n\\end{align}\n\\]\n\nLinear regression is not appropriate here\nMutliclass logistic regression or discriminant analysis are more appropriate"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#logistic-regression",
-    "href": "slides/04-logistic_o.qmd.html#logistic-regression",
+    "objectID": "slides/04-logistic_o.html#logistic-regression",
+    "href": "slides/04-logistic_o.html#logistic-regression",
     "title": "Chapter 4 Part 1",
     "section": "Logistic Regression",
     "text": "Logistic Regression\n\\[\np(X) = \\frac{e^{\\beta_0+\\beta_1X}}{1+e^{\\beta_0+\\beta_1X}}\n\\]\n\nNote: \\(p(X)\\) is shorthand for \\(P(Y=1|X)\\)\nNo matter what values \\(\\beta_0\\), \\(\\beta_1\\), or \\(X\\) take \\(p(X)\\) will always be between 0 and 1"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#logistic-regression-1",
-    "href": "slides/04-logistic_o.qmd.html#logistic-regression-1",
+    "objectID": "slides/04-logistic_o.html#logistic-regression-1",
+    "href": "slides/04-logistic_o.html#logistic-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Logistic Regression",
     "text": "Logistic Regression\n\\[\np(X) = \\frac{e^{\\beta_0+\\beta_1X}}{1+e^{\\beta_0+\\beta_1X}}\n\\]\nWe can rearrange this into the following form:\n\\[\n\\log\\left(\\frac{p(X)}{1-p(X)}\\right) = \\beta_0 + \\beta_1 X\n\\]\n\nWhat is this transformation called?\n\n\nThis is a log odds or logit transformation of \\(p(X)\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#linear-versus-logistic-regression-1",
-    "href": "slides/04-logistic_o.qmd.html#linear-versus-logistic-regression-1",
+    "objectID": "slides/04-logistic_o.html#linear-versus-logistic-regression-1",
+    "href": "slides/04-logistic_o.html#linear-versus-logistic-regression-1",
     "title": "Chapter 4 Part 1",
     "section": "Linear versus logistic regression",
     "text": "Linear versus logistic regression\n\n\n\n\n\n\n\n\n\nLogistic regression ensures that our estimates for \\(p(X)\\) are between 0 and 1 🎉"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#maximum-likelihood",
-    "href": "slides/04-logistic_o.qmd.html#maximum-likelihood",
+    "objectID": "slides/04-logistic_o.html#maximum-likelihood",
+    "href": "slides/04-logistic_o.html#maximum-likelihood",
     "title": "Chapter 4 Part 1",
     "section": "Maximum Likelihood",
     "text": "Maximum Likelihood\n\nRefresher: How did we estimate \\(\\hat\\beta\\) in linear regression?"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#maximum-likelihood-1",
-    "href": "slides/04-logistic_o.qmd.html#maximum-likelihood-1",
+    "objectID": "slides/04-logistic_o.html#maximum-likelihood-1",
+    "href": "slides/04-logistic_o.html#maximum-likelihood-1",
     "title": "Chapter 4 Part 1",
     "section": "Maximum Likelihood",
     "text": "Maximum Likelihood\n\nRefresher: How did we estimate \\(\\hat\\beta\\) in linear regression?\n\nIn logistic regression, we use maximum likelihood to estimate the parameters\n\\[\\mathcal{l}(\\beta_0,\\beta_1)=\\prod_{i:y_i=1}p(x_i)\\prod_{i:y_i=0}(1-p(x_i))\\]\n\nThis likelihood give the probability of the observed ones and zeros in the data\nWe pick \\(\\beta_0\\) and \\(\\beta_1\\) to maximize the likelihood\nWe’ll let R do the heavy lifting here"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#lets-see-it-in-r",
-    "href": "slides/04-logistic_o.qmd.html#lets-see-it-in-r",
+    "objectID": "slides/04-logistic_o.html#lets-see-it-in-r",
+    "href": "slides/04-logistic_o.html#lets-see-it-in-r",
     "title": "Chapter 4 Part 1",
     "section": "Let’s see it in R",
     "text": "Let’s see it in R\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(default ~ balance, \n      data = Default) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term         estimate std.error statistic   p.value\n  &lt;chr&gt;           &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept) -10.7      0.361        -29.5 3.62e-191\n2 balance       0.00550  0.000220      25.0 1.98e-137\n\n\n\nUse the logistic_reg() function in R with the glm engine"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#making-predictions",
-    "href": "slides/04-logistic_o.qmd.html#making-predictions",
+    "objectID": "slides/04-logistic_o.html#making-predictions",
+    "href": "slides/04-logistic_o.html#making-predictions",
     "title": "Chapter 4 Part 1",
     "section": "Making predictions",
     "text": "Making predictions\n\nWhat is our estimated probability of default for someone with a balance of $1000?\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.6513306\n0.3611574\n-29.49221\n0\n\n\nbalance\n0.0054989\n0.0002204\n24.95309\n0\n\n\n\n\n\n. . .\n\\[\n\\hat{p}(X) = \\frac{e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}{1+e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}=\\frac{e^{-10.65+0.0055\\times 1000}}{1+e^{-10.65+0.0055\\times 1000}}=0.006\n\\]"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#making-predictions-1",
-    "href": "slides/04-logistic_o.qmd.html#making-predictions-1",
+    "objectID": "slides/04-logistic_o.html#making-predictions-1",
+    "href": "slides/04-logistic_o.html#making-predictions-1",
     "title": "Chapter 4 Part 1",
     "section": "Making predictions",
     "text": "Making predictions\n\nWhat is our estimated probability of default for someone with a balance of $2000?\n\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.6513306\n0.3611574\n-29.49221\n0\n\n\nbalance\n0.0054989\n0.0002204\n24.95309\n0\n\n\n\n\n\n. . .\n\\[\n\\hat{p}(X) = \\frac{e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}{1+e^{\\hat{\\beta}_0+\\hat{\\beta}_1X}}=\\frac{e^{-10.65+0.0055\\times 2000}}{1+e^{-10.65+0.0055\\times 2000}}=0.586\n\\]"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#logistic-regression-example",
-    "href": "slides/04-logistic_o.qmd.html#logistic-regression-example",
+    "objectID": "slides/04-logistic_o.html#logistic-regression-example",
+    "href": "slides/04-logistic_o.html#logistic-regression-example",
     "title": "Chapter 4 Part 1",
     "section": "Logistic regression example",
     "text": "Logistic regression example\nLet’s refit the model to predict the probability of default given the customer is a student\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-3.5041278\n0.0707130\n-49.554219\n0.0000000\n\n\nstudentYes\n0.4048871\n0.1150188\n3.520181\n0.0004313\n\n\n\n\n\n\\[P(\\texttt{default = Yes}|\\texttt{student = Yes}) = \\frac{e^{-3.5041+0.4049\\times1}}{1+e^{-3.5041+0.4049\\times1}}=0.0431\\]\n. . .\n\nHow will this change if student = No?\n\n. . .\n\\[P(\\texttt{default = Yes}|\\texttt{student = No}) = \\frac{e^{-3.5041+0.4049\\times0}}{1+e^{-3.5041+0.4049\\times0}}=0.0292\\]"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#potential-confounding",
-    "href": "slides/04-logistic_o.qmd.html#potential-confounding",
+    "objectID": "slides/04-logistic_o.html#potential-confounding",
+    "href": "slides/04-logistic_o.html#potential-confounding",
     "title": "Chapter 4 Part 1",
     "section": "Potential Confounding",
     "text": "Potential Confounding\n\n\n\n\n\n\n\n\n\n\nWhat is going on here?"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#confounding",
-    "href": "slides/04-logistic_o.qmd.html#confounding",
+    "objectID": "slides/04-logistic_o.html#confounding",
+    "href": "slides/04-logistic_o.html#confounding",
     "title": "Chapter 4 Part 1",
     "section": "Confounding",
     "text": "Confounding\n\n\n\n\n\n\n\n\n\n\nStudents tend to have higher balances than non-students\nTheir marginal default rate is higher\nFor each level of balance, students default less\nTheir conditional default rate is lower"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#a-bit-about-odds",
-    "href": "slides/04-logistic_o.qmd.html#a-bit-about-odds",
+    "objectID": "slides/04-logistic_o.html#a-bit-about-odds",
+    "href": "slides/04-logistic_o.html#a-bit-about-odds",
     "title": "Chapter 4 Part 1",
     "section": "A bit about “odds”",
     "text": "A bit about “odds”\n\nThe “odds” tell you how likely an event is\n🌂 Let’s say there is a 60% chance of rain today * What is the probability that it will rain?\n\\(p = 0.6\\)\nWhat is the probability that it won’t rain?\n\\(1-p = 0.4\\)\nWhat are the odds that it will rain?\n3 to 2, 3:2, \\(\\frac{0.6}{0.4} = 1.5\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#transforming-logs",
-    "href": "slides/04-logistic_o.qmd.html#transforming-logs",
+    "objectID": "slides/04-logistic_o.html#transforming-logs",
+    "href": "slides/04-logistic_o.html#transforming-logs",
     "title": "Chapter 4 Part 1",
     "section": "Transforming logs",
     "text": "Transforming logs\n\nHow do you “undo” a \\(\\log\\) base \\(e\\)?\nUse \\(e\\)! For example:\n\\(e^{\\log(10)} = 10\\)\n\\(e^{\\log(1283)} = 1283\\)\n\\(e^{\\log(x)} = x\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#transforming-logs-1",
-    "href": "slides/04-logistic_o.qmd.html#transforming-logs-1",
+    "objectID": "slides/04-logistic_o.html#transforming-logs-1",
+    "href": "slides/04-logistic_o.html#transforming-logs-1",
     "title": "Chapter 4 Part 1",
     "section": "Transforming logs",
     "text": "Transforming logs\n\nHow would you get the odds from the log(odds)?\n\n\n\nHow do you “undo” a \\(\\log\\) base \\(e\\)?\nUse \\(e\\)! For example:\n\\(e^{\\log(10)} = 10\\)\n\\(e^{\\log(1283)} = 1283\\)\n\\(e^{\\log(x)} = x\\)\n\n\n\n\\(e^{\\log(odds)}\\) = odds"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#transforming-odds",
-    "href": "slides/04-logistic_o.qmd.html#transforming-odds",
+    "objectID": "slides/04-logistic_o.html#transforming-odds",
+    "href": "slides/04-logistic_o.html#transforming-odds",
     "title": "Chapter 4 Part 1",
     "section": "Transforming odds",
     "text": "Transforming odds\n\nodds = \\(\\frac{\\pi}{1-\\pi}\\)\nSolving for \\(\\pi\\)\n\\(\\pi = \\frac{\\textrm{odds}}{1+\\textrm{odds}}\\)\nPlugging in \\(e^{\\log(odds)}\\) = odds\n\\(\\pi = \\frac{e^{\\log(odds)}}{1+e^{\\log(odds)}}\\)\nPlugging in \\(\\log(odds) = \\beta_0 + \\beta_1x\\)\n\\(\\pi = \\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#the-logistic-model",
-    "href": "slides/04-logistic_o.qmd.html#the-logistic-model",
+    "objectID": "slides/04-logistic_o.html#the-logistic-model",
+    "href": "slides/04-logistic_o.html#the-logistic-model",
     "title": "Chapter 4 Part 1",
     "section": "The logistic model",
-    "text": "The logistic model\n\n✌️ forms\n\n\n\n\n\n\n\n\nForm\nModel\n\n\n\n\nLogit form\n\\(\\log\\left(\\frac{\\pi}{1-\\pi}\\right) = \\beta_0 + \\beta_1x\\)\n\n\nProbability form\n\\(\\Large\\pi = \\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
+    "text": "The logistic model\n\n✌️ forms\n\n. . .\n\n\n\n\n\n\n\nForm\nModel\n\n\n\n\nLogit form\n\\(\\log\\left(\\frac{\\pi}{1-\\pi}\\right) = \\beta_0 + \\beta_1x\\)\n\n\nProbability form\n\\(\\Large\\pi = \\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#the-logistic-model-1",
-    "href": "slides/04-logistic_o.qmd.html#the-logistic-model-1",
+    "objectID": "slides/04-logistic_o.html#the-logistic-model-1",
+    "href": "slides/04-logistic_o.html#the-logistic-model-1",
     "title": "Chapter 4 Part 1",
     "section": "The logistic model",
     "text": "The logistic model\n\n\n\nprobability\nodds\nlog(odds)\n\n\n\n\n\\(\\pi\\)\n\\(\\frac{\\pi}{1-\\pi}\\)\n\\(\\log\\left(\\frac{\\pi}{1-\\pi}\\right)=l\\)\n\n\n\n⬅️\n\n\n\nlog(odds)\nodds\nprobability\n\n\n\n\n\\(l\\)\n\\(e^l\\)\n\\(\\frac{e^l}{1+e^l} = \\pi\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#the-logistic-model-2",
-    "href": "slides/04-logistic_o.qmd.html#the-logistic-model-2",
+    "objectID": "slides/04-logistic_o.html#the-logistic-model-2",
+    "href": "slides/04-logistic_o.html#the-logistic-model-2",
     "title": "Chapter 4 Part 1",
     "section": "The logistic model",
     "text": "The logistic model\n\n✌️ forms\nlog(odds): \\(l = \\beta_0 + \\beta_1x\\)\nP(Outcome = Yes): \\(\\Large\\pi =\\frac{e^{\\beta_0 + \\beta_1x}}{1+e^{\\beta_0 + \\beta_1x}}\\)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios",
+    "objectID": "slides/04-logistic_o.html#odds-ratios",
+    "href": "slides/04-logistic_o.html#odds-ratios",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later. (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-1",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-1",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-1",
+    "href": "slides/04-logistic_o.html#odds-ratios-1",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat is the explanatory variable?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-2",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-2",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-2",
+    "href": "slides/04-logistic_o.html#odds-ratios-2",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat type of variable is this?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-3",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-3",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-3",
+    "href": "slides/04-logistic_o.html#odds-ratios-3",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat is the outcome variable?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-4",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-4",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-4",
+    "href": "slides/04-logistic_o.html#odds-ratios-4",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat type of variable is this?\n\nA study investigated whether a handheld device that sends a magnetic pulse into a person’s head might be an effective treatment for migraine headaches.\n\n\nResearchers recruited 200 subjects who suffered from migraines\nrandomly assigned them to receive either the TMS (transcranial magnetic stimulation) treatment or a placebo treatment\nSubjects were instructed to apply the device at the onset of migraine symptoms and then assess how they felt two hours later (either Pain-free or Not pain-free)"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-5",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-5",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-5",
+    "href": "slides/04-logistic_o.html#odds-ratios-5",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\nWe can compare the results using odds\nWhat are the odds of being pain-free for the placebo group?\n\\((22/100)/(78/100) = 22/78 = 0.282\\)\nWhat are the odds of being pain-free for the treatment group?\n\\(39/61 = 0.639\\)\nComparing the odds what can we conclude?\nTMS increases the likelihood of success"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-6",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-6",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-6",
+    "href": "slides/04-logistic_o.html#odds-ratios-6",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\nWe can summarize this relationship with an odds ratio: the ratio of the two odds\n\\(\\Large OR = \\frac{39/61}{22/78} = \\frac{0.639}{0.282} = 2.27\\)\n“the odds of being pain free were 2.27 times higher with TMS than with the placebo”"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-7",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-7",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-7",
+    "href": "slides/04-logistic_o.html#odds-ratios-7",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat if we wanted to calculate this in terms of Not pain-free (with pain-free) as the referent?\n\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\n\\(\\Large OR = \\frac{61/39}{78/22} = \\frac{1.564}{3.545} = 0.441\\)\nthe odds for still being in pain for the TMS group are 0.441 times the odds of being in pain for the placebo group"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-8",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-8",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-8",
+    "href": "slides/04-logistic_o.html#odds-ratios-8",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat changed here?\n\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\n\\(\\Large OR = \\frac{78/22}{61/39} = \\frac{3.545}{1.564} = 2.27\\)\nthe odds for still being in pain for the placebo group are 2.27 times the odds of being in pain for the TMS group"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-9",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-9",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-9",
+    "href": "slides/04-logistic_o.html#odds-ratios-9",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nIn general, it’s more natural to interpret odds ratios &gt; 1, you can flip the referent to do so\n\n\n\nTreatment\nTMS\nPlacebo\nTotal\n\n\n\n\nPain-free two hours later\n39\n22\n61\n\n\nNot pain-free two hours later\n61\n78\n139\n\n\nTotal\n100\n100\n200\n\n\n\n\\(\\Large OR = \\frac{78/22}{61/39} = \\frac{3.545}{1.564} = 2.27\\)\nthe odds for still being in pain for the placebo group are 2.27 times the odds of being in pain for the TMS group"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-10",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-10",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-10",
+    "href": "slides/04-logistic_o.html#odds-ratios-10",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nLet’s look at some Titanic data. We are interested in whether the passenger reported being female is related to whether they survived.\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-11",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-11",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-11",
+    "href": "slides/04-logistic_o.html#odds-ratios-11",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat are the odds of surviving for females versus males?\n\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313\n\n\n\n\\[\\Large OR = \\frac{308/154}{142/709} = \\frac{2}{0.2} = 9.99\\]"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-12",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-12",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-12",
+    "href": "slides/04-logistic_o.html#odds-ratios-12",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nHow do you interpret this?\n\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313\n\n\n\n\\[\\Large OR = \\frac{308/154}{142/709} = \\frac{2}{0.2} = 9.99\\] the odds of surviving for the female passengers was 9.99 times the odds of surviving for the male passengers"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-13",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-13",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-13",
+    "href": "slides/04-logistic_o.html#odds-ratios-13",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nWhat if we wanted to fit a model? What would the equation be?\n\n\n\n\n\nFemale\nMale\nTotal\n\n\n\n\nSurvived\n308\n142\n450\n\n\nDied\n154\n709\n863\n\n\nTotal\n462\n851\n1313\n\n\n\n. . .\n\\[\\Large \\log(\\textrm{odds of survival}) = \\beta_0 + \\beta_1 \\textrm{Female}\\]"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-14",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-14",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-14",
+    "href": "slides/04-logistic_o.html#odds-ratios-14",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\\[\\Large \\log(\\textrm{odds of survival}) = \\beta_0 + \\beta_1 \\textrm{Female}\\]\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    -1.61    0.0919     -17.5 1.70e-68\n2 Sexfemale       2.30    0.135       17.1 2.91e-65"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-15",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-15",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-15",
+    "href": "slides/04-logistic_o.html#odds-ratios-15",
     "title": "Chapter 4 Part 1",
     "section": "Odds Ratios",
     "text": "Odds Ratios\n\nHow do you interpret this result?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    -1.61    0.0919     -17.5 1.70e-68\n2 Sexfemale       2.30    0.135       17.1 2.91e-65"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-16",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-16",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-16",
+    "href": "slides/04-logistic_o.html#odds-ratios-16",
     "title": "Chapter 4 Part 1",
     "section": "Odds Ratios",
     "text": "Odds Ratios\n\nHow do you interpret this result?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy(exponentiate = TRUE) \n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    0.200    0.0919     -17.5 1.70e-68\n2 Sexfemale      9.99     0.135       17.1 2.91e-65\n\nexp(2.301176)\n\n[1] 9.99"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-17",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-17",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-17",
+    "href": "slides/04-logistic_o.html#odds-ratios-17",
     "title": "Chapter 4 Part 1",
     "section": "Odds Ratios",
     "text": "Odds Ratios\n\nHow do you interpret this result?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Survived ~ Sex, data = Titanic) |&gt;\n  tidy(exponentiate = TRUE) \n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    0.200    0.0919     -17.5 1.70e-68\n2 Sexfemale      9.99     0.135       17.1 2.91e-65\n\nexp(2.301176)\n\n[1] 9.99\n\n\nthe odds of surviving for the female passengers was 9.99 times the odds of surviving for the male passengers"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-18",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-18",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-18",
+    "href": "slides/04-logistic_o.html#odds-ratios-18",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nWhat if the explanatory variable is continuous?\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA, data = MedGPA) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   -19.2       5.63     -3.41 0.000644\n2 GPA             5.45      1.58      3.45 0.000553\n\n\nA one unit increase in GPA yields a 5.45 increase in the log odds of acceptance"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-19",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-19",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-19",
+    "href": "slides/04-logistic_o.html#odds-ratios-19",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\nWhat if the explanatory variable is continuous?\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA, data = MedGPA) |&gt;\n  tidy(exponentiate = TRUE) \n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)  4.56e-9      5.63     -3.41 0.000644\n2 GPA          2.34e+2      1.58      3.45 0.000553\n\n\nA one unit increase in GPA yields a 234-fold increase in the odds of acceptance\n\n😱 that seems huge! Remember: the interpretation of these coefficients depends on your units (the same as in ordinary linear regression)."
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-20",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-20",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-20",
+    "href": "slides/04-logistic_o.html#odds-ratios-20",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nHow could we get the odds associated with increasing GPA by 0.1?\n\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA, data = MedGPA) |&gt;\n  tidy()\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)   -19.2       5.63     -3.41 0.000644\n2 GPA             5.45      1.58      3.45 0.000553\n\n\n\nexp(5.454) ## a one unit increase in GPA\n\n[1] 234\n\nexp(5.454 * 0.1) ## a 0.1 increase in GPA\n\n[1] 1.73\n\n\nA one-tenth unit increase in GPA yields a 1.73-fold increase in the odds of acceptance"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#odds-ratios-21",
-    "href": "slides/04-logistic_o.qmd.html#odds-ratios-21",
+    "objectID": "slides/04-logistic_o.html#odds-ratios-21",
+    "href": "slides/04-logistic_o.html#odds-ratios-21",
     "title": "Chapter 4 Part 1",
     "section": "Odds ratios",
     "text": "Odds ratios\n\nHow could we get the odds associated with increasing GPA by 0.1?\n\n\nMedGPA &lt;- MedGPA |&gt;\n  mutate(GPA_10 = GPA * 10)\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(Acceptance ~ GPA_10, data = MedGPA) |&gt;\n  tidy(exponentiate = TRUE)\n\n# A tibble: 2 × 5\n  term             estimate std.error statistic  p.value\n  &lt;chr&gt;               &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept) 0.00000000456     5.63      -3.41 0.000644\n2 GPA_10      1.73              0.158      3.45 0.000553\n\n\nA one-tenth unit increase in GPA yields a 1.73-fold increase in the odds of acceptance"
   },
   {
-    "objectID": "slides/04-logistic_o.qmd.html#application-exercise",
-    "href": "slides/04-logistic_o.qmd.html#application-exercise",
+    "objectID": "slides/04-logistic_o.html#application-exercise",
+    "href": "slides/04-logistic_o.html#application-exercise",
     "title": "Chapter 4 Part 1",
     "section": " Application Exercise",
-    "text": "Application Exercise\nUsing the Default data from the ISLR package. Fit two logistic regression models that predict whether a customer defaults\n\nOne model with student as a predictor. Interpret the coefficient of studentYes.\nAnother model with balance as a predictor. Interpret the coefficient of balance.\n\nHere is some code to get you started:\n\nlibrary(ISLR)\ndata(\"Default\")"
+    "text": "Application Exercise\nUsing the Default data from the ISLR package. Fit two logistic regression models that predict whether a customer defaults\n\nOne model with student as a predictor. Interpret the coefficient of studentYes.\nAnother model with balance as a predictor. Interpret the coefficient of balance.\n\n. . .\nHere is some code to get you started:\n\nlibrary(ISLR)\ndata(\"Default\")"
   },
   {
     "objectID": "slides/04-2-lda-qda.qmd.html#recap",
@@ -2090,46 +2090,166 @@
     "text": "Accuracy\n\nMisclassification error rate\n\n. . .\n\\[Err_{\\texttt{test}} = \\frac{\\#incorrect predictions}{total predictions} = \\textrm{Ave}_{test}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\] &gt; * \\(I(\\cdot)\\) is an indicator function and will only be eitehr 0 or 1.\n\n\nThe Bayes Classifier using the true \\(p_k(x)\\) has the smallest error\nSome of the methods we (may) learn build structured models for \\(\\mathcal{C}(x)\\) (support vector machines, for example)\nSome build structured models for \\(p_k(x)\\) (logistic regression, for example)\n\n\n\n\nthe test error rate \\(\\textrm{Ave}_{i\\in\\texttt{test}}I[y_i\\neq \\mathcal{\\hat{C}}(x_i)]\\) is minimized on average by very simple classifier that assigns each observation to the most likely class, given its predictor values (that’s the Bayes classifier)"
   },
   {
-    "objectID": "labs/lab01-cv-tm.html",
-    "href": "labs/lab01-cv-tm.html",
-    "title": "Lab 01",
+    "objectID": "labs/lab02-logistic.html",
+    "href": "labs/lab02-logistic.html",
+    "title": "Lab 02",
     "section": "",
-    "text": "Go to our RStudio and create a new R project inside your class folder.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+    "text": "Go to our RStudio and create a new R project inside your class folder.\n\n\nCreate a .qmd file for your lab, make sure the author is your name, and Render the document.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
   },
   {
-    "objectID": "labs/lab01-cv-tm.html#yaml",
-    "href": "labs/lab01-cv-tm.html#yaml",
-    "title": "Lab 01",
-    "section": "YAML:",
-    "text": "YAML:\nOpen the .qmd file in your project, make sure the author is your name, and Render the document."
+    "objectID": "labs/lab02-logistic.html#yaml",
+    "href": "labs/lab02-logistic.html#yaml",
+    "title": "Lab 02",
+    "section": "",
+    "text": "Create a .qmd file for your lab, make sure the author is your name, and Render the document.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
   },
   {
-    "objectID": "labs/lab01-cv-tm.html#conceptual-questions",
-    "href": "labs/lab01-cv-tm.html#conceptual-questions",
-    "title": "Lab 01",
+    "objectID": "labs/lab02-logistic.html#conceptual-questions",
+    "href": "labs/lab02-logistic.html#conceptual-questions",
+    "title": "Lab 02",
     "section": "Conceptual questions",
-    "text": "Conceptual questions\n\nExplain how k-fold Cross Validation is implemented.\nWhat are the advantages / disadvantages of k-fold Cross Validation compared to the Validation Set approach? What are the advantages / disadvantages of k-fold Cross Validation compared to Leave-one-out Cross Validation?"
+    "text": "Conceptual questions\n\nSuppose that an individual has a 23% chance of defaulting on their credit card payment. What are the odds that they will default?"
   },
   {
-    "objectID": "labs/lab01-cv-tm.html#data-exploration",
-    "href": "labs/lab01-cv-tm.html#data-exploration",
-    "title": "Lab 01",
-    "section": "Data exploration",
-    "text": "Data exploration\n\nFor this analysis, we are using the Auto dataset from the ISLR package. How many rows are in this dataset? How many columns? Is there any missing data?\nOur outcome of interest is miles per gallon: mpg. Create a publication-ready figure examining the distribution of this variable.\nOur main predictor of interest is horsepower. Create a publication-ready figure looking at the relationship between miles per gallon and horsepower."
+    "objectID": "labs/lab02-logistic.html#logistic-regression",
+    "href": "labs/lab02-logistic.html#logistic-regression",
+    "title": "Lab 02",
+    "section": "Logistic Regression",
+    "text": "Logistic Regression\n\nFor this lab we are using the Smarket data. Examine this data set - how many observations are there? How many columns? What are the variables?\nLet’s look at the correlation between all of the variables. Add the code below to your .qmd file. What can you learn from this visualization? Which pair of variables have the highest correlation?\n\n\nggpairs(Smarket, \n        lower = list(combo = wrap(ggally_facethist, binwidth = 0.5)), \n        progress = FALSE)\n\n\nInference Fit a logistic regression model to predict Direction using Lag1, Lag2, Lag3, Lag4, Lag5, and Volume. Show a table that contains the coefficients and p-values along with the confidence intervals for each of the 6 predictors. Which predictor has the smallest p-value? Interpret the coefficient, confidence interval, and p-value for this predictor.\nInference Exponentiate the results from Exercise 4. Interpret the odds ratio for the same predictor you selected in Exercise 4.\nPrediction Using 5-fold cross validation, fit the same logistic regression model as Exercise 4. What is the test Accuracy for this model? Interpret this result.\nInference Fit a logistic regression model to predict Direction using only Lag1 and Lag2. Show a table that contains the coefficients and p-values along with the confidence intervals for each of the 2 predictors. Which predictor has the smallest p-value? Interpret the coefficient, confidence interval, and p-value for this predictor.\nInference Exponentiate the results from Exercise 7. Interpret the odds ratio for the same predictor you selected in Exercise 7.\nPrediction Using 5-fold cross validation, fit the same logistic regression model as Exercise 7. What is the test Accuracy for this model? Interpret this result.\nIf you had to choose between the model fit in Exercise 4 and the one fit in Exercise 7, which would you choose? Why?"
   },
   {
-    "objectID": "labs/lab01-cv-tm.html#k-fold-cross-validation",
-    "href": "labs/lab01-cv-tm.html#k-fold-cross-validation",
-    "title": "Lab 01",
-    "section": "K-fold cross validation",
-    "text": "K-fold cross validation\nWe are trying to decide between three models of varying flexibility:\n\nModel 1: \\(\\texttt{mpg} = \\beta_0 + \\beta_1 \\texttt{horsepower} + \\epsilon\\)\nModel 2: \\(\\texttt{mpg} = \\beta_0 + \\beta_1 \\texttt{horsepower} + \\beta_2 \\texttt{horsepower}^2 + \\epsilon\\)\nModel 3: \\(\\texttt{mpg} = \\beta_0 + \\beta_1 \\texttt{horsepower} + \\beta_2 \\texttt{horsepower}^2 + \\beta_3 \\texttt{horsepower}^3 + \\epsilon\\)\n\n\nUsing the Auto data, split the data into two groups a training data set, saved as Auto_train and a testing data set, saved as Auto_test. Be sure to set a seed to ensure that you get the same result each time you Render your document.\n\n\n\nYou can use the poly() function to fit a model with a polynomial term. For example, to fit the model \\(y = \\beta_0 + \\beta_1 \\texttt{x} + \\beta_2 \\texttt{x}^2 + \\beta_3 \\texttt{x}^3 + \\epsilon\\), you would run fit(lm_spec, y ~ poly(x, 3), data = data)\n\nFit the three models outlined above on the training data. Using the model created on the training data, predict mpg in the test data set for each model. What is the test RMSE for the three models? Which model would you choose?\nFit the same three models, but instead of the validation set approach, perform 5-fold cross validation. Make sure to set a seed so you get the same answer each time you run the analysis. Calculate the overall 5-fold cross validation error for each of the three models. Which model would you chose?\nThe tidymodels package allows you to do this faster! Instead of having a fit 3 (or more!) different models to determine the best flexibility, you can (1) create a recipe to specify how you would like to fit a model and then (2) tune this model to determine the best output. Copy the code below. What do you think the line step_poly(horsepower, degree = tune()) does? Hint: you can run ?step_poly in the Console to learn more about this function.\n\n\nauto_prep &lt;- Auto |&gt;\n  recipe(mpg ~ horsepower) |&gt;\n  step_poly(horsepower, degree = tune())\n\n\nTo tune this model, you will replace fit_resamples with tune_grid. The pseudo code to do this is below - you may need to update some names to match what you have named objects in your document. Add the code to tune your model based on the code below.\n\n\nauto_tune &lt;- tune_grid(lm_spec,\n          auto_prep,\n          resamples = auto_cv)\n\n\nUsing the collect_metrics function, look at the RMSE for auto_tune. Which degree is preferable?\nYou can plot the output from Exercise 11 to make it a bit easier to determine. First, save your output from Exercise 11 as auto_metrics. Then filter this data frame to only include rows where .metric == “rmse”. Save this filtered data frame as auto_rmse. Edit the code below to plot the degree on the x-axis and mean on the y-axis. Describe what this plot shows.\n\n\nggplot(auto_rmse, aes(x = ----, y = ----)) + \n  geom_line() +\n  geom_pointrange(aes(ymin = mean - std_err, ymax = mean + std_err)) + \n  labs(x = \"Degree\",\n       y = \"Cross validation error\",\n       title = ---)"
-  },
-  {
-    "objectID": "hw/hw-02-cv-tm.html",
-    "href": "hw/hw-02-cv-tm.html",
-    "title": "Homework 2",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Instructions\n\nCreating a new project. and giving it a sensible name such as homework_2.\nCreate a new quarto document and give it a sensible name such as hw2.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels.\nSet a seed before each problem.\nMake sure you answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\nExercises\n\n(ISLR 3) We now review k-fold cross-validation.\n\nExplain how k-fold cross-validation is implemented.\nWhat are the advantages and disadvantages of k-fold cross-validation relative to:\n\n\nThe validation set approach?\nLOOCV?\n\n(ISLR 8) We will now perform cross-validation on a simulated data set.\n\nGenerate a simulated data set as follows below. In this data set, what is \\(n\\) and what is \\(p\\)? Write out the model used to generate the data in equation form.\n\n\n\nset.seed(1)\nx &lt;- rnorm(100)\ny &lt;- x - 2 * x^2 + rnorm(100)\n\n\nContinued\n\nCreate a scatterplot of \\(X\\) against \\(Y\\). Comment on what you find.\nSet a random seed, and then compute the LOOCV errors that result from fitting the following four models using least squares:\n\nm1. \\(Y = \\beta_0 + \\beta_1 X + \\epsilon\\)\nm2. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\epsilon\\)\nm3. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\epsilon\\)\nm4. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\beta_4 X^4 + \\epsilon\\)\n\n\n\n\n\n\n\nTip\n\n\n\nYou may find it helpful to use the data.frame() function to create a single data set containing both \\(X\\) and \\(Y\\).\n\n\n\nContinued\n\nRepeat (c) using another random seed, and report your results. Are your results the same as what you got in (c)? Why?\nWhich of the models in (c) had the smallest LOOCV error? Is this what you expected? Explain your answer.\nComment on the statistical significance of the coefficient estimates that result from fitting each of the models in (c) using least squares. Do these results agree with the conclusions drawn based on the cross-validation results?\n\nThe data FirstYearGPA, in the Stat2Data packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use ?FirstYearGPA to learn about the dataset.\n\nSplit the data into training and test using 70% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed.\nUse the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE.\nNow do cross validation instead of using a test and training set. Give the final CV MSE.\nWhich was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example?\nIf we had more data, how might we combine both approaches?\n\nThe data Titanic, in the Stat2Data packages a list and outcomes for passengers on the Titanic.\n\nFit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.\n\n\n\ndata(Titanic)\ntitanic_2 &lt;- as.data.frame(Titanic) |&gt;\n  transform(Survived = factor(Survived))\n\nlog_spec&lt;- \n  logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nlogistic_fit &lt;-\n  fit(log_spec,\n    ____________ ~ ________+________,\n    data = ________)\n\n\nContinued\n\nUse the predict function on your model and predict for the data you used to fit the model.\nUsing your predicted values, calculate the misclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match.\nNow split the data into training and test like in the previous exercise (70/30 split). Give the misclassification rate for the test set.\nNow use cross validation and give the average misclassification rate across folds (almost a default output of the collect_metrics function).\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final html document to the respective assignment on Moodle"
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - LDA, QDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nTidymodel recipies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA or Clustering, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, watch project videos, surveys etc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
+    "crumbs": [
+      "Course Contents",
+      "Schedule & Assignments"
+    ]
+  },
+  {
+    "objectID": "hw/hw-04-regression_sol.html",
+    "href": "hw/hw-04-regression_sol.html",
+    "title": "Homework 4 Solutions",
+    "section": "",
+    "text": "1.\nWe perform best subset, forward stepwise, and backward stepwise selection on a single data set. For each approach, we obtain p + 1 models, containing \\(0, 1, 2, . . . ,p\\) predictors.\nExplain your answers:\n(a) Which of the three models with k predictors has the smallest training RSS?\nBest subsets since it considers every possible combination. It is possible both forward and backward stepwise pick the same k predictor model and have the same training RSS.\n\nWhich of the three models with k predictors has the smallest test RSS?\n\nYou cannot determine this to be sure. It depends if the best subset choice on the training set overfit. If it did, one of the other approach models could perform better.\n\nTrue or False:\n\n\nThe predictors in the k-variable model identified by forward stepwise are a subset of the predictors in the (k+1)-variable model identified by forward stepwise selection.\n\nTrue, FSR keeps all k predictors from the previous step and adds an additional variable.\n\nThe predictors in the k-variable model identified by backward stepwise are a subset of the predictors in the (k + 1)- variable model identified by backward stepwise selection.\n\nTrue, BSR drops 1 variable form a k+1 predictor model and goes down to a k variable model. The k variables must be in the k+1 variable model.\n\nThe predictors in the k-variable model identified by backward stepwise are a subset of the predictors in the (k + 1)- variable model identified by forward stepwise selection.\n\nFalse, not always true.\n\nThe predictors in the k-variable model identified by forward stepwise are a subset of the predictors in the (k+1)-variable model identified by backward stepwise selection.\n\nFalse, not always true.\n\nThe predictors in the k-variable model identified by best subset are a subset of the predictors in the (k + 1)-variable model identified by best subset selection.\n\nFalse, not always true.\n\n\n8.\nIn this exercise, we will generate simulated data, and will then use this data to perform best subset selection.\n\nUse the rnorm() function to generate a predictor X of length n = 100, as well as a noise vector \\(\\epsilon\\) of length n = 100.\n\n\nX &lt;- rnorm(100, mean = 10, sd = 10) \nep &lt;- rnorm(100,sd = 30)\n\n\nGenerate a response vector \\(Y\\) of length \\(n=100\\) according to the model\n\n\\[Y=\\beta_0 + \\beta_1X+\\beta_2X^2+\\beta_3X^3+\\epsilon,\\]\nwhere \\(\\beta_0,\\beta_1,\\) and \\(\\beta_3\\) are constants of your choice.\n\nY = 5 + 3*X + 10*X^2+ 2*X^3 + ep\n\n\nUse the regsubsets() function to perform best subset selection in order to choose the best model containing the predictors \\(X\\),\\(X^2\\), . . . ,\\(X^{10}\\). What is the best model obtained according to \\(C_p\\), BIC, and adjusted \\(R^2\\)? Show some plots to provide evidence for your answer, and report the coefficients of the best model obtained. Note you will need to use the data.frame() function to create a single data set containing both X and Y .\n\n\nsimdata &lt;- data.frame(ysim = Y,xsim = X)\n\nhead(simdata)\n\n        ysim      xsim\n1 1845.03133  8.368388\n2   34.56759 -3.272097\n3   14.39104  1.845040\n4 5054.90702 12.113334\n5  457.36512  4.704802\n6   42.17828  1.571858\n\n\n\ncreate_metrics_table &lt;- function(X){\n  K &lt;- length(X$rsq)\n  metrics_df &lt;- data.frame(num_pred= 1:K, # K different models\n                           Rsq = X$rsq,\n                           rss = X$rss,\n                           adjr2 = X$adjr2,\n                           cp = X$cp,\n                           bic = X$bic) |&gt;\n    tidyr::pivot_longer(cols=Rsq:bic,\n                 names_to = \"metric\",values_to = \"metric_val\")\n  # This pivot puts the metric values in 1 column \n  # and creates another column for the name of \n  # the metric\n  return(metrics_df)\n}\n\n\nlibrary(leaps)\n\nWarning: package 'leaps' was built under R version 4.3.2\n\nbss_fit &lt;- regsubsets(ysim~poly(xsim,10),data = simdata)\nbss_fit\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata)\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n\nbss_summary &lt;- summary(bss_fit)\n\nbss_summary\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata)\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n         poly(xsim, 10)1 poly(xsim, 10)2 poly(xsim, 10)3 poly(xsim, 10)4\n1  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n2  ( 1 ) \"*\"             \"*\"             \" \"             \" \"            \n3  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n4  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n5  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n6  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)5 poly(xsim, 10)6 poly(xsim, 10)7 poly(xsim, 10)8\n1  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n2  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n3  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n4  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n5  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n6  ( 1 ) \"*\"             \" \"             \"*\"             \" \"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)9 poly(xsim, 10)10\n1  ( 1 ) \" \"             \" \"             \n2  ( 1 ) \" \"             \" \"             \n3  ( 1 ) \" \"             \" \"             \n4  ( 1 ) \" \"             \" \"             \n5  ( 1 ) \" \"             \" \"             \n6  ( 1 ) \" \"             \" \"             \n7  ( 1 ) \" \"             \" \"             \n8  ( 1 ) \" \"             \" \"             \n\n\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.3.3\n\nbss_full_data_metrics &lt;- create_metrics_table(bss_summary)\nhead(bss_full_data_metrics)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq       6.57e-1\n2        1 rss       5.51e+9\n3        1 adjr2     6.53e-1\n4        1 cp        4.95e+6\n5        1 bic      -9.77e+1\n6        2 Rsq       9.45e-1\n\nbss_full_data_metrics |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Best Subset Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\nAccording to \\(C_p\\), BIC, and adjusted \\(R^2\\) the best model is the three variable model. On the adjusted \\(R^\\) graph you can see substantial improvements in the value between the 1 and 2 variable and the 2 and 3 variable model, and then little to no improvements beyond 3 variables. With \\(C_p\\) and BIC we see the same behavior with with substantial decreases in the values between 1 and 2 variable models and then again between 2 and 3 variable models. All 3 metrics agree that the best model is a model with 3 variables.\n\nRepeat (c), using forward stepwise selection and also using backwards stepwise selection. How does your answer compare to the results in (c)?\n\n\nfsw_fit &lt;- regsubsets(ysim~poly(xsim,10),data = simdata,method = \"forward\")\nfsw_fit\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"forward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: forward\n\nfsw_summary &lt;- summary(fsw_fit)\n\nfsw_summary\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"forward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: forward\n         poly(xsim, 10)1 poly(xsim, 10)2 poly(xsim, 10)3 poly(xsim, 10)4\n1  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n2  ( 1 ) \"*\"             \"*\"             \" \"             \" \"            \n3  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n4  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n5  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n6  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)5 poly(xsim, 10)6 poly(xsim, 10)7 poly(xsim, 10)8\n1  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n2  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n3  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n4  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n5  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n6  ( 1 ) \"*\"             \" \"             \"*\"             \" \"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)9 poly(xsim, 10)10\n1  ( 1 ) \" \"             \" \"             \n2  ( 1 ) \" \"             \" \"             \n3  ( 1 ) \" \"             \" \"             \n4  ( 1 ) \" \"             \" \"             \n5  ( 1 ) \" \"             \" \"             \n6  ( 1 ) \" \"             \" \"             \n7  ( 1 ) \" \"             \" \"             \n8  ( 1 ) \" \"             \" \"             \n\nfsw_full_data_metrics &lt;- create_metrics_table(fsw_summary)\nhead(fsw_full_data_metrics)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq       6.57e-1\n2        1 rss       5.51e+9\n3        1 adjr2     6.53e-1\n4        1 cp        4.95e+6\n5        1 bic      -9.77e+1\n6        2 Rsq       9.45e-1\n\nfsw_full_data_metrics |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Forward Stepwise Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\n\nbsw_fit &lt;- regsubsets(ysim~poly(xsim,10),data = simdata,method = \"backward\")\nfsw_fit\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"forward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: forward\n\nbsw_summary &lt;- summary(bsw_fit)\n\nbsw_summary\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"backward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: backward\n         poly(xsim, 10)1 poly(xsim, 10)2 poly(xsim, 10)3 poly(xsim, 10)4\n1  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n2  ( 1 ) \"*\"             \"*\"             \" \"             \" \"            \n3  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n4  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n5  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n6  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)5 poly(xsim, 10)6 poly(xsim, 10)7 poly(xsim, 10)8\n1  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n2  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n3  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n4  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n5  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n6  ( 1 ) \"*\"             \" \"             \"*\"             \" \"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)9 poly(xsim, 10)10\n1  ( 1 ) \" \"             \" \"             \n2  ( 1 ) \" \"             \" \"             \n3  ( 1 ) \" \"             \" \"             \n4  ( 1 ) \" \"             \" \"             \n5  ( 1 ) \" \"             \" \"             \n6  ( 1 ) \" \"             \" \"             \n7  ( 1 ) \" \"             \" \"             \n8  ( 1 ) \" \"             \" \"             \n\nbsw_full_data_metrics &lt;- create_metrics_table(bsw_summary)\nhead(bsw_full_data_metrics)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq       6.57e-1\n2        1 rss       5.51e+9\n3        1 adjr2     6.53e-1\n4        1 cp        4.95e+6\n5        1 bic      -9.77e+1\n6        2 Rsq       9.45e-1\n\nbsw_full_data_metrics |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Backward Stepwise Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\nWith both forward and backwards stepwise regression we see identical behavior of BIC, \\(C_p\\) and adjusted \\(R^2\\) as with the best subset regression, the best model is with 3 predictors.\n\nNow fit a lasso model to the simulated data, again using \\(X\\),\\(X^2\\), . . . ,\\(X^{10}\\) as predictors. Use cross-validation to select the optimal value of \\(\\lambda\\). Create plots of the cross-validation error as a function of \\(\\lambda\\). Report the resulting coefficient estimates, and discuss the results obtained.\n\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.1.1 ──\n\n\n✔ broom        1.0.5          ✔ rsample      1.2.1     \n✔ dials        1.2.1          ✔ tibble       3.2.1     \n✔ dplyr        1.1.4          ✔ tidyr        1.3.1     \n✔ infer        1.0.6          ✔ tune         1.2.1.9000\n✔ modeldata    1.3.0          ✔ workflows    1.1.4     \n✔ parsnip      1.2.1          ✔ workflowsets 1.0.1     \n✔ purrr        1.0.2          ✔ yardstick    1.3.0     \n✔ recipes      1.0.10         \n\n\nWarning: package 'broom' was built under R version 4.3.1\n\n\nWarning: package 'dials' was built under R version 4.3.2\n\n\nWarning: package 'scales' was built under R version 4.3.2\n\n\nWarning: package 'dplyr' was built under R version 4.3.2\n\n\nWarning: package 'infer' was built under R version 4.3.2\n\n\nWarning: package 'modeldata' was built under R version 4.3.2\n\n\nWarning: package 'parsnip' was built under R version 4.3.3\n\n\nWarning: package 'purrr' was built under R version 4.3.1\n\n\nWarning: package 'recipes' was built under R version 4.3.2\n\n\nWarning: package 'rsample' was built under R version 4.3.3\n\n\nWarning: package 'tidyr' was built under R version 4.3.2\n\n\nWarning: package 'workflows' was built under R version 4.3.2\n\n\nWarning: package 'workflowsets' was built under R version 4.3.1\n\n\nWarning: package 'yardstick' was built under R version 4.3.2\n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ purrr::discard() masks scales::discard()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\n✖ recipes::step()  masks stats::step()\n• Learn how to get started at https://www.tidymodels.org/start/\n\nset.seed(434)\n\nsimdat_alt &lt;- simdata|&gt;\n  bind_cols(poly(simdata$xsim,degree=10,simple = T,raw = T))|&gt;\n  select(-xsim)\n\nsim_cv &lt;- vfold_cv(simdat_alt, v = 5)\n\nlasso_spec &lt;- \n  linear_reg(penalty = tune(), mixture = 1) |&gt; \n  set_engine(\"glmnet\") \n\nlam_grid &lt;- expand_grid(penalty = seq(0, 325, by = 10))\n\n\nrec &lt;- recipe(ysim ~ ., data = simdat_alt) |&gt;\n  step_normalize(all_predictors())\n\nresults &lt;- tune_grid(lasso_spec,\n                     preprocessor = rec,\n                     grid = lam_grid, \n                     resamples = sim_cv)\n\nWarning: package 'glmnet' was built under R version 4.3.2\n\n\nWarning: package 'Matrix' was built under R version 4.3.2\n\nmetrics&lt;- results |&gt;\n            collect_metrics()\n\nmetrics\n\n# A tibble: 66 × 7\n   penalty .metric .estimator   mean     n     std_err .config              \n     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;       &lt;dbl&gt; &lt;chr&gt;                \n 1       0 rmse    standard   355.       5 49.1        Preprocessor1_Model01\n 2       0 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model01\n 3      10 rmse    standard   355.       5 49.1        Preprocessor1_Model02\n 4      10 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model02\n 5      20 rmse    standard   355.       5 49.1        Preprocessor1_Model03\n 6      20 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model03\n 7      30 rmse    standard   355.       5 49.1        Preprocessor1_Model04\n 8      30 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model04\n 9      40 rmse    standard   355.       5 49.1        Preprocessor1_Model05\n10      40 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model05\n# ℹ 56 more rows\n\nmetrics |&gt; \n  filter(.metric ==\"rmse\") |&gt; \n  group_by(penalty)|&gt;\n  summarise(penalty = min(penalty),\n            mean = mean(mean))|&gt;\n  ggplot(aes(x=penalty,y=mean)) +\n    geom_point()+\n    labs(title = \"Lasso Penalty vs RMSE\")\n\n\n\n\n\n\n\nfinal_spec &lt;- linear_reg(penalty = 0, mixture = 1) |&gt;\n  set_engine(\"glmnet\")\n\nfinal_lasso_workflow &lt;- workflow()|&gt;\n  add_model(final_spec) |&gt; \n  add_recipe(rec)\n\nfinal_lasso_fit &lt;- final_lasso_workflow|&gt;\n  fit(data =simdat_alt)\n\nfinal_lasso_fit |&gt; tidy()\n\n# A tibble: 11 × 3\n   term        estimate penalty\n   &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)    8587.       0\n 2 1                 0        0\n 3 2              1848.       0\n 4 3             10578.       0\n 5 4                 0        0\n 6 5                 0        0\n 7 6                 0        0\n 8 7                 0        0\n 9 8                 0        0\n10 9                 0        0\n11 10                0        0\n\n\nLasso regression keeps only variables \\(X^2\\) and \\(X^3\\) which misses X.\n\nNow generate a response vector Y according to the model\n\n\\[Y=\\beta_0 + \\beta_7X^7 + \\epsilon\\]\nand perform best subset selection and the lasso. Discuss the results obtained.\nNew Sim Data\n\nY2 = 5 + 3*X + 5*X^7 + ep\n\nsimdata_2 &lt;- data.frame(ysim = Y2,xsim = X)\n\n\n## This is to fit the model with the polynomials\nsimdat_alt_2 &lt;- simdata_2|&gt;\n  bind_cols(poly(simdata$xsim,degree=10,simple = T,raw = T))|&gt;\n  select(-xsim)\n\n\n\nBest Subsets\n\nbss_fit_2 &lt;- regsubsets(ysim~.,data = simdat_alt_2)\nbss_fit_2\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ ., data = simdat_alt_2)\n10 Variables  (and intercept)\n     Forced in Forced out\n`1`      FALSE      FALSE\n`2`      FALSE      FALSE\n`3`      FALSE      FALSE\n`4`      FALSE      FALSE\n`5`      FALSE      FALSE\n`6`      FALSE      FALSE\n`7`      FALSE      FALSE\n`8`      FALSE      FALSE\n`9`      FALSE      FALSE\n`10`     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n\nbss_summary_2 &lt;- summary(bss_fit_2)\n\nbss_summary_2\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ ., data = simdat_alt_2)\n10 Variables  (and intercept)\n     Forced in Forced out\n`1`      FALSE      FALSE\n`2`      FALSE      FALSE\n`3`      FALSE      FALSE\n`4`      FALSE      FALSE\n`5`      FALSE      FALSE\n`6`      FALSE      FALSE\n`7`      FALSE      FALSE\n`8`      FALSE      FALSE\n`9`      FALSE      FALSE\n`10`     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n         `1` `2` `3` `4` `5` `6` `7` `8` `9` `10`\n1  ( 1 ) \" \" \" \" \" \" \" \" \" \" \" \" \"*\" \" \" \" \" \" \" \n2  ( 1 ) \"*\" \" \" \" \" \" \" \" \" \" \" \"*\" \" \" \" \" \" \" \n3  ( 1 ) \" \" \" \" \"*\" \"*\" \" \" \" \" \"*\" \" \" \" \" \" \" \n4  ( 1 ) \"*\" \" \" \" \" \" \" \"*\" \"*\" \"*\" \" \" \" \" \" \" \n5  ( 1 ) \"*\" \"*\" \" \" \" \" \"*\" \"*\" \"*\" \" \" \" \" \" \" \n6  ( 1 ) \"*\" \" \" \" \" \"*\" \"*\" \" \" \"*\" \" \" \"*\" \"*\" \n7  ( 1 ) \"*\" \"*\" \" \" \" \" \" \" \"*\" \"*\" \"*\" \"*\" \"*\" \n8  ( 1 ) \"*\" \"*\" \" \" \"*\" \" \" \"*\" \"*\" \"*\" \"*\" \"*\" \n\nbss_full_data_metrics_2 &lt;- create_metrics_table(bss_summary_2)\n\nhead(bss_full_data_metrics_2)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq           1  \n2        1 rss      158450. \n3        1 adjr2         1  \n4        1 cp           46.2\n5        1 bic       -4050. \n6        2 Rsq           1  \n\nbss_full_data_metrics_2 |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Best Subset Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\nBest subsets indicates that either two or eight coefficients should be kept. If we choose 2, the model would be X and \\(X^7\\), the correct model. If we choose predictors then we would keep all but \\(X^4\\), \\(X^5\\) and \\(X^6\\).\n\n\nLasso\n\nlibrary(tidymodels)\nset.seed(434)\n\nsim_cv &lt;- vfold_cv(simdat_alt_2, v = 5)\n\nlasso_spec &lt;- \n  linear_reg(penalty = tune(), mixture = 1) |&gt; \n  set_engine(\"glmnet\") \n\nlam_grid &lt;- expand_grid(penalty = seq(0, 100, by = 10))\n\n\nrec &lt;- recipe(ysim ~ ., data = simdat_alt_2) |&gt;\n  step_scale(all_predictors())\n\nresults &lt;- tune_grid(lasso_spec,\n                     preprocessor = rec,\n                     grid = lam_grid, \n                     resamples = sim_cv)\n\nmetrics&lt;- results |&gt;\n            collect_metrics()\n\nmetrics\n\n# A tibble: 22 × 7\n   penalty .metric .estimator         mean     n std_err .config              \n     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;                \n 1       0 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model01\n 2       0 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model01\n 3      10 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model02\n 4      10 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model02\n 5      20 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model03\n 6      20 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model03\n 7      30 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model04\n 8      30 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model04\n 9      40 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model05\n10      40 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model05\n# ℹ 12 more rows\n\nmetrics |&gt; \n  filter(.metric ==\"rmse\") |&gt; \n  group_by(penalty)|&gt;\n  summarise(penalty = min(penalty),\n            mean = mean(mean))|&gt;\n  ggplot(aes(x=penalty,y=mean)) +\n    geom_line()+\n    labs(title = \"Lasso Penalty vs RMSE\")\n\n\n\n\n\n\n\nmetrics |&gt; filter(.metric==\"rmse\") |&gt;\n  arrange(mean)\n\n# A tibble: 11 × 7\n   penalty .metric .estimator       mean     n    std_err .config              \n     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;dbl&gt; &lt;int&gt;      &lt;dbl&gt; &lt;chr&gt;                \n 1       0 rmse    standard   510011538.     5 342846372. Preprocessor1_Model01\n 2      10 rmse    standard   510011538.     5 342846372. Preprocessor1_Model02\n 3      20 rmse    standard   510011538.     5 342846372. Preprocessor1_Model03\n 4      30 rmse    standard   510011538.     5 342846372. Preprocessor1_Model04\n 5      40 rmse    standard   510011538.     5 342846372. Preprocessor1_Model05\n 6      50 rmse    standard   510011538.     5 342846372. Preprocessor1_Model06\n 7      60 rmse    standard   510011538.     5 342846372. Preprocessor1_Model07\n 8      70 rmse    standard   510011538.     5 342846372. Preprocessor1_Model08\n 9      80 rmse    standard   510011538.     5 342846372. Preprocessor1_Model09\n10      90 rmse    standard   510011538.     5 342846372. Preprocessor1_Model10\n11     100 rmse    standard   510011538.     5 342846372. Preprocessor1_Model11\n\n# Choose lambda = 81\n\nfinal_spec &lt;- linear_reg(penalty = 0, mixture = 1) |&gt;\n  set_engine(\"glmnet\")\n\nfinal_lasso_workflow &lt;- workflow()|&gt;\n  add_model(final_spec) |&gt; \n  add_recipe(rec)\n\nfinal_lasso_fit &lt;- final_lasso_workflow|&gt;\n  fit(data =simdat_alt_2)\n\nfinal_lasso_fit |&gt; tidy()\n\n# A tibble: 11 × 3\n   term            estimate penalty\n   &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)   130518046.       0\n 2 1                     0        0\n 3 2                     0        0\n 4 3                     0        0\n 5 4                     0        0\n 6 5                     0        0\n 7 6             415202305.       0\n 8 7           24905659724.       0\n 9 8              20982661.       0\n10 9                     0        0\n11 10                    0        0\n\n\nIn this case, lasso keeps the intercept and coefficients for \\(X^6\\), \\(X^7\\) and \\(X^8\\). Best subsets did a better job."
+  },
+  {
+    "objectID": "hw/hw-01-intro-review.html",
+    "href": "hw/hw-01-intro-review.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "R is the name of the programming language itself and RStudio is a convenient interface.\nThe main goal of this homework is to re-introduce you to R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\nAs the homework’s progress, you are encouraged to explore beyond what the homework dictates; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands."
+  },
+  {
+    "objectID": "hw/hw-01-intro-review.html#this-one-time",
+    "href": "hw/hw-01-intro-review.html#this-one-time",
+    "title": "Homework 1",
+    "section": "This One Time",
+    "text": "This One Time\n\nGo to our RStudio Server at &lt;https://10.101.128.72:8787&gt;\nClick File tab on the bottom right and then click the work Home.\nCreate a new folder using the little folder icon with the green plus on it. Use STA 362 in the folder name."
+  },
+  {
+    "objectID": "hw/hw-01-intro-review.html#every-homeworklabactivity",
+    "href": "hw/hw-01-intro-review.html#every-homeworklabactivity",
+    "title": "Homework 1",
+    "section": "Every Homework/lab/activity",
+    "text": "Every Homework/lab/activity\nEach of your assignments will begin with the following steps.\n\nFinding the instructions on our website: &lt;https://stats-tgeorge.github.io/STA362StatLearning/&gt;\nGoing to our RStudio Server at &lt;https://10.101.128.72:8787&gt;\nCreating a new project. and giving it a sensible name such as homework_1 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw1.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+  },
+  {
+    "objectID": "hw/hw-01-intro-review.html#yaml",
+    "href": "hw/hw-01-intro-review.html#yaml",
+    "title": "Homework 1",
+    "section": "YAML",
+    "text": "YAML\nIn your Quarto (qmd) file in your project, change the author name to your name, and render the document. Make sure that you also have added the extra YAML clode above."
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Introduction to Statistical Learning",
+    "section": "",
+    "text": "Course Description\nThis course will introduce students to relatively new and powerful statistical techniques used to analyze data. The course will begin with a review of linear regression and an introduction to computer-based variable and model selection methods. Other topics will include classification methods, resampling methods for model-building, non-linear models, and tree-based methods. The computer software program R will be used throughout.",
+    "crumbs": [
+      "Course information",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html",
+    "href": "course-instructor.html",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "course-instructor.html#instructor",
+    "href": "course-instructor.html#instructor",
+    "title": "Instructor",
+    "section": "",
+    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
+    "crumbs": [
+      "Course information",
+      "Instructor"
+    ]
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
+    "crumbs": [
+      "Course information",
+      "R/RStudio Access"
+    ]
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "RStudio Server\n🔗 on Cornell College Cluster\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradebook\n🔗 on Moodle",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "course-links.html#course-links",
+    "href": "course-links.html#course-links",
+    "title": "Useful links",
+    "section": "",
+    "text": "RStudio Server\n🔗 on Cornell College Cluster\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradebook\n🔗 on Moodle",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "course-links.html#other-useful-links",
+    "href": "course-links.html#other-useful-links",
+    "title": "Useful links",
+    "section": "Other Useful Links",
+    "text": "Other Useful Links\n\nData Wrangling and Viz Interactive Tutorials\nRStudio Cheatsheets\nIntroduction to dplyr\nR Date Examples\nNY Times Cornell College Sign-up\nR for Data Science 2nd Ed\nQuarto Documentation\nData visualization\n\nggplot2 Reference\nggplot2: Elegant Graphics for Data Analysis\nData Visualization: A Practice Introduction\nPatchwork R Package",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
+  },
+  {
+    "objectID": "course-links.html#data-links",
+    "href": "course-links.html#data-links",
+    "title": "Useful links",
+    "section": "Data Links",
+    "text": "Data Links\n\nTidyTuesday\nR Data Sources for Regression Analysis\nFiveThirtyEight data\nAmazon Registry of Open Data\nOpen data StackExchange\nMicrosoft R Application Window\nData.gov\nUS Census\nNew York City data\nGeorge Mason University Data Link List\nToward Data Science list of Data Sources\nNHS Scotland Open Data\nEdinburgh Open Data\nOpen access to Scotland’s official statistics\nBikeshare data portal\nUK Gov Data\nKaggle datasets\nOpenIntro datasets\nAwesome public datasets\nYouth Risk Behavior Surveillance System (YRBSS)\nPRISM Data Archive Project\nHarvard Dataverse\nAndrew G. Reiter Poly Scie Datasets\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies\nU.S. Data\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nState of Iowa Open Geospatial Data\nIf you know of others, let me know!",
+    "crumbs": [
+      "Course Contents",
+      "Useful links"
+    ]
   },
   {
     "objectID": "course-support.html",
@@ -2231,138 +2351,46 @@
     ]
   },
   {
-    "objectID": "course-links.html",
-    "href": "course-links.html",
-    "title": "Useful links",
+    "objectID": "hw/hw-02-cv-tm.html",
+    "href": "hw/hw-02-cv-tm.html",
+    "title": "Homework 2",
     "section": "",
-    "text": "RStudio Server\n🔗 on Cornell College Cluster\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradebook\n🔗 on Moodle",
-    "crumbs": [
-      "Course Contents",
-      "Useful links"
-    ]
+    "text": "Instructions\n\nCreating a new project. and giving it a sensible name such as homework_2.\nCreate a new quarto document and give it a sensible name such as hw2.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels.\nSet a seed before each problem.\nMake sure you answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\nExercises\n\n(ISLR 3) We now review k-fold cross-validation.\n\nExplain how k-fold cross-validation is implemented.\nWhat are the advantages and disadvantages of k-fold cross-validation relative to:\n\n\nThe validation set approach?\nLOOCV?\n\n(ISLR 8) We will now perform cross-validation on a simulated data set.\n\nGenerate a simulated data set as follows below. In this data set, what is \\(n\\) and what is \\(p\\)? Write out the model used to generate the data in equation form.\n\n\n\nset.seed(1)\nx &lt;- rnorm(100)\ny &lt;- x - 2 * x^2 + rnorm(100)\n\n\nContinued\n\nCreate a scatterplot of \\(X\\) against \\(Y\\). Comment on what you find.\nSet a random seed, and then compute the LOOCV errors that result from fitting the following four models using least squares:\n\nm1. \\(Y = \\beta_0 + \\beta_1 X + \\epsilon\\)\nm2. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\epsilon\\)\nm3. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\epsilon\\)\nm4. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\beta_4 X^4 + \\epsilon\\)\n\n\n\n\n\n\n\nTip\n\n\n\nYou may find it helpful to use the data.frame() function to create a single data set containing both \\(X\\) and \\(Y\\).\n\n\n\nContinued\n\nRepeat (c) using another random seed, and report your results. Are your results the same as what you got in (c)? Why?\nWhich of the models in (c) had the smallest LOOCV error? Is this what you expected? Explain your answer.\nComment on the statistical significance of the coefficient estimates that result from fitting each of the models in (c) using least squares. Do these results agree with the conclusions drawn based on the cross-validation results?\n\nThe data FirstYearGPA, in the Stat2Data packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use ?FirstYearGPA to learn about the dataset.\n\nSplit the data into training and test using 70% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed.\nUse the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE.\nNow do cross validation instead of using a test and training set. Give the final CV MSE.\nWhich was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example?\nIf we had more data, how might we combine both approaches?\n\nThe data Titanic, in the Stat2Data packages a list and outcomes for passengers on the Titanic.\n\nFit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.\n\n\n\ndata(Titanic)\ntitanic_2 &lt;- as.data.frame(Titanic) |&gt;\n  transform(Survived = factor(Survived))\n\nlog_spec&lt;- \n  logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nlogistic_fit &lt;-\n  fit(log_spec,\n    ____________ ~ ________+________,\n    data = ________)\n\n\nContinued\n\nUse the predict function on your model and predict for the data you used to fit the model.\nUsing your predicted values, calculate the misclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match.\nNow split the data into training and test like in the previous exercise (70/30 split). Give the misclassification rate for the test set.\nNow use cross validation and give the average misclassification rate across folds (almost a default output of the collect_metrics function).\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final html document to the respective assignment on Moodle"
   },
   {
-    "objectID": "course-links.html#course-links",
-    "href": "course-links.html#course-links",
-    "title": "Useful links",
+    "objectID": "labs/lab01-cv-tm.html",
+    "href": "labs/lab01-cv-tm.html",
+    "title": "Lab 01",
     "section": "",
-    "text": "RStudio Server\n🔗 on Cornell College Cluster\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradebook\n🔗 on Moodle",
-    "crumbs": [
-      "Course Contents",
-      "Useful links"
-    ]
+    "text": "Go to our RStudio and create a new R project inside your class folder.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
   },
   {
-    "objectID": "course-links.html#other-useful-links",
-    "href": "course-links.html#other-useful-links",
-    "title": "Useful links",
-    "section": "Other Useful Links",
-    "text": "Other Useful Links\n\nData Wrangling and Viz Interactive Tutorials\nRStudio Cheatsheets\nIntroduction to dplyr\nR Date Examples\nNY Times Cornell College Sign-up\nR for Data Science 2nd Ed\nQuarto Documentation\nData visualization\n\nggplot2 Reference\nggplot2: Elegant Graphics for Data Analysis\nData Visualization: A Practice Introduction\nPatchwork R Package",
-    "crumbs": [
-      "Course Contents",
-      "Useful links"
-    ]
+    "objectID": "labs/lab01-cv-tm.html#yaml",
+    "href": "labs/lab01-cv-tm.html#yaml",
+    "title": "Lab 01",
+    "section": "YAML:",
+    "text": "YAML:\nOpen the .qmd file in your project, make sure the author is your name, and Render the document."
   },
   {
-    "objectID": "course-links.html#data-links",
-    "href": "course-links.html#data-links",
-    "title": "Useful links",
-    "section": "Data Links",
-    "text": "Data Links\n\nTidyTuesday\nR Data Sources for Regression Analysis\nFiveThirtyEight data\nAmazon Registry of Open Data\nOpen data StackExchange\nMicrosoft R Application Window\nData.gov\nUS Census\nNew York City data\nGeorge Mason University Data Link List\nToward Data Science list of Data Sources\nNHS Scotland Open Data\nEdinburgh Open Data\nOpen access to Scotland’s official statistics\nBikeshare data portal\nUK Gov Data\nKaggle datasets\nOpenIntro datasets\nAwesome public datasets\nYouth Risk Behavior Surveillance System (YRBSS)\nPRISM Data Archive Project\nHarvard Dataverse\nAndrew G. Reiter Poly Scie Datasets\nEuropean Statistics\nStatistics Canada\nPew Research\nUNICEF\nCDC\nWorld Bank\nElection Studies\nU.S. Data\nWorld Health Organization\nThe National Bureau of Economic Research\nInternational Monetary Fund\nGeneral Social Survey\nUnited Nations Data\nUnited Nations Statistics Division\nState of Iowa Open Geospatial Data\nIf you know of others, let me know!",
-    "crumbs": [
-      "Course Contents",
-      "Useful links"
-    ]
+    "objectID": "labs/lab01-cv-tm.html#conceptual-questions",
+    "href": "labs/lab01-cv-tm.html#conceptual-questions",
+    "title": "Lab 01",
+    "section": "Conceptual questions",
+    "text": "Conceptual questions\n\nExplain how k-fold Cross Validation is implemented.\nWhat are the advantages / disadvantages of k-fold Cross Validation compared to the Validation Set approach? What are the advantages / disadvantages of k-fold Cross Validation compared to Leave-one-out Cross Validation?"
   },
   {
-    "objectID": "computing-access.html",
-    "href": "computing-access.html",
-    "title": "Computing access",
-    "section": "",
-    "text": "To access computing resources the course, Introduction to Data Science, offered by the Cornell College Department of Mathematics and Statistics, go to the RStudio Server while on campus and connected to campus internet.\nYour account will be pre-created before the class begins and will use your Cornell College username. The default password will be shared in class and you will need to change it.",
-    "crumbs": [
-      "Course information",
-      "R/RStudio Access"
-    ]
+    "objectID": "labs/lab01-cv-tm.html#data-exploration",
+    "href": "labs/lab01-cv-tm.html#data-exploration",
+    "title": "Lab 01",
+    "section": "Data exploration",
+    "text": "Data exploration\n\nFor this analysis, we are using the Auto dataset from the ISLR package. How many rows are in this dataset? How many columns? Is there any missing data?\nOur outcome of interest is miles per gallon: mpg. Create a publication-ready figure examining the distribution of this variable.\nOur main predictor of interest is horsepower. Create a publication-ready figure looking at the relationship between miles per gallon and horsepower."
   },
   {
-    "objectID": "course-instructor.html",
-    "href": "course-instructor.html",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-instructor.html#instructor",
-    "href": "course-instructor.html#instructor",
-    "title": "Instructor",
-    "section": "",
-    "text": "Dr. Tyler George (he/him) is a Assistant Professor of Statistics at Cornell College. He received his PhD in Statistics and Analytics from Central Michigan University. During his PhD he also studied mathematics and statistics education. His dissertation work involved creating a new lack of fit test for linear regression models. His interests are broadly in statistics, data science and best pedagogy to teach them.\n\n\n\nOffice hours\nLocation\n\n\n\n\nMonday - Thursday 3:05pm - 4:05pm\nWest 311\n\n\nOther Times by Appointment\nWest 311\n\n\n\nOffice hours are for STUDENTS. Please take advantage of them to get help with class, advising, and/or getting to know your professor! If you miss class, check out course calendar to verify there have been no changes.",
-    "crumbs": [
-      "Course information",
-      "Instructor"
-    ]
-  },
-  {
-    "objectID": "course-overview.html",
-    "href": "course-overview.html",
-    "title": "Introduction to Statistical Learning",
-    "section": "",
-    "text": "Course Description\nThis course will introduce students to relatively new and powerful statistical techniques used to analyze data. The course will begin with a review of linear regression and an introduction to computer-based variable and model selection methods. Other topics will include classification methods, resampling methods for model-building, non-linear models, and tree-based methods. The computer software program R will be used throughout.",
-    "crumbs": [
-      "Course information",
-      "Overview"
-    ]
-  },
-  {
-    "objectID": "hw/hw-01-intro-review.html",
-    "href": "hw/hw-01-intro-review.html",
-    "title": "Homework 1",
-    "section": "",
-    "text": "R is the name of the programming language itself and RStudio is a convenient interface.\nThe main goal of this homework is to re-introduce you to R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\nAs the homework’s progress, you are encouraged to explore beyond what the homework dictates; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands."
-  },
-  {
-    "objectID": "hw/hw-01-intro-review.html#this-one-time",
-    "href": "hw/hw-01-intro-review.html#this-one-time",
-    "title": "Homework 1",
-    "section": "This One Time",
-    "text": "This One Time\n\nGo to our RStudio Server at &lt;https://10.101.128.72:8787&gt;\nClick File tab on the bottom right and then click the work Home.\nCreate a new folder using the little folder icon with the green plus on it. Use STA 362 in the folder name."
-  },
-  {
-    "objectID": "hw/hw-01-intro-review.html#every-homeworklabactivity",
-    "href": "hw/hw-01-intro-review.html#every-homeworklabactivity",
-    "title": "Homework 1",
-    "section": "Every Homework/lab/activity",
-    "text": "Every Homework/lab/activity\nEach of your assignments will begin with the following steps.\n\nFinding the instructions on our website: &lt;https://stats-tgeorge.github.io/STA362StatLearning/&gt;\nGoing to our RStudio Server at &lt;https://10.101.128.72:8787&gt;\nCreating a new project. and giving it a sensible name such as homework_1 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw1.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
-  },
-  {
-    "objectID": "hw/hw-01-intro-review.html#yaml",
-    "href": "hw/hw-01-intro-review.html#yaml",
-    "title": "Homework 1",
-    "section": "YAML",
-    "text": "YAML\nIn your Quarto (qmd) file in your project, change the author name to your name, and render the document. Make sure that you also have added the extra YAML clode above."
-  },
-  {
-    "objectID": "hw/hw-04-regression_sol.html",
-    "href": "hw/hw-04-regression_sol.html",
-    "title": "Homework 4 Solutions",
-    "section": "",
-    "text": "1.\nWe perform best subset, forward stepwise, and backward stepwise selection on a single data set. For each approach, we obtain p + 1 models, containing \\(0, 1, 2, . . . ,p\\) predictors.\nExplain your answers:\n(a) Which of the three models with k predictors has the smallest training RSS?\nBest subsets since it considers every possible combination. It is possible both forward and backward stepwise pick the same k predictor model and have the same training RSS.\n\nWhich of the three models with k predictors has the smallest test RSS?\n\nYou cannot determine this to be sure. It depends if the best subset choice on the training set overfit. If it did, one of the other approach models could perform better.\n\nTrue or False:\n\n\nThe predictors in the k-variable model identified by forward stepwise are a subset of the predictors in the (k+1)-variable model identified by forward stepwise selection.\n\nTrue, FSR keeps all k predictors from the previous step and adds an additional variable.\n\nThe predictors in the k-variable model identified by backward stepwise are a subset of the predictors in the (k + 1)- variable model identified by backward stepwise selection.\n\nTrue, BSR drops 1 variable form a k+1 predictor model and goes down to a k variable model. The k variables must be in the k+1 variable model.\n\nThe predictors in the k-variable model identified by backward stepwise are a subset of the predictors in the (k + 1)- variable model identified by forward stepwise selection.\n\nFalse, not always true.\n\nThe predictors in the k-variable model identified by forward stepwise are a subset of the predictors in the (k+1)-variable model identified by backward stepwise selection.\n\nFalse, not always true.\n\nThe predictors in the k-variable model identified by best subset are a subset of the predictors in the (k + 1)-variable model identified by best subset selection.\n\nFalse, not always true.\n\n\n8.\nIn this exercise, we will generate simulated data, and will then use this data to perform best subset selection.\n\nUse the rnorm() function to generate a predictor X of length n = 100, as well as a noise vector \\(\\epsilon\\) of length n = 100.\n\n\nX &lt;- rnorm(100, mean = 10, sd = 10) \nep &lt;- rnorm(100,sd = 30)\n\n\nGenerate a response vector \\(Y\\) of length \\(n=100\\) according to the model\n\n\\[Y=\\beta_0 + \\beta_1X+\\beta_2X^2+\\beta_3X^3+\\epsilon,\\]\nwhere \\(\\beta_0,\\beta_1,\\) and \\(\\beta_3\\) are constants of your choice.\n\nY = 5 + 3*X + 10*X^2+ 2*X^3 + ep\n\n\nUse the regsubsets() function to perform best subset selection in order to choose the best model containing the predictors \\(X\\),\\(X^2\\), . . . ,\\(X^{10}\\). What is the best model obtained according to \\(C_p\\), BIC, and adjusted \\(R^2\\)? Show some plots to provide evidence for your answer, and report the coefficients of the best model obtained. Note you will need to use the data.frame() function to create a single data set containing both X and Y .\n\n\nsimdata &lt;- data.frame(ysim = Y,xsim = X)\n\nhead(simdata)\n\n        ysim      xsim\n1 1845.03133  8.368388\n2   34.56759 -3.272097\n3   14.39104  1.845040\n4 5054.90702 12.113334\n5  457.36512  4.704802\n6   42.17828  1.571858\n\n\n\ncreate_metrics_table &lt;- function(X){\n  K &lt;- length(X$rsq)\n  metrics_df &lt;- data.frame(num_pred= 1:K, # K different models\n                           Rsq = X$rsq,\n                           rss = X$rss,\n                           adjr2 = X$adjr2,\n                           cp = X$cp,\n                           bic = X$bic) |&gt;\n    tidyr::pivot_longer(cols=Rsq:bic,\n                 names_to = \"metric\",values_to = \"metric_val\")\n  # This pivot puts the metric values in 1 column \n  # and creates another column for the name of \n  # the metric\n  return(metrics_df)\n}\n\n\nlibrary(leaps)\n\nWarning: package 'leaps' was built under R version 4.3.2\n\nbss_fit &lt;- regsubsets(ysim~poly(xsim,10),data = simdata)\nbss_fit\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata)\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n\nbss_summary &lt;- summary(bss_fit)\n\nbss_summary\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata)\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n         poly(xsim, 10)1 poly(xsim, 10)2 poly(xsim, 10)3 poly(xsim, 10)4\n1  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n2  ( 1 ) \"*\"             \"*\"             \" \"             \" \"            \n3  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n4  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n5  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n6  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)5 poly(xsim, 10)6 poly(xsim, 10)7 poly(xsim, 10)8\n1  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n2  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n3  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n4  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n5  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n6  ( 1 ) \"*\"             \" \"             \"*\"             \" \"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)9 poly(xsim, 10)10\n1  ( 1 ) \" \"             \" \"             \n2  ( 1 ) \" \"             \" \"             \n3  ( 1 ) \" \"             \" \"             \n4  ( 1 ) \" \"             \" \"             \n5  ( 1 ) \" \"             \" \"             \n6  ( 1 ) \" \"             \" \"             \n7  ( 1 ) \" \"             \" \"             \n8  ( 1 ) \" \"             \" \"             \n\n\n\nlibrary(ggplot2)\n\nWarning: package 'ggplot2' was built under R version 4.3.3\n\nbss_full_data_metrics &lt;- create_metrics_table(bss_summary)\nhead(bss_full_data_metrics)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq       6.57e-1\n2        1 rss       5.51e+9\n3        1 adjr2     6.53e-1\n4        1 cp        4.95e+6\n5        1 bic      -9.77e+1\n6        2 Rsq       9.45e-1\n\nbss_full_data_metrics |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Best Subset Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\nAccording to \\(C_p\\), BIC, and adjusted \\(R^2\\) the best model is the three variable model. On the adjusted \\(R^\\) graph you can see substantial improvements in the value between the 1 and 2 variable and the 2 and 3 variable model, and then little to no improvements beyond 3 variables. With \\(C_p\\) and BIC we see the same behavior with with substantial decreases in the values between 1 and 2 variable models and then again between 2 and 3 variable models. All 3 metrics agree that the best model is a model with 3 variables.\n\nRepeat (c), using forward stepwise selection and also using backwards stepwise selection. How does your answer compare to the results in (c)?\n\n\nfsw_fit &lt;- regsubsets(ysim~poly(xsim,10),data = simdata,method = \"forward\")\nfsw_fit\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"forward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: forward\n\nfsw_summary &lt;- summary(fsw_fit)\n\nfsw_summary\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"forward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: forward\n         poly(xsim, 10)1 poly(xsim, 10)2 poly(xsim, 10)3 poly(xsim, 10)4\n1  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n2  ( 1 ) \"*\"             \"*\"             \" \"             \" \"            \n3  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n4  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n5  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n6  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)5 poly(xsim, 10)6 poly(xsim, 10)7 poly(xsim, 10)8\n1  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n2  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n3  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n4  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n5  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n6  ( 1 ) \"*\"             \" \"             \"*\"             \" \"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)9 poly(xsim, 10)10\n1  ( 1 ) \" \"             \" \"             \n2  ( 1 ) \" \"             \" \"             \n3  ( 1 ) \" \"             \" \"             \n4  ( 1 ) \" \"             \" \"             \n5  ( 1 ) \" \"             \" \"             \n6  ( 1 ) \" \"             \" \"             \n7  ( 1 ) \" \"             \" \"             \n8  ( 1 ) \" \"             \" \"             \n\nfsw_full_data_metrics &lt;- create_metrics_table(fsw_summary)\nhead(fsw_full_data_metrics)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq       6.57e-1\n2        1 rss       5.51e+9\n3        1 adjr2     6.53e-1\n4        1 cp        4.95e+6\n5        1 bic      -9.77e+1\n6        2 Rsq       9.45e-1\n\nfsw_full_data_metrics |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Forward Stepwise Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\n\nbsw_fit &lt;- regsubsets(ysim~poly(xsim,10),data = simdata,method = \"backward\")\nfsw_fit\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"forward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: forward\n\nbsw_summary &lt;- summary(bsw_fit)\n\nbsw_summary\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ poly(xsim, 10), data = simdata, method = \"backward\")\n10 Variables  (and intercept)\n                 Forced in Forced out\npoly(xsim, 10)1      FALSE      FALSE\npoly(xsim, 10)2      FALSE      FALSE\npoly(xsim, 10)3      FALSE      FALSE\npoly(xsim, 10)4      FALSE      FALSE\npoly(xsim, 10)5      FALSE      FALSE\npoly(xsim, 10)6      FALSE      FALSE\npoly(xsim, 10)7      FALSE      FALSE\npoly(xsim, 10)8      FALSE      FALSE\npoly(xsim, 10)9      FALSE      FALSE\npoly(xsim, 10)10     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: backward\n         poly(xsim, 10)1 poly(xsim, 10)2 poly(xsim, 10)3 poly(xsim, 10)4\n1  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n2  ( 1 ) \"*\"             \"*\"             \" \"             \" \"            \n3  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n4  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n5  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n6  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)5 poly(xsim, 10)6 poly(xsim, 10)7 poly(xsim, 10)8\n1  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n2  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n3  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n4  ( 1 ) \" \"             \" \"             \" \"             \" \"            \n5  ( 1 ) \"*\"             \" \"             \" \"             \" \"            \n6  ( 1 ) \"*\"             \" \"             \"*\"             \" \"            \n7  ( 1 ) \"*\"             \"*\"             \"*\"             \" \"            \n8  ( 1 ) \"*\"             \"*\"             \"*\"             \"*\"            \n         poly(xsim, 10)9 poly(xsim, 10)10\n1  ( 1 ) \" \"             \" \"             \n2  ( 1 ) \" \"             \" \"             \n3  ( 1 ) \" \"             \" \"             \n4  ( 1 ) \" \"             \" \"             \n5  ( 1 ) \" \"             \" \"             \n6  ( 1 ) \" \"             \" \"             \n7  ( 1 ) \" \"             \" \"             \n8  ( 1 ) \" \"             \" \"             \n\nbsw_full_data_metrics &lt;- create_metrics_table(bsw_summary)\nhead(bsw_full_data_metrics)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq       6.57e-1\n2        1 rss       5.51e+9\n3        1 adjr2     6.53e-1\n4        1 cp        4.95e+6\n5        1 bic      -9.77e+1\n6        2 Rsq       9.45e-1\n\nbsw_full_data_metrics |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Backward Stepwise Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\nWith both forward and backwards stepwise regression we see identical behavior of BIC, \\(C_p\\) and adjusted \\(R^2\\) as with the best subset regression, the best model is with 3 predictors.\n\nNow fit a lasso model to the simulated data, again using \\(X\\),\\(X^2\\), . . . ,\\(X^{10}\\) as predictors. Use cross-validation to select the optimal value of \\(\\lambda\\). Create plots of the cross-validation error as a function of \\(\\lambda\\). Report the resulting coefficient estimates, and discuss the results obtained.\n\n\nlibrary(tidymodels)\n\n── Attaching packages ────────────────────────────────────── tidymodels 1.1.1 ──\n\n\n✔ broom        1.0.5          ✔ rsample      1.2.1     \n✔ dials        1.2.1          ✔ tibble       3.2.1     \n✔ dplyr        1.1.4          ✔ tidyr        1.3.1     \n✔ infer        1.0.6          ✔ tune         1.2.1.9000\n✔ modeldata    1.3.0          ✔ workflows    1.1.4     \n✔ parsnip      1.2.1          ✔ workflowsets 1.0.1     \n✔ purrr        1.0.2          ✔ yardstick    1.3.0     \n✔ recipes      1.0.10         \n\n\nWarning: package 'broom' was built under R version 4.3.1\n\n\nWarning: package 'dials' was built under R version 4.3.2\n\n\nWarning: package 'scales' was built under R version 4.3.2\n\n\nWarning: package 'dplyr' was built under R version 4.3.2\n\n\nWarning: package 'infer' was built under R version 4.3.2\n\n\nWarning: package 'modeldata' was built under R version 4.3.2\n\n\nWarning: package 'parsnip' was built under R version 4.3.3\n\n\nWarning: package 'purrr' was built under R version 4.3.1\n\n\nWarning: package 'recipes' was built under R version 4.3.2\n\n\nWarning: package 'rsample' was built under R version 4.3.3\n\n\nWarning: package 'tidyr' was built under R version 4.3.2\n\n\nWarning: package 'workflows' was built under R version 4.3.2\n\n\nWarning: package 'workflowsets' was built under R version 4.3.1\n\n\nWarning: package 'yardstick' was built under R version 4.3.2\n\n\n── Conflicts ───────────────────────────────────────── tidymodels_conflicts() ──\n✖ purrr::discard() masks scales::discard()\n✖ dplyr::filter()  masks stats::filter()\n✖ dplyr::lag()     masks stats::lag()\n✖ recipes::step()  masks stats::step()\n• Learn how to get started at https://www.tidymodels.org/start/\n\nset.seed(434)\n\nsimdat_alt &lt;- simdata|&gt;\n  bind_cols(poly(simdata$xsim,degree=10,simple = T,raw = T))|&gt;\n  select(-xsim)\n\nsim_cv &lt;- vfold_cv(simdat_alt, v = 5)\n\nlasso_spec &lt;- \n  linear_reg(penalty = tune(), mixture = 1) |&gt; \n  set_engine(\"glmnet\") \n\nlam_grid &lt;- expand_grid(penalty = seq(0, 325, by = 10))\n\n\nrec &lt;- recipe(ysim ~ ., data = simdat_alt) |&gt;\n  step_normalize(all_predictors())\n\nresults &lt;- tune_grid(lasso_spec,\n                     preprocessor = rec,\n                     grid = lam_grid, \n                     resamples = sim_cv)\n\nWarning: package 'glmnet' was built under R version 4.3.2\n\n\nWarning: package 'Matrix' was built under R version 4.3.2\n\nmetrics&lt;- results |&gt;\n            collect_metrics()\n\nmetrics\n\n# A tibble: 66 × 7\n   penalty .metric .estimator   mean     n     std_err .config              \n     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;       &lt;dbl&gt; &lt;int&gt;       &lt;dbl&gt; &lt;chr&gt;                \n 1       0 rmse    standard   355.       5 49.1        Preprocessor1_Model01\n 2       0 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model01\n 3      10 rmse    standard   355.       5 49.1        Preprocessor1_Model02\n 4      10 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model02\n 5      20 rmse    standard   355.       5 49.1        Preprocessor1_Model03\n 6      20 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model03\n 7      30 rmse    standard   355.       5 49.1        Preprocessor1_Model04\n 8      30 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model04\n 9      40 rmse    standard   355.       5 49.1        Preprocessor1_Model05\n10      40 rsq     standard     1.00     5  0.00000335 Preprocessor1_Model05\n# ℹ 56 more rows\n\nmetrics |&gt; \n  filter(.metric ==\"rmse\") |&gt; \n  group_by(penalty)|&gt;\n  summarise(penalty = min(penalty),\n            mean = mean(mean))|&gt;\n  ggplot(aes(x=penalty,y=mean)) +\n    geom_point()+\n    labs(title = \"Lasso Penalty vs RMSE\")\n\n\n\n\n\n\n\nfinal_spec &lt;- linear_reg(penalty = 0, mixture = 1) |&gt;\n  set_engine(\"glmnet\")\n\nfinal_lasso_workflow &lt;- workflow()|&gt;\n  add_model(final_spec) |&gt; \n  add_recipe(rec)\n\nfinal_lasso_fit &lt;- final_lasso_workflow|&gt;\n  fit(data =simdat_alt)\n\nfinal_lasso_fit |&gt; tidy()\n\n# A tibble: 11 × 3\n   term        estimate penalty\n   &lt;chr&gt;          &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)    8587.       0\n 2 1                 0        0\n 3 2              1848.       0\n 4 3             10578.       0\n 5 4                 0        0\n 6 5                 0        0\n 7 6                 0        0\n 8 7                 0        0\n 9 8                 0        0\n10 9                 0        0\n11 10                0        0\n\n\nLasso regression keeps only variables \\(X^2\\) and \\(X^3\\) which misses X.\n\nNow generate a response vector Y according to the model\n\n\\[Y=\\beta_0 + \\beta_7X^7 + \\epsilon\\]\nand perform best subset selection and the lasso. Discuss the results obtained.\nNew Sim Data\n\nY2 = 5 + 3*X + 5*X^7 + ep\n\nsimdata_2 &lt;- data.frame(ysim = Y2,xsim = X)\n\n\n## This is to fit the model with the polynomials\nsimdat_alt_2 &lt;- simdata_2|&gt;\n  bind_cols(poly(simdata$xsim,degree=10,simple = T,raw = T))|&gt;\n  select(-xsim)\n\n\n\nBest Subsets\n\nbss_fit_2 &lt;- regsubsets(ysim~.,data = simdat_alt_2)\nbss_fit_2\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ ., data = simdat_alt_2)\n10 Variables  (and intercept)\n     Forced in Forced out\n`1`      FALSE      FALSE\n`2`      FALSE      FALSE\n`3`      FALSE      FALSE\n`4`      FALSE      FALSE\n`5`      FALSE      FALSE\n`6`      FALSE      FALSE\n`7`      FALSE      FALSE\n`8`      FALSE      FALSE\n`9`      FALSE      FALSE\n`10`     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n\nbss_summary_2 &lt;- summary(bss_fit_2)\n\nbss_summary_2\n\nSubset selection object\nCall: regsubsets.formula(ysim ~ ., data = simdat_alt_2)\n10 Variables  (and intercept)\n     Forced in Forced out\n`1`      FALSE      FALSE\n`2`      FALSE      FALSE\n`3`      FALSE      FALSE\n`4`      FALSE      FALSE\n`5`      FALSE      FALSE\n`6`      FALSE      FALSE\n`7`      FALSE      FALSE\n`8`      FALSE      FALSE\n`9`      FALSE      FALSE\n`10`     FALSE      FALSE\n1 subsets of each size up to 8\nSelection Algorithm: exhaustive\n         `1` `2` `3` `4` `5` `6` `7` `8` `9` `10`\n1  ( 1 ) \" \" \" \" \" \" \" \" \" \" \" \" \"*\" \" \" \" \" \" \" \n2  ( 1 ) \"*\" \" \" \" \" \" \" \" \" \" \" \"*\" \" \" \" \" \" \" \n3  ( 1 ) \" \" \" \" \"*\" \"*\" \" \" \" \" \"*\" \" \" \" \" \" \" \n4  ( 1 ) \"*\" \" \" \" \" \" \" \"*\" \"*\" \"*\" \" \" \" \" \" \" \n5  ( 1 ) \"*\" \"*\" \" \" \" \" \"*\" \"*\" \"*\" \" \" \" \" \" \" \n6  ( 1 ) \"*\" \" \" \" \" \"*\" \"*\" \" \" \"*\" \" \" \"*\" \"*\" \n7  ( 1 ) \"*\" \"*\" \" \" \" \" \" \" \"*\" \"*\" \"*\" \"*\" \"*\" \n8  ( 1 ) \"*\" \"*\" \" \" \"*\" \" \" \"*\" \"*\" \"*\" \"*\" \"*\" \n\nbss_full_data_metrics_2 &lt;- create_metrics_table(bss_summary_2)\n\nhead(bss_full_data_metrics_2)\n\n# A tibble: 6 × 3\n  num_pred metric metric_val\n     &lt;int&gt; &lt;chr&gt;       &lt;dbl&gt;\n1        1 Rsq           1  \n2        1 rss      158450. \n3        1 adjr2         1  \n4        1 cp           46.2\n5        1 bic       -4050. \n6        2 Rsq           1  \n\nbss_full_data_metrics_2 |&gt; \n  ggplot(aes(y=metric_val,x=num_pred))+\n    geom_line() + geom_point()+\n    facet_wrap(~metric,scales = \"free_y\")+\n    labs(title=\"Best Subset Regression\",\n         subtitle = \"On Full Data\")\n\n\n\n\n\n\n\n\nBest subsets indicates that either two or eight coefficients should be kept. If we choose 2, the model would be X and \\(X^7\\), the correct model. If we choose predictors then we would keep all but \\(X^4\\), \\(X^5\\) and \\(X^6\\).\n\n\nLasso\n\nlibrary(tidymodels)\nset.seed(434)\n\nsim_cv &lt;- vfold_cv(simdat_alt_2, v = 5)\n\nlasso_spec &lt;- \n  linear_reg(penalty = tune(), mixture = 1) |&gt; \n  set_engine(\"glmnet\") \n\nlam_grid &lt;- expand_grid(penalty = seq(0, 100, by = 10))\n\n\nrec &lt;- recipe(ysim ~ ., data = simdat_alt_2) |&gt;\n  step_scale(all_predictors())\n\nresults &lt;- tune_grid(lasso_spec,\n                     preprocessor = rec,\n                     grid = lam_grid, \n                     resamples = sim_cv)\n\nmetrics&lt;- results |&gt;\n            collect_metrics()\n\nmetrics\n\n# A tibble: 22 × 7\n   penalty .metric .estimator         mean     n std_err .config              \n     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;             &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;                \n 1       0 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model01\n 2       0 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model01\n 3      10 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model02\n 4      10 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model02\n 5      20 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model03\n 6      20 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model03\n 7      30 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model04\n 8      30 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model04\n 9      40 rmse    standard   510011538.       5 3.43e+8 Preprocessor1_Model05\n10      40 rsq     standard           1.00     5 1.22e-6 Preprocessor1_Model05\n# ℹ 12 more rows\n\nmetrics |&gt; \n  filter(.metric ==\"rmse\") |&gt; \n  group_by(penalty)|&gt;\n  summarise(penalty = min(penalty),\n            mean = mean(mean))|&gt;\n  ggplot(aes(x=penalty,y=mean)) +\n    geom_line()+\n    labs(title = \"Lasso Penalty vs RMSE\")\n\n\n\n\n\n\n\nmetrics |&gt; filter(.metric==\"rmse\") |&gt;\n  arrange(mean)\n\n# A tibble: 11 × 7\n   penalty .metric .estimator       mean     n    std_err .config              \n     &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;           &lt;dbl&gt; &lt;int&gt;      &lt;dbl&gt; &lt;chr&gt;                \n 1       0 rmse    standard   510011538.     5 342846372. Preprocessor1_Model01\n 2      10 rmse    standard   510011538.     5 342846372. Preprocessor1_Model02\n 3      20 rmse    standard   510011538.     5 342846372. Preprocessor1_Model03\n 4      30 rmse    standard   510011538.     5 342846372. Preprocessor1_Model04\n 5      40 rmse    standard   510011538.     5 342846372. Preprocessor1_Model05\n 6      50 rmse    standard   510011538.     5 342846372. Preprocessor1_Model06\n 7      60 rmse    standard   510011538.     5 342846372. Preprocessor1_Model07\n 8      70 rmse    standard   510011538.     5 342846372. Preprocessor1_Model08\n 9      80 rmse    standard   510011538.     5 342846372. Preprocessor1_Model09\n10      90 rmse    standard   510011538.     5 342846372. Preprocessor1_Model10\n11     100 rmse    standard   510011538.     5 342846372. Preprocessor1_Model11\n\n# Choose lambda = 81\n\nfinal_spec &lt;- linear_reg(penalty = 0, mixture = 1) |&gt;\n  set_engine(\"glmnet\")\n\nfinal_lasso_workflow &lt;- workflow()|&gt;\n  add_model(final_spec) |&gt; \n  add_recipe(rec)\n\nfinal_lasso_fit &lt;- final_lasso_workflow|&gt;\n  fit(data =simdat_alt_2)\n\nfinal_lasso_fit |&gt; tidy()\n\n# A tibble: 11 × 3\n   term            estimate penalty\n   &lt;chr&gt;              &lt;dbl&gt;   &lt;dbl&gt;\n 1 (Intercept)   130518046.       0\n 2 1                     0        0\n 3 2                     0        0\n 4 3                     0        0\n 5 4                     0        0\n 6 5                     0        0\n 7 6             415202305.       0\n 8 7           24905659724.       0\n 9 8              20982661.       0\n10 9                     0        0\n11 10                    0        0\n\n\nIn this case, lasso keeps the intercept and coefficients for \\(X^6\\), \\(X^7\\) and \\(X^8\\). Best subsets did a better job."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Introduction to Statistical Learning Schedule",
-    "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n14 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n15 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n16 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n17 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n18 April\nCh 4 - LDA, QDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n19 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n20 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n21 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n22 April\nTidymodel recipies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n23 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n24 April\nCh 6 - Dimension Reduction, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n25 April\nCh 8 - Decision Trees, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n26 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n27 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n28 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n29 April\nCh 12 - PCA or Clustering, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n30 April\nFinish Up, watch project videos, surveys etc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n1 May\nExam",
-    "crumbs": [
-      "Course Contents",
-      "Schedule & Assignments"
-    ]
+    "objectID": "labs/lab01-cv-tm.html#k-fold-cross-validation",
+    "href": "labs/lab01-cv-tm.html#k-fold-cross-validation",
+    "title": "Lab 01",
+    "section": "K-fold cross validation",
+    "text": "K-fold cross validation\nWe are trying to decide between three models of varying flexibility:\n\nModel 1: \\(\\texttt{mpg} = \\beta_0 + \\beta_1 \\texttt{horsepower} + \\epsilon\\)\nModel 2: \\(\\texttt{mpg} = \\beta_0 + \\beta_1 \\texttt{horsepower} + \\beta_2 \\texttt{horsepower}^2 + \\epsilon\\)\nModel 3: \\(\\texttt{mpg} = \\beta_0 + \\beta_1 \\texttt{horsepower} + \\beta_2 \\texttt{horsepower}^2 + \\beta_3 \\texttt{horsepower}^3 + \\epsilon\\)\n\n\nUsing the Auto data, split the data into two groups a training data set, saved as Auto_train and a testing data set, saved as Auto_test. Be sure to set a seed to ensure that you get the same result each time you Render your document.\n\n\n\nYou can use the poly() function to fit a model with a polynomial term. For example, to fit the model \\(y = \\beta_0 + \\beta_1 \\texttt{x} + \\beta_2 \\texttt{x}^2 + \\beta_3 \\texttt{x}^3 + \\epsilon\\), you would run fit(lm_spec, y ~ poly(x, 3), data = data)\n\nFit the three models outlined above on the training data. Using the model created on the training data, predict mpg in the test data set for each model. What is the test RMSE for the three models? Which model would you choose?\nFit the same three models, but instead of the validation set approach, perform 5-fold cross validation. Make sure to set a seed so you get the same answer each time you run the analysis. Calculate the overall 5-fold cross validation error for each of the three models. Which model would you chose?\nThe tidymodels package allows you to do this faster! Instead of having a fit 3 (or more!) different models to determine the best flexibility, you can (1) create a recipe to specify how you would like to fit a model and then (2) tune this model to determine the best output. Copy the code below. What do you think the line step_poly(horsepower, degree = tune()) does? Hint: you can run ?step_poly in the Console to learn more about this function.\n\n\nauto_prep &lt;- Auto |&gt;\n  recipe(mpg ~ horsepower) |&gt;\n  step_poly(horsepower, degree = tune())\n\n\nTo tune this model, you will replace fit_resamples with tune_grid. The pseudo code to do this is below - you may need to update some names to match what you have named objects in your document. Add the code to tune your model based on the code below.\n\n\nauto_tune &lt;- tune_grid(lm_spec,\n          auto_prep,\n          resamples = auto_cv)\n\n\nUsing the collect_metrics function, look at the RMSE for auto_tune. Which degree is preferable?\nYou can plot the output from Exercise 11 to make it a bit easier to determine. First, save your output from Exercise 11 as auto_metrics. Then filter this data frame to only include rows where .metric == “rmse”. Save this filtered data frame as auto_rmse. Edit the code below to plot the degree on the x-axis and mean on the y-axis. Describe what this plot shows.\n\n\nggplot(auto_rmse, aes(x = ----, y = ----)) + \n  geom_line() +\n  geom_pointrange(aes(ymin = mean - std_err, ymax = mean + std_err)) + \n  labs(x = \"Degree\",\n       y = \"Cross validation error\",\n       title = ---)"
   },
   {
     "objectID": "project.html",

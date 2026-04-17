@@ -862,7 +862,7 @@
     "href": "slides/04-2-lda-qda.qmd.html#lda-bluejays-eda---variance",
     "title": "Chapter 4 Part 2",
     "section": "LDA Bluejays EDA - Variance",
-    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F          1.25 \n2 M          0.787\n\n\n\nVery similar standard deviations (and thus variances)"
+    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F           1.19\n2 M           1.23\n\n\n\nVery similar standard deviations (and thus variances)"
   },
   {
     "objectID": "slides/04-2-lda-qda.qmd.html#fit-lda",
@@ -876,14 +876,14 @@
     "href": "slides/04-2-lda-qda.qmd.html#check-the-fit",
     "title": "Chapter 4 Part 2",
     "section": "Check The Fit",
-    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F  8  7\n         M  3 19\n\n\n\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.730"
+    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F 14  3\n         M  5 15\n\n\n\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.784"
   },
   {
     "objectID": "slides/04-2-lda-qda.qmd.html#compare-to-logistic",
     "href": "slides/04-2-lda-qda.qmd.html#compare-to-logistic",
     "title": "Chapter 4 Part 2",
     "section": "Compare to Logistic",
-    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.676"
+    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.784"
   },
   {
     "objectID": "slides/04-2-lda-qda.qmd.html#application-exercise",
@@ -2122,7 +2122,7 @@
     "href": "index.html",
     "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - LDA, QDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nTidymodel recipies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA or Clustering, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, watch project videos, surveys etc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nTidymodel recipies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA or Clustering, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, watch project videos, surveys etc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
@@ -4050,5 +4050,1195 @@
     "title": "Chapter 5 and tidymodels",
     "section": " Application Exercise",
     "text": "Application Exercise\n\nFit 3 models on the data using 5 fold cross validation:\n\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\epsilon\\)\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\epsilon\\)\n\\(mpg = \\beta_0 + \\beta_1 horsepower + \\beta_2 horsepower^2+ \\beta_3 horsepower^3 +\\epsilon\\)\n\nCollect the metrics from each model, saving the results as results_1, results_2, results_3\nWhich model is “best”?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#recap",
+    "href": "slides/04-2-mlog-lda.qmd.html#recap",
+    "title": "Chapter 4 Part 2",
+    "section": "Recap",
+    "text": "Recap\n\nWe had a logistic regression refresher\nNow…\n\nWhat if our response has more than two levels?\nWhat if logistic regression is a poor fit?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#setup",
+    "href": "slides/04-2-mlog-lda.qmd.html#setup",
+    "title": "Chapter 4 Part 2",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)\nlibrary(Stat2Data)\n#install.packages(\"discrim\")"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#multinomial-logistic",
+    "href": "slides/04-2-mlog-lda.qmd.html#multinomial-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Multinomial Logistic",
+    "text": "Multinomial Logistic\n\nSo far we have discussed logistic regression with two classes.\nIt is easily generalized to more than two classes."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#confounding",
+    "href": "slides/04-2-mlog-lda.qmd.html#confounding",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\nRecall our defaults data with variable default, student, and balance\n\n\nWhat is going on here?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#confounding-1",
+    "href": "slides/04-2-mlog-lda.qmd.html#confounding-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\n\n\nStudents tend to have higher balances than non-students\nTheir marginal default rate is higher\nFor each level of balance, students default less\nTheir conditional default rate is lower"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#multiple-logistic-regression",
+    "href": "slides/04-2-mlog-lda.qmd.html#multiple-logistic-regression",
+    "title": "Chapter 4 Part 2",
+    "section": "Multiple logistic regression",
+    "text": "Multiple logistic regression\n\\[\\log\\left(\\frac{p(X)}{1-p(X)}\\right)=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\] \\[p(X) = \\frac{e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}{1+e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}\\]\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.8690452\n0.4922555\n-22.080088\n0.0000000\n\n\nbalance\n0.0057365\n0.0002319\n24.737563\n0.0000000\n\n\nincome\n0.0000030\n0.0000082\n0.369815\n0.7115203\n\n\nstudentYes\n-0.6467758\n0.2362525\n-2.737646\n0.0061881\n\n\n\n\n\n\nWhy is the coefficient for student negative now when it was positive before?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#logistic-regression-for-more-than-two-classes",
+    "href": "slides/04-2-mlog-lda.qmd.html#logistic-regression-for-more-than-two-classes",
+    "title": "Chapter 4 Part 2",
+    "section": "Logistic regression for more than two classes",
+    "text": "Logistic regression for more than two classes\n\\[P(Y=k|X) = \\frac{e ^{\\beta_{0k}+\\beta_{1k}X_1+\\dots+\\beta_{pk}X_p}}{\\sum_{l=1}^Ke^{\\beta_{0l}+\\beta_{1l}X_1+\\dots+\\beta_{pl}X_p}}\\]\n\nWe generalize this to situations with multiple classes\nHere we have a linear function for each of the \\(K\\) classes\nThis is known as multinomial logistic regression"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-warmup",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-warmup",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Warmup",
+    "text": "LDA Warmup\nTo give us a general overview, we are going to watch the StatQuest video on the topic: https://www.youtube.com/watch?v=azXCzI57Yfc"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#discriminant-analysis",
+    "href": "slides/04-2-mlog-lda.qmd.html#discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Analysis",
+    "text": "Discriminant Analysis\n\nHere the approach is to model the distribution of X in each of the classes separately, and then use Bayes theorem to flip things around and obtain \\(P(Y|X)\\).\nWhen we use normal (Gaussian) distributions for each class, this leads to linear or quadratic discriminant analysis.\nHowever, this approach is quite general, and other distributions can be used as well. We will focus on normal distributions."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#why-another-approach",
+    "href": "slides/04-2-mlog-lda.qmd.html#why-another-approach",
+    "title": "Chapter 4 Part 2",
+    "section": "Why Another Approach?",
+    "text": "Why Another Approach?\n\nWhen the classes are well-separated, the parameter estimates for the logistic regression model are surprisingly unstable. Linear discriminant analysis does not suffer from this problem.\nIf n is small and the distribution of the predictors X is approximately normal in each of the classes, the linear discriminant model is again more stable than the logistic regression model.\nLinear discriminant analysis is popular when we have more than two response classes, because it also provides low-dimensional views of the data."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#bayes-theorem-classification",
+    "href": "slides/04-2-mlog-lda.qmd.html#bayes-theorem-classification",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes Theorem (classification)",
+    "text": "Bayes Theorem (classification)\nThomas Bayes was a famous mathematician whose name represents a big subfield of statistical and probabilistic modeling. Here we focus on a simple result, known as Bayes theorem:\n\\[P(Y=k|X=x) = \\frac{P(X=x|Y=k)\\cdot P(Y=k)}{P(X=x)}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#bayes-for-discriminant-analysis",
+    "href": "slides/04-2-mlog-lda.qmd.html#bayes-for-discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes for Discriminant Analysis",
+    "text": "Bayes for Discriminant Analysis\n\\[P(Y=k|X=x) = \\frac{\\pi_kf_k(x)}{\\sum_{l=1}^K\\pi_lf_l(x)} \\text{, where}\\]\n\n\\(f_k(x)=P(X=x|Y=k)\\) is the density for \\(X\\) in class \\(k\\). Here we use normal’s but they could be other distributions (such as \\(\\chi^2\\))\n\\(\\pi_k = P(Y=k)\\) is the marginal or prior probability for class \\(k\\)."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#classify-to-the-highest-density",
+    "href": "slides/04-2-mlog-lda.qmd.html#classify-to-the-highest-density",
+    "title": "Chapter 4 Part 2",
+    "section": "Classify to the highest density",
+    "text": "Classify to the highest density\n\\[\\pi_1=.5, \\pi_2=.5\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe classify a new point according to which density is highest.\nWhen the priors are different, we take them into account as well, and compare \\(\\pi_kf_k(x)\\).\nOn the right, we favor the pink class - the decision boundary has shifted to the left."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-when-p1",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-when-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nThe Gaussian (normal) density has the form\n\\[f_k(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma_k}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}\\]\n\n\\(\\mu_k\\) is the mean, \\(\\sigma_k^2\\) the variance (in class \\(k\\))\nFor now, we assume \\(\\sigma_k=\\sigma\\) for all groups (we will need to check this with real data)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-when-p1-1",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-when-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nWe plug this \\(f_k(x)\\) into Bayes formula and after some simplifying we get:\n\\[p_k(x) = \\frac{\\pi_k\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}{\\sum_{l=1}^K\\pi_l\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#discriminant-function",
+    "href": "slides/04-2-mlog-lda.qmd.html#discriminant-function",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Function",
+    "text": "Discriminant Function\nTo classify at the value X = x, we need to see which of the \\(p_k(x)\\) is largest. Taking logs, and discarding terms that do not depend on \\(k\\), we see that this is equivalent to assigning x to the class with the largest discriminant score:\n\n\\[\\delta_k(x) = x\\cdot \\frac{\\mu_k}{\\sigma^2}-\\frac{\\mu_k^2}{2\\sigma^2}+log(\\pi_k)\\]\n\nImportantly, \\(\\delta_k(x)\\) is a linear function of \\(x\\).\nIf there are \\(K=2\\) classes and \\(\\pi_1=\\pi_2=.5\\), then the decision boundry is at\n\n\n\n\\[x=\\frac{\\mu_1+\\mu_2}{2}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#maximizing-delta_kx",
+    "href": "slides/04-2-mlog-lda.qmd.html#maximizing-delta_kx",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\nIn order to maximize this, we need estimates for all the parameters\n\n\nWhat should we estimate \\(\\hat{\\pi_k}\\), \\(\\mu_k\\), and \\(\\sigma^2\\) with?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#maximizing-delta_kx-1",
+    "href": "slides/04-2-mlog-lda.qmd.html#maximizing-delta_kx-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\n\\[\\hat{\\pi}_k = \\frac{n_k}{n}\\] . . .\n\\[\\hat{\\mu}_k = \\frac{1}{n_k}\\sum_{i:y_k=k}x_i\\] . . .\n\\[\\hat{\\sigma}^2 = \\frac{1}{n-K}\\sum_{k=1}^K\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2 = \\sum_{k=1}^K\\frac{n_k-1}{n-K}\\cdot \\hat{\\sigma}_k^2\\]\nWhere \\[\\hat{\\sigma}_k^2 = \\frac{1}{n_k-1}\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-in-r-example-p1",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-in-r-example-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA In R Example (\\(p=1\\))",
+    "text": "LDA In R Example (\\(p=1\\))\n\ndata(\"BlueJays\") # Bring data into environment\nlibrary(Stat2Data)\nlibrary(tidymodels)\nlibrary(tidyverse)\nlibrary(discrim)\n\n\nCan we determine the sex of a blue jay by measuring the distance from the tip of the bill to the back of the head (Head)?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\ntt_split &lt;- initial_split(BlueJays,prop=.7)\n\nBJ_train &lt;- training(tt_split)\n\nBJ_train |&gt; ggplot(aes(x = Head,y=KnownSex)) +\n  geom_boxplot() +\n  theme_bw()"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda-1",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\nWhat assumptions should we check?\n\n\nNormality of our predictor\nConstant variance between groups."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda---normality",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda---normality",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Normality",
+    "text": "LDA Bluejays EDA - Normality\n\nlibrary(patchwork)\n\n(BJ_train |&gt; ggplot(aes(sample = Head)) + geom_qq())+\n  (BJ_train |&gt; ggplot(aes(x = Head)) + geom_histogram())"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda---variance",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-bluejays-eda---variance",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Variance",
+    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F           1.27\n2 M           1.32\n\n\n\nVery similar standard deviations (and thus variances)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#fit-lda",
+    "href": "slides/04-2-mlog-lda.qmd.html#fit-lda",
+    "title": "Chapter 4 Part 2",
+    "section": "Fit LDA",
+    "text": "Fit LDA\n\nlda_spec &lt;- discrim_linear() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")\n\nlda_fit&lt;- fit(lda_spec,\n            KnownSex ~ Head,\n            data = BJ_train)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#check-the-fit",
+    "href": "slides/04-2-mlog-lda.qmd.html#check-the-fit",
+    "title": "Chapter 4 Part 2",
+    "section": "Check The Fit",
+    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F  9  3\n         M  3 22\n\n\n\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.838"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#compare-to-logistic",
+    "href": "slides/04-2-mlog-lda.qmd.html#compare-to-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Compare to Logistic",
+    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.838"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#application-exercise",
+    "href": "slides/04-2-mlog-lda.qmd.html#application-exercise",
+    "title": "Chapter 4 Part 2",
+    "section": " Application Exercise",
+    "text": "Application Exercise\nWe are going to use the penguins data from the palmerpeguins package.\n\nConduct basic EDA to see if penguin bill length is different by sex and if LDA is an appropriate model choice.\nUse LDA to predict penguin sex based on their bill length using training and testing data. Get the accuracy on the testing set.\nFit a logistic regression model and get it’s accuracy to see which did better."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-with-p1",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-with-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nWhen we have 2 or more predictors, the distribution becomes multivariate.\nIf the covariance between predictors is 0 within each class of the response, LDA is still appropriate."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#lda-with-p1-1",
+    "href": "slides/04-2-mlog-lda.qmd.html#lda-with-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nFor example, with 2 normal predictors, their distributions in 3d would like like this:\n\n\n\n\nLuckily, the discriminate function remains linear\n\n\\[\\delta_k(x) = c_{k0} + c_{k1}x_1+...c_{kp}x_p\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#example-p2k3",
+    "href": "slides/04-2-mlog-lda.qmd.html#example-p2k3",
+    "title": "Chapter 4 Part 2",
+    "section": "Example: \\(p=2,K=3\\)",
+    "text": "Example: \\(p=2,K=3\\)\n\nThere is no limit on the number of levels of the categorical response for LDA\nSuppose \\(\\pi_1=\\pi_2\\pi_3=1/3\\)\n\n\n - The dashed lines are known as the Bayes decision boundaries"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#probabilities",
+    "href": "slides/04-2-mlog-lda.qmd.html#probabilities",
+    "title": "Chapter 4 Part 2",
+    "section": "Probabilities",
+    "text": "Probabilities\n\nOnce the estimates for the \\(\\hat{\\delta}_k(x)\\) have been found, we can plug them in and get:\n\\[\\hat{P}(Y=k|X=x)=\\frac{e^{\\hat{\\delta}_k(x)}}{\\sum_{l=1}^Ke^{\\hat{\\delta}^l(x)}}\\]\nClassifying to the largest \\(\\hat{\\delta}_k(x)\\) amounts to classifying to the class for which \\(\\hat{P}(Y = k|X = x)\\) is largest.\nWhen \\(K = 2\\), we classify to class 2 if \\(\\hat{P}(Y = 2|X = x)\\geq 0.5\\), else to class 1."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#example---credit-card-fraud",
+    "href": "slides/04-2-mlog-lda.qmd.html#example---credit-card-fraud",
+    "title": "Chapter 4 Part 2",
+    "section": "Example - Credit Card Fraud",
+    "text": "Example - Credit Card Fraud\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.972\n\n\n\nAccuracy of 97.7% on a testing set!\nWhat about the different types of errors?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#errors",
+    "href": "slides/04-2-mlog-lda.qmd.html#errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Errors",
+    "text": "Errors\n\nOf the true yes, we made errors at the rate of 83/(83+26), 76%\nOf the true no, we made errors at the rate of 2/(2889+2), .069%"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#types-of-errors",
+    "href": "slides/04-2-mlog-lda.qmd.html#types-of-errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Types of Errors",
+    "text": "Types of Errors\n\nRecall:\n\nFalse positive rate: The fraction of negative examples that are classified as positive.\nFalse negative rate: The fraction of positive examples that are classified as negative.\n\nRemember the model gave probabilities, the final yes or no is decided by\n\\[\\hat{P}(Default=Yes|Balance,Student) \\geq .5\\]\n\nWe can adjust our error rates by changing that threshold"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#sensitivity-and-specificity",
+    "href": "slides/04-2-mlog-lda.qmd.html#sensitivity-and-specificity",
+    "title": "Chapter 4 Part 2",
+    "section": "Sensitivity and Specificity",
+    "text": "Sensitivity and Specificity\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n\nThe sensitivity is the true positive rate.\n\nThe rate at which we correctly predict a person will default.\n26/(83+26) = .24 (24%)\n\nThe specificity is the true negative rate.\n\nThe rate at which we correctly predict a person will not default.\n2889/(2889+2) =.999 (99.9%)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#varying-the-threshold",
+    "href": "slides/04-2-mlog-lda.qmd.html#varying-the-threshold",
+    "title": "Chapter 4 Part 2",
+    "section": "Varying the threshold",
+    "text": "Varying the threshold\n\nIn order to determine the best threshold, we want to maximize the specificty and sensitivity.\nOR - maximize the sensitivty and minimize 1-specificity.\nIn order to to do this we use an \\(ROC\\) curve which stands for receiver operating characteristic curve."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#roc-curve",
+    "href": "slides/04-2-mlog-lda.qmd.html#roc-curve",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\nWe want to maximize the area under this curve, called ROC AUC\n\nlda_roc&lt;- lda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_curve(truth = default,.pred_No) \n\nhead(lda_roc)\n\n# A tibble: 6 × 3\n  .threshold specificity sensitivity\n       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;\n1  -Inf          0                 1\n2     0.0819     0                 1\n3     0.129      0.00917           1\n4     0.151      0.0183            1\n5     0.154      0.0275            1\n6     0.201      0.0367            1"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#roc-curve-1",
+    "href": "slides/04-2-mlog-lda.qmd.html#roc-curve-1",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\n\nautoplot(lda_roc)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#roc-auc",
+    "href": "slides/04-2-mlog-lda.qmd.html#roc-auc",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC AUC",
+    "text": "ROC AUC\n\nlda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957\n\n\nIf we want to tune our model better, we can optimize the ROC AUC by changing the threshold.\n\nI did a train/test approach here. What should I do different if I want to tune for threshold?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#qda",
+    "href": "slides/04-2-mlog-lda.qmd.html#qda",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA",
+    "text": "QDA\n\nQDA arises when \\(p&gt;1\\) and the is a covariance structure between the predictors within the same level of the response.\nThis introduces a squared term into the maximization problem of the \\(\\delta_k(x)\\), thus the name."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#qda-in-r",
+    "href": "slides/04-2-mlog-lda.qmd.html#qda-in-r",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA In R",
+    "text": "QDA In R\n\nqda_fit&lt;-discrim_quad() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")|&gt; \n  fit(default ~ balance + student,\n      data = training(def_splits))\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  conf_mat(truth = default, estimate = .pred_class) \n\n          Truth\nPrediction   No  Yes\n       No  2888   80\n       Yes    3   29\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.qmd.html#tuning-by-threhold",
+    "href": "slides/04-2-mlog-lda.qmd.html#tuning-by-threhold",
+    "title": "Chapter 4 Part 2",
+    "section": "Tuning By Threhold",
+    "text": "Tuning By Threhold\nhttps://www.tidymodels.org/start/case-study/"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html",
+    "href": "slides/04-2-mlog-lda_o.qmd.html",
+    "title": "Chapter 4 Part 2",
+    "section": "",
+    "text": "We had a logistic regression refresher\nNow…\n\nWhat if our response has more than two levels?\nWhat if logistic regression is a poor fit?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#recap",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#recap",
+    "title": "Chapter 4 Part 2",
+    "section": "",
+    "text": "We had a logistic regression refresher\nNow…\n\nWhat if our response has more than two levels?\nWhat if logistic regression is a poor fit?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#setup",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#setup",
+    "title": "Chapter 4 Part 2",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)\nlibrary(Stat2Data)\n#install.packages(\"discrim\")"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#multinomial-logistic",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#multinomial-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Multinomial Logistic",
+    "text": "Multinomial Logistic\n\nSo far we have discussed logistic regression with two classes.\nIt is easily generalized to more than two classes."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#confounding",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#confounding",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\nRecall our defaults data with variable default, student, and balance\n\n\n\n\n\n\n\n\n\n\nWhat is going on here?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#confounding-1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#confounding-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\n\n\n\n\n\n\n\n\n\n\nStudents tend to have higher balances than non-students\nTheir marginal default rate is higher\nFor each level of balance, students default less\nTheir conditional default rate is lower"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#multiple-logistic-regression",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#multiple-logistic-regression",
+    "title": "Chapter 4 Part 2",
+    "section": "Multiple logistic regression",
+    "text": "Multiple logistic regression\n\\[\\log\\left(\\frac{p(X)}{1-p(X)}\\right)=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\] \\[p(X) = \\frac{e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}{1+e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}\\]\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.8690452\n0.4922555\n-22.080088\n0.0000000\n\n\nbalance\n0.0057365\n0.0002319\n24.737563\n0.0000000\n\n\nincome\n0.0000030\n0.0000082\n0.369815\n0.7115203\n\n\nstudentYes\n-0.6467758\n0.2362525\n-2.737646\n0.0061881\n\n\n\n\n\n\nWhy is the coefficient for student negative now when it was positive before?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#logistic-regression-for-more-than-two-classes",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#logistic-regression-for-more-than-two-classes",
+    "title": "Chapter 4 Part 2",
+    "section": "Logistic regression for more than two classes",
+    "text": "Logistic regression for more than two classes\n\\[P(Y=k|X) = \\frac{e ^{\\beta_{0k}+\\beta_{1k}X_1+\\dots+\\beta_{pk}X_p}}{\\sum_{l=1}^Ke^{\\beta_{0l}+\\beta_{1l}X_1+\\dots+\\beta_{pl}X_p}}\\]\n\nWe generalize this to situations with multiple classes\nHere we have a linear function for each of the \\(K\\) classes\nThis is known as multinomial logistic regression"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-warmup",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-warmup",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Warmup",
+    "text": "LDA Warmup\nTo give us a general overview, we are going to watch the StatQuest video on the topic: https://www.youtube.com/watch?v=azXCzI57Yfc"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#discriminant-analysis",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Analysis",
+    "text": "Discriminant Analysis\n\nHere the approach is to model the distribution of X in each of the classes separately, and then use Bayes theorem to flip things around and obtain \\(P(Y|X)\\).\nWhen we use normal (Gaussian) distributions for each class, this leads to linear or quadratic discriminant analysis.\nHowever, this approach is quite general, and other distributions can be used as well. We will focus on normal distributions."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#why-another-approach",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#why-another-approach",
+    "title": "Chapter 4 Part 2",
+    "section": "Why Another Approach?",
+    "text": "Why Another Approach?\n\nWhen the classes are well-separated, the parameter estimates for the logistic regression model are surprisingly unstable. Linear discriminant analysis does not suffer from this problem.\nIf n is small and the distribution of the predictors X is approximately normal in each of the classes, the linear discriminant model is again more stable than the logistic regression model.\nLinear discriminant analysis is popular when we have more than two response classes, because it also provides low-dimensional views of the data."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#bayes-theorem-classification",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#bayes-theorem-classification",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes Theorem (classification)",
+    "text": "Bayes Theorem (classification)\nThomas Bayes was a famous mathematician whose name represents a big subfield of statistical and probabilistic modeling. Here we focus on a simple result, known as Bayes theorem:\n\\[P(Y=k|X=x) = \\frac{P(X=x|Y=k)\\cdot P(Y=k)}{P(X=x)}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#bayes-for-discriminant-analysis",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#bayes-for-discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes for Discriminant Analysis",
+    "text": "Bayes for Discriminant Analysis\n\\[P(Y=k|X=x) = \\frac{\\pi_kf_k(x)}{\\sum_{l=1}^K\\pi_lf_l(x)} \\text{, where}\\]\n\n\\(f_k(x)=P(X=x|Y=k)\\) is the density for \\(X\\) in class \\(k\\). Here we use normal’s but they could be other distributions (such as \\(\\chi^2\\))\n\\(\\pi_k = P(Y=k)\\) is the marginal or prior probability for class \\(k\\)."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#classify-to-the-highest-density",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#classify-to-the-highest-density",
+    "title": "Chapter 4 Part 2",
+    "section": "Classify to the highest density",
+    "text": "Classify to the highest density\n\\[\\pi_1=.5, \\pi_2=.5\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe classify a new point according to which density is highest.\nWhen the priors are different, we take them into account as well, and compare \\(\\pi_kf_k(x)\\).\nOn the right, we favor the pink class - the decision boundary has shifted to the left."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-when-p1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-when-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nThe Gaussian (normal) density has the form\n\\[f_k(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma_k}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}\\]\n\n\\(\\mu_k\\) is the mean, \\(\\sigma_k^2\\) the variance (in class \\(k\\))\nFor now, we assume \\(\\sigma_k=\\sigma\\) for all groups (we will need to check this with real data)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-when-p1-1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-when-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nWe plug this \\(f_k(x)\\) into Bayes formula and after some simplifying we get:\n\\[p_k(x) = \\frac{\\pi_k\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}{\\sum_{l=1}^K\\pi_l\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#discriminant-function",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#discriminant-function",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Function",
+    "text": "Discriminant Function\nTo classify at the value X = x, we need to see which of the \\(p_k(x)\\) is largest. Taking logs, and discarding terms that do not depend on \\(k\\), we see that this is equivalent to assigning x to the class with the largest discriminant score:\n. . .\n\\[\\delta_k(x) = x\\cdot \\frac{\\mu_k}{\\sigma^2}-\\frac{\\mu_k^2}{2\\sigma^2}+log(\\pi_k)\\]\n\nImportantly, \\(\\delta_k(x)\\) is a linear function of \\(x\\).\nIf there are \\(K=2\\) classes and \\(\\pi_1=\\pi_2=.5\\), then the decision boundry is at\n\n. . .\n\\[x=\\frac{\\mu_1+\\mu_2}{2}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#maximizing-delta_kx",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#maximizing-delta_kx",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\nIn order to maximize this, we need estimates for all the parameters\n. . .\n\nWhat should we estimate \\(\\hat{\\pi_k}\\), \\(\\mu_k\\), and \\(\\sigma^2\\) with?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#maximizing-delta_kx-1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#maximizing-delta_kx-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\n\\[\\hat{\\pi}_k = \\frac{n_k}{n}\\] . . .\n\\[\\hat{\\mu}_k = \\frac{1}{n_k}\\sum_{i:y_k=k}x_i\\] . . .\n\\[\\hat{\\sigma}^2 = \\frac{1}{n-K}\\sum_{k=1}^K\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2 = \\sum_{k=1}^K\\frac{n_k-1}{n-K}\\cdot \\hat{\\sigma}_k^2\\]\nWhere \\[\\hat{\\sigma}_k^2 = \\frac{1}{n_k-1}\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-in-r-example-p1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-in-r-example-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA In R Example (\\(p=1\\))",
+    "text": "LDA In R Example (\\(p=1\\))\n\ndata(\"BlueJays\") # Bring data into environment\nlibrary(Stat2Data)\nlibrary(tidymodels)\nlibrary(tidyverse)\nlibrary(discrim)\n\n\nCan we determine the sex of a blue jay by measuring the distance from the tip of the bill to the back of the head (Head)?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\ntt_split &lt;- initial_split(BlueJays,prop=.7)\n\nBJ_train &lt;- training(tt_split)\n\nBJ_train |&gt; ggplot(aes(x = Head,y=KnownSex)) +\n  geom_boxplot() +\n  theme_bw()"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda-1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\nWhat assumptions should we check?\n\n\nNormality of our predictor\nConstant variance between groups."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda---normality",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda---normality",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Normality",
+    "text": "LDA Bluejays EDA - Normality\n\nlibrary(patchwork)\n\n(BJ_train |&gt; ggplot(aes(sample = Head)) + geom_qq())+\n  (BJ_train |&gt; ggplot(aes(x = Head)) + geom_histogram())"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda---variance",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-bluejays-eda---variance",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Variance",
+    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F           1.29\n2 M           1.07\n\n\n\nVery similar standard deviations (and thus variances)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#fit-lda",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#fit-lda",
+    "title": "Chapter 4 Part 2",
+    "section": "Fit LDA",
+    "text": "Fit LDA\n\nlda_spec &lt;- discrim_linear() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")\n\nlda_fit&lt;- fit(lda_spec,\n            KnownSex ~ Head,\n            data = BJ_train)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#check-the-fit",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#check-the-fit",
+    "title": "Chapter 4 Part 2",
+    "section": "Check The Fit",
+    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F  9  2\n         M  6 20\n\n\n. . .\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.784"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#compare-to-logistic",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#compare-to-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Compare to Logistic",
+    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.757"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#application-exercise",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#application-exercise",
+    "title": "Chapter 4 Part 2",
+    "section": " Application Exercise",
+    "text": "Application Exercise\nWe are going to use the penguins data from the palmerpeguins package.\n\nConduct basic EDA to see if penguin bill length is different by sex and if LDA is an appropriate model choice.\nUse LDA to predict penguin sex based on their bill length using training and testing data. Get the accuracy on the testing set.\nFit a logistic regression model and get it’s accuracy to see which did better."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-with-p1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-with-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nWhen we have 2 or more predictors, the distribution becomes multivariate.\nIf the covariance between predictors is 0 within each class of the response, LDA is still appropriate."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#lda-with-p1-1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#lda-with-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nFor example, with 2 normal predictors, their distributions in 3d would like like this:\n\n. . .\n\n\nLuckily, the discriminate function remains linear\n\n\\[\\delta_k(x) = c_{k0} + c_{k1}x_1+...c_{kp}x_p\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#example-p2k3",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#example-p2k3",
+    "title": "Chapter 4 Part 2",
+    "section": "Example: \\(p=2,K=3\\)",
+    "text": "Example: \\(p=2,K=3\\)\n\nThere is no limit on the number of levels of the categorical response for LDA\nSuppose \\(\\pi_1=\\pi_2\\pi_3=1/3\\)\n\n. . .\n - The dashed lines are known as the Bayes decision boundaries"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#probabilities",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#probabilities",
+    "title": "Chapter 4 Part 2",
+    "section": "Probabilities",
+    "text": "Probabilities\n\nOnce the estimates for the \\(\\hat{\\delta}_k(x)\\) have been found, we can plug them in and get:\n\\[\\hat{P}(Y=k|X=x)=\\frac{e^{\\hat{\\delta}_k(x)}}{\\sum_{l=1}^Ke^{\\hat{\\delta}^l(x)}}\\]\nClassifying to the largest \\(\\hat{\\delta}_k(x)\\) amounts to classifying to the class for which \\(\\hat{P}(Y = k|X = x)\\) is largest.\nWhen \\(K = 2\\), we classify to class 2 if \\(\\hat{P}(Y = 2|X = x)\\geq 0.5\\), else to class 1."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#example---credit-card-fraud",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#example---credit-card-fraud",
+    "title": "Chapter 4 Part 2",
+    "section": "Example - Credit Card Fraud",
+    "text": "Example - Credit Card Fraud\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.972\n\n\n\nAccuracy of 97.7% on a testing set!\nWhat about the different types of errors?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#errors",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Errors",
+    "text": "Errors\n\nOf the true yes, we made errors at the rate of 83/(83+26), 76%\nOf the true no, we made errors at the rate of 2/(2889+2), .069%"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#types-of-errors",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#types-of-errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Types of Errors",
+    "text": "Types of Errors\n\nRecall:\n\nFalse positive rate: The fraction of negative examples that are classified as positive.\nFalse negative rate: The fraction of positive examples that are classified as negative.\n\nRemember the model gave probabilities, the final yes or no is decided by\n\\[\\hat{P}(Default=Yes|Balance,Student) \\geq .5\\]\n\nWe can adjust our error rates by changing that threshold"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#sensitivity-and-specificity",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#sensitivity-and-specificity",
+    "title": "Chapter 4 Part 2",
+    "section": "Sensitivity and Specificity",
+    "text": "Sensitivity and Specificity\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n\nThe sensitivity is the true positive rate.\n\nThe rate at which we correctly predict a person will default.\n26/(83+26) = .24 (24%)\n\nThe specificity is the true negative rate.\n\nThe rate at which we correctly predict a person will not default.\n2889/(2889+2) =.999 (99.9%)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#varying-the-threshold",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#varying-the-threshold",
+    "title": "Chapter 4 Part 2",
+    "section": "Varying the threshold",
+    "text": "Varying the threshold\n\nIn order to determine the best threshold, we want to maximize the specificty and sensitivity.\nOR - maximize the sensitivty and minimize 1-specificity.\nIn order to to do this we use an \\(ROC\\) curve which stands for receiver operating characteristic curve."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#roc-curve",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#roc-curve",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\nWe want to maximize the area under this curve, called ROC AUC\n\nlda_roc&lt;- lda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_curve(truth = default,.pred_No) \n\nhead(lda_roc)\n\n# A tibble: 6 × 3\n  .threshold specificity sensitivity\n       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;\n1  -Inf          0                 1\n2     0.0819     0                 1\n3     0.129      0.00917           1\n4     0.151      0.0183            1\n5     0.154      0.0275            1\n6     0.201      0.0367            1"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#roc-curve-1",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#roc-curve-1",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\n\nautoplot(lda_roc)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#roc-auc",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#roc-auc",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC AUC",
+    "text": "ROC AUC\n\nlda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957\n\n\nIf we want to tune our model better, we can optimize the ROC AUC by changing the threshold.\n\nI did a train/test approach here. What should I do different if I want to tune for threshold?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#qda",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#qda",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA",
+    "text": "QDA\n\nQDA arises when \\(p&gt;1\\) and the is a covariance structure between the predictors within the same level of the response.\nThis introduces a squared term into the maximization problem of the \\(\\delta_k(x)\\), thus the name."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#qda-in-r",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#qda-in-r",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA In R",
+    "text": "QDA In R\n\nqda_fit&lt;-discrim_quad() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")|&gt; \n  fit(default ~ balance + student,\n      data = training(def_splits))\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  conf_mat(truth = default, estimate = .pred_class) \n\n          Truth\nPrediction   No  Yes\n       No  2888   80\n       Yes    3   29\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.qmd.html#tuning-by-threhold",
+    "href": "slides/04-2-mlog-lda_o.qmd.html#tuning-by-threhold",
+    "title": "Chapter 4 Part 2",
+    "section": "Tuning By Threhold",
+    "text": "Tuning By Threhold\nhttps://www.tidymodels.org/start/case-study/"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#recap",
+    "href": "slides/04-2-mlog-lda.html#recap",
+    "title": "Chapter 4 Part 2",
+    "section": "Recap",
+    "text": "Recap\n\nWe had a logistic regression refresher\nNow…\n\nWhat if our response has more than two levels?\nWhat if logistic regression is a poor fit?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#setup",
+    "href": "slides/04-2-mlog-lda.html#setup",
+    "title": "Chapter 4 Part 2",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)\nlibrary(Stat2Data)\n#install.packages(\"discrim\")"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#multinomial-logistic",
+    "href": "slides/04-2-mlog-lda.html#multinomial-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Multinomial Logistic",
+    "text": "Multinomial Logistic\n\nSo far we have discussed logistic regression with two classes.\nIt is easily generalized to more than two classes."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#confounding",
+    "href": "slides/04-2-mlog-lda.html#confounding",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\nRecall our defaults data with variable default, student, and balance\n\n\nWhat is going on here?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#confounding-1",
+    "href": "slides/04-2-mlog-lda.html#confounding-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\n\n\nStudents tend to have higher balances than non-students\nTheir marginal default rate is higher\nFor each level of balance, students default less\nTheir conditional default rate is lower"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#multiple-logistic-regression",
+    "href": "slides/04-2-mlog-lda.html#multiple-logistic-regression",
+    "title": "Chapter 4 Part 2",
+    "section": "Multiple logistic regression",
+    "text": "Multiple logistic regression\n\\[\\log\\left(\\frac{p(X)}{1-p(X)}\\right)=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\] \\[p(X) = \\frac{e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}{1+e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}\\]\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.8690452\n0.4922555\n-22.080088\n0.0000000\n\n\nbalance\n0.0057365\n0.0002319\n24.737563\n0.0000000\n\n\nincome\n0.0000030\n0.0000082\n0.369815\n0.7115203\n\n\nstudentYes\n-0.6467758\n0.2362525\n-2.737646\n0.0061881\n\n\n\n\n\n\nWhy is the coefficient for student negative now when it was positive before?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#logistic-regression-for-more-than-two-classes",
+    "href": "slides/04-2-mlog-lda.html#logistic-regression-for-more-than-two-classes",
+    "title": "Chapter 4 Part 2",
+    "section": "Logistic regression for more than two classes",
+    "text": "Logistic regression for more than two classes\n\\[P(Y=k|X) = \\frac{e ^{\\beta_{0k}+\\beta_{1k}X_1+\\dots+\\beta_{pk}X_p}}{\\sum_{l=1}^Ke^{\\beta_{0l}+\\beta_{1l}X_1+\\dots+\\beta_{pl}X_p}}\\]\n\nWe generalize this to situations with multiple classes\nHere we have a linear function for each of the \\(K\\) classes\nThis is known as multinomial logistic regression"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-warmup",
+    "href": "slides/04-2-mlog-lda.html#lda-warmup",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Warmup",
+    "text": "LDA Warmup\nTo give us a general overview, we are going to watch the StatQuest video on the topic: https://www.youtube.com/watch?v=azXCzI57Yfc"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#discriminant-analysis",
+    "href": "slides/04-2-mlog-lda.html#discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Analysis",
+    "text": "Discriminant Analysis\n\nHere the approach is to model the distribution of X in each of the classes separately, and then use Bayes theorem to flip things around and obtain \\(P(Y|X)\\).\nWhen we use normal (Gaussian) distributions for each class, this leads to linear or quadratic discriminant analysis.\nHowever, this approach is quite general, and other distributions can be used as well. We will focus on normal distributions."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#why-another-approach",
+    "href": "slides/04-2-mlog-lda.html#why-another-approach",
+    "title": "Chapter 4 Part 2",
+    "section": "Why Another Approach?",
+    "text": "Why Another Approach?\n\nWhen the classes are well-separated, the parameter estimates for the logistic regression model are surprisingly unstable. Linear discriminant analysis does not suffer from this problem.\nIf n is small and the distribution of the predictors X is approximately normal in each of the classes, the linear discriminant model is again more stable than the logistic regression model.\nLinear discriminant analysis is popular when we have more than two response classes, because it also provides low-dimensional views of the data."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#bayes-theorem-classification",
+    "href": "slides/04-2-mlog-lda.html#bayes-theorem-classification",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes Theorem (classification)",
+    "text": "Bayes Theorem (classification)\nThomas Bayes was a famous mathematician whose name represents a big subfield of statistical and probabilistic modeling. Here we focus on a simple result, known as Bayes theorem:\n\\[P(Y=k|X=x) = \\frac{P(X=x|Y=k)\\cdot P(Y=k)}{P(X=x)}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#bayes-for-discriminant-analysis",
+    "href": "slides/04-2-mlog-lda.html#bayes-for-discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes for Discriminant Analysis",
+    "text": "Bayes for Discriminant Analysis\n\\[P(Y=k|X=x) = \\frac{\\pi_kf_k(x)}{\\sum_{l=1}^K\\pi_lf_l(x)} \\text{, where}\\]\n\n\\(f_k(x)=P(X=x|Y=k)\\) is the density for \\(X\\) in class \\(k\\). Here we use normal’s but they could be other distributions (such as \\(\\chi^2\\))\n\\(\\pi_k = P(Y=k)\\) is the marginal or prior probability for class \\(k\\)."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#classify-to-the-highest-density",
+    "href": "slides/04-2-mlog-lda.html#classify-to-the-highest-density",
+    "title": "Chapter 4 Part 2",
+    "section": "Classify to the highest density",
+    "text": "Classify to the highest density\n\\[\\pi_1=.5, \\pi_2=.5\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe classify a new point according to which density is highest.\nWhen the priors are different, we take them into account as well, and compare \\(\\pi_kf_k(x)\\).\nOn the right, we favor the pink class - the decision boundary has shifted to the left."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-when-p1",
+    "href": "slides/04-2-mlog-lda.html#lda-when-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nThe Gaussian (normal) density has the form\n\\[f_k(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma_k}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}\\]\n\n\\(\\mu_k\\) is the mean, \\(\\sigma_k^2\\) the variance (in class \\(k\\))\nFor now, we assume \\(\\sigma_k=\\sigma\\) for all groups (we will need to check this with real data)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-when-p1-1",
+    "href": "slides/04-2-mlog-lda.html#lda-when-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nWe plug this \\(f_k(x)\\) into Bayes formula and after some simplifying we get:\n\\[p_k(x) = \\frac{\\pi_k\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}{\\sum_{l=1}^K\\pi_l\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#discriminant-function",
+    "href": "slides/04-2-mlog-lda.html#discriminant-function",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Function",
+    "text": "Discriminant Function\nTo classify at the value X = x, we need to see which of the \\(p_k(x)\\) is largest. Taking logs, and discarding terms that do not depend on \\(k\\), we see that this is equivalent to assigning x to the class with the largest discriminant score:\n\n\\[\\delta_k(x) = x\\cdot \\frac{\\mu_k}{\\sigma^2}-\\frac{\\mu_k^2}{2\\sigma^2}+log(\\pi_k)\\]\n\nImportantly, \\(\\delta_k(x)\\) is a linear function of \\(x\\).\nIf there are \\(K=2\\) classes and \\(\\pi_1=\\pi_2=.5\\), then the decision boundry is at\n\n\n\n\\[x=\\frac{\\mu_1+\\mu_2}{2}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#maximizing-delta_kx",
+    "href": "slides/04-2-mlog-lda.html#maximizing-delta_kx",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\nIn order to maximize this, we need estimates for all the parameters\n\n\nWhat should we estimate \\(\\hat{\\pi_k}\\), \\(\\mu_k\\), and \\(\\sigma^2\\) with?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#maximizing-delta_kx-1",
+    "href": "slides/04-2-mlog-lda.html#maximizing-delta_kx-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\n\\[\\hat{\\pi}_k = \\frac{n_k}{n}\\] . . .\n\\[\\hat{\\mu}_k = \\frac{1}{n_k}\\sum_{i:y_k=k}x_i\\] . . .\n\\[\\hat{\\sigma}^2 = \\frac{1}{n-K}\\sum_{k=1}^K\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2 = \\sum_{k=1}^K\\frac{n_k-1}{n-K}\\cdot \\hat{\\sigma}_k^2\\]\nWhere \\[\\hat{\\sigma}_k^2 = \\frac{1}{n_k-1}\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-in-r-example-p1",
+    "href": "slides/04-2-mlog-lda.html#lda-in-r-example-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA In R Example (\\(p=1\\))",
+    "text": "LDA In R Example (\\(p=1\\))\n\ndata(\"BlueJays\") # Bring data into environment\nlibrary(Stat2Data)\nlibrary(tidymodels)\nlibrary(tidyverse)\nlibrary(discrim)\n\n\nCan we determine the sex of a blue jay by measuring the distance from the tip of the bill to the back of the head (Head)?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-bluejays-eda",
+    "href": "slides/04-2-mlog-lda.html#lda-bluejays-eda",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\ntt_split &lt;- initial_split(BlueJays,prop=.7)\n\nBJ_train &lt;- training(tt_split)\n\nBJ_train |&gt; ggplot(aes(x = Head,y=KnownSex)) +\n  geom_boxplot() +\n  theme_bw()"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-bluejays-eda-1",
+    "href": "slides/04-2-mlog-lda.html#lda-bluejays-eda-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\nWhat assumptions should we check?\n\n\nNormality of our predictor\nConstant variance between groups."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-bluejays-eda---normality",
+    "href": "slides/04-2-mlog-lda.html#lda-bluejays-eda---normality",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Normality",
+    "text": "LDA Bluejays EDA - Normality\n\nlibrary(patchwork)\n\n(BJ_train |&gt; ggplot(aes(sample = Head)) + geom_qq())+\n  (BJ_train |&gt; ggplot(aes(x = Head)) + geom_histogram())"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-bluejays-eda---variance",
+    "href": "slides/04-2-mlog-lda.html#lda-bluejays-eda---variance",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Variance",
+    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F           1.23\n2 M           1.08\n\n\n\nVery similar standard deviations (and thus variances)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#fit-lda",
+    "href": "slides/04-2-mlog-lda.html#fit-lda",
+    "title": "Chapter 4 Part 2",
+    "section": "Fit LDA",
+    "text": "Fit LDA\n\nlda_spec &lt;- discrim_linear() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")\n\nlda_fit&lt;- fit(lda_spec,\n            KnownSex ~ Head,\n            data = BJ_train)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#check-the-fit",
+    "href": "slides/04-2-mlog-lda.html#check-the-fit",
+    "title": "Chapter 4 Part 2",
+    "section": "Check The Fit",
+    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F 12  5\n         M  6 14\n\n\n\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.703"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#compare-to-logistic",
+    "href": "slides/04-2-mlog-lda.html#compare-to-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Compare to Logistic",
+    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.730"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#application-exercise",
+    "href": "slides/04-2-mlog-lda.html#application-exercise",
+    "title": "Chapter 4 Part 2",
+    "section": " Application Exercise",
+    "text": "Application Exercise\nWe are going to use the penguins data from the palmerpeguins package.\n\nConduct basic EDA to see if penguin bill length is different by sex and if LDA is an appropriate model choice.\nUse LDA to predict penguin sex based on their bill length using training and testing data. Get the accuracy on the testing set.\nFit a logistic regression model and get it’s accuracy to see which did better."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-with-p1",
+    "href": "slides/04-2-mlog-lda.html#lda-with-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nWhen we have 2 or more predictors, the distribution becomes multivariate.\nIf the covariance between predictors is 0 within each class of the response, LDA is still appropriate."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#lda-with-p1-1",
+    "href": "slides/04-2-mlog-lda.html#lda-with-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nFor example, with 2 normal predictors, their distributions in 3d would like like this:\n\n\n\n\nLuckily, the discriminate function remains linear\n\n\\[\\delta_k(x) = c_{k0} + c_{k1}x_1+...c_{kp}x_p\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#example-p2k3",
+    "href": "slides/04-2-mlog-lda.html#example-p2k3",
+    "title": "Chapter 4 Part 2",
+    "section": "Example: \\(p=2,K=3\\)",
+    "text": "Example: \\(p=2,K=3\\)\n\nThere is no limit on the number of levels of the categorical response for LDA\nSuppose \\(\\pi_1=\\pi_2\\pi_3=1/3\\)\n\n\n - The dashed lines are known as the Bayes decision boundaries"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#probabilities",
+    "href": "slides/04-2-mlog-lda.html#probabilities",
+    "title": "Chapter 4 Part 2",
+    "section": "Probabilities",
+    "text": "Probabilities\n\nOnce the estimates for the \\(\\hat{\\delta}_k(x)\\) have been found, we can plug them in and get:\n\\[\\hat{P}(Y=k|X=x)=\\frac{e^{\\hat{\\delta}_k(x)}}{\\sum_{l=1}^Ke^{\\hat{\\delta}^l(x)}}\\]\nClassifying to the largest \\(\\hat{\\delta}_k(x)\\) amounts to classifying to the class for which \\(\\hat{P}(Y = k|X = x)\\) is largest.\nWhen \\(K = 2\\), we classify to class 2 if \\(\\hat{P}(Y = 2|X = x)\\geq 0.5\\), else to class 1."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#example---credit-card-fraud",
+    "href": "slides/04-2-mlog-lda.html#example---credit-card-fraud",
+    "title": "Chapter 4 Part 2",
+    "section": "Example - Credit Card Fraud",
+    "text": "Example - Credit Card Fraud\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.972\n\n\n\nAccuracy of 97.7% on a testing set!\nWhat about the different types of errors?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#errors",
+    "href": "slides/04-2-mlog-lda.html#errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Errors",
+    "text": "Errors\n\nOf the true yes, we made errors at the rate of 83/(83+26), 76%\nOf the true no, we made errors at the rate of 2/(2889+2), .069%"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#types-of-errors",
+    "href": "slides/04-2-mlog-lda.html#types-of-errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Types of Errors",
+    "text": "Types of Errors\n\nRecall:\n\nFalse positive rate: The fraction of negative examples that are classified as positive.\nFalse negative rate: The fraction of positive examples that are classified as negative.\n\nRemember the model gave probabilities, the final yes or no is decided by\n\\[\\hat{P}(Default=Yes|Balance,Student) \\geq .5\\]\n\nWe can adjust our error rates by changing that threshold"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#sensitivity-and-specificity",
+    "href": "slides/04-2-mlog-lda.html#sensitivity-and-specificity",
+    "title": "Chapter 4 Part 2",
+    "section": "Sensitivity and Specificity",
+    "text": "Sensitivity and Specificity\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n\nThe sensitivity is the true positive rate.\n\nThe rate at which we correctly predict a person will default.\n26/(83+26) = .24 (24%)\n\nThe specificity is the true negative rate.\n\nThe rate at which we correctly predict a person will not default.\n2889/(2889+2) =.999 (99.9%)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#varying-the-threshold",
+    "href": "slides/04-2-mlog-lda.html#varying-the-threshold",
+    "title": "Chapter 4 Part 2",
+    "section": "Varying the threshold",
+    "text": "Varying the threshold\n\nIn order to determine the best threshold, we want to maximize the specificty and sensitivity.\nOR - maximize the sensitivty and minimize 1-specificity.\nIn order to to do this we use an \\(ROC\\) curve which stands for receiver operating characteristic curve."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#roc-curve",
+    "href": "slides/04-2-mlog-lda.html#roc-curve",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\nWe want to maximize the area under this curve, called ROC AUC\n\nlda_roc&lt;- lda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_curve(truth = default,.pred_No) \n\nhead(lda_roc)\n\n# A tibble: 6 × 3\n  .threshold specificity sensitivity\n       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;\n1  -Inf          0                 1\n2     0.0819     0                 1\n3     0.129      0.00917           1\n4     0.151      0.0183            1\n5     0.154      0.0275            1\n6     0.201      0.0367            1"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#roc-curve-1",
+    "href": "slides/04-2-mlog-lda.html#roc-curve-1",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\n\nautoplot(lda_roc)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#roc-auc",
+    "href": "slides/04-2-mlog-lda.html#roc-auc",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC AUC",
+    "text": "ROC AUC\n\nlda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957\n\n\nIf we want to tune our model better, we can optimize the ROC AUC by changing the threshold.\n\nI did a train/test approach here. What should I do different if I want to tune for threshold?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#qda",
+    "href": "slides/04-2-mlog-lda.html#qda",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA",
+    "text": "QDA\n\nQDA arises when \\(p&gt;1\\) and the is a covariance structure between the predictors within the same level of the response.\nThis introduces a squared term into the maximization problem of the \\(\\delta_k(x)\\), thus the name."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#qda-in-r",
+    "href": "slides/04-2-mlog-lda.html#qda-in-r",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA In R",
+    "text": "QDA In R\n\nqda_fit&lt;-discrim_quad() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")|&gt; \n  fit(default ~ balance + student,\n      data = training(def_splits))\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  conf_mat(truth = default, estimate = .pred_class) \n\n          Truth\nPrediction   No  Yes\n       No  2888   80\n       Yes    3   29\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#tuning-by-threhold",
+    "href": "slides/04-2-mlog-lda.html#tuning-by-threhold",
+    "title": "Chapter 4 Part 2",
+    "section": "Tuning By Threhold",
+    "text": "Tuning By Threhold\nhttps://www.tidymodels.org/start/case-study/"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html",
+    "href": "slides/04-2-mlog-lda_o.html",
+    "title": "Chapter 4 Part 2",
+    "section": "",
+    "text": "We had a logistic regression refresher\nNow…\n\nWhat if our response has more than two levels?\nWhat if logistic regression is a poor fit?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#recap",
+    "href": "slides/04-2-mlog-lda_o.html#recap",
+    "title": "Chapter 4 Part 2",
+    "section": "",
+    "text": "We had a logistic regression refresher\nNow…\n\nWhat if our response has more than two levels?\nWhat if logistic regression is a poor fit?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#setup",
+    "href": "slides/04-2-mlog-lda_o.html#setup",
+    "title": "Chapter 4 Part 2",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(tidymodels)\nlibrary(gridExtra)\nlibrary(ISLR)\nlibrary(Stat2Data)\n#install.packages(\"discrim\")"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#multinomial-logistic",
+    "href": "slides/04-2-mlog-lda_o.html#multinomial-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Multinomial Logistic",
+    "text": "Multinomial Logistic\n\nSo far we have discussed logistic regression with two classes.\nIt is easily generalized to more than two classes."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#confounding",
+    "href": "slides/04-2-mlog-lda_o.html#confounding",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\nRecall our defaults data with variable default, student, and balance\n\n\n\n\n\n\n\n\n\n\nWhat is going on here?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#confounding-1",
+    "href": "slides/04-2-mlog-lda_o.html#confounding-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Confounding",
+    "text": "Confounding\n\n\n\n\n\n\n\n\n\n\nStudents tend to have higher balances than non-students\nTheir marginal default rate is higher\nFor each level of balance, students default less\nTheir conditional default rate is lower"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#multiple-logistic-regression",
+    "href": "slides/04-2-mlog-lda_o.html#multiple-logistic-regression",
+    "title": "Chapter 4 Part 2",
+    "section": "Multiple logistic regression",
+    "text": "Multiple logistic regression\n\\[\\log\\left(\\frac{p(X)}{1-p(X)}\\right)=\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p\\] \\[p(X) = \\frac{e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}{1+e^{\\beta_0+\\beta_1X_1+\\dots+\\beta_pX_p}}\\]\n\n\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n\n(Intercept)\n-10.8690452\n0.4922555\n-22.080088\n0.0000000\n\n\nbalance\n0.0057365\n0.0002319\n24.737563\n0.0000000\n\n\nincome\n0.0000030\n0.0000082\n0.369815\n0.7115203\n\n\nstudentYes\n-0.6467758\n0.2362525\n-2.737646\n0.0061881\n\n\n\n\n\n\nWhy is the coefficient for student negative now when it was positive before?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#logistic-regression-for-more-than-two-classes",
+    "href": "slides/04-2-mlog-lda_o.html#logistic-regression-for-more-than-two-classes",
+    "title": "Chapter 4 Part 2",
+    "section": "Logistic regression for more than two classes",
+    "text": "Logistic regression for more than two classes\n\\[P(Y=k|X) = \\frac{e ^{\\beta_{0k}+\\beta_{1k}X_1+\\dots+\\beta_{pk}X_p}}{\\sum_{l=1}^Ke^{\\beta_{0l}+\\beta_{1l}X_1+\\dots+\\beta_{pl}X_p}}\\]\n\nWe generalize this to situations with multiple classes\nHere we have a linear function for each of the \\(K\\) classes\nThis is known as multinomial logistic regression"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-warmup",
+    "href": "slides/04-2-mlog-lda_o.html#lda-warmup",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Warmup",
+    "text": "LDA Warmup\nTo give us a general overview, we are going to watch the StatQuest video on the topic: https://www.youtube.com/watch?v=azXCzI57Yfc"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#discriminant-analysis",
+    "href": "slides/04-2-mlog-lda_o.html#discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Analysis",
+    "text": "Discriminant Analysis\n\nHere the approach is to model the distribution of X in each of the classes separately, and then use Bayes theorem to flip things around and obtain \\(P(Y|X)\\).\nWhen we use normal (Gaussian) distributions for each class, this leads to linear or quadratic discriminant analysis.\nHowever, this approach is quite general, and other distributions can be used as well. We will focus on normal distributions."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#why-another-approach",
+    "href": "slides/04-2-mlog-lda_o.html#why-another-approach",
+    "title": "Chapter 4 Part 2",
+    "section": "Why Another Approach?",
+    "text": "Why Another Approach?\n\nWhen the classes are well-separated, the parameter estimates for the logistic regression model are surprisingly unstable. Linear discriminant analysis does not suffer from this problem.\nIf n is small and the distribution of the predictors X is approximately normal in each of the classes, the linear discriminant model is again more stable than the logistic regression model.\nLinear discriminant analysis is popular when we have more than two response classes, because it also provides low-dimensional views of the data."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#bayes-theorem-classification",
+    "href": "slides/04-2-mlog-lda_o.html#bayes-theorem-classification",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes Theorem (classification)",
+    "text": "Bayes Theorem (classification)\nThomas Bayes was a famous mathematician whose name represents a big subfield of statistical and probabilistic modeling. Here we focus on a simple result, known as Bayes theorem:\n\\[P(Y=k|X=x) = \\frac{P(X=x|Y=k)\\cdot P(Y=k)}{P(X=x)}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#bayes-for-discriminant-analysis",
+    "href": "slides/04-2-mlog-lda_o.html#bayes-for-discriminant-analysis",
+    "title": "Chapter 4 Part 2",
+    "section": "Bayes for Discriminant Analysis",
+    "text": "Bayes for Discriminant Analysis\n\\[P(Y=k|X=x) = \\frac{\\pi_kf_k(x)}{\\sum_{l=1}^K\\pi_lf_l(x)} \\text{, where}\\]\n\n\\(f_k(x)=P(X=x|Y=k)\\) is the density for \\(X\\) in class \\(k\\). Here we use normal’s but they could be other distributions (such as \\(\\chi^2\\))\n\\(\\pi_k = P(Y=k)\\) is the marginal or prior probability for class \\(k\\)."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#classify-to-the-highest-density",
+    "href": "slides/04-2-mlog-lda_o.html#classify-to-the-highest-density",
+    "title": "Chapter 4 Part 2",
+    "section": "Classify to the highest density",
+    "text": "Classify to the highest density\n\\[\\pi_1=.5, \\pi_2=.5\\]\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe classify a new point according to which density is highest.\nWhen the priors are different, we take them into account as well, and compare \\(\\pi_kf_k(x)\\).\nOn the right, we favor the pink class - the decision boundary has shifted to the left."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-when-p1",
+    "href": "slides/04-2-mlog-lda_o.html#lda-when-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nThe Gaussian (normal) density has the form\n\\[f_k(x) = \\frac{1}{\\sqrt{2\\pi}\\sigma_k}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}\\]\n\n\\(\\mu_k\\) is the mean, \\(\\sigma_k^2\\) the variance (in class \\(k\\))\nFor now, we assume \\(\\sigma_k=\\sigma\\) for all groups (we will need to check this with real data)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-when-p1-1",
+    "href": "slides/04-2-mlog-lda_o.html#lda-when-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA (when \\(p=1\\))",
+    "text": "LDA (when \\(p=1\\))\nWe plug this \\(f_k(x)\\) into Bayes formula and after some simplifying we get:\n\\[p_k(x) = \\frac{\\pi_k\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}{\\sum_{l=1}^K\\pi_l\\frac{1}{\\sqrt{2\\pi}\\sigma}e^{-\\frac{1}{2}(\\frac{x-\\mu_k}{\\sigma_k})^2}}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#discriminant-function",
+    "href": "slides/04-2-mlog-lda_o.html#discriminant-function",
+    "title": "Chapter 4 Part 2",
+    "section": "Discriminant Function",
+    "text": "Discriminant Function\nTo classify at the value X = x, we need to see which of the \\(p_k(x)\\) is largest. Taking logs, and discarding terms that do not depend on \\(k\\), we see that this is equivalent to assigning x to the class with the largest discriminant score:\n. . .\n\\[\\delta_k(x) = x\\cdot \\frac{\\mu_k}{\\sigma^2}-\\frac{\\mu_k^2}{2\\sigma^2}+log(\\pi_k)\\]\n\nImportantly, \\(\\delta_k(x)\\) is a linear function of \\(x\\).\nIf there are \\(K=2\\) classes and \\(\\pi_1=\\pi_2=.5\\), then the decision boundry is at\n\n. . .\n\\[x=\\frac{\\mu_1+\\mu_2}{2}\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#maximizing-delta_kx",
+    "href": "slides/04-2-mlog-lda_o.html#maximizing-delta_kx",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\nIn order to maximize this, we need estimates for all the parameters\n. . .\n\nWhat should we estimate \\(\\hat{\\pi_k}\\), \\(\\mu_k\\), and \\(\\sigma^2\\) with?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#maximizing-delta_kx-1",
+    "href": "slides/04-2-mlog-lda_o.html#maximizing-delta_kx-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Maximizing \\(\\delta_k(x)\\)",
+    "text": "Maximizing \\(\\delta_k(x)\\)\n\\[\\hat{\\pi}_k = \\frac{n_k}{n}\\] . . .\n\\[\\hat{\\mu}_k = \\frac{1}{n_k}\\sum_{i:y_k=k}x_i\\] . . .\n\\[\\hat{\\sigma}^2 = \\frac{1}{n-K}\\sum_{k=1}^K\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2 = \\sum_{k=1}^K\\frac{n_k-1}{n-K}\\cdot \\hat{\\sigma}_k^2\\]\nWhere \\[\\hat{\\sigma}_k^2 = \\frac{1}{n_k-1}\\sum_{i:y_i=k}(x_i-\\hat{\\mu}_k)^2\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-in-r-example-p1",
+    "href": "slides/04-2-mlog-lda_o.html#lda-in-r-example-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA In R Example (\\(p=1\\))",
+    "text": "LDA In R Example (\\(p=1\\))\n\ndata(\"BlueJays\") # Bring data into environment\nlibrary(Stat2Data)\nlibrary(tidymodels)\nlibrary(tidyverse)\nlibrary(discrim)\n\n\nCan we determine the sex of a blue jay by measuring the distance from the tip of the bill to the back of the head (Head)?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda",
+    "href": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\ntt_split &lt;- initial_split(BlueJays,prop=.7)\n\nBJ_train &lt;- training(tt_split)\n\nBJ_train |&gt; ggplot(aes(x = Head,y=KnownSex)) +\n  geom_boxplot() +\n  theme_bw()"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda-1",
+    "href": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA",
+    "text": "LDA Bluejays EDA\n\nWhat assumptions should we check?\n\n\nNormality of our predictor\nConstant variance between groups."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda---normality",
+    "href": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda---normality",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Normality",
+    "text": "LDA Bluejays EDA - Normality\n\nlibrary(patchwork)\n\n(BJ_train |&gt; ggplot(aes(sample = Head)) + geom_qq())+\n  (BJ_train |&gt; ggplot(aes(x = Head)) + geom_histogram())"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda---variance",
+    "href": "slides/04-2-mlog-lda_o.html#lda-bluejays-eda---variance",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA Bluejays EDA - Variance",
+    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F           1.23\n2 M           1.08\n\n\n\nVery similar standard deviations (and thus variances)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#fit-lda",
+    "href": "slides/04-2-mlog-lda_o.html#fit-lda",
+    "title": "Chapter 4 Part 2",
+    "section": "Fit LDA",
+    "text": "Fit LDA\n\nlda_spec &lt;- discrim_linear() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")\n\nlda_fit&lt;- fit(lda_spec,\n            KnownSex ~ Head,\n            data = BJ_train)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#check-the-fit",
+    "href": "slides/04-2-mlog-lda_o.html#check-the-fit",
+    "title": "Chapter 4 Part 2",
+    "section": "Check The Fit",
+    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F 12  5\n         M  6 14\n\n\n. . .\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.703"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#compare-to-logistic",
+    "href": "slides/04-2-mlog-lda_o.html#compare-to-logistic",
+    "title": "Chapter 4 Part 2",
+    "section": "Compare to Logistic",
+    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.730"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#application-exercise",
+    "href": "slides/04-2-mlog-lda_o.html#application-exercise",
+    "title": "Chapter 4 Part 2",
+    "section": " Application Exercise",
+    "text": "Application Exercise\nWe are going to use the penguins data from the palmerpeguins package.\n\nConduct basic EDA to see if penguin bill length is different by sex and if LDA is an appropriate model choice.\nUse LDA to predict penguin sex based on their bill length using training and testing data. Get the accuracy on the testing set.\nFit a logistic regression model and get it’s accuracy to see which did better."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-with-p1",
+    "href": "slides/04-2-mlog-lda_o.html#lda-with-p1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nWhen we have 2 or more predictors, the distribution becomes multivariate.\nIf the covariance between predictors is 0 within each class of the response, LDA is still appropriate."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#lda-with-p1-1",
+    "href": "slides/04-2-mlog-lda_o.html#lda-with-p1-1",
+    "title": "Chapter 4 Part 2",
+    "section": "LDA with \\(p>1\\)",
+    "text": "LDA with \\(p&gt;1\\)\n\nFor example, with 2 normal predictors, their distributions in 3d would like like this:\n\n. . .\n\n\nLuckily, the discriminate function remains linear\n\n\\[\\delta_k(x) = c_{k0} + c_{k1}x_1+...c_{kp}x_p\\]"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#example-p2k3",
+    "href": "slides/04-2-mlog-lda_o.html#example-p2k3",
+    "title": "Chapter 4 Part 2",
+    "section": "Example: \\(p=2,K=3\\)",
+    "text": "Example: \\(p=2,K=3\\)\n\nThere is no limit on the number of levels of the categorical response for LDA\nSuppose \\(\\pi_1=\\pi_2\\pi_3=1/3\\)\n\n. . .\n - The dashed lines are known as the Bayes decision boundaries"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#probabilities",
+    "href": "slides/04-2-mlog-lda_o.html#probabilities",
+    "title": "Chapter 4 Part 2",
+    "section": "Probabilities",
+    "text": "Probabilities\n\nOnce the estimates for the \\(\\hat{\\delta}_k(x)\\) have been found, we can plug them in and get:\n\\[\\hat{P}(Y=k|X=x)=\\frac{e^{\\hat{\\delta}_k(x)}}{\\sum_{l=1}^Ke^{\\hat{\\delta}^l(x)}}\\]\nClassifying to the largest \\(\\hat{\\delta}_k(x)\\) amounts to classifying to the class for which \\(\\hat{P}(Y = k|X = x)\\) is largest.\nWhen \\(K = 2\\), we classify to class 2 if \\(\\hat{P}(Y = 2|X = x)\\geq 0.5\\), else to class 1."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#example---credit-card-fraud",
+    "href": "slides/04-2-mlog-lda_o.html#example---credit-card-fraud",
+    "title": "Chapter 4 Part 2",
+    "section": "Example - Credit Card Fraud",
+    "text": "Example - Credit Card Fraud\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.972\n\n\n\nAccuracy of 97.7% on a testing set!\nWhat about the different types of errors?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#errors",
+    "href": "slides/04-2-mlog-lda_o.html#errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Errors",
+    "text": "Errors\n\nOf the true yes, we made errors at the rate of 83/(83+26), 76%\nOf the true no, we made errors at the rate of 2/(2889+2), .069%"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#types-of-errors",
+    "href": "slides/04-2-mlog-lda_o.html#types-of-errors",
+    "title": "Chapter 4 Part 2",
+    "section": "Types of Errors",
+    "text": "Types of Errors\n\nRecall:\n\nFalse positive rate: The fraction of negative examples that are classified as positive.\nFalse negative rate: The fraction of positive examples that are classified as negative.\n\nRemember the model gave probabilities, the final yes or no is decided by\n\\[\\hat{P}(Default=Yes|Balance,Student) \\geq .5\\]\n\nWe can adjust our error rates by changing that threshold"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#sensitivity-and-specificity",
+    "href": "slides/04-2-mlog-lda_o.html#sensitivity-and-specificity",
+    "title": "Chapter 4 Part 2",
+    "section": "Sensitivity and Specificity",
+    "text": "Sensitivity and Specificity\n\n\n          Truth\nPrediction   No  Yes\n       No  2889   83\n       Yes    2   26\n\n\n\nThe sensitivity is the true positive rate.\n\nThe rate at which we correctly predict a person will default.\n26/(83+26) = .24 (24%)\n\nThe specificity is the true negative rate.\n\nThe rate at which we correctly predict a person will not default.\n2889/(2889+2) =.999 (99.9%)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#varying-the-threshold",
+    "href": "slides/04-2-mlog-lda_o.html#varying-the-threshold",
+    "title": "Chapter 4 Part 2",
+    "section": "Varying the threshold",
+    "text": "Varying the threshold\n\nIn order to determine the best threshold, we want to maximize the specificty and sensitivity.\nOR - maximize the sensitivty and minimize 1-specificity.\nIn order to to do this we use an \\(ROC\\) curve which stands for receiver operating characteristic curve."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#roc-curve",
+    "href": "slides/04-2-mlog-lda_o.html#roc-curve",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\nWe want to maximize the area under this curve, called ROC AUC\n\nlda_roc&lt;- lda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_curve(truth = default,.pred_No) \n\nhead(lda_roc)\n\n# A tibble: 6 × 3\n  .threshold specificity sensitivity\n       &lt;dbl&gt;       &lt;dbl&gt;       &lt;dbl&gt;\n1  -Inf          0                 1\n2     0.0819     0                 1\n3     0.129      0.00917           1\n4     0.151      0.0183            1\n5     0.154      0.0275            1\n6     0.201      0.0367            1"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#roc-curve-1",
+    "href": "slides/04-2-mlog-lda_o.html#roc-curve-1",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC Curve",
+    "text": "ROC Curve\n\nautoplot(lda_roc)"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#roc-auc",
+    "href": "slides/04-2-mlog-lda_o.html#roc-auc",
+    "title": "Chapter 4 Part 2",
+    "section": "ROC AUC",
+    "text": "ROC AUC\n\nlda_fit_2 |&gt;\n  augment(new_data = testing(def_splits)) |&gt;\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957\n\n\nIf we want to tune our model better, we can optimize the ROC AUC by changing the threshold.\n\nI did a train/test approach here. What should I do different if I want to tune for threshold?"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#qda",
+    "href": "slides/04-2-mlog-lda_o.html#qda",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA",
+    "text": "QDA\n\nQDA arises when \\(p&gt;1\\) and the is a covariance structure between the predictors within the same level of the response.\nThis introduces a squared term into the maximization problem of the \\(\\delta_k(x)\\), thus the name."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#qda-in-r",
+    "href": "slides/04-2-mlog-lda_o.html#qda-in-r",
+    "title": "Chapter 4 Part 2",
+    "section": "QDA In R",
+    "text": "QDA In R\n\nqda_fit&lt;-discrim_quad() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"MASS\")|&gt; \n  fit(default ~ balance + student,\n      data = training(def_splits))\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  conf_mat(truth = default, estimate = .pred_class) \n\n          Truth\nPrediction   No  Yes\n       No  2888   80\n       Yes    3   29\n\nqda_fit |&gt;\n  augment(new_data = testing(def_splits)) %&gt;%\n  roc_auc(truth = default,.pred_No) \n\n# A tibble: 1 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 roc_auc binary         0.957"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda_o.html#tuning-by-threhold",
+    "href": "slides/04-2-mlog-lda_o.html#tuning-by-threhold",
+    "title": "Chapter 4 Part 2",
+    "section": "Tuning By Threhold",
+    "text": "Tuning By Threhold\nhttps://www.tidymodels.org/start/case-study/"
   }
 ]

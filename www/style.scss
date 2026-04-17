@@ -8,3 +8,7 @@
 .center h5 {
   text-align: center;
 }
+
+:not(pre) > code {
+  background-color: white !important;
+}

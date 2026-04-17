@@ -75,7 +75,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting-4c7b890cc350be7067044af900615741.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-02eb42f406eb4160cdedd79fbc65702a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-9554d1459b61db7d5fadbbfffad54d39.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -106,16 +106,45 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="Homework 3 – STA 362: Statistical Learning">
-<meta property="og:description" content="Logistic, LDA, QDA, Naive Bayes, and KNN">
+<meta property="og:description" content="Classification">
 <meta property="og:image" content="https://stats-tgeorge.github.io/STA362StatLearning//img/twitter.png">
 <meta property="og:site_name" content="STA 362: Statistical Learning">
 <meta property="og:locale" content="en_US">
 <meta property="og:image:height" content="670">
 <meta property="og:image:width" content="1200">
 <meta name="twitter:title" content="Homework 3 – STA 362: Statistical Learning">
-<meta name="twitter:description" content="Logistic, LDA, QDA, Naive Bayes, and KNN">
+<meta name="twitter:description" content="Classification">
 <meta name="twitter:image" content="https://stats-tgeorge.github.io/STA362StatLearning//img/twitter.png">
 <meta name="twitter:creator" content="@stats_tgeorge">
 <meta name="twitter:card" content="summary_large_image">
@@ -258,8 +287,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#due-4232024-at-1pm" id="toc-due-4232024-at-1pm" class="nav-link active" data-scroll-target="#due-4232024-at-1pm">Due 4/23/2024 at 1pm</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
+  <li><a href="#instructions" id="toc-instructions" class="nav-link active" data-scroll-target="#instructions">Instructions</a></li>
   <li><a href="#exercises---note-the-chapter-number" id="toc-exercises---note-the-chapter-number" class="nav-link" data-scroll-target="#exercises---note-the-chapter-number">Exercises - NOTE THE CHAPTER NUMBER</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
@@ -271,7 +299,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Homework 3</h1>
-<p class="subtitle lead">Logistic, LDA, QDA, Naive Bayes, and KNN</p>
+<p class="subtitle lead">Classification</p>
 </div>
 
 
@@ -288,9 +316,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="due-4232024-at-1pm" class="level2">
-<h2 class="anchored" data-anchor-id="due-4232024-at-1pm">Due 4/23/2024 at 1pm</h2>
-</section>
 <section id="instructions" class="level1">
 <h1>Instructions</h1>
 <ul>
@@ -316,16 +341,74 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="exercises---note-the-chapter-number" class="level1">
 <h1>Exercises - NOTE THE CHAPTER NUMBER</h1>
 <ol type="1">
-<li><strong>Complete exercise chapter 5, number 5 in ISLR.</strong></li>
+<li><p>(ISLR 5.) In Chapter 4, we used logistic regression to predict the probability of default using <code>income</code> and <code>balance</code> on the <code>Default</code> data set. We will now estimate the test error of this logistic regression model using the validation set approach. Do not forget to set a random seed before beginning your analysis.</p>
+<ol type="a">
+<li><p>Fit a logistic regression model that uses <code>income</code> and <code>balance</code> to predict <code>default</code>.</p></li>
+<li><p>Using the validation set approach, estimate the test error of this model. In order to do this, you must perform the following steps:</p>
+<ol type="i">
+<li><p>Split the sample set into a training set and a validation set.</p></li>
+<li><p>Fit a multiple logistic regression model using only the training observations.</p></li>
+<li><p>Obtain prediction of default status of each individual in the validation set by computing the posterior probability of default for that individual, and classifying the individual to the default category if the posterior probability is greater than 0.5.</p></li>
+<li><p>Compute the validation set error, which is the fraction of the observations in the validation set that are misclassified.</p></li>
+</ol></li>
+</ol></li>
+<li><p>(ISLR 4.12) Suppose that you wish to classify an observation <span class="math inline">\(X \in \mathbb{R}\)</span> into apples and oranges. You fit a logistic regression model and find that</p></li>
 </ol>
-<ul>
-<li>Replace (b) (iii) with the following: Obtain prediction of default status of each individual in the validation set.</li>
-</ul>
+<p><span class="math inline">\(\ \hat{Pr}(Y = \text{orange} \mid X = x) = \frac{\exp(\hat{\beta}_0 + \hat{\beta}_1 x)}{1 + \exp(\hat{\beta}_0 + \hat{\beta}_1 x)}.\)</span></p>
+<p>Your friend fits a logistic regression model to the same data using the softmax formulation in (ISLR 4.13), and finds that</p>
+<p><span class="math inline">\(\hat{Pr}(Y = \text{orange} \mid X = x) = \frac{\exp(\hat{\alpha}_{\text{orange}0} + \hat{\alpha}_{\text{orange}1} x)}{\exp(\hat{\alpha}_{\text{orange}0} + \hat{\alpha}_{\text{orange}1} x) + \exp(\hat{\alpha}_{\text{apple}0} + \hat{\alpha}_{\text{apple}1} x)}.\)</span></p>
 <ol start="2" type="1">
-<li><p><strong>Complete exercise chapter 4, number 12 in ISLR.</strong></p></li>
-<li><p><strong>Complete exercise chapter 4, number 13 in ISLR.</strong> NOTE: Confusion matrix is the two-way table.</p></li>
-<li><p><strong>Complete exercise chapter 4, number 16 in ISLR.</strong></p></li>
+<li><p>Continued</p>
+<ol type="a">
+<li><p>What is the log odds of orange versus apple in your model?</p></li>
+<li><p>What is the log odds of orange versus apple in your friend’s model?</p></li>
+<li><p>Suppose that in your model, <span class="math inline">\(\hat{\beta}_0 = 2\)</span> and <span class="math inline">\(\hat{\beta}_1 = -1\)</span>. What are the coefficient estimates in your friend’s model? Be as specific as possible.</p></li>
+<li><p>Now suppose that you and your friend fit the same two models on a different data set. This time, your friend gets the coefficient estimates <span class="math inline">\(\hat{\alpha}_{\text{orange}0} = 1.2\)</span>, <span class="math inline">\(\hat{\alpha}_{\text{orange}1} = -2\)</span>, <span class="math inline">\(\hat{\alpha}_{\text{apple}0} = 3\)</span>, and <span class="math inline">\(\hat{\alpha}_{\text{apple}1} = 0.6\)</span>. What are the coefficient estimates in your model?</p></li>
+<li><p>Finally, suppose you apply both models from (d) to a data set with 2,000 test observations. What fraction of the time do you expect the predicted class labels from your model to agree with those from your friend’s model? Explain your answer.</p></li>
+</ol></li>
+<li><p>(ISLR 4.13) This question should be answered using the <code>Weekly</code> data set, which is part of the <code>ISLR2</code> package. This data is similar in nature to the <code>Smarket</code> data from this chapter’s lab, except that it contains 1,089 weekly returns for 21 years, from the beginning of 1990 to the end of 2010.</p>
+<ol type="a">
+<li><p>Produce some numerical and graphical summaries of the <code>Weekly</code> data. Do there appear to be any patterns?</p></li>
+<li><p>Use the full data set to perform a logistic regression with <code>Direction</code> as the response and the five lag variables plus <code>Volume</code> as predictors. Use the <code>summary()</code> function to print the results. Do any of the predictors appear to be statistically significant? If so, which ones?</p></li>
+<li><p>Compute the confusion matrix and overall fraction of correct predictions. Explain what the confusion matrix is telling you about the types of mistakes made by logistic regression.</p></li>
+<li><p>Now fit the logistic regression model using a training data period from 1990 to 2008, with <code>Lag2</code> as the only predictor. Compute the confusion matrix and the overall fraction of correct predictions for the held out data (that is, the data from 2009 and 2010).</p></li>
+<li><p>Repeat (d) using LDA.</p></li>
+<li><p>Repeat (d) using QDA.</p></li>
+<li><p>Repeat (d) using KNN with <span class="math inline">\(K = 1\)</span>.</p></li>
+<li><p>Repeat (d) using naive Bayes.</p></li>
+<li><p>Which of these methods appears to provide the best results on this data?</p></li>
+<li><p>Experiment with different combinations of predictors, including possible transformations and interactions, for each of the methods. Report the variables, method, and associated confusion matrix that appears to provide the best results on the held out data. Note that you should also experiment with values for <span class="math inline">\(K\)</span> in the KNN classifier.</p></li>
+</ol></li>
 </ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Confusion matrix is the two-way table.</p>
+</div>
+</div>
+<ol start="4" type="1">
+<li>(ISLR 4.16) Using the <code>Boston</code> data set, fit classification models in order to predict whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models using various subsets of the predictors. Describe your findings.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You will have to create the response variable yourself, using the variables that are contained in the <code>Boston</code> data set.</p>
+</div>
+</div>
 </section>
 <section id="submission" class="level1">
 <h1>Submission</h1>

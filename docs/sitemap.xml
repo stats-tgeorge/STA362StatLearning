@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/syllabus.html</loc>
-    <lastmod>2026-04-09T16:41:26.211Z</lastmod>
+    <lastmod>2026-04-17T12:16:34.663Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-logistic.html</loc>
@@ -14,11 +14,11 @@
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-2-lda-qda.qmd.html</loc>
-    <lastmod>2026-04-08T16:38:51.106Z</lastmod>
+    <lastmod>2026-04-17T12:28:52.631Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-2-lda-qda_o.qmd.html</loc>
-    <lastmod>2026-04-08T16:38:51.106Z</lastmod>
+    <lastmod>2026-04-17T12:28:52.631Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/01-02-welcome_to_sl.html</loc>
@@ -42,7 +42,7 @@
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-03-logistic_lda_qda.html</loc>
-    <lastmod>2026-04-08T16:38:51.092Z</lastmod>
+    <lastmod>2026-04-17T12:59:16.582Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-01-intro-review.html</loc>
@@ -98,11 +98,11 @@
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb_o.html</loc>
-    <lastmod>2026-04-08T16:38:51.109Z</lastmod>
+    <lastmod>2026-04-17T12:20:38.838Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb.html</loc>
-    <lastmod>2026-04-08T16:38:51.109Z</lastmod>
+    <lastmod>2026-04-17T12:20:38.838Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/05-cv-tidymodels_o.html</loc>

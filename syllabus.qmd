@@ -24,9 +24,6 @@ Instructor [Dr. Tyler George]({{< var instructor.url >}})
 
 {{< fa solid envelope >}} &nbsp; <a href="mailto:tgeorge@cornellcollege.edu"> tgeorge\@cornellcollege.edu </a>
 
-
-
-
 :::
 
 ::: {.column width="33%"}
@@ -56,7 +53,7 @@ Instructor [Dr. Tyler George]({{< var instructor.url >}})
 
 :::
 
-:::
+::::
 
 I am available far beyond the listed times. Please email me, and we can set up a time to chat about class material or whatever you prefer! I will generally announce changes to office hours in class, but I still suggest checking the [Course Calendar]({{< var course.coursecal >}}) to verify availability. 
 
@@ -158,6 +155,7 @@ bind_rows(assignments, assignments_total) %>%
   select(Assignment, Points) %>% 
   pandoc.table(justify = "lc", missing = "—")
 ```
+
 <div>
 
 <div class="centered-table">

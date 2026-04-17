@@ -1,6 +1,6 @@
 ---
 title: "Homework 3"
-subtitle: "Logistic, LDA, QDA, Naive Bayes, and KNN"
+subtitle: "Classification"
 format: html
 ---
 
@@ -10,8 +10,6 @@ library(tidymodels)
 library(ISLR)
 hw_num <- 3
 ```
-
-## Due 4/23/2024 at 1pm
 
 # Instructions
 
@@ -38,15 +36,72 @@ format:
 -   Make sure your answers print results. If the output is a large table, use the head() function to shorten the output. 
 
 # Exercises - NOTE THE CHAPTER NUMBER
-1.  **Complete exercise chapter 5, number 5 in ISLR.**
- - Replace (b) (iii) with the following: Obtain prediction of default status of each individual in the validation set.
+1. (ISLR 5.) In Chapter 4, we used logistic regression to predict the probability of default using `income` and `balance` on the `Default` data set. We will now estimate the test error of this logistic regression model using the validation set approach. Do not forget to set a random seed before beginning your analysis.
 
-2.  **Complete exercise chapter 4, number 12 in ISLR.**
+    a) Fit a logistic regression model that uses `income` and `balance` to predict `default`.
 
-3.  **Complete exercise chapter 4, number 13 in ISLR.**
-NOTE: Confusion matrix is the two-way table. 
+    b) Using the validation set approach, estimate the test error of this model. In order to do this, you must perform the following steps:
 
-4.  **Complete exercise chapter 4, number 16 in ISLR.**
+        i. Split the sample set into a training set and a validation set.
+
+        ii. Fit a multiple logistic regression model using only the training observations.
+
+        iii. Obtain prediction of default status of each individual in the validation set by computing the posterior probability of default for that individual, and classifying the individual to the default category if the posterior probability is greater than 0.5.
+
+        iv. Compute the validation set error, which is the fraction of the observations in the validation set that are misclassified.
+
+2. (ISLR 4.12) Suppose that you wish to classify an observation $X \in \mathbb{R}$ into apples and oranges. You fit a logistic regression model and find that
+
+$\ \hat{Pr}(Y = \text{orange} \mid X = x) = \frac{\exp(\hat{\beta}_0 + \hat{\beta}_1 x)}{1 + \exp(\hat{\beta}_0 + \hat{\beta}_1 x)}.$
+
+Your friend fits a logistic regression model to the same data using the softmax formulation in (ISLR 4.13), and finds that
+
+$\hat{Pr}(Y = \text{orange} \mid X = x) = \frac{\exp(\hat{\alpha}_{\text{orange}0} + \hat{\alpha}_{\text{orange}1} x)}{\exp(\hat{\alpha}_{\text{orange}0} + \hat{\alpha}_{\text{orange}1} x) + \exp(\hat{\alpha}_{\text{apple}0} + \hat{\alpha}_{\text{apple}1} x)}.$
+
+2. Continued
+
+    a) What is the log odds of orange versus apple in your model?
+
+    b) What is the log odds of orange versus apple in your friend’s model?
+
+    c) Suppose that in your model, $\hat{\beta}_0 = 2$ and $\hat{\beta}_1 = -1$. What are the coefficient estimates in your friend’s model? Be as specific as possible.
+
+    d) Now suppose that you and your friend fit the same two models on a different data set. This time, your friend gets the coefficient estimates $\hat{\alpha}_{\text{orange}0} = 1.2$, $\hat{\alpha}_{\text{orange}1} = -2$, $\hat{\alpha}_{\text{apple}0} = 3$, and $\hat{\alpha}_{\text{apple}1} = 0.6$. What are the coefficient estimates in your model?
+
+    e) Finally, suppose you apply both models from (d) to a data set with 2,000 test observations. What fraction of the time do you expect the predicted class labels from your model to agree with those from your friend’s model? Explain your answer.
+
+3.  (ISLR 4.13) This question should be answered using the `Weekly` data set, which is part of the `ISLR2` package. This data is similar in nature to the `Smarket` data from this chapter’s lab, except that it contains 1,089 weekly returns for 21 years, from the beginning of 1990 to the end of 2010.
+
+    a) Produce some numerical and graphical summaries of the `Weekly` data. Do there appear to be any patterns?
+
+    b) Use the full data set to perform a logistic regression with `Direction` as the response and the five lag variables plus `Volume` as predictors. Use the `summary()` function to print the results. Do any of the predictors appear to be statistically significant? If so, which ones?
+
+    c) Compute the confusion matrix and overall fraction of correct predictions. Explain what the confusion matrix is telling you about the types of mistakes made by logistic regression.
+
+    d) Now fit the logistic regression model using a training data period from 1990 to 2008, with `Lag2` as the only predictor. Compute the confusion matrix and the overall fraction of correct predictions for the held out data (that is, the data from 2009 and 2010).
+
+    e) Repeat (d) using LDA.
+
+    f) Repeat (d) using QDA.
+
+    g) Repeat (d) using KNN with $K = 1$.
+
+    h) Repeat (d) using naive Bayes.
+
+    i) Which of these methods appears to provide the best results on this data?
+
+    j) Experiment with different combinations of predictors, including possible transformations and interactions, for each of the methods. Report the variables, method, and associated confusion matrix that appears to provide the best results on the held out data. Note that you should also experiment with values for $K$ in the KNN classifier.
+
+
+:::{.callout-tip}
+Confusion matrix is the two-way table. 
+:::
+
+4. (ISLR 4.16) Using the `Boston` data set, fit classification models in order to predict whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models using various subsets of the predictors. Describe your findings.
+
+:::{.callout-tip}
+You will have to create the response variable yourself, using the variables that are contained in the `Boston` data set.
+:::
 
 # Submission
 

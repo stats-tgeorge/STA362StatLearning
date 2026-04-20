@@ -98,7 +98,7 @@ ggplot(Smarket, aes(Year, Volume)) +
 
 1. Split the data into training and testing sets with 70% in the training set. 
 
-#### Answer the following in questions 2 through 6:
+#### Answer the following in questions 2 through 5:
     
   a) Fit the model using Lag1-5 and volume to predict direction. 
   b) What are the model assumptions? 
@@ -124,7 +124,6 @@ Start of by creating a named list of the fitted models you want to evaluate. I h
 #| eval: false
 models <- list("logistic regression" = lr_fit3,
                "LDA" = lda_fit,
-               "QDA" = qda_fit,
                "KNN" = knn_fit)
 ```
 
@@ -166,7 +165,7 @@ preds |>
   autoplot()
 ```
 
-7. Use the above code to fit all models at once and them compare them according to accuracy, ROC, and ROC AUC. 
+6. Use the above code to fit all models at once and them compare them according to accuracy, ROC, and ROC AUC. 
 
 
 # Submission

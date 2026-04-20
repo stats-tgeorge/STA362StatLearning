@@ -390,8 +390,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <ol type="1">
 <li>Split the data into training and testing sets with 70% in the training set.</li>
 </ol>
-<section id="answer-the-following-in-questions-2-through-6" class="level4">
-<h4 class="anchored" data-anchor-id="answer-the-following-in-questions-2-through-6">Answer the following in questions 2 through 6:</h4>
+<section id="answer-the-following-in-questions-2-through-5" class="level4">
+<h4 class="anchored" data-anchor-id="answer-the-following-in-questions-2-through-5">Answer the following in questions 2 through 5:</h4>
 <ol type="a">
 <li>Fit the model using Lag1-5 and volume to predict direction.</li>
 <li>What are the model assumptions?</li>
@@ -413,8 +413,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>models <span class="ot">&lt;-</span> <span class="fu">list</span>(<span class="st">"logistic regression"</span> <span class="ot">=</span> lr_fit3,</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>               <span class="st">"LDA"</span> <span class="ot">=</span> lda_fit,</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"QDA"</span> <span class="ot">=</span> qda_fit,</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>               <span class="st">"KNN"</span> <span class="ot">=</span> knn_fit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>               <span class="st">"KNN"</span> <span class="ot">=</span> knn_fit)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>Next use <code>imap_dfr()</code> from the <a href="https://purrr.tidyverse.org/">purrr</a> package to apply <code>augment()</code> to each of the models using the testing data set. <code>.id = "model"</code> creates a column named <code>"model"</code> that is added to the resulting tibble using the names of <code>models</code>.</p>
 <div class="cell">
@@ -441,7 +440,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">roc_curve</span>(Direction, .pred_Down) <span class="sc">|&gt;</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">autoplot</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-<ol start="7" type="1">
+<ol start="6" type="1">
 <li>Use the above code to fit all models at once and them compare them according to accuracy, ROC, and ROC AUC.</li>
 </ol>
 </section>

@@ -98,11 +98,11 @@
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb_o.html</loc>
-    <lastmod>2026-04-17T12:20:38.838Z</lastmod>
+    <lastmod>2026-04-20T12:37:10.453Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-3-km-nb.html</loc>
-    <lastmod>2026-04-17T12:20:38.838Z</lastmod>
+    <lastmod>2026-04-20T12:37:10.453Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/05-cv-tidymodels_o.html</loc>
@@ -127,5 +127,9 @@
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/04-2-mlog-lda_o.html</loc>
     <lastmod>2026-04-17T13:43:02.151Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/labs/lab03-classification.html</loc>
+    <lastmod>2026-04-20T12:51:38.258Z</lastmod>
   </url>
 </urlset>

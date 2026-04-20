@@ -2122,7 +2122,7 @@
     "href": "index.html",
     "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nTidymodel recipies\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nCh 8 - Bagging, RF, Boosting, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA or Clustering, project\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, watch project videos, surveys etc\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nTidymodel recipies, Ch 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
@@ -2922,7 +2922,7 @@
     "href": "slides/04-3-km-nb_o.html#knn-example-knn-vs-bayes",
     "title": "Chapter 4 Part 3",
     "section": "KNN Example KNN vs Bayes",
-    "text": "KNN Example KNN vs Bayes\n\n\n\nThe black curve indicates the KNN decision boundary, using \\(K = 10\\). The Bayes decision boundary is shown as a purple dashed line.\nThe KNN and Bayes decision boundaries are very similar."
+    "text": "KNN Example KNN vs Bayes\n\n\nThe black curve indicates the KNN decision boundary, using \\(K = 10\\). The Bayes decision boundary is shown as a purple dashed line.\nThe KNN and Bayes decision boundaries are very similar."
   },
   {
     "objectID": "slides/04-3-km-nb_o.html#knn-low-and-high-flexibility",
@@ -2978,7 +2978,7 @@
     "href": "slides/04-3-km-nb_o.html#naive-bayes-2",
     "title": "Chapter 4 Part 3",
     "section": "Naive Bayes",
-    "text": "Naive Bayes\n\nWith Naive Bayes we drop the normality assumption but introduce a must stronger assumption\n\nWithin a class \\(k\\),\nThe predictors are independent"
+    "text": "Naive Bayes\n\nWith Naive Bayes we drop the normality assumption but introduce a much stronger assumption\n\nWithin a class \\(k\\), the \\(p\\) predictors are independent\n\nStated mathematically \\(f_x(x) = f_{k1}(x_1)*f_{k2}(x_2)\\times\\cdot\\cdot\\cdot \\times f_{kp}(x_p)\\)\n\n. . .\nwhere \\(f_{kj}\\) is the density function of the \\(j\\)th predictor among observations in the \\(k\\)th class."
   },
   {
     "objectID": "slides/04-3-km-nb_o.html#naive-bayes-new-assumptions",
@@ -2992,7 +2992,7 @@
     "href": "slides/04-3-km-nb_o.html#naive-bayes-probability-function",
     "title": "Chapter 4 Part 3",
     "section": "Naive Bayes Probability Function",
-    "text": "Naive Bayes Probability Function\nMaking these assumption, we now have:\n\\[P(Y=k|X=x) = \\frac{\\pi_k\\cdot f_{k1}(x_1)\\cdot \\cdot \\cdot f_{kp}(x_p)}{\\sum_{l=1}^K\\pi_l\\cdot f_{l1}(x_1)\\cdot \\cdot \\cdot f_{lp}(x_p)}\\] for \\(k=1,2,...,K\\)"
+    "text": "Naive Bayes Probability Function\nMaking these assumptions, we now have:\n\\[P(Y=k|X=x) = \\frac{\\pi_k\\cdot f_{k1}(x_1)\\cdot \\cdot \\cdot f_{kp}(x_p)}{\\sum_{l=1}^K\\pi_l\\cdot f_{l1}(x_1)\\cdot \\cdot \\cdot f_{lp}(x_p)}\\] for \\(k=1,2,...,K\\)"
   },
   {
     "objectID": "slides/04-3-km-nb_o.html#naive-bayes---why",
@@ -3104,7 +3104,7 @@
     "href": "slides/04-3-km-nb.html#knn-example-knn-vs-bayes",
     "title": "Chapter 4 Part 3",
     "section": "KNN Example KNN vs Bayes",
-    "text": "KNN Example KNN vs Bayes\n\n\n\nThe black curve indicates the KNN decision boundary, using \\(K = 10\\). The Bayes decision boundary is shown as a purple dashed line.\nThe KNN and Bayes decision boundaries are very similar."
+    "text": "KNN Example KNN vs Bayes\n\n\nThe black curve indicates the KNN decision boundary, using \\(K = 10\\). The Bayes decision boundary is shown as a purple dashed line.\nThe KNN and Bayes decision boundaries are very similar."
   },
   {
     "objectID": "slides/04-3-km-nb.html#knn-low-and-high-flexibility",
@@ -3160,7 +3160,7 @@
     "href": "slides/04-3-km-nb.html#naive-bayes-2",
     "title": "Chapter 4 Part 3",
     "section": "Naive Bayes",
-    "text": "Naive Bayes\n\nWith Naive Bayes we drop the normality assumption but introduce a must stronger assumption\n\nWithin a class \\(k\\),\nThe predictors are independent"
+    "text": "Naive Bayes\n\nWith Naive Bayes we drop the normality assumption but introduce a much stronger assumption\n\nWithin a class \\(k\\), the \\(p\\) predictors are independent\n\nStated mathematically \\(f_x(x) = f_{k1}(x_1)*f_{k2}(x_2)\\times\\cdot\\cdot\\cdot \\times f_{kp}(x_p)\\)\n\n\nwhere \\(f_{kj}\\) is the density function of the \\(j\\)th predictor among observations in the \\(k\\)th class."
   },
   {
     "objectID": "slides/04-3-km-nb.html#naive-bayes-new-assumptions",
@@ -3174,7 +3174,7 @@
     "href": "slides/04-3-km-nb.html#naive-bayes-probability-function",
     "title": "Chapter 4 Part 3",
     "section": "Naive Bayes Probability Function",
-    "text": "Naive Bayes Probability Function\nMaking these assumption, we now have:\n\\[P(Y=k|X=x) = \\frac{\\pi_k\\cdot f_{k1}(x_1)\\cdot \\cdot \\cdot f_{kp}(x_p)}{\\sum_{l=1}^K\\pi_l\\cdot f_{l1}(x_1)\\cdot \\cdot \\cdot f_{lp}(x_p)}\\] for \\(k=1,2,...,K\\)"
+    "text": "Naive Bayes Probability Function\nMaking these assumptions, we now have:\n\\[P(Y=k|X=x) = \\frac{\\pi_k\\cdot f_{k1}(x_1)\\cdot \\cdot \\cdot f_{kp}(x_p)}{\\sum_{l=1}^K\\pi_l\\cdot f_{l1}(x_1)\\cdot \\cdot \\cdot f_{lp}(x_p)}\\] for \\(k=1,2,...,K\\)"
   },
   {
     "objectID": "slides/04-3-km-nb.html#naive-bayes---why",
@@ -5240,5 +5240,47 @@
     "title": "Chapter 4 Part 2",
     "section": "Tuning By Threhold",
     "text": "Tuning By Threhold\nhttps://www.tidymodels.org/start/case-study/"
+  },
+  {
+    "objectID": "slides/04-3-km-nb.html#knn-low-and-high-flexibility-1",
+    "href": "slides/04-3-km-nb.html#knn-low-and-high-flexibility-1",
+    "title": "Chapter 4 Part 3",
+    "section": "KNN Low and High Flexibility",
+    "text": "KNN Low and High Flexibility"
+  },
+  {
+    "objectID": "labs/lab03-classification.html",
+    "href": "labs/lab03-classification.html",
+    "title": "Lab 03",
+    "section": "",
+    "text": "Go to our RStudio and create a new R project inside your class folder.\n\n\nCreate a .qmd file for your lab, make sure the author is your name, and Render the document.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+  },
+  {
+    "objectID": "labs/lab03-classification.html#yaml",
+    "href": "labs/lab03-classification.html#yaml",
+    "title": "Lab 03",
+    "section": "",
+    "text": "Create a .qmd file for your lab, make sure the author is your name, and Render the document.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+  },
+  {
+    "objectID": "labs/lab03-classification.html#the-stock-market-data",
+    "href": "labs/lab03-classification.html#the-stock-market-data",
+    "title": "Lab 03",
+    "section": "The Stock Market Data",
+    "text": "The Stock Market Data\nWe will be examining the Smarket data set for this lab. It contains a number of numeric variables plus a variable called Direction which has the two labels \"Up\" and \"Down\". Before we do on to modeling, let us take a look at the correlation between the variables.\nTo look at the correlation, we will use the corrr package. The correlate() function will calculate the correlation matrix between all the variables that it is being fed. We will therefore remove Direction as it is not numeric. Then we pass that to rplot() to quickly visualize the correlation matrix. I have also changed the colours argument to better see what is going on.\n\nlibrary(corrr)\ncor_Smarket &lt;- Smarket |&gt;\n  select(-Direction) |&gt;\n  correlate()\n\nrplot(cor_Smarket, colours = c(\"indianred2\", \"black\", \"skyblue1\"))\n\n\n\n\n\n\n\n\nAnd we see that these variables are more or less uncorrelated with each other. The other pair is Year and Volume that is a little correlated.\nIf you want to create heatmap styled correlation chart you can also create it manually.\n\nlibrary(paletteer)\ncor_Smarket |&gt;\n  stretch() |&gt;\n  ggplot(aes(x, y, fill = r)) +\n  geom_tile() +\n  geom_text(aes(label = as.character(fashion(r)))) +\n  scale_fill_paletteer_c(\"scico::roma\", limits = c(-1, 1), direction = -1)\n\n\n\n\n\n\n\n\nIf we plot Year against Volume we see that there is an upwards trend in Volume with time.\n\nggplot(Smarket, aes(Year, Volume)) +\n  geom_jitter(height = 0)"
+  },
+  {
+    "objectID": "labs/lab03-classification.html#exercises",
+    "href": "labs/lab03-classification.html#exercises",
+    "title": "Lab 03",
+    "section": "Exercises",
+    "text": "Exercises\n\nData Split\n\nSplit the data into training and testing sets with 70% in the training set.\n\n\nAnswer the following in questions 2 through 6:\n\nFit the model using Lag1-5 and volume to predict direction.\nWhat are the model assumptions?\nCheck all of the assumptions.\nAssess your model on the testing set with accuracy, the ROC curve, and the ROC AUC and give the confusion matrix.\n\n\nLogistic Regression HINT: For linearity in logistic, you will need to create bins for each predictor, say 5 bins, then check the empirical probabilities for each bin.\nLDA\nNaive Bayes\nK Nearest Neighbors\n\n\n\n\nComparing multiple models\nWe have fit a lot of different models in this lab. And we were able to calculate the performance metrics one by one, but it is not ideal if we want to compare the different models. Below is an example of how you can more conveniently calculate performance metrics for multiple models at the same time.\nStart of by creating a named list of the fitted models you want to evaluate. I have made sure only to include models that were fitted on the same parameters to make it easier to compare them.\n\nmodels &lt;- list(\"logistic regression\" = lr_fit3,\n               \"LDA\" = lda_fit,\n               \"QDA\" = qda_fit,\n               \"KNN\" = knn_fit)\n\nNext use imap_dfr() from the purrr package to apply augment() to each of the models using the testing data set. .id = \"model\" creates a column named \"model\" that is added to the resulting tibble using the names of models.\n\npreds &lt;- imap_dfr(models, augment, \n                  new_data = Smarket_test, .id = \"model\")\n\npreds |&gt;\n  dplyr::select(model, Direction, .pred_class, .pred_Down, .pred_Up)\n\nWe have seen how to use accuracy() a lot of times by now, but it is not the only metric to use for classification, and yardstick provides many more. You can combine multiple different metrics together with metric_set()\n\nmulti_metric &lt;- metric_set(accuracy, sensitivity, specificity)\n\nand then the resulting function can be applied to calculate multiple metrics at the same time. All of the yardstick works with grouped tibbles so by calling group_by(model) we can calculate the metrics for each of the models in one go.\n\npreds |&gt;\n  group_by(model) |&gt;\n  multi_metric(truth = Direction, estimate = .pred_class)\n\nThe same technique can be used to create ROC curves.\n\npreds |&gt;\n  group_by(model) |&gt;\n  roc_curve(Direction, .pred_Down) |&gt;\n  autoplot()\n\n\nUse the above code to fit all models at once and them compare them according to accuracy, ROC, and ROC AUC."
+  },
+  {
+    "objectID": "slides/04-3-km-nb_o.html#knn-low-and-high-flexibility-1",
+    "href": "slides/04-3-km-nb_o.html#knn-low-and-high-flexibility-1",
+    "title": "Chapter 4 Part 3",
+    "section": "KNN Low and High Flexibility",
+    "text": "KNN Low and High Flexibility"
   }
 ]

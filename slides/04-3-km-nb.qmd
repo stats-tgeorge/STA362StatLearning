@@ -1,6 +1,6 @@
 ---
 title: "Chapter 4 Part 3"
-subtitle: "LDA, KMeans, Naive Bayes"
+subtitle: "KMeans, Naive Bayes"
 format: 
   revealjs:
     slide-number: true
@@ -89,14 +89,19 @@ The KNN decision boundary for this example is shown in black. The blue grid indi
 
 :::{.column}
 
-- The black curve indicates the KNN decision boundary, using $K = 10$. The Bayes decision boundary is shown as a purple dashed line. 
+The black curve indicates the KNN decision boundary, using $K = 10$. The Bayes decision boundary is shown as a purple dashed line. 
 
-- The KNN and Bayes decision boundaries are very similar.
+The KNN and Bayes decision boundaries are very similar.
 
 :::
 
+
+
 :::{.column}
+
+
 ![](img/KNNClassK10.png)
+
 :::
 ::::
 
@@ -104,7 +109,10 @@ The KNN decision boundary for this example is shown in black. The blue grid indi
 
 - Comparison of KNN decision boundaries (solid black curves) obtained using $K = 1$ and $K = 100$. 
   -   The $K = 1$ decision boundary is overly flexible and the $K = 100$ boundary is not sufficiently flexible. 
-- The Bayes decision boundary is shown as a purple dashed line.
+
+-   The Bayes decision boundary is shown as a purple dashed line.
+
+## KNN Low and High Flexibility {.smaller}
 
 ![](img/KNNClassK1vs100.png)
 
@@ -180,9 +188,14 @@ knn_fit_1 |>
 
 ## Naive Bayes {.smaller}
 
-- With Naive Bayes we drop the normality assumption but introduce a must stronger assumption
-  -   Within a class $k$, 
-  -   The predictors are independent
+- With Naive Bayes we drop the normality assumption but introduce a much stronger assumption
+  -   Within a class $k$, the $p$ predictors are independent
+  
+- Stated mathematically $f_x(x) = f_{k1}(x_1)*f_{k2}(x_2)\times\cdot\cdot\cdot \times f_{kp}(x_p)$
+
+. . .
+
+where $f_{kj}$ is the density function of the $j$th predictor among observations in the $k$th class. 
   
 ## Naive Bayes New Assumptions
 
@@ -194,7 +207,7 @@ knn_fit_1 |>
 
 ## Naive Bayes Probability Function 
 
-Making these assumption, we now have:
+Making these assumptions, we now have:
 
 $$P(Y=k|X=x) = \frac{\pi_k\cdot f_{k1}(x_1)\cdot \cdot \cdot f_{kp}(x_p)}{\sum_{l=1}^K\pi_l\cdot f_{l1}(x_1)\cdot \cdot \cdot f_{lp}(x_p)}$$
 for $k=1,2,...,K$

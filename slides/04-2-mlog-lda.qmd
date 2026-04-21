@@ -433,6 +433,48 @@ lda_fit_2 |>
 
 - What about the different types of errors? 
 
+## Other LDS Interpretation {.smaller}
+
+```{r}
+lda_fit_2
+```
+
+- Prior probabilities
+  - These shows us updated estimates of $\hat{\pi}_1$, $\hat{\pi}_2$, etc.
+
+## Other LDS Interpretation {.smaller}
+
+```{r}
+#| echo: false
+lda_fit_2
+```
+
+- Group means
+  - These are the averages of the predictors within each class. 
+  - Estimates of $\mu_1$, $\mu_2$ etc.
+
+## Other LDS Interpretation {.smaller}
+
+```{r}
+#| echo: false
+lda_fit_2
+```
+
+- Coefficients of linear discriminants
+  - These are the coefficients of the linear combination of the predictors used to form the LDA decision rule 
+
+## Other LDS Interpretation {.smaller}
+
+- Using the base R plot we can get the linear discriminants
+
+. . .
+
+```{r}
+lda_fit_2$fit |> plot()
+
+```
+
+
 ## Errors
 
 - Of the true `yes`, we made errors at the rate of 83/(83+26), 76%

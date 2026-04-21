@@ -242,8 +242,11 @@ for $k=1,2,...,K$
 
 ```{r}
 #| code-line-numbers: "1|3"
-nb_fit_1 <- naive_Bayes() |>
+nb_fit_1 <- naive_Bayes() |> # The default predictor assumption is none
+  # it will use smoothing (kernel density) to get the job done
+  # setting usekernel = T will assume predictors are normal 
   set_mode("classification")|>
+  set_args(usekernel=FALSE)|> # now the assumption is normal
   set_engine("klaR")|> 
     fit(default ~ balance + student,
       data = default_training)

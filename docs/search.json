@@ -3202,7 +3202,7 @@
     "href": "slides/04-3-km-nb.html#naive-bayes-tidymodels",
     "title": "Chapter 4 Part 3",
     "section": "Naive Bayes Tidymodels",
-    "text": "Naive Bayes Tidymodels\n\nnb_fit_1 &lt;- naive_Bayes() |&gt;\n  set_mode(\"classification\")|&gt;\n  set_engine(\"klaR\")|&gt; \n    fit(default ~ balance + student,\n      data = default_training)"
+    "text": "Naive Bayes Tidymodels\n\nnb_fit_1 &lt;- naive_Bayes() |&gt; # The default predictor assumption is none\n  # it will use smoothing (kernel density) to get the job done\n  # setting usekernel = T will assume predictors are normal \n  set_mode(\"classification\")|&gt;\n  set_args(usekernel=FALSE)|&gt; # now the assumption is normal\n  set_engine(\"klaR\")|&gt; \n    fit(default ~ balance + student,\n      data = default_training)"
   },
   {
     "objectID": "slides/04-3-km-nb.html#naive-bayes-confusion-matrix",
@@ -4805,7 +4805,7 @@
     "href": "slides/04-2-mlog-lda.html#lda-bluejays-eda---variance",
     "title": "Chapter 4 Part 2",
     "section": "LDA Bluejays EDA - Variance",
-    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F           1.23\n2 M           1.08\n\n\n\nVery similar standard deviations (and thus variances)"
+    "text": "LDA Bluejays EDA - Variance\n\nBJ_train |&gt; group_by(KnownSex)|&gt;\n  summarize(Head_sd = sd(Head))\n\n# A tibble: 2 × 2\n  KnownSex Head_sd\n  &lt;fct&gt;      &lt;dbl&gt;\n1 F           1.32\n2 M           1.15\n\n\n\nVery similar standard deviations (and thus variances)"
   },
   {
     "objectID": "slides/04-2-mlog-lda.html#fit-lda",
@@ -4819,14 +4819,14 @@
     "href": "slides/04-2-mlog-lda.html#check-the-fit",
     "title": "Chapter 4 Part 2",
     "section": "Check The Fit",
-    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F 12  5\n         M  6 14\n\n\n\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.703"
+    "text": "Check The Fit\n\nBJTest &lt;- testing(tt_split)\n\nlda_fit |&gt; \n  augment(new_data = BJTest) %&gt;%\n  conf_mat(truth = KnownSex, estimate = .pred_class) \n\n          Truth\nPrediction  F  M\n         F 14  4\n         M  4 15\n\n\n\n\nlda_fit|&gt; \n  augment(new_data = BJTest) |&gt; \n  accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.784"
   },
   {
     "objectID": "slides/04-2-mlog-lda.html#compare-to-logistic",
     "href": "slides/04-2-mlog-lda.html#compare-to-logistic",
     "title": "Chapter 4 Part 2",
     "section": "Compare to Logistic",
-    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.730"
+    "text": "Compare to Logistic\n\nlogistic_reg() |&gt;\n  set_engine(\"glm\") |&gt;\n  fit(KnownSex ~ Head,\n      data = BJ_train) |&gt;\n  augment(new_data = BJTest)|&gt;\n    accuracy(truth = KnownSex,estimate=.pred_class)\n\n# A tibble: 1 × 3\n  .metric  .estimator .estimate\n  &lt;chr&gt;    &lt;chr&gt;          &lt;dbl&gt;\n1 accuracy binary         0.811"
   },
   {
     "objectID": "slides/04-2-mlog-lda.html#application-exercise",
@@ -5366,5 +5366,33 @@
     "title": "Mini Project 1",
     "section": "",
     "text": "Work with your group to choose 3 potential datasets before the morning of the project. Your response must be categorical your data must have at least 5 potential predictors, with at least 1 of them being quantitative."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#other-lds-interpretation",
+    "href": "slides/04-2-mlog-lda.html#other-lds-interpretation",
+    "title": "Chapter 4 Part 2",
+    "section": "Other LDS Interpretation",
+    "text": "Other LDS Interpretation\n\nlda_fit_2\n\nparsnip model object\n\nCall:\nlda(default ~ balance + student, data = data)\n\nPrior probabilities of groups:\n   No   Yes \n0.968 0.032 \n\nGroup means:\n      balance studentYes\nNo   801.7667  0.2873377\nYes 1733.3278  0.3750000\n\nCoefficients of linear discriminants:\n                    LD1\nbalance     0.002231925\nstudentYes -0.253340375\n\n\n\nPrior probabilities\n\nThese shows us updated estimates of \\(\\hat{\\pi}_1\\), \\(\\hat{\\pi}_2\\), etc."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#other-lds-interpretation-1",
+    "href": "slides/04-2-mlog-lda.html#other-lds-interpretation-1",
+    "title": "Chapter 4 Part 2",
+    "section": "Other LDS Interpretation",
+    "text": "Other LDS Interpretation\n\n\nparsnip model object\n\nCall:\nlda(default ~ balance + student, data = data)\n\nPrior probabilities of groups:\n   No   Yes \n0.968 0.032 \n\nGroup means:\n      balance studentYes\nNo   801.7667  0.2873377\nYes 1733.3278  0.3750000\n\nCoefficients of linear discriminants:\n                    LD1\nbalance     0.002231925\nstudentYes -0.253340375\n\n\n\nGroup means\n\nThese are the averages of the predictors within each class.\nEstimates of \\(\\mu_1\\), \\(\\mu_2\\) etc."
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#other-lds-interpretation-2",
+    "href": "slides/04-2-mlog-lda.html#other-lds-interpretation-2",
+    "title": "Chapter 4 Part 2",
+    "section": "Other LDS Interpretation",
+    "text": "Other LDS Interpretation\n\n\nparsnip model object\n\nCall:\nlda(default ~ balance + student, data = data)\n\nPrior probabilities of groups:\n   No   Yes \n0.968 0.032 \n\nGroup means:\n      balance studentYes\nNo   801.7667  0.2873377\nYes 1733.3278  0.3750000\n\nCoefficients of linear discriminants:\n                    LD1\nbalance     0.002231925\nstudentYes -0.253340375\n\n\n\nCoefficients of linear discriminants\n\nThese are the coefficients of the linear combination of the predictors used to form the LDA decision rule"
+  },
+  {
+    "objectID": "slides/04-2-mlog-lda.html#other-lds-interpretation-3",
+    "href": "slides/04-2-mlog-lda.html#other-lds-interpretation-3",
+    "title": "Chapter 4 Part 2",
+    "section": "Other LDS Interpretation",
+    "text": "Other LDS Interpretation\n\nUsing the base R plot we can get the linear discriminants\n\n\n\nlda_fit_2$fit |&gt; plot()"
   }
 ]

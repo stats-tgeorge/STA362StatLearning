@@ -34,7 +34,7 @@
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/index.html</loc>
-    <lastmod>2026-04-15T13:51:45.284Z</lastmod>
+    <lastmod>2026-04-23T13:35:19.974Z</lastmod>
   </url>
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/hw/hw-04-regression_sol.html</loc>
@@ -155,5 +155,29 @@
   <url>
     <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/06-subset_o.html</loc>
     <lastmod>2026-04-22T15:07:18.053Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/06-2-shrinkage.html</loc>
+    <lastmod>2026-04-23T13:23:07.380Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/06-3-lasso_ridge_tm.html</loc>
+    <lastmod>2026-04-23T13:25:18.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/06-3-lasso_ridge_tm_o.html</loc>
+    <lastmod>2026-04-23T13:25:18.676Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/06-2-shrinkage_o.html</loc>
+    <lastmod>2026-04-23T13:23:07.380Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/06-3-enet_tmrec.html</loc>
+    <lastmod>2026-04-23T13:34:33.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://stats-tgeorge.github.io/STA362StatLearning/slides/06-3-enet_tmrec_o.html</loc>
+    <lastmod>2026-04-23T13:34:33.530Z</lastmod>
   </url>
 </urlset>

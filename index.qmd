@@ -23,6 +23,7 @@ d %>%
   select(-admin_notes) |>
   #Exercises = exercises,
   rename(Day = day, Date = date, Topic = topic,Notes = notes,
+         `Notes 2` = notes2,`Outline 2` = outline2,
           Lab = Lab, Homework = HW,Outline = outline,Exam = exam,
          Project = project) |>
   
@@ -33,6 +34,16 @@ d %>%
                           glue::glue("<a href = {x}>{fontawesome::fa('laptop')}</a>"))
                  }) %>%
   text_transform(cells_body(columns = c(Outline)),
+               fn = function(x){
+                 ifelse(is.na(x), fontawesome::fa('list', fill_opacity = 0.1), 
+                        glue::glue("<a href = {x}>{fontawesome::fa('list')}</a>"))
+               }) %>%
+    text_transform(cells_body(columns = c(`Notes 2`)),
+               fn = function(x){
+                 ifelse(is.na(x), fontawesome::fa('laptop', fill_opacity = 0.1), 
+                        glue::glue("<a href = {x}>{fontawesome::fa('laptop')}</a>"))
+               }) %>%
+    text_transform(cells_body(columns = c(`Outline 2`)),
                fn = function(x){
                  ifelse(is.na(x), fontawesome::fa('list', fill_opacity = 0.1), 
                         glue::glue("<a href = {x}>{fontawesome::fa('list')}</a>"))

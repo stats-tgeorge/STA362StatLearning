@@ -2122,7 +2122,7 @@
     "href": "index.html",
     "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
@@ -7564,5 +7564,299 @@
     "title": "Chapter 6 Part 3",
     "section": " Application Exercise",
     "text": "Application Exercise\n\n\n\nUsing the final model specification, extract the coefficients from the model by creating a workflow\nFilter out any coefficients exactly equal to 0"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#setup",
+    "href": "slides/06-4-dim-red.html#setup",
+    "title": "Chapter 6 Part 4",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(learntidymodels)\n#install.packages('pak')\n#pak::pak(\"mixOmics\") #Very large!"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#dimension-reduction",
+    "href": "slides/06-4-dim-red.html#dimension-reduction",
+    "title": "Chapter 6 Part 4",
+    "section": "Dimension Reduction",
+    "text": "Dimension Reduction\n\nLasso does dimension reduction when fitting\nThe methods that we have discussed so far in this chapter have involved fitting linear regression models, via least squares or a shrunken approach, using the original predictors, \\(X_1\\),\\(X_2\\),…,\\(X_p\\).\nNext we cover a few approaches that transform the predictors and then fit a least squares model using the transformed variables. We will refer to these techniques as dimension reduction methods."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#the-transformations",
+    "href": "slides/06-4-dim-red.html#the-transformations",
+    "title": "Chapter 6 Part 4",
+    "section": "The Transformations",
+    "text": "The Transformations\n\nLet \\(Z_1,...,Z_m\\) represent \\(M&lt;p\\) linear combinations of our original \\(p\\) predictors. Or, \\[Z_m = \\sum_{j=1}^p\\phi_{mj}X_j\\] for some constants \\(\\phi_{m1},...,\\phi_{mp}\\).\nWe can then fit linear regression model, \\[y_i = \\theta_0 + \\sum_{m=1}^M\\theta_mz_{im}+\\epsilon_i\\text{, }i=1,...,n,\\] using ordinary least squares."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#the-coefficients",
+    "href": "slides/06-4-dim-red.html#the-coefficients",
+    "title": "Chapter 6 Part 4",
+    "section": "The Coefficients",
+    "text": "The Coefficients\n\nNote that in our transformed model, the regression coefficients are given by \\(\\theta_0...\\theta_M\\).\nIf the constants \\(\\phi_{m1},...,\\phi_{mp}\\) are chosen well, then this dimension reduction can often outperform OLS regression.\nAlso note, that \\(\\beta_j = \\sum_{m=1}^M\\theta_m\\phi_{mf}\\), and thus this new transformed model is a special case of OLS\nThis effectively constrains the \\(\\beta_j\\)’s."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#principal-components-regression",
+    "href": "slides/06-4-dim-red.html#principal-components-regression",
+    "title": "Chapter 6 Part 4",
+    "section": "Principal Components Regression",
+    "text": "Principal Components Regression\n\nHere we apply principal components analysis (PCA) (discussed in Chapter 10 of the text) to define the linear combinations of the predictors, for use in our regression.\nThe first principal component is that (normalized) linear combination of the variables with the largest variance.\nThe second principal component has largest variance, subject to being uncorrelated with the first. And so on.\nHence with many correlated original variables, we replace them with a small set of principal components that capture their joint variation."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr---how-does-it-work",
+    "href": "slides/06-4-dim-red.html#pcr---how-does-it-work",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - How does it work?",
+    "text": "PCR - How does it work?\nVideo\nhttps://www.youtube.com/watch?v=SWfucxnOF8c"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#partial-least-squares",
+    "href": "slides/06-4-dim-red.html#partial-least-squares",
+    "title": "Chapter 6 Part 4",
+    "section": "Partial Least Squares",
+    "text": "Partial Least Squares\n\nPCR identifies linear combinations, or directions, that best represent the predictors \\(X_1,...X_p\\)\nThese directions are identified in an unsupervised way, since the response Y is not used to help determine the principal component directions.\nThat is, the response does not supervise the identification of the principal components.\nConsequently, PCR suffers from a potentially serious drawback: there is no guarantee that the directions that best explain the predictors will also be the best directions to use for predicting the response."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#more-pls",
+    "href": "slides/06-4-dim-red.html#more-pls",
+    "title": "Chapter 6 Part 4",
+    "section": "More PLS",
+    "text": "More PLS\n\nLike PCR, PLS is a dimension reduction method, which first identifies a new set of features \\(Z_1,...,Z_m\\) that are linear combinations of the original features, and then its a linear model via OLS using these \\(M\\) new features.\nBut unlike PCR, PLS identifies these new features in a supervised way, that is, it makes use of the response Y in order to identify new features that not only approximate the old features well, but also that are related to the response.\nRoughly speaking, the PLS approach attempts to find directions that help explain both the response and the predictors."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#even-more-pls",
+    "href": "slides/06-4-dim-red.html#even-more-pls",
+    "title": "Chapter 6 Part 4",
+    "section": "Even More PLS",
+    "text": "Even More PLS\nVideo\nhttps://www.youtube.com/watch?v=Vf7doatc2rA"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr-in-tidymodels",
+    "href": "slides/06-4-dim-red.html#pcr-in-tidymodels",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR in tidymodels",
+    "text": "PCR in tidymodels\n\nUse step_normalize and then step_pca\nFit a linear regression model\n\n\n\ndata(iris)\n\nlm_spec &lt;- linear_reg() |&gt;\n  set_engine(\"lm\")\n\niris_rec_pcr &lt;- recipe(Sepal.Width ~ .,data = iris)|&gt;\n    step_dummy(all_nominal_predictors())|&gt;\n    step_normalize(all_predictors()) |&gt;\n    step_pca(all_numeric_predictors())          #New\n\npcr_wf &lt;- workflow() |&gt;\n  add_model(lm_spec)|&gt;\n  add_recipe(iris_rec_pcr)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr-in-tidymodels-1",
+    "href": "slides/06-4-dim-red.html#pcr-in-tidymodels-1",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR in tidymodels",
+    "text": "PCR in tidymodels\n\niris_pcr_fit &lt;- pcr_wf |&gt; \n  fit(data = iris)\n\ntidy_pcr_fit&lt;- iris_pcr_fit |&gt; tidy()\n\ntidy_pcr_fit\n\n# A tibble: 6 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   3.06      0.0219    140.   1.08e-155\n2 PC1          -0.0682    0.0119     -5.73 5.61e-  8\n3 PC2          -0.157     0.0191     -8.23 1.01e- 13\n4 PC3           0.436     0.0456      9.56 4.58e- 17\n5 PC4          -0.910     0.122      -7.46 7.40e- 12\n6 PC5           0.356     0.204       1.75 8.29e-  2"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr-in-tidymodels-2",
+    "href": "slides/06-4-dim-red.html#pcr-in-tidymodels-2",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR in tidymodels",
+    "text": "PCR in tidymodels\n\nplot_top_loadings(iris_pcr_fit)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr",
+    "href": "slides/06-4-dim-red.html#pcr",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR",
+    "text": "PCR\n\nFor now we are going to let it choose our number of components\nOnce we cover PCA formally, we can do more."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pls-in-tidymodels",
+    "href": "slides/06-4-dim-red.html#pls-in-tidymodels",
+    "title": "Chapter 6 Part 4",
+    "section": "PLS in tidymodels",
+    "text": "PLS in tidymodels\n\niris_rec_pls &lt;- recipe(Sepal.Width ~ .,data = iris)|&gt;\n    step_dummy(all_nominal_predictors())|&gt;\n    step_normalize(all_predictors()) |&gt;\n    step_pls(all_numeric_predictors(),outcome = \"Sepal.Width\")          #New\n\npls_wf &lt;- workflow() |&gt;\n  add_model(lm_spec)|&gt;\n  add_recipe(iris_rec_pls)\n\niris_pls_fit &lt;- pls_wf |&gt; \n  fit(data = iris)\n\ntidy_pls_fit&lt;- iris_pls_fit |&gt; tidy()\n\ntidy_pls_fit\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)    3.06     0.0283    108.   7.30e-142\n2 PLS1           0.146    0.0190      7.72 1.68e- 12\n3 PLS2           0.132    0.0247      5.34 3.49e-  7"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pls-in-tidymodels-1",
+    "href": "slides/06-4-dim-red.html#pls-in-tidymodels-1",
+    "title": "Chapter 6 Part 4",
+    "section": "PLS in tidymodels",
+    "text": "PLS in tidymodels\n\nplot_top_loadings(iris_pls_fit,type = 'pls')"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr---an-example",
+    "href": "slides/06-4-dim-red.html#pcr---an-example",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - An Example",
+    "text": "PCR - An Example\n\nThe first component in Green in the direction of the greatest variance."
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr---an-example-1",
+    "href": "slides/06-4-dim-red.html#pcr---an-example-1",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - An Example",
+    "text": "PCR - An Example\n\n\nThe observations are project onto the green first component line on the left. This projection yields observations of the largest possible variance.\nAfter accounting for this direction, we can consider the points on as if they are on an \\(x\\)-axis. Then second component will be chosen to minimize the variance in the last remaining direction.\nThe blue dot represents \\((\\bar{pop},\\bar{ad})\\)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr---an-example---notation",
+    "href": "slides/06-4-dim-red.html#pcr---an-example---notation",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - An Example - Notation",
+    "text": "PCR - An Example - Notation\n\n\\(Z_1 = 0.839 \\times (pop - \\bar{pop}) + 0.544 \\times (ad-\\bar{ad})\\)\n\\(\\phi_{11}=0.839\\) and \\(\\phi_{21} = 0.544\\), the principal component loading’s\nOut of every possible linear combination of \\(pop\\) and \\(ad\\), such that \\(\\phi_{11}^2 + \\phi_{21}^2 = 1\\), this linear combination has the highest possible variance.\nSince \\(n=100\\) and \\(pop\\) and \\(ad\\) are vectors of length 100, so is \\(Z_1\\)\n\n\\(z_{i1} = 0.839 \\times (pop_i - \\bar{pop}) + 0.544 \\times (ad_i-\\bar{ad})\\)\n\nThe \\(z_{11},...,z_{n1}\\) are the principal component scores"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#pcr---another-interpretation",
+    "href": "slides/06-4-dim-red.html#pcr---another-interpretation",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - Another Interpretation",
+    "text": "PCR - Another Interpretation\n\nThe first component is as close to the data as possible (just like least squares)\nIn the previous graph, when the distances from each point to the green “x-axis” line, are the principal component scores\nEach \\(Z_i\\) will orthogonal (perpendicular) than the prior\nEach \\(Z_i\\) will carry less information (variance) than the prior\nEach \\(Z_i\\) will be uncorrelated with the prior \\(Z_i\\)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red.html#partial-least-squares-1",
+    "href": "slides/06-4-dim-red.html#partial-least-squares-1",
+    "title": "Chapter 6 Part 4",
+    "section": "Partial Least Squares",
+    "text": "Partial Least Squares\n\nPCR identifies linear combinations, or directions, that best represent the predictors \\(X_1,...X_p\\)\nThese directions are identified in an unsupervised way, since the response Y is not used to help determine the principal component directions.\nThat is, the response does not supervise the identification of the principal components.\nConsequently, PCR suffers from a potentially serious drawback: there is no guarantee that the directions that best explain the predictors will also be the best directions to use for predicting the response."
+  },
+  {
+    "objectID": "labs/lab04-ridge-lasso-elastic.html",
+    "href": "labs/lab04-ridge-lasso-elastic.html",
+    "title": "Lab 04 - Ridge Lasso Elastic Net",
+    "section": "",
+    "text": "Go to our RStudio and create a new R project inside your class folder.\n\n\nCreate a .qmd file for your lab, make sure the author is your name, and Render the document.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+  },
+  {
+    "objectID": "labs/lab04-ridge-lasso-elastic.html#yaml",
+    "href": "labs/lab04-ridge-lasso-elastic.html#yaml",
+    "title": "Lab 04 - Ridge Lasso Elastic Net",
+    "section": "",
+    "text": "Create a .qmd file for your lab, make sure the author is your name, and Render the document.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html",
+    "href": "slides/06-4-dim-red_o.html",
+    "title": "Chapter 6 Part 4",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(learntidymodels)\n#install.packages('pak')\n#pak::pak(\"mixOmics\") #Very large!"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#setup",
+    "href": "slides/06-4-dim-red_o.html#setup",
+    "title": "Chapter 6 Part 4",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(learntidymodels)\n#install.packages('pak')\n#pak::pak(\"mixOmics\") #Very large!"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#dimension-reduction",
+    "href": "slides/06-4-dim-red_o.html#dimension-reduction",
+    "title": "Chapter 6 Part 4",
+    "section": "Dimension Reduction",
+    "text": "Dimension Reduction\n\nLasso does dimension reduction when fitting\nThe methods that we have discussed so far in this chapter have involved fitting linear regression models, via least squares or a shrunken approach, using the original predictors, \\(X_1\\),\\(X_2\\),…,\\(X_p\\).\nNext we cover a few approaches that transform the predictors and then fit a least squares model using the transformed variables. We will refer to these techniques as dimension reduction methods."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#the-transformations",
+    "href": "slides/06-4-dim-red_o.html#the-transformations",
+    "title": "Chapter 6 Part 4",
+    "section": "The Transformations",
+    "text": "The Transformations\n\nLet \\(Z_1,...,Z_m\\) represent \\(M&lt;p\\) linear combinations of our original \\(p\\) predictors. Or, \\[Z_m = \\sum_{j=1}^p\\phi_{mj}X_j\\] for some constants \\(\\phi_{m1},...,\\phi_{mp}\\).\nWe can then fit linear regression model, \\[y_i = \\theta_0 + \\sum_{m=1}^M\\theta_mz_{im}+\\epsilon_i\\text{, }i=1,...,n,\\] using ordinary least squares."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#the-coefficients",
+    "href": "slides/06-4-dim-red_o.html#the-coefficients",
+    "title": "Chapter 6 Part 4",
+    "section": "The Coefficients",
+    "text": "The Coefficients\n\nNote that in our transformed model, the regression coefficients are given by \\(\\theta_0...\\theta_M\\).\nIf the constants \\(\\phi_{m1},...,\\phi_{mp}\\) are chosen well, then this dimension reduction can often outperform OLS regression.\nAlso note, that \\(\\beta_j = \\sum_{m=1}^M\\theta_m\\phi_{mf}\\), and thus this new transformed model is a special case of OLS\nThis effectively constrains the \\(\\beta_j\\)’s."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#principal-components-regression",
+    "href": "slides/06-4-dim-red_o.html#principal-components-regression",
+    "title": "Chapter 6 Part 4",
+    "section": "Principal Components Regression",
+    "text": "Principal Components Regression\n\nHere we apply principal components analysis (PCA) (discussed in Chapter 10 of the text) to define the linear combinations of the predictors, for use in our regression.\nThe first principal component is that (normalized) linear combination of the variables with the largest variance.\nThe second principal component has largest variance, subject to being uncorrelated with the first. And so on.\nHence with many correlated original variables, we replace them with a small set of principal components that capture their joint variation."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr---how-does-it-work",
+    "href": "slides/06-4-dim-red_o.html#pcr---how-does-it-work",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - How does it work?",
+    "text": "PCR - How does it work?\nVideo\nhttps://www.youtube.com/watch?v=SWfucxnOF8c"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr---an-example",
+    "href": "slides/06-4-dim-red_o.html#pcr---an-example",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - An Example",
+    "text": "PCR - An Example\n\nThe first component in Green in the direction of the greatest variance."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr---an-example-1",
+    "href": "slides/06-4-dim-red_o.html#pcr---an-example-1",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - An Example",
+    "text": "PCR - An Example\n\n\nThe observations are project onto the green first component line on the left. This projection yields observations of the largest possible variance.\nAfter accounting for this direction, we can consider the points on as if they are on an \\(x\\)-axis. Then second component will be chosen to minimize the variance in the last remaining direction.\nThe blue dot represents \\((\\bar{pop},\\bar{ad})\\)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr---an-example---notation",
+    "href": "slides/06-4-dim-red_o.html#pcr---an-example---notation",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - An Example - Notation",
+    "text": "PCR - An Example - Notation\n\n\\(Z_1 = 0.839 \\times (pop - \\bar{pop}) + 0.544 \\times (ad-\\bar{ad})\\)\n\\(\\phi_{11}=0.839\\) and \\(\\phi_{21} = 0.544\\), the principal component loading’s\nOut of every possible linear combination of \\(pop\\) and \\(ad\\), such that \\(\\phi_{11}^2 + \\phi_{21}^2 = 1\\), this linear combination has the highest possible variance.\nSince \\(n=100\\) and \\(pop\\) and \\(ad\\) are vectors of length 100, so is \\(Z_1\\)\n\n\\(z_{i1} = 0.839 \\times (pop_i - \\bar{pop}) + 0.544 \\times (ad_i-\\bar{ad})\\)\n\nThe \\(z_{11},...,z_{n1}\\) are the principal component scores"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr---another-interpretation",
+    "href": "slides/06-4-dim-red_o.html#pcr---another-interpretation",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR - Another Interpretation",
+    "text": "PCR - Another Interpretation\n\nThe first component is as close to the data as possible (just like least squares)\nIn the previous graph, when the distances from each point to the green “x-axis” line, are the principal component scores\nEach \\(Z_i\\) will orthogonal (perpendicular) than the prior\nEach \\(Z_i\\) will carry less information (variance) than the prior\nEach \\(Z_i\\) will be uncorrelated with the prior \\(Z_i\\)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#partial-least-squares-1",
+    "href": "slides/06-4-dim-red_o.html#partial-least-squares-1",
+    "title": "Chapter 6 Part 4",
+    "section": "Partial Least Squares",
+    "text": "Partial Least Squares\n\nPCR identifies linear combinations, or directions, that best represent the predictors \\(X_1,...X_p\\)\nThese directions are identified in an unsupervised way, since the response Y is not used to help determine the principal component directions.\nThat is, the response does not supervise the identification of the principal components.\nConsequently, PCR suffers from a potentially serious drawback: there is no guarantee that the directions that best explain the predictors will also be the best directions to use for predicting the response."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#more-pls",
+    "href": "slides/06-4-dim-red_o.html#more-pls",
+    "title": "Chapter 6 Part 4",
+    "section": "More PLS",
+    "text": "More PLS\n\nLike PCR, PLS is a dimension reduction method, which first identifies a new set of features \\(Z_1,...,Z_m\\) that are linear combinations of the original features, and then its a linear model via OLS using these \\(M\\) new features.\nBut unlike PCR, PLS identifies these new features in a supervised way, that is, it makes use of the response Y in order to identify new features that not only approximate the old features well, but also that are related to the response.\nRoughly speaking, the PLS approach attempts to find directions that help explain both the response and the predictors."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#even-more-pls",
+    "href": "slides/06-4-dim-red_o.html#even-more-pls",
+    "title": "Chapter 6 Part 4",
+    "section": "Even More PLS",
+    "text": "Even More PLS\nVideo\nhttps://www.youtube.com/watch?v=Vf7doatc2rA"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr-in-tidymodels",
+    "href": "slides/06-4-dim-red_o.html#pcr-in-tidymodels",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR in tidymodels",
+    "text": "PCR in tidymodels\n\nUse step_normalize and then step_pca\nFit a linear regression model\n\n. . .\n\ndata(iris)\n\nlm_spec &lt;- linear_reg() |&gt;\n  set_engine(\"lm\")\n\niris_rec_pcr &lt;- recipe(Sepal.Width ~ .,data = iris)|&gt;\n    step_dummy(all_nominal_predictors())|&gt;\n    step_normalize(all_predictors()) |&gt;\n    step_pca(all_numeric_predictors())          #New\n\npcr_wf &lt;- workflow() |&gt;\n  add_model(lm_spec)|&gt;\n  add_recipe(iris_rec_pcr)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr-in-tidymodels-1",
+    "href": "slides/06-4-dim-red_o.html#pcr-in-tidymodels-1",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR in tidymodels",
+    "text": "PCR in tidymodels\n\niris_pcr_fit &lt;- pcr_wf |&gt; \n  fit(data = iris)\n\ntidy_pcr_fit&lt;- iris_pcr_fit |&gt; tidy()\n\ntidy_pcr_fit\n\n# A tibble: 6 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   3.06      0.0219    140.   1.08e-155\n2 PC1          -0.0682    0.0119     -5.73 5.61e-  8\n3 PC2          -0.157     0.0191     -8.23 1.01e- 13\n4 PC3           0.436     0.0456      9.56 4.58e- 17\n5 PC4          -0.910     0.122      -7.46 7.40e- 12\n6 PC5           0.356     0.204       1.75 8.29e-  2"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr-in-tidymodels-2",
+    "href": "slides/06-4-dim-red_o.html#pcr-in-tidymodels-2",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR in tidymodels",
+    "text": "PCR in tidymodels\n\nplot_top_loadings(iris_pcr_fit)"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pcr",
+    "href": "slides/06-4-dim-red_o.html#pcr",
+    "title": "Chapter 6 Part 4",
+    "section": "PCR",
+    "text": "PCR\n\nFor now we are going to let it choose our number of components\nOnce we cover PCA formally, we can do more."
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pls-in-tidymodels",
+    "href": "slides/06-4-dim-red_o.html#pls-in-tidymodels",
+    "title": "Chapter 6 Part 4",
+    "section": "PLS in tidymodels",
+    "text": "PLS in tidymodels\n\niris_rec_pls &lt;- recipe(Sepal.Width ~ .,data = iris)|&gt;\n    step_dummy(all_nominal_predictors())|&gt;\n    step_normalize(all_predictors()) |&gt;\n    step_pls(all_numeric_predictors(),outcome = \"Sepal.Width\")          #New\n\npls_wf &lt;- workflow() |&gt;\n  add_model(lm_spec)|&gt;\n  add_recipe(iris_rec_pls)\n\niris_pls_fit &lt;- pls_wf |&gt; \n  fit(data = iris)\n\ntidy_pls_fit&lt;- iris_pls_fit |&gt; tidy()\n\ntidy_pls_fit\n\n# A tibble: 3 × 5\n  term        estimate std.error statistic   p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)    3.06     0.0283    108.   7.30e-142\n2 PLS1           0.146    0.0190      7.72 1.68e- 12\n3 PLS2           0.132    0.0247      5.34 3.49e-  7"
+  },
+  {
+    "objectID": "slides/06-4-dim-red_o.html#pls-in-tidymodels-1",
+    "href": "slides/06-4-dim-red_o.html#pls-in-tidymodels-1",
+    "title": "Chapter 6 Part 4",
+    "section": "PLS in tidymodels",
+    "text": "PLS in tidymodels\n\nplot_top_loadings(iris_pls_fit,type = 'pls')"
   }
 ]

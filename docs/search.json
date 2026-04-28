@@ -2122,7 +2122,7 @@
     "href": "index.html",
     "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
@@ -2140,7 +2140,7 @@
     "href": "hw/hw-03-logistic_lda_qda.html",
     "title": "Homework 3",
     "section": "",
-    "text": "Instructions\n\nCreating a new project. and giving it a sensible name such as homework3 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw3.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels.\nSet a seed before each problem.\nMake sure your answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\nExercises - NOTE THE CHAPTER NUMBER\n\n(ISLR 5.) In Chapter 4, we used logistic regression to predict the probability of default using income and balance on the Default data set. We will now estimate the test error of this logistic regression model using the validation set approach. Do not forget to set a random seed before beginning your analysis.\n\nFit a logistic regression model that uses income and balance to predict default.\nUsing the validation set approach, estimate the test error of this model. In order to do this, you must perform the following steps:\n\nSplit the sample set into a training set and a validation set.\nFit a multiple logistic regression model using only the training observations.\nObtain prediction of default status of each individual in the validation set by computing the posterior probability of default for that individual, and classifying the individual to the default category if the posterior probability is greater than 0.5.\nCompute the validation set error, which is the fraction of the observations in the validation set that are misclassified.\n\n\n(ISLR 4.12) Suppose that you wish to classify an observation \\(X \\in \\mathbb{R}\\) into apples and oranges. You fit a logistic regression model and find that\n\n\\(\\ \\hat{Pr}(Y = \\text{orange} \\mid X = x) = \\frac{\\exp(\\hat{\\beta}_0 + \\hat{\\beta}_1 x)}{1 + \\exp(\\hat{\\beta}_0 + \\hat{\\beta}_1 x)}.\\)\nYour friend fits a logistic regression model to the same data using the softmax formulation in (ISLR 4.13), and finds that\n\\(\\hat{Pr}(Y = \\text{orange} \\mid X = x) = \\frac{\\exp(\\hat{\\alpha}_{\\text{orange}0} + \\hat{\\alpha}_{\\text{orange}1} x)}{\\exp(\\hat{\\alpha}_{\\text{orange}0} + \\hat{\\alpha}_{\\text{orange}1} x) + \\exp(\\hat{\\alpha}_{\\text{apple}0} + \\hat{\\alpha}_{\\text{apple}1} x)}.\\)\n\nContinued\n\nWhat is the log odds of orange versus apple in your model?\nWhat is the log odds of orange versus apple in your friend’s model?\nSuppose that in your model, \\(\\hat{\\beta}_0 = 2\\) and \\(\\hat{\\beta}_1 = -1\\). What are the coefficient estimates in your friend’s model? Be as specific as possible.\nNow suppose that you and your friend fit the same two models on a different data set. This time, your friend gets the coefficient estimates \\(\\hat{\\alpha}_{\\text{orange}0} = 1.2\\), \\(\\hat{\\alpha}_{\\text{orange}1} = -2\\), \\(\\hat{\\alpha}_{\\text{apple}0} = 3\\), and \\(\\hat{\\alpha}_{\\text{apple}1} = 0.6\\). What are the coefficient estimates in your model?\nFinally, suppose you apply both models from (d) to a data set with 2,000 test observations. What fraction of the time do you expect the predicted class labels from your model to agree with those from your friend’s model? Explain your answer.\n\n(ISLR 4.13) This question should be answered using the Weekly data set, which is part of the ISLR2 package. This data is similar in nature to the Smarket data from this chapter’s lab, except that it contains 1,089 weekly returns for 21 years, from the beginning of 1990 to the end of 2010.\n\nProduce some numerical and graphical summaries of the Weekly data. Do there appear to be any patterns?\nUse the full data set to perform a logistic regression with Direction as the response and the five lag variables plus Volume as predictors. Use the summary() function to print the results. Do any of the predictors appear to be statistically significant? If so, which ones?\nCompute the confusion matrix and overall fraction of correct predictions. Explain what the confusion matrix is telling you about the types of mistakes made by logistic regression.\nNow fit the logistic regression model using a training data period from 1990 to 2008, with Lag2 as the only predictor. Compute the confusion matrix and the overall fraction of correct predictions for the held out data (that is, the data from 2009 and 2010).\nRepeat (d) using LDA.\nRepeat (d) using QDA.\nRepeat (d) using KNN with \\(K = 1\\).\nRepeat (d) using naive Bayes.\nWhich of these methods appears to provide the best results on this data?\nExperiment with different combinations of predictors, including possible transformations and interactions, for each of the methods. Report the variables, method, and associated confusion matrix that appears to provide the best results on the held out data. Note that you should also experiment with values for \\(K\\) in the KNN classifier.\n\n\n\n\n\n\n\n\nTip\n\n\n\nConfusion matrix is the two-way table.\n\n\n\n(ISLR 4.16) Using the Boston data set, fit classification models in order to predict whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models using various subsets of the predictors. Describe your findings.\n\n\n\n\n\n\n\nTip\n\n\n\nYou will have to create the response variable yourself, using the variables that are contained in the Boston data set.\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final html document to the respective assignment on Moodle"
+    "text": "Instructions\n\nCreating a new project. and giving it a sensible name such as homework3 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw3.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels.\nSet a seed before each problem.\nMake sure your answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\nExercises - NOTE THE CHAPTER NUMBER\n\n(ISLR 5.) In Chapter 4, we used logistic regression to predict the probability of default using income and balance on the Default data set. We will now estimate the test error of this logistic regression model using the validation set approach. Do not forget to set a random seed before beginning your analysis.\n\nFit a logistic regression model that uses income and balance to predict default.\nUsing the validation set approach, estimate the test error of this model. In order to do this, you must perform the following steps:\n\nSplit the sample set into a training set and a validation set.\nFit a multiple logistic regression model using only the training observations.\nObtain prediction of default status of each individual in the validation set by computing the posterior probability of default for that individual, and classifying the individual to the default category if the posterior probability is greater than 0.5.\nCompute the validation set error, which is the fraction of the observations in the validation set that are misclassified.\n\n\n(ISLR 4.12) Suppose that you wish to classify an observation \\(X \\in \\mathbb{R}\\) into apples and oranges. You fit a logistic regression model and find that\n\n\\(\\ \\hat{Pr}(Y = \\text{orange} \\mid X = x) = \\frac{\\exp(\\hat{\\beta}_0 + \\hat{\\beta}_1 x)}{1 + \\exp(\\hat{\\beta}_0 + \\hat{\\beta}_1 x)}.\\)\nYour friend fits a logistic regression model to the same data using the softmax formulation in (ISLR 4.13), and finds that\n\\(\\hat{Pr}(Y = \\text{orange} \\mid X = x) = \\frac{\\exp(\\hat{\\alpha}_{\\text{orange}0} + \\hat{\\alpha}_{\\text{orange}1} x)}{\\exp(\\hat{\\alpha}_{\\text{orange}0} + \\hat{\\alpha}_{\\text{orange}1} x) + \\exp(\\hat{\\alpha}_{\\text{apple}0} + \\hat{\\alpha}_{\\text{apple}1} x)}.\\)\n\nContinued\n\nWhat is the log odds of orange versus apple in your model?\nWhat is the log odds of orange versus apple in your friend’s model?\nSuppose that in your model, \\(\\hat{\\beta}_0 = 2\\) and \\(\\hat{\\beta}_1 = -1\\). What are the coefficient estimates in your friend’s model? Be as specific as possible.\nNow suppose that you and your friend fit the same two models on a different data set. This time, your friend gets the coefficient estimates \\(\\hat{\\alpha}_{\\text{orange}0} = 1.2\\), \\(\\hat{\\alpha}_{\\text{orange}1} = -2\\), \\(\\hat{\\alpha}_{\\text{apple}0} = 3\\), and \\(\\hat{\\alpha}_{\\text{apple}1} = 0.6\\). What are the coefficient estimates in your model?\nFinally, suppose you apply both models from (d) to a data set with 2,000 test observations. What fraction of the time do you expect the predicted class labels from your model to agree with those from your friend’s model? Explain your answer.\n\n(ISLR 4.13) This question should be answered using the Weekly data set, which is part of the ISLR2 package. This data is similar in nature to the Smarket data from this chapter’s lab, except that it contains 1,089 weekly returns for 21 years, from the beginning of 1990 to the end of 2010.\n\nProduce some numerical and graphical summaries of the Weekly data. Do there appear to be any patterns?\nUse the full data set to perform a logistic regression with Direction as the response and the five lag variables plus Volume as predictors. Use the summary() function to print the results. Do any of the predictors appear to be statistically significant? If so, which ones?\nCompute the confusion matrix and overall fraction of correct predictions. Explain what the confusion matrix is telling you about the types of mistakes made by logistic regression.\nNow fit the logistic regression model using a training data period from 1990 to 2008, with Lag2 as the only predictor. Compute the confusion matrix and the overall fraction of correct predictions for the held out data (that is, the data from 2009 and 2010).\nRepeat (d) using LDA.\nRepeat (d) using QDA.\nRepeat (d) using KNN with \\(K = 1\\).\nRepeat (d) using naive Bayes.\nWhich of these methods appears to provide the best results on this data?\nExperiment with different combinations of predictors, including possible transformations and interactions, for each of the methods. Report the variables, method, and associated confusion matrix that appears to provide the best results on the held out data. Note that you should also experiment with values for \\(K\\) in the KNN classifier.\n\n\n\n\n\n\n\n\nTip\n\n\n\nConfusion matrix is the two-way table.\n\n\n\n(ISLR 4.16) Using the Boston data set, fit classification models in order to predict whether a given census tract has a crime rate above or below the median. Explore logistic regression, LDA, naive Bayes, and KNN models using various subsets of the predictors. Describe your findings.\n\n\n\n\n\n\n\nTip\n\n\n\nYou will have to create the response variable yourself, using the variables that are contained in the Boston data set.\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen).\nClick the check box next to the file.\nClick the blue gear above and then click “Export” to download.\nSubmit your final html document to the respective assignment on Moodle."
   },
   {
     "objectID": "hw/hw-01-intro-review.html",
@@ -2362,7 +2362,7 @@
     "href": "hw/hw-02-cv-tm.html",
     "title": "Homework 2",
     "section": "",
-    "text": "Instructions\n\nCreating a new project. and giving it a sensible name such as homework_2.\nCreate a new quarto document and give it a sensible name such as hw2.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels.\nSet a seed before each problem.\nMake sure you answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\nExercises\n\n(ISLR 3) We now review k-fold cross-validation.\n\nExplain how k-fold cross-validation is implemented.\nWhat are the advantages and disadvantages of k-fold cross-validation relative to:\n\n\nThe validation set approach?\nLOOCV?\n\n(ISLR 8) We will now perform cross-validation on a simulated data set.\n\nGenerate a simulated data set as follows below. In this data set, what is \\(n\\) and what is \\(p\\)? Write out the model used to generate the data in equation form.\n\n\n\nset.seed(1)\nx &lt;- rnorm(100)\ny &lt;- x - 2 * x^2 + rnorm(100)\n\n\nContinued\n\nCreate a scatterplot of \\(X\\) against \\(Y\\). Comment on what you find.\nSet a random seed, and then compute the LOOCV errors that result from fitting the following four models using least squares:\n\nm1. \\(Y = \\beta_0 + \\beta_1 X + \\epsilon\\)\nm2. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\epsilon\\)\nm3. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\epsilon\\)\nm4. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\beta_4 X^4 + \\epsilon\\)\n\n\n\n\n\n\n\nTip\n\n\n\nYou may find it helpful to use the data.frame() function to create a single data set containing both \\(X\\) and \\(Y\\).\n\n\n\nContinued\n\nRepeat (c) using another random seed, and report your results. Are your results the same as what you got in (c)? Why?\nWhich of the models in (c) had the smallest LOOCV error? Is this what you expected? Explain your answer.\nComment on the statistical significance of the coefficient estimates that result from fitting each of the models in (c) using least squares. Do these results agree with the conclusions drawn based on the cross-validation results?\n\nThe data FirstYearGPA, in the Stat2Data packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use ?FirstYearGPA to learn about the dataset.\n\nSplit the data into training and test using 70% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed.\nUse the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE.\nNow do cross validation instead of using a test and training set. Give the final CV MSE.\nWhich was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example?\nIf we had more data, how might we combine both approaches?\n\nThe data Titanic, in the Stat2Data packages a list and outcomes for passengers on the Titanic.\n\nFit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.\n\n\n\ndata(Titanic)\ntitanic_2 &lt;- as.data.frame(Titanic) |&gt;\n  transform(Survived = factor(Survived))\n\nlog_spec&lt;- \n  logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nlogistic_fit &lt;-\n  fit(log_spec,\n    ____________ ~ ________+________,\n    data = ________)\n\n\nContinued\n\nUse the predict function on your model and predict for the data you used to fit the model.\nUsing your predicted values, calculate the misclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match.\nNow split the data into training and test like in the previous exercise (70/30 split). Give the misclassification rate for the test set.\nNow use cross validation and give the average misclassification rate across folds (almost a default output of the collect_metrics function).\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen)\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download\nSubmit your final html document to the respective assignment on Moodle"
+    "text": "Instructions\n\nCreating a new project. and giving it a sensible name such as homework_2.\nCreate a new quarto document and give it a sensible name such as hw2.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n---\ntitle: \"Document title\"\nauthor: \"my name\"\nformat:\n  html:\n    embed-resources: true\n---\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels.\nSet a seed before each problem.\nMake sure you answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\nExercises\n\n(ISLR 3) We now review k-fold cross-validation.\n\nExplain how k-fold cross-validation is implemented.\nWhat are the advantages and disadvantages of k-fold cross-validation relative to:\n\n\nThe validation set approach?\nLOOCV?\n\n(ISLR 8) We will now perform cross-validation on a simulated data set.\n\nGenerate a simulated data set as follows below. In this data set, what is \\(n\\) and what is \\(p\\)? Write out the model used to generate the data in equation form.\n\n\n\nset.seed(1)\nx &lt;- rnorm(100)\ny &lt;- x - 2 * x^2 + rnorm(100)\n\n\nContinued\n\nCreate a scatterplot of \\(X\\) against \\(Y\\). Comment on what you find.\nSet a random seed, and then compute the LOOCV errors that result from fitting the following four models using least squares:\n\nm1. \\(Y = \\beta_0 + \\beta_1 X + \\epsilon\\)\nm2. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\epsilon\\)\nm3. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\epsilon\\)\nm4. \\(Y = \\beta_0 + \\beta_1 X + \\beta_2 X^2 + \\beta_3 X^3 + \\beta_4 X^4 + \\epsilon\\)\n\n\n\n\n\n\n\nTip\n\n\n\nYou may find it helpful to use the data.frame() function to create a single data set containing both \\(X\\) and \\(Y\\).\n\n\n\nContinued\n\nRepeat (c) using another random seed, and report your results. Are your results the same as what you got in (c)? Why?\nWhich of the models in (c) had the smallest LOOCV error? Is this what you expected? Explain your answer.\nComment on the statistical significance of the coefficient estimates that result from fitting each of the models in (c) using least squares. Do these results agree with the conclusions drawn based on the cross-validation results?\n\nThe data FirstYearGPA, in the Stat2Data packages contains measurements on 219 college students. The response variable is GPA (grade point average after one year of college). Use ?FirstYearGPA to learn about the dataset.\n\nSplit the data into training and test using 70% for training and the remaining for test. Fit a multiple linear regression to predict GPA using HSGPA, HU, and White. Give the prediction equation along with the training MSE. Make sure to set a seed.\nUse the prediction equation in the previous part as a formula to generate predictions of the GPA for each of the cases in the test sample. Then give the test MSE.\nNow do cross validation instead of using a test and training set. Give the final CV MSE.\nWhich was better - using a test/training approach or using Cross Validation? Why is Cross validation likely to be better in this example?\nIf we had more data, how might we combine both approaches?\n\nThe data Titanic, in the Stat2Data packages a list and outcomes for passengers on the Titanic.\n\nFit a logistic regression model using Age and then SexCode using the code below and filling in the blanks. Write down both the logit and probability forms for the fitted model.\n\n\n\ndata(Titanic)\ntitanic_2 &lt;- as.data.frame(Titanic) |&gt;\n  transform(Survived = factor(Survived))\n\nlog_spec&lt;- \n  logistic_reg() |&gt;\n  set_engine(\"glm\")\n\nlogistic_fit &lt;-\n  fit(log_spec,\n    ____________ ~ ________+________,\n    data = ________)\n\n\nContinued\n\nUse the predict function on your model and predict for the data you used to fit the model.\nUsing your predicted values, calculate the misclassification rate. You will need to find a way to compare the predicted value to the new estimates and then count when they do not match.\nNow split the data into training and test like in the previous exercise (70/30 split). Give the misclassification rate for the test set.\nNow use cross validation and give the average misclassification rate across folds (almost a default output of the collect_metrics function).\n\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen).\nClick the check box next to the file\nClick the blue gear above and then click “Export” to download.\nSubmit your final html document to the respective assignment on Moodle."
   },
   {
     "objectID": "labs/lab01-cv-tm.html",
@@ -5694,7 +5694,7 @@
     "href": "hw/hw-04-regression.html",
     "title": "Homework 4",
     "section": "",
-    "text": "NoteInstructions\n\n\n\n\n\n\nCreating a new project. and giving it a sensible name such as homework3 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw3.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n\n\nThough the book used R code from base R, I want you to complete the exercises using functions from tidymodels when possible.\nSet a seed before each problem.\nMake sure your answers print results. If the output is a large table, use the head() function to shorten the output."
+    "text": "NoteInstructions\n\n\n\n\n\n\nCreating a new project. and giving it a sensible name such as homework4 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw4.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n\n\nThough the book used R code from base R, I want you to complete the exercises using functions from tidymodels when possible.\nSet a seed before each problem.\nMake sure your answers print results. If the output is a large table, use the head() function to shorten the output."
   },
   {
     "objectID": "slides/06-subset_o.html",
@@ -7858,5 +7858,789 @@
     "title": "Chapter 6 Part 4",
     "section": "PLS in tidymodels",
     "text": "PLS in tidymodels\n\nplot_top_loadings(iris_pls_fit,type = 'pls')"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#setup",
+    "href": "slides/07-basic-dt.html#setup",
+    "title": "Chapter 8 Part 1",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\n#install.packages('rpart.plot')"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-trees",
+    "href": "slides/07-basic-dt.html#decision-trees",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision trees",
+    "text": "Decision trees\n\nCan be applied to regression problems\nCan be applied to classification problems\n\n\n\nWhat is the difference?"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example",
+    "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\nHow would you stratify this?"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-1",
+    "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-1",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#lets-walk-through-the-figure",
+    "href": "slides/07-basic-dt.html#lets-walk-through-the-figure",
+    "title": "Chapter 8 Part 1",
+    "section": "Let’s walk through the figure",
+    "text": "Let’s walk through the figure\n\nThis is using the Hitters data from the ISLR 📦\nI fit a regression tree predicting the salary of a baseball player from:\n\nNumber of years they played in the major leagues\nNumber of hits they made in the previous year\n\nAt each node the label (e.g., \\(X_j &lt; t_k\\) ) indicates that the left branch that comes from that split. The right branch is the opposite, e.g. \\(X_j \\geq t_k\\)."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#lets-walk-through-the-figure-1",
+    "href": "slides/07-basic-dt.html#lets-walk-through-the-figure-1",
+    "title": "Chapter 8 Part 1",
+    "section": "Let’s walk through the figure",
+    "text": "Let’s walk through the figure\n\nFor example, the first internal node indicates that those to the left have less than 4.5 years in the major league, on the right have \\(\\geq\\) 4.5 years.\nThe number on the top of the nodes indicates the predicted Salary, for example before doing any splitting, the average Salary for the whole dataset is 536 thousand dollars.\nThis tree has two internal nodes and three termninal nodes"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-2",
+    "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-2",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-3",
+    "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-3",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-4",
+    "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-4",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R1\", aes(x = 3, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-5",
+    "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-5",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R1\", aes(x = 3, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R2\", aes(x = 15, y = 15), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R3\", aes(x = 15, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#terminology",
+    "href": "slides/07-basic-dt.html#terminology",
+    "title": "Chapter 8 Part 1",
+    "section": "Terminology",
+    "text": "Terminology\n\n🌳 The final regions, \\(R_1, R_2, R_3\\) are called terminal nodes\n🎄 You can think of the trees as upside down, the leaves are at the bottom\n🎄 The splits are called internal nodes"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#interpretation-of-results",
+    "href": "slides/07-basic-dt.html#interpretation-of-results",
+    "title": "Chapter 8 Part 1",
+    "section": "Interpretation of results",
+    "text": "Interpretation of results\n\nYears is the most important factor in determining Salary; players with less experience earn lower salaries\nGiven that a player is less experienced, the number of Hits seems to play little role in the Salary\nAmong players who have been in the major leagues for 4.5 years or more, the number of Hits made in the previous year does affect Salary, players with more Hits tend to have higher salaries\nThis is probably an oversimplification, but see how easy it is to interpret!"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#interpreting-decision-trees",
+    "href": "slides/07-basic-dt.html#interpreting-decision-trees",
+    "title": "Chapter 8 Part 1",
+    "section": " Interpreting decision trees",
+    "text": "Interpreting decision trees\n\nQuestionsGraph\n\n\n\nHow many internal nodes does this plot have? How many terminal nodes?\nWhat is the average Salary for players who have more than 6.5 years in the major leagues but less than 118 Hits? What % of the dataset fall in this category?"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#the-tree-building-process",
+    "href": "slides/07-basic-dt.html#the-tree-building-process",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nDivide the predictor space (the set of possible values for \\(X_1, X_2, \\dots, X_p\\) ) into \\(J\\) distinct non-overlapping regions, \\(R_1, R_2, \\dots R_j\\)\nFor every observation that falls into the region \\(R_j\\), we make the same prediction, the mean response value for the training observations in \\(R_j\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#the-tree-building-process-1",
+    "href": "slides/07-basic-dt.html#the-tree-building-process-1",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nThe regions could have any shape, but we choose to divide the predictor space into high-dimensional boxes for simplicity and ease of interpretation\nThe goal is to find boxes, \\(R_1, \\dots, R_j\\) that minimize the RSS, given by\n\\(\\sum_{j=1}^J\\sum_{i\\in R_j}(y_i-\\hat{y}_{R_j})^2\\) where \\(\\hat{y}_{R_j}\\) is the mean response for the training observations within the \\(j\\)th box."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#the-tree-building-process-2",
+    "href": "slides/07-basic-dt.html#the-tree-building-process-2",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nIt is often computationally infeasible to consider every possible partition of the feature space into \\(J\\) boxes\nTherefore, we take a top-down, greedy approach known as recursive binary splitting\nThis is top-down because it begins at the top of the tree and then splits the predictor space successively into two branches at a time\nIt is greedy because at each step the best split is made at that step (instead of looking forward and picking a split that may result in a better tree in a future step)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#the-tree-building-process-3",
+    "href": "slides/07-basic-dt.html#the-tree-building-process-3",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nFirst select the predictor \\(X_j\\) and the cutpoint \\(s\\) such that splitting the predictor space into \\(\\{X|X_j &lt; s\\}\\) and \\(\\{X|X_k\\geq s\\}\\) leads to the greatest possible reduction in RSS\nWe repeat this process, looking for the best predictor and cutpoint to split the data within each of the resulting regions\nNow instead of splitting the entire predictor space, we split one of the two previously identified regions, now we have three regions"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#the-tree-building-process-4",
+    "href": "slides/07-basic-dt.html#the-tree-building-process-4",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nThen we look to split one of these three regions to minimize the RSS\nThis process continues until some stopping criteria are met. 🛑 e.g., we could stop when we have created a fixed number of regions, or we could keep going until no region contains more than 5 observations, etc."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#draw-a-partition",
+    "href": "slides/07-basic-dt.html#draw-a-partition",
+    "title": "Chapter 8 Part 1",
+    "section": " Draw a partition",
+    "text": "Draw a partition\nDraw an example of a partition of a two-dimensional feature space that could result from recursive binary splitting with six regions. Label your figure with the regions, \\(R_1, \\dots, R_6\\) as well as the cutpoints \\(t_1, t_2, \\dots\\). Draw a decision tree corresponding to this partition."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#decision-tree-predictions",
+    "href": "slides/07-basic-dt.html#decision-tree-predictions",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree predictions",
+    "text": "Decision tree predictions\n\nPredict the response for a test observation using the mean of the training observations in the region that the test observation belongs to\n\n\n\nWhat could potentially go wrong with what we have described so far?\n\n\nThe process may produce good predictions on the training set but is likely to overfit!"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#pruning-a-tree",
+    "href": "slides/07-basic-dt.html#pruning-a-tree",
+    "title": "Chapter 8 Part 1",
+    "section": "Pruning a tree",
+    "text": "Pruning a tree\nDo you love the tree puns? I DO!\n\nA smaller tree (with fewer splits, that is fewer regions \\(R_1,\\dots, R_j\\) ) may lead to lower variance and better interpretation at the cost of a little bias\nA good strategy is to grow a very large tree, \\(T_0\\), and then prune it back to obtain a subtree\nFor this, we use cost complexity pruning (also known as weakest link 🔗 pruning)\nConsider a sequence of trees indexed by a nonnegative tuning parameter, \\(\\alpha\\). For each \\(\\alpha\\) there is a subtree \\(T \\subset T_0\\) such that \\(\\sum_{m=1}^{|T|}\\sum_{i:x_i\\in R_m}(y_i-\\hat{y}_{R_m})^2+\\alpha|T|\\) is as small as possible."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#pruning",
+    "href": "slides/07-basic-dt.html#pruning",
+    "title": "Chapter 8 Part 1",
+    "section": "Pruning",
+    "text": "Pruning\n\\[\\sum_{m=1}^{|T|}\\sum_{i:x_i\\in R_m}(y_i-\\hat{y}_{R_m})^2+\\alpha|T|\\]\n\n\\(|T|\\) indicates the number of terminal nodes of the tree \\(T\\)\n\\(R_m\\) is the box (the subset of the predictor space) corresponding to the \\(m\\)th terminal node\n\\(\\hat{y}_{R_m}\\) is the mean of the training observations in \\(R_m\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#choosing-the-best-subtree",
+    "href": "slides/07-basic-dt.html#choosing-the-best-subtree",
+    "title": "Chapter 8 Part 1",
+    "section": "Choosing the best subtree",
+    "text": "Choosing the best subtree\nThe tuning parameter, \\(\\alpha\\), controls the trade-off between the subtree’s complexity and its fit to the training data\n\nHow do you think you could select \\(\\alpha\\)?\n\n\nYou can select an optimal value, \\(\\hat{\\alpha}\\) using cross-validation!\nThen return to the full dataset and obtain the subtree using \\(\\hat{\\alpha}\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#summary-regression-tree-algorithm",
+    "href": "slides/07-basic-dt.html#summary-regression-tree-algorithm",
+    "title": "Chapter 8 Part 1",
+    "section": "Summary regression tree algorithm",
+    "text": "Summary regression tree algorithm\n\nUse recursive binary splitting to grow a large tree on the training data, stop when you reach some stopping criteria (such as there is some minimum number of observations in each region)\nApply cost complexity pruning to the larger tree to obtain a sequence of best subtrees, as a function of \\(\\alpha\\)\nUse K-fold cross-validation to choose \\(\\alpha\\). Pick \\(\\alpha\\) to minimize the average error\nReturn the subtree from step 2 that corresponds to the chosen \\(\\alpha\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#randomly-divide-the-data-in-half-132-training-observations-131-testing",
+    "href": "slides/07-basic-dt.html#randomly-divide-the-data-in-half-132-training-observations-131-testing",
+    "title": "Chapter 8 Part 1",
+    "section": "1. Randomly divide the data in half, 132 training observations, 131 testing",
+    "text": "1. Randomly divide the data in half, 132 training observations, 131 testing\n\nset.seed(77)\nbaseball_split &lt;- initial_split(baseball, prop = 0.5)\nbaseball_train &lt;- training(baseball_split)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#create-cross-validation-object-for-6-fold-cross-validation",
+    "href": "slides/07-basic-dt.html#create-cross-validation-object-for-6-fold-cross-validation",
+    "title": "Chapter 8 Part 1",
+    "section": "2. Create cross-validation object for 6-fold cross validation",
+    "text": "2. Create cross-validation object for 6-fold cross validation\n\nbaseball_cv &lt;- vfold_cv(baseball_train, v = 6)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#create-a-model-specification-that-tunes-based-on-complexity-alpha-and-add-to-workflow",
+    "href": "slides/07-basic-dt.html#create-a-model-specification-that-tunes-based-on-complexity-alpha-and-add-to-workflow",
+    "title": "Chapter 8 Part 1",
+    "section": "3. Create a model specification that tunes based on complexity, \\(\\alpha\\) and add to workflow",
+    "text": "3. Create a model specification that tunes based on complexity, \\(\\alpha\\) and add to workflow\n\ntree_spec &lt;- decision_tree(\n  cost_complexity = tune(), \n  tree_depth = 10,\n  mode = \"regression\") |&gt;\n  set_engine(\"rpart\")\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(Salary ~ Hits + Years + PutOuts + RBI + Walks + Runs, data = baseball)\n    ) |&gt;\n  add_model(tree_spec)\n\n\nWhat is my tree depth for my “large” tree?"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#fit-the-model-on-the-cross-validation-set",
+    "href": "slides/07-basic-dt.html#fit-the-model-on-the-cross-validation-set",
+    "title": "Chapter 8 Part 1",
+    "section": "4. Fit the model on the cross validation set",
+    "text": "4. Fit the model on the cross validation set\n\ngrid &lt;- expand_grid(cost_complexity = seq(0.01, 0.05, by = 0.01))\nmodel &lt;- tune_grid(wf,\n                   grid = grid,\n                   resamples = baseball_cv)\n\n\nWhat \\(\\alpha\\)’s am I trying?"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#choose-alpha-that-minimizes-the-rmse",
+    "href": "slides/07-basic-dt.html#choose-alpha-that-minimizes-the-rmse",
+    "title": "Chapter 8 Part 1",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the RMSE",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the RMSE\n\nmodel |&gt;\n  show_best(metric = \"rmse\")\n\n# A tibble: 5 × 7\n  cost_complexity .metric .estimator  mean     n std_err .config        \n            &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1            0.01 rmse    standard    422.     6    33.6 pre0_mod1_post0\n2            0.02 rmse    standard    423.     6    32.0 pre0_mod2_post0\n3            0.03 rmse    standard    425.     6    31.9 pre0_mod3_post0\n4            0.04 rmse    standard    429.     6    32.5 pre0_mod4_post0\n5            0.05 rmse    standard    441.     6    25.3 pre0_mod5_post0"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#choose-alpha-that-minimizes-the-rmse-1",
+    "href": "slides/07-basic-dt.html#choose-alpha-that-minimizes-the-rmse-1",
+    "title": "Chapter 8 Part 1",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the RMSE",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the RMSE\n\nmodel |&gt;\n  show_best()\n\n\nmodel |&gt;\n  select_best(metric = \"rmse\") #&lt;&lt;\n\n# A tibble: 1 × 2\n  cost_complexity .config        \n            &lt;dbl&gt; &lt;chr&gt;          \n1            0.01 pre0_mod1_post0"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#choose-alpha-that-minimizes-the-rmse-2",
+    "href": "slides/07-basic-dt.html#choose-alpha-that-minimizes-the-rmse-2",
+    "title": "Chapter 8 Part 1",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the RMSE",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the RMSE\n\nmodel |&gt;\n  show_best(metric = \"rmse\")\n\n\nfinal_complexity &lt;- select_best(model, metric = \"rmse\")"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#fit-the-final-model",
+    "href": "slides/07-basic-dt.html#fit-the-final-model",
+    "title": "Chapter 8 Part 1",
+    "section": "6. Fit the final model",
+    "text": "6. Fit the final model\n\nwf_final &lt;- wf |&gt;\n  finalize_workflow(final_complexity)\n\nfinal_model &lt;- fit(wf_final,\n                   data = baseball_train)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#final-tree",
+    "href": "slides/07-basic-dt.html#final-tree",
+    "title": "Chapter 8 Part 1",
+    "section": "Final tree",
+    "text": "Final tree\n\nrpart.plot::rpart.plot(final_model$fit$fit$fit, roundint = FALSE)\n\n\n\nHow many terminal nodes does this tree have?"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#calculate-rmse-on-the-test-data",
+    "href": "slides/07-basic-dt.html#calculate-rmse-on-the-test-data",
+    "title": "Chapter 8 Part 1",
+    "section": "Calculate RMSE on the test data",
+    "text": "Calculate RMSE on the test data\n\nbaseball_test &lt;- testing(baseball_split)\nfinal_model |&gt;\n  predict(new_data = baseball_test) |&gt;\n  bind_cols(baseball_test) |&gt;\n  metrics(truth = Salary, estimate = .pred)\n\n# A tibble: 3 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 rmse    standard     380.   \n2 rsq     standard       0.291\n3 mae     standard     248."
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#application-exercise",
+    "href": "slides/07-basic-dt.html#application-exercise",
+    "title": "Chapter 8 Part 1",
+    "section": " Application Exercise",
+    "text": "Application Exercise\nUsing the College data from the ISLR package, predict the number of applications received from a subset of the variables of your choice using a decision tree. (Not sure about the variables? Run ?College in the console after loading the ISLR package)"
+  },
+  {
+    "objectID": "slides/07-basic-dt.html#exercise",
+    "href": "slides/07-basic-dt.html#exercise",
+    "title": "Chapter 8 Part 1",
+    "section": " Exercise",
+    "text": "Exercise\nDraw a partition\nDraw an example of a partition of a two-dimensional feature space that could result from recursive binary splitting with six regions. Label your figure with the regions, \\(R_1, \\dots, R_6\\) as well as the cutpoints \\(t_1, t_2, \\dots\\). Draw a decision tree corresponding to this partition."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html",
+    "href": "slides/07-basic-dt_o.html",
+    "title": "Chapter 8 Part 1",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\n#install.packages('rpart.plot')"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#setup",
+    "href": "slides/07-basic-dt_o.html#setup",
+    "title": "Chapter 8 Part 1",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\n#install.packages('rpart.plot')"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-trees",
+    "href": "slides/07-basic-dt_o.html#decision-trees",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision trees",
+    "text": "Decision trees\n\nCan be applied to regression problems\nCan be applied to classification problems\n\n. . .\n\nWhat is the difference?"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example",
+    "href": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\n\n\n\n\n\n\n\n\nHow would you stratify this?"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-1",
+    "href": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-1",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#lets-walk-through-the-figure",
+    "href": "slides/07-basic-dt_o.html#lets-walk-through-the-figure",
+    "title": "Chapter 8 Part 1",
+    "section": "Let’s walk through the figure",
+    "text": "Let’s walk through the figure\n\nThis is using the Hitters data from the ISLR 📦\nI fit a regression tree predicting the salary of a baseball player from:\n\nNumber of years they played in the major leagues\nNumber of hits they made in the previous year\n\nAt each node the label (e.g., \\(X_j &lt; t_k\\) ) indicates that the left branch that comes from that split. The right branch is the opposite, e.g. \\(X_j \\geq t_k\\)."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#lets-walk-through-the-figure-1",
+    "href": "slides/07-basic-dt_o.html#lets-walk-through-the-figure-1",
+    "title": "Chapter 8 Part 1",
+    "section": "Let’s walk through the figure",
+    "text": "Let’s walk through the figure\n\nFor example, the first internal node indicates that those to the left have less than 4.5 years in the major league, on the right have \\(\\geq\\) 4.5 years.\nThe number on the top of the nodes indicates the predicted Salary, for example before doing any splitting, the average Salary for the whole dataset is 536 thousand dollars.\nThis tree has two internal nodes and three termninal nodes"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-2",
+    "href": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-2",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-3",
+    "href": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-3",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-4",
+    "href": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-4",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R1\", aes(x = 3, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-5",
+    "href": "slides/07-basic-dt_o.html#decision-tree---baseball-salary-example-5",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree - Baseball Salary Example",
+    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R1\", aes(x = 3, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R2\", aes(x = 15, y = 15), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R3\", aes(x = 15, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#terminology",
+    "href": "slides/07-basic-dt_o.html#terminology",
+    "title": "Chapter 8 Part 1",
+    "section": "Terminology",
+    "text": "Terminology\n\n🌳 The final regions, \\(R_1, R_2, R_3\\) are called terminal nodes\n🎄 You can think of the trees as upside down, the leaves are at the bottom\n🎄 The splits are called internal nodes"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#interpretation-of-results",
+    "href": "slides/07-basic-dt_o.html#interpretation-of-results",
+    "title": "Chapter 8 Part 1",
+    "section": "Interpretation of results",
+    "text": "Interpretation of results\n\nYears is the most important factor in determining Salary; players with less experience earn lower salaries\nGiven that a player is less experienced, the number of Hits seems to play little role in the Salary\nAmong players who have been in the major leagues for 4.5 years or more, the number of Hits made in the previous year does affect Salary, players with more Hits tend to have higher salaries\nThis is probably an oversimplification, but see how easy it is to interpret!"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#interpreting-decision-trees",
+    "href": "slides/07-basic-dt_o.html#interpreting-decision-trees",
+    "title": "Chapter 8 Part 1",
+    "section": " Interpreting decision trees",
+    "text": "Interpreting decision trees\n\nQuestionsGraph\n\n\n\n\nHow many internal nodes does this plot have? How many terminal nodes?\nWhat is the average Salary for players who have more than 6.5 years in the major leagues but less than 118 Hits? What % of the dataset fall in this category?"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#the-tree-building-process",
+    "href": "slides/07-basic-dt_o.html#the-tree-building-process",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nDivide the predictor space (the set of possible values for \\(X_1, X_2, \\dots, X_p\\) ) into \\(J\\) distinct non-overlapping regions, \\(R_1, R_2, \\dots R_j\\)\nFor every observation that falls into the region \\(R_j\\), we make the same prediction, the mean response value for the training observations in \\(R_j\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#the-tree-building-process-1",
+    "href": "slides/07-basic-dt_o.html#the-tree-building-process-1",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nThe regions could have any shape, but we choose to divide the predictor space into high-dimensional boxes for simplicity and ease of interpretation\nThe goal is to find boxes, \\(R_1, \\dots, R_j\\) that minimize the RSS, given by\n\\(\\sum_{j=1}^J\\sum_{i\\in R_j}(y_i-\\hat{y}_{R_j})^2\\) where \\(\\hat{y}_{R_j}\\) is the mean response for the training observations within the \\(j\\)th box."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#the-tree-building-process-2",
+    "href": "slides/07-basic-dt_o.html#the-tree-building-process-2",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nIt is often computationally infeasible to consider every possible partition of the feature space into \\(J\\) boxes\nTherefore, we take a top-down, greedy approach known as recursive binary splitting\nThis is top-down because it begins at the top of the tree and then splits the predictor space successively into two branches at a time\nIt is greedy because at each step the best split is made at that step (instead of looking forward and picking a split that may result in a better tree in a future step)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#the-tree-building-process-3",
+    "href": "slides/07-basic-dt_o.html#the-tree-building-process-3",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nFirst select the predictor \\(X_j\\) and the cutpoint \\(s\\) such that splitting the predictor space into \\(\\{X|X_j &lt; s\\}\\) and \\(\\{X|X_k\\geq s\\}\\) leads to the greatest possible reduction in RSS\nWe repeat this process, looking for the best predictor and cutpoint to split the data within each of the resulting regions\nNow instead of splitting the entire predictor space, we split one of the two previously identified regions, now we have three regions"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#the-tree-building-process-4",
+    "href": "slides/07-basic-dt_o.html#the-tree-building-process-4",
+    "title": "Chapter 8 Part 1",
+    "section": "The tree building process",
+    "text": "The tree building process\n\nThen we look to split one of these three regions to minimize the RSS\nThis process continues until some stopping criteria are met. 🛑 e.g., we could stop when we have created a fixed number of regions, or we could keep going until no region contains more than 5 observations, etc."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#exercise",
+    "href": "slides/07-basic-dt_o.html#exercise",
+    "title": "Chapter 8 Part 1",
+    "section": " Exercise",
+    "text": "Exercise\n\nDraw a partition\nDraw an example of a partition of a two-dimensional feature space that could result from recursive binary splitting with six regions. Label your figure with the regions, \\(R_1, \\dots, R_6\\) as well as the cutpoints \\(t_1, t_2, \\dots\\). Draw a decision tree corresponding to this partition."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#decision-tree-predictions",
+    "href": "slides/07-basic-dt_o.html#decision-tree-predictions",
+    "title": "Chapter 8 Part 1",
+    "section": "Decision tree predictions",
+    "text": "Decision tree predictions\n\nPredict the response for a test observation using the mean of the training observations in the region that the test observation belongs to\n\n. . .\n\nWhat could potentially go wrong with what we have described so far?\n\n\nThe process may produce good predictions on the training set but is likely to overfit!"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#pruning-a-tree",
+    "href": "slides/07-basic-dt_o.html#pruning-a-tree",
+    "title": "Chapter 8 Part 1",
+    "section": "Pruning a tree",
+    "text": "Pruning a tree\nDo you love the tree puns? I DO!\n\nA smaller tree (with fewer splits, that is fewer regions \\(R_1,\\dots, R_j\\) ) may lead to lower variance and better interpretation at the cost of a little bias\nA good strategy is to grow a very large tree, \\(T_0\\), and then prune it back to obtain a subtree\nFor this, we use cost complexity pruning (also known as weakest link 🔗 pruning)\nConsider a sequence of trees indexed by a nonnegative tuning parameter, \\(\\alpha\\). For each \\(\\alpha\\) there is a subtree \\(T \\subset T_0\\) such that \\(\\sum_{m=1}^{|T|}\\sum_{i:x_i\\in R_m}(y_i-\\hat{y}_{R_m})^2+\\alpha|T|\\) is as small as possible."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#pruning",
+    "href": "slides/07-basic-dt_o.html#pruning",
+    "title": "Chapter 8 Part 1",
+    "section": "Pruning",
+    "text": "Pruning\n\\[\\sum_{m=1}^{|T|}\\sum_{i:x_i\\in R_m}(y_i-\\hat{y}_{R_m})^2+\\alpha|T|\\]\n\n\\(|T|\\) indicates the number of terminal nodes of the tree \\(T\\)\n\\(R_m\\) is the box (the subset of the predictor space) corresponding to the \\(m\\)th terminal node\n\\(\\hat{y}_{R_m}\\) is the mean of the training observations in \\(R_m\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#choosing-the-best-subtree",
+    "href": "slides/07-basic-dt_o.html#choosing-the-best-subtree",
+    "title": "Chapter 8 Part 1",
+    "section": "Choosing the best subtree",
+    "text": "Choosing the best subtree\nThe tuning parameter, \\(\\alpha\\), controls the trade-off between the subtree’s complexity and its fit to the training data\n\nHow do you think you could select \\(\\alpha\\)?\n\n\nYou can select an optimal value, \\(\\hat{\\alpha}\\) using cross-validation!\nThen return to the full dataset and obtain the subtree using \\(\\hat{\\alpha}\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#summary-regression-tree-algorithm",
+    "href": "slides/07-basic-dt_o.html#summary-regression-tree-algorithm",
+    "title": "Chapter 8 Part 1",
+    "section": "Summary regression tree algorithm",
+    "text": "Summary regression tree algorithm\n\nUse recursive binary splitting to grow a large tree on the training data, stop when you reach some stopping criteria (such as there is some minimum number of observations in each region)\nApply cost complexity pruning to the larger tree to obtain a sequence of best subtrees, as a function of \\(\\alpha\\)\nUse K-fold cross-validation to choose \\(\\alpha\\). Pick \\(\\alpha\\) to minimize the average error\nReturn the subtree from step 2 that corresponds to the chosen \\(\\alpha\\)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#randomly-divide-the-data-in-half-132-training-observations-131-testing",
+    "href": "slides/07-basic-dt_o.html#randomly-divide-the-data-in-half-132-training-observations-131-testing",
+    "title": "Chapter 8 Part 1",
+    "section": "1. Randomly divide the data in half, 132 training observations, 131 testing",
+    "text": "1. Randomly divide the data in half, 132 training observations, 131 testing\n\nset.seed(77)\nbaseball_split &lt;- initial_split(baseball, prop = 0.5)\nbaseball_train &lt;- training(baseball_split)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#create-cross-validation-object-for-6-fold-cross-validation",
+    "href": "slides/07-basic-dt_o.html#create-cross-validation-object-for-6-fold-cross-validation",
+    "title": "Chapter 8 Part 1",
+    "section": "2. Create cross-validation object for 6-fold cross validation",
+    "text": "2. Create cross-validation object for 6-fold cross validation\n\nbaseball_cv &lt;- vfold_cv(baseball_train, v = 6)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#create-a-model-specification-that-tunes-based-on-complexity-alpha-and-add-to-workflow",
+    "href": "slides/07-basic-dt_o.html#create-a-model-specification-that-tunes-based-on-complexity-alpha-and-add-to-workflow",
+    "title": "Chapter 8 Part 1",
+    "section": "3. Create a model specification that tunes based on complexity, \\(\\alpha\\) and add to workflow",
+    "text": "3. Create a model specification that tunes based on complexity, \\(\\alpha\\) and add to workflow\n\ntree_spec &lt;- decision_tree(\n  cost_complexity = tune(), \n  tree_depth = 10,\n  mode = \"regression\") |&gt;\n  set_engine(\"rpart\")\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(Salary ~ Hits + Years + PutOuts + RBI + Walks + Runs, data = baseball)\n    ) |&gt;\n  add_model(tree_spec)\n\n\nWhat is my tree depth for my “large” tree?"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#fit-the-model-on-the-cross-validation-set",
+    "href": "slides/07-basic-dt_o.html#fit-the-model-on-the-cross-validation-set",
+    "title": "Chapter 8 Part 1",
+    "section": "4. Fit the model on the cross validation set",
+    "text": "4. Fit the model on the cross validation set\n\ngrid &lt;- expand_grid(cost_complexity = seq(0.01, 0.05, by = 0.01))\nmodel &lt;- tune_grid(wf,\n                   grid = grid,\n                   resamples = baseball_cv)\n\n\nWhat \\(\\alpha\\)’s am I trying?"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#choose-alpha-that-minimizes-the-rmse",
+    "href": "slides/07-basic-dt_o.html#choose-alpha-that-minimizes-the-rmse",
+    "title": "Chapter 8 Part 1",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the RMSE",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the RMSE\n\nmodel |&gt;\n  show_best(metric = \"rmse\")\n\n# A tibble: 5 × 7\n  cost_complexity .metric .estimator  mean     n std_err .config        \n            &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;      &lt;dbl&gt; &lt;int&gt;   &lt;dbl&gt; &lt;chr&gt;          \n1            0.01 rmse    standard    422.     6    33.6 pre0_mod1_post0\n2            0.02 rmse    standard    423.     6    32.0 pre0_mod2_post0\n3            0.03 rmse    standard    425.     6    31.9 pre0_mod3_post0\n4            0.04 rmse    standard    429.     6    32.5 pre0_mod4_post0\n5            0.05 rmse    standard    441.     6    25.3 pre0_mod5_post0"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#choose-alpha-that-minimizes-the-rmse-1",
+    "href": "slides/07-basic-dt_o.html#choose-alpha-that-minimizes-the-rmse-1",
+    "title": "Chapter 8 Part 1",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the RMSE",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the RMSE\n\nmodel |&gt;\n  show_best()\n\n\nmodel |&gt;\n  select_best(metric = \"rmse\") #&lt;&lt;\n\n# A tibble: 1 × 2\n  cost_complexity .config        \n            &lt;dbl&gt; &lt;chr&gt;          \n1            0.01 pre0_mod1_post0"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#choose-alpha-that-minimizes-the-rmse-2",
+    "href": "slides/07-basic-dt_o.html#choose-alpha-that-minimizes-the-rmse-2",
+    "title": "Chapter 8 Part 1",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the RMSE",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the RMSE\n\nmodel |&gt;\n  show_best(metric = \"rmse\")\n\n\nfinal_complexity &lt;- select_best(model, metric = \"rmse\")"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#fit-the-final-model",
+    "href": "slides/07-basic-dt_o.html#fit-the-final-model",
+    "title": "Chapter 8 Part 1",
+    "section": "6. Fit the final model",
+    "text": "6. Fit the final model\n\nwf_final &lt;- wf |&gt;\n  finalize_workflow(final_complexity)\n\nfinal_model &lt;- fit(wf_final,\n                   data = baseball_train)"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#final-tree",
+    "href": "slides/07-basic-dt_o.html#final-tree",
+    "title": "Chapter 8 Part 1",
+    "section": "Final tree",
+    "text": "Final tree\n\nrpart.plot::rpart.plot(final_model$fit$fit$fit, roundint = FALSE)\n\n\n\n\n\n\n\n\n\nHow many terminal nodes does this tree have?"
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#calculate-rmse-on-the-test-data",
+    "href": "slides/07-basic-dt_o.html#calculate-rmse-on-the-test-data",
+    "title": "Chapter 8 Part 1",
+    "section": "Calculate RMSE on the test data",
+    "text": "Calculate RMSE on the test data\n\nbaseball_test &lt;- testing(baseball_split)\nfinal_model |&gt;\n  predict(new_data = baseball_test) |&gt;\n  bind_cols(baseball_test) |&gt;\n  metrics(truth = Salary, estimate = .pred)\n\n# A tibble: 3 × 3\n  .metric .estimator .estimate\n  &lt;chr&gt;   &lt;chr&gt;          &lt;dbl&gt;\n1 rmse    standard     380.   \n2 rsq     standard       0.291\n3 mae     standard     248."
+  },
+  {
+    "objectID": "slides/07-basic-dt_o.html#application-exercise",
+    "href": "slides/07-basic-dt_o.html#application-exercise",
+    "title": "Chapter 8 Part 1",
+    "section": " Application Exercise",
+    "text": "Application Exercise\nUsing the College data from the ISLR package, predict the number of applications received from a subset of the variables of your choice using a decision tree. (Not sure about the variables? Run ?College in the console after loading the ISLR package)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html",
+    "href": "slides/07-2-dt_o.html",
+    "title": "Chapter 8 Part 2",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\nlibrary(partykit)\nlibrary(rattle)\n#install.packages('ranger')"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#setup",
+    "href": "slides/07-2-dt_o.html#setup",
+    "title": "Chapter 8 Part 2",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\nlibrary(partykit)\nlibrary(rattle)\n#install.packages('ranger')"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#plotting-decision-trees",
+    "href": "slides/07-2-dt_o.html#plotting-decision-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Plotting decision trees",
+    "text": "Plotting decision trees\nThere are several R packages that assist with tree plotting\n\nrpart.plot\npartykit\nrattle"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#where-to-find-out-more-about-packages",
+    "href": "slides/07-2-dt_o.html#where-to-find-out-more-about-packages",
+    "title": "Chapter 8 Part 2",
+    "section": "Where to find out more about packages",
+    "text": "Where to find out more about packages\n\nVignettes\nJournal Article (R Journal is great)\nRstudio Community\nStackOverflow\nTwitter"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#rpart.plot",
+    "href": "slides/07-2-dt_o.html#rpart.plot",
+    "title": "Chapter 8 Part 2",
+    "section": "rpart.plot",
+    "text": "rpart.plot\nWe’re going to focus on rpart.plot, but feel free to try the others!\n\ninstall.packages(\"rpart.plot\")\n\n\nlibrary(rpart.plot)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#rpart.plot-1",
+    "href": "slides/07-2-dt_o.html#rpart.plot-1",
+    "title": "Chapter 8 Part 2",
+    "section": "rpart.plot",
+    "text": "rpart.plot\n\ntree_spec &lt;- decision_tree(\n  cost_complexity = 0.1,\n  tree_depth = 10,\n  mode = \"regression\") |&gt;\n  set_engine(\"rpart\")\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(Salary ~ Hits + Years + PutOuts + RBI + Walks + Runs,\n                   data = baseball)\n  ) |&gt;\n  add_model(tree_spec)\n\nmodel &lt;- fit(wf, baseball)\n\n. . .\n\nrpart.plot(model$fit$fit$fit,\n           roundint = FALSE)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#rpart.plot-2",
+    "href": "slides/07-2-dt_o.html#rpart.plot-2",
+    "title": "Chapter 8 Part 2",
+    "section": "rpart.plot",
+    "text": "rpart.plot\n\nrpart.plot(model$fit$fit$fit, \n           roundint = FALSE)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#classification-trees-1",
+    "href": "slides/07-2-dt_o.html#classification-trees-1",
+    "title": "Chapter 8 Part 2",
+    "section": "Classification Trees",
+    "text": "Classification Trees\n\nVery similar to regression trees except it is used to predict a qualitative response rather than a quantitative one\nWe predict that each observation belongs to the most commonly occuring class of the training observations in a given region"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#fitting-classification-trees",
+    "href": "slides/07-2-dt_o.html#fitting-classification-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Fitting classification trees",
+    "text": "Fitting classification trees\n\nWe use recursive binary splitting to grow the tree\nInstead of RSS, we can use:\nGini index: \\(G = \\sum_{k=1}^K \\hat{p}_{mk}(1-\\hat{p}_{mk})\\)\nThis is a measure of total variance across the \\(K\\) classes. If all of the \\(\\hat{p}_{mk}\\) values are close to zero or one, this will be small\nThe Gini index is a measure of node purity small values indicate that node contains predominantly observations from a single class\nIn R, this can be estimated using the gain_capture() function."
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#classification-tree---heart-disease-example",
+    "href": "slides/07-2-dt_o.html#classification-tree---heart-disease-example",
+    "title": "Chapter 8 Part 2",
+    "section": "Classification tree - Heart Disease Example",
+    "text": "Classification tree - Heart Disease Example\n\nClassifying whether 303 patients have heart disease based on 13 predictors (Age, Sex, Chol, etc)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#split-the-data-into-a-cross-validation-set",
+    "href": "slides/07-2-dt_o.html#split-the-data-into-a-cross-validation-set",
+    "title": "Chapter 8 Part 2",
+    "section": "1. Split the data into a cross-validation set",
+    "text": "1. Split the data into a cross-validation set\n\nheart_cv &lt;- vfold_cv(heart, v = 5)\n\n\nHow many folds do I have?"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#create-a-model-specification-that-tunes-based-on-complexity-alpha",
+    "href": "slides/07-2-dt_o.html#create-a-model-specification-that-tunes-based-on-complexity-alpha",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create a model specification that tunes based on complexity, \\(\\alpha\\)",
+    "text": "2. Create a model specification that tunes based on complexity, \\(\\alpha\\)\n\ntree_spec &lt;- decision_tree(\n  cost_complexity = tune(), \n  tree_depth = 10,\n  mode = \"classification\") %&gt;% \n  set_engine(\"rpart\")\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n                     RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca,\n    data = heart\n    )\n  ) |&gt;\n  add_model(tree_spec)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#fit-the-model-on-the-cross-validation-set",
+    "href": "slides/07-2-dt_o.html#fit-the-model-on-the-cross-validation-set",
+    "title": "Chapter 8 Part 2",
+    "section": "3. Fit the model on the cross validation set",
+    "text": "3. Fit the model on the cross validation set\n\ngrid &lt;- expand_grid(cost_complexity = seq(0.01, 0.05, by = 0.01))\nmodel &lt;- tune_grid(wf,\n                   grid = grid,\n                   resamples = heart_cv,\n                   metrics = metric_set(gain_capture, accuracy)) \n\n. . .\n\nWhat \\(\\alpha\\)s am I trying?"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#choose-alpha-that-minimizes-the-gini-index",
+    "href": "slides/07-2-dt_o.html#choose-alpha-that-minimizes-the-gini-index",
+    "title": "Chapter 8 Part 2",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the Gini Index",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the Gini Index\n\nbest &lt;- model %&gt;%\n  select_best(metric = \"gain_capture\")"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#fit-the-final-model",
+    "href": "slides/07-2-dt_o.html#fit-the-final-model",
+    "title": "Chapter 8 Part 2",
+    "section": "6. Fit the final model",
+    "text": "6. Fit the final model\n\nfinal_wf &lt;- wf |&gt;\n  finalize_workflow(best)\n\nfinal_model &lt;- fit(final_wf, data = heart)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#examine-how-the-final-model-does-on-the-full-sample",
+    "href": "slides/07-2-dt_o.html#examine-how-the-final-model-does-on-the-full-sample",
+    "title": "Chapter 8 Part 2",
+    "section": "7. Examine how the final model does on the full sample",
+    "text": "7. Examine how the final model does on the full sample\n\nfinal_model %&gt;%\n  predict(new_data = heart) %&gt;%\n  bind_cols(heart) %&gt;%\n  conf_mat(truth = HD, estimate = .pred_class) %&gt;%\n  autoplot(type = \"heatmap\")"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#decision-trees",
+    "href": "slides/07-2-dt_o.html#decision-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Decision trees",
+    "text": "Decision trees\n\n\n\nPros\n\nsimple\neasy to interpret\n\n\n\n\nCons\n\nnot often competitive in terms of predictive accuracy\nNext we will discuss how to combine multiple trees to improve accuracy"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#try-classification-trees",
+    "href": "slides/07-2-dt_o.html#try-classification-trees",
+    "title": "Chapter 8 Part 2",
+    "section": " Try Classification Trees",
+    "text": "Try Classification Trees\n\nFit a classification tree to predict species in the penguins data from the palmerpenguins packages."
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#bagging-1",
+    "href": "slides/07-2-dt_o.html#bagging-1",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging",
+    "text": "Bagging\n\nbagging is a general-purpose procedure for reducing the variance of a statistical learning method (outside of just trees)\nIt is particularly useful and frequently used in the context of decision trees\nAlso called bootstrap aggregation"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#bagging-2",
+    "href": "slides/07-2-dt_o.html#bagging-2",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging",
+    "text": "Bagging\n\nMathematically, why does this work? Let’s go back to intro to stat!\nIf you have a set of \\(n\\) independent observations: \\(Z_1, \\dots, Z_n\\), each with a variance of \\(\\sigma^2\\), what would the variance of the mean, \\(\\bar{Z}\\) be?\nThe variance of \\(\\bar{Z}\\) is \\(\\sigma^2/n\\)\nIn other words, averaging a set of observations reduces the variance.\nThis is generally not practical because we generally do not have multiple training sets"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#bagging-3",
+    "href": "slides/07-2-dt_o.html#bagging-3",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging",
+    "text": "Bagging\nAveraging a set of observations reduces the variance. This is generally not practical because we generally do not have multiple training sets.\n\nWhat can we do?\n\n\nBootstrap! We can take repeated samples from the single training data set."
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#bagging-process",
+    "href": "slides/07-2-dt_o.html#bagging-process",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging process",
+    "text": "Bagging process\n\ngenerate \\(B\\) different bootstrapped training sets\nTrain our method on the \\(b\\)th bootstrapped training set to get \\(\\hat{f}^{*b}(x)\\), the prediction at point \\(x\\)\nAverage all predictions to get: \\(\\hat{f}_{bag}(x)=\\frac{1}{B}\\sum_{b=1}^B\\hat{f}^{*b}(x)\\)\nThis is bagging!"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#bagging-regression-trees",
+    "href": "slides/07-2-dt_o.html#bagging-regression-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging regression trees",
+    "text": "Bagging regression trees\n\ngenerate \\(B\\) different bootstrapped training sets\nFit a regression tree on the \\(b\\)th bootstrapped training set to get \\(\\hat{f}^{*b}(x)\\), the prediction at point \\(x\\)\nAverage all predictions to get: \\(\\hat{f}_{bag}(x)=\\frac{1}{B}\\sum_{b=1}^B\\hat{f}^{*b}(x)\\)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#bagging-classification-trees",
+    "href": "slides/07-2-dt_o.html#bagging-classification-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging classification trees",
+    "text": "Bagging classification trees\n\nfor each test observation, record the class predicted by the \\(B\\) trees\nTake a majority vote - the overall prediction is the most commonly occuring class among the \\(B\\) predictions"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#out-of-bag-error-estimation",
+    "href": "slides/07-2-dt_o.html#out-of-bag-error-estimation",
+    "title": "Chapter 8 Part 2",
+    "section": "Out-of-bag Error Estimation",
+    "text": "Out-of-bag Error Estimation\n\nYou can estimate the test error of a bagged model\nThe key to bagging is that trees are repeatedly fit to bootstrapped subsets of the observations\nOn average, each bagged tree makes use of about 2/3 of the observations (you can prove this if you’d like!, not required for this course though)\nThe remaining 1/3 of observations not used to fit a given bagged tree are the out-of-bag (OOB) observations"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#out-of-bag-error-estimation-1",
+    "href": "slides/07-2-dt_o.html#out-of-bag-error-estimation-1",
+    "title": "Chapter 8 Part 2",
+    "section": "Out-of-bag Error Estimation",
+    "text": "Out-of-bag Error Estimation\nYou can predict the response for the \\(i\\)th observation using each of the trees in which that observation was OOB\n\nHow many predictions do you think this will yield for the \\(i\\)th observation?\n\n\nThis will yield \\(B/3\\) predictions for the \\(i\\)th observations. We can average this!\nThis estimate is essentially the LOOCV error for bagging as long as \\(B\\) is large 🎉"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#bagging-vs-boosting-video",
+    "href": "slides/07-2-dt_o.html#bagging-vs-boosting-video",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging (vs Boosting) Video",
+    "text": "Bagging (vs Boosting) Video\nhttps://www.youtube.com/watch?v=tjy0yL1rRRU&t=4s"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#describing-bagging",
+    "href": "slides/07-2-dt_o.html#describing-bagging",
+    "title": "Chapter 8 Part 2",
+    "section": " Describing Bagging",
+    "text": "Describing Bagging\nSee if you can draw a diagram to describe the bagging process to someone who has never heard of this before.\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#random-forest-process",
+    "href": "slides/07-2-dt_o.html#random-forest-process",
+    "title": "Chapter 8 Part 2",
+    "section": "Random Forest process",
+    "text": "Random Forest process\n\nLike bagging, build a number of decision trees on bootstrapped training samples\nEach time the tree is split, instead of considering all predictors (like bagging), a random selection of \\(m\\) predictors is chosen as split candidates from the full set of \\(p\\) predictors\nThe split is allowed to use only one of those \\(m\\) predictors\nA fresh selection of \\(m\\) predictors is taken at each split\ntypically we choose \\(m \\approx \\sqrt{p}\\)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#choosing-m-for-random-forest",
+    "href": "slides/07-2-dt_o.html#choosing-m-for-random-forest",
+    "title": "Chapter 8 Part 2",
+    "section": " Choosing m for Random Forest",
+    "text": "Choosing m for Random Forest\nLet’s say you have a dataset with 100 observations and 9 variables, if you were fitting a random forest, what would a good \\(m\\) be?"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#randomly-divide-the-data-in-half-149-training-observations-148-testing",
+    "href": "slides/07-2-dt_o.html#randomly-divide-the-data-in-half-149-training-observations-148-testing",
+    "title": "Chapter 8 Part 2",
+    "section": "1. Randomly divide the data in half, 149 training observations, 148 testing",
+    "text": "1. Randomly divide the data in half, 149 training observations, 148 testing\n\nset.seed(77)\nheart_split &lt;- initial_split(heart, prop = 0.5)\nheart_train &lt;- training(heart_split)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#create-model-specification",
+    "href": "slides/07-2-dt_o.html#create-model-specification",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create model specification",
+    "text": "2. Create model specification\n\nmodel_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = ---\n) |&gt; \n  set_engine(\"ranger\")\n\n. . .\n\nmtry here is m. If we are doing bagging what do you think we set this to?"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#create-bagging-specification",
+    "href": "slides/07-2-dt_o.html#create-bagging-specification",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create bagging specification",
+    "text": "2. Create bagging specification\n\nbagging_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 13 #&lt;&lt;\n) |&gt; \n  set_engine(\"ranger\")\n\n\nWhat would we change mtry to if we are doing a random forest?"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#create-random-forest-specification",
+    "href": "slides/07-2-dt_o.html#create-random-forest-specification",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create Random Forest specification",
+    "text": "2. Create Random Forest specification\n\nrf_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 3 #&lt;&lt;\n) |&gt; \n  set_engine(\"ranger\")\n\n\nThe default for rand_forest is floor(sqrt(# predictors)) (so 3 in this case)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#create-the-workflow",
+    "href": "slides/07-2-dt_o.html#create-the-workflow",
+    "title": "Chapter 8 Part 2",
+    "section": "3. Create the workflow",
+    "text": "3. Create the workflow\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(\n      HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n               RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca + Thal,\n             data = heart_train\n    )\n  ) |&gt;\n  add_model(rf_spec)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#fit-the-model",
+    "href": "slides/07-2-dt_o.html#fit-the-model",
+    "title": "Chapter 8 Part 2",
+    "section": "4. Fit the model",
+    "text": "4. Fit the model\n\nmodel &lt;- fit(wf, data = heart_train)"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#examine-how-it-looks-in-the-test-data",
+    "href": "slides/07-2-dt_o.html#examine-how-it-looks-in-the-test-data",
+    "title": "Chapter 8 Part 2",
+    "section": "5. Examine how it looks in the test data",
+    "text": "5. Examine how it looks in the test data\n\nheart_test &lt;- testing(heart_split)\nmodel |&gt;\n  predict(new_data = heart_test) |&gt;\n  bind_cols(heart_test) |&gt;\n  conf_mat(truth = HD, estimate = .pred_class) |&gt;\n  autoplot(type = \"heatmap\")"
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#trade-off",
+    "href": "slides/07-2-dt_o.html#trade-off",
+    "title": "Chapter 8 Part 2",
+    "section": "Trade Off",
+    "text": "Trade Off\n\nWhat is our final tree?\n\n. . .\n\nWith both bagging and random forests, we have traded interpretability with performance.\nThese approaches will predict better but we no longer have a single represenation fo the tree.\nEven if we wanted to pick the best performing tree, it may have a different subset of variables than other similar trees."
+  },
+  {
+    "objectID": "slides/07-2-dt_o.html#application-exercise",
+    "href": "slides/07-2-dt_o.html#application-exercise",
+    "title": "Chapter 8 Part 2",
+    "section": " Application Exercise",
+    "text": "Application Exercise\n\nOpen your last application exercise\nRefit your model as a bagged tree and a random forest"
+  },
+  {
+    "objectID": "hw/hw-05-trees.html",
+    "href": "hw/hw-05-trees.html",
+    "title": "Homework 5",
+    "section": "",
+    "text": "NoteInstructions\n\n\n\n\n\n\nCreating a new project. and giving it a sensible name such as homework5 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw5.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels when possible.\nSet a seed before each problem.\nMake sure your answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\n\n\nExercises\n\n(ISLR 8.9) This problem involves the OJ data set which is part of the ISLR2 package.\n\n\nCreate a training set containing 80% of the observations.\nFit a tree to the training data, with Purchase as the response and the other variables as predictors. Use the summary() function to produce summary statistics about the tree, and describe the results obtained. What is the training error rate? How many terminal nodes does the tree have?\nType in the name of the tree object in order to get a detailed text output.\nCreate a plot of the tree, and interpret the results. Pick one of the terminal nodes, and interpret the information displayed.\nPredict the response on the test data, and produce a confusion matrix comparing the test labels to the predicted test labels. What is the test error rate?\nUse cross validation on the training set in order to determine the optimal tree size.\nProduce a plot with tree size on the x-axis and cross-validated classification error rate on the y-axis.\nWhich tree size corresponds to the lowest cross-validated classification error rate?\nProduce a pruned tree corresponding to the optimal tree size obtained using cross-validation. If cross-validation does not lead to selection of a pruned tree, then create a pruned tree with five terminal nodes.\nCompare the training error rates between the pruned and unpruned trees. Which is higher?\nCompare the test error rates between the pruned and unpruned trees. Which is higher?\nFit a bagged tree model using the training data (you do not need to use cross validation). You will need to change the mtry argument and potentially others. What is the test error rate?\nFit a boosted tree model using the training data (you do not need to use cross validation). You will need to consider the mtry argument and potentially others. What is the test error rate?\nFit a random forest model using the training data (you do not need to use cross validation). You will need to change the mtry argument and potentially others. What is the test error rate?\nFit a tree model using cross validation on the training set to tune the mtry argument. With your best mtry value, refit the model on the whole training set. What is the test error rate?\nFinally, create a table that includes the test error for all of the models included above. Give each a name that is clear and include any tuned values. Which model is best and why?\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen).\nClick the check box next to the file.\nClick the blue gear above and then click “Export” to download.\nSubmit your final html document to the respective assignment on Moodle."
   }
 ]

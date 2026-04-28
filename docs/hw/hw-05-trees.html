@@ -258,9 +258,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#due-562024-at-9am" id="toc-due-562024-at-9am" class="nav-link active" data-scroll-target="#due-562024-at-9am">Due 5/6/2024 at 9am</a></li>
-  <li><a href="#instructions" id="toc-instructions" class="nav-link" data-scroll-target="#instructions">Instructions</a></li>
-  <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
+  <li><a href="#exercises" id="toc-exercises" class="nav-link active" data-scroll-target="#exercises">Exercises</a></li>
   <li><a href="#submission" id="toc-submission" class="nav-link" data-scroll-target="#submission">Submission</a></li>
   </ul>
 </nav>
@@ -288,11 +286,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="due-562024-at-9am" class="level2">
-<h2 class="anchored" data-anchor-id="due-562024-at-9am">Due 5/6/2024 at 9am</h2>
-</section>
-<section id="instructions" class="level1">
-<h1>Instructions</h1>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Note</span>Instructions
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse show">
+<div class="callout-body-container callout-body">
 <ul>
 <li><p>Creating a new <em>project.</em> and giving it a sensible name such as homework5 and having that project in the course folder you created.</p></li>
 <li><p>Create a new quarto document and give it a sensible name such as hw5.</p></li>
@@ -312,11 +317,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Set a seed before each problem.</li>
 <li>Make sure your answers print results. If the output is a large table, use the head() function to shorten the output.</li>
 </ul>
-</section>
+</div>
+</div>
+</div>
 <section id="exercises" class="level1">
 <h1>Exercises</h1>
-<ol start="9" type="1">
-<li>This problem involves the <code>OJ</code> data set which is part of the <code>ISLR2</code> package.</li>
+<ol type="1">
+<li>(ISLR 8.9) This problem involves the <code>OJ</code> data set which is part of the <code>ISLR2</code> package.</li>
 </ol>
 <ol type="a">
 <li><p>Create a training set containing 80% of the observations.</p></li>
@@ -330,8 +337,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Produce a pruned tree corresponding to the optimal tree size obtained using cross-validation. If cross-validation does not lead to selection of a pruned tree, then create a pruned tree with five terminal nodes.</p></li>
 <li><p>Compare the training error rates between the pruned and unpruned trees. Which is higher?</p></li>
 <li><p>Compare the test error rates between the pruned and unpruned trees. Which is higher?</p></li>
-<li><p>Fit a bagged tree model using the training data (you do not need to use cross validation). You will need to change the <code>mtry</code> argument to the correct number. What is the test error rate?</p></li>
-<li><p>Fit a random forest model using the training data (you do not need to use cross validation). You will need to change the <code>mtry</code> argument to the correct number. What is the test error rate?</p></li>
+<li><p>Fit a bagged tree model using the training data (you do not need to use cross validation). You will need to change the <code>mtry</code> argument and potentially others. What is the test error rate?</p></li>
+<li><p>Fit a boosted tree model using the training data (you do not need to use cross validation). You will need to consider the <code>mtry</code> argument and potentially others. What is the test error rate?</p></li>
+<li><p>Fit a random forest model using the training data (you do not need to use cross validation). You will need to change the <code>mtry</code> argument and potentially others. What is the test error rate?</p></li>
 <li><p>Fit a tree model using cross validation on the training set to tune the <code>mtry</code> argument. With your best <code>mtry</code> value, refit the model on the whole training set. What is the test error rate?</p></li>
 <li><p>Finally, create a table that includes the test error for all of the models included above. Give each a name that is clear and include any tuned values. Which model is best and why?</p></li>
 </ol>
@@ -340,10 +348,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h1>Submission</h1>
 <p>When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:</p>
 <ul>
-<li>Finding the .html file in your File pane (on the bottom right of the screen)</li>
-<li>Click the check box next to the file</li>
-<li>Click the blue gear above and then click “Export” to download</li>
-<li>Submit your final html document to the respective assignment on <a href="{{< var course.moodle >}}">Moodle</a></li>
+<li>Finding the .html file in your File pane (on the bottom right of the screen).</li>
+<li>Click the check box next to the file.</li>
+<li>Click the blue gear above and then click “Export” to download.</li>
+<li>Submit your final html document to the respective assignment on <a href="https://moodle.cornellcollege.edu/course/view.php?id=9434">Moodle</a>.</li>
 </ul>
 
 

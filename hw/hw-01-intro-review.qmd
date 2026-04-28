@@ -227,9 +227,8 @@ There are a couple of very good sources of information that you may have forgott
 
 When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
 
--   Finding the .html file in your File pane (on the bottom right of the screen)
--   Click the check box next to the file
--   Click the blue gear above and then click "Export" to download
--   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}})
+-   Finding the .html file in your File pane (on the bottom right of the screen).
+-   Click the check box next to the file.
+-   Click the blue gear above and then click "Export" to download.
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}}).
 
-<br><br><br> Homework adapted from <a href="https://sta-363-s23.github.io/website/syllabus.html" target="_blank">Statistical Learning</a> by Dr. Lucy D'Agostino McGowan

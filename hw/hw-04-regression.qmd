@@ -8,7 +8,7 @@ format: html
 library(tidyverse)
 library(tidymodels)
 library(ISLR)
-hw_num <- 3
+hw_num <- 4
 ```
 
 ::: {.callout-note collapse="false" appearance="Instructions"}
@@ -108,4 +108,4 @@ When you are finished with your homework, be sure to Render the final document. 
 -   Finding the .html file in your File pane (on the bottom right of the screen).
 -   Click the check box next to the file.
 -   Click the blue gear above and then click "Export" to download.
--   Submit your final html document to the respective assignment on [Moodle](%7B%7B%3C%20var%20course.moodle%20%3E%7D%7D).
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}}).

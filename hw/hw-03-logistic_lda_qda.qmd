@@ -107,7 +107,7 @@ You will have to create the response variable yourself, using the variables that
 
 When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
 
--   Finding the .html file in your File pane (on the bottom right of the screen)
--   Click the check box next to the file
--   Click the blue gear above and then click "Export" to download
--   Submit your final html document to the respective assignment on [Moodle](%7B%7B%3C%20var%20course.moodle%20%3E%7D%7D)
+-   Finding the .html file in your File pane (on the bottom right of the screen).
+-   Click the check box next to the file.
+-   Click the blue gear above and then click "Export" to download.
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}}).

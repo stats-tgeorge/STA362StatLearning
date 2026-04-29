@@ -2122,7 +2122,7 @@
     "href": "index.html",
     "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
@@ -7913,28 +7913,28 @@
     "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-3",
     "title": "Chapter 8 Part 1",
     "section": "Decision tree - Baseball Salary Example",
-    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+    "text": "Decision tree - Baseball Salary Example"
   },
   {
     "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-4",
     "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-4",
     "title": "Chapter 8 Part 1",
     "section": "Decision tree - Baseball Salary Example",
-    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R1\", aes(x = 3, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+    "text": "Decision tree - Baseball Salary Example"
   },
   {
     "objectID": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-5",
     "href": "slides/07-basic-dt.html#decision-tree---baseball-salary-example-5",
     "title": "Chapter 8 Part 1",
     "section": "Decision tree - Baseball Salary Example",
-    "text": "Decision tree - Baseball Salary Example\n\n\nWarning in geom_segment(aes(x = 4.5, xend = 25, y = 118, yend = 118), color = \"black\"): All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R1\", aes(x = 3, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R2\", aes(x = 15, y = 15), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row.\n\n\nWarning in geom_text(label = \"R3\", aes(x = 15, y = 200), color = \"orange\", : All aesthetics have length 1, but the data has 263 rows.\nℹ Please consider using `annotate()` or provide this layer with data containing a single\n  row."
+    "text": "Decision tree - Baseball Salary Example"
   },
   {
     "objectID": "slides/07-basic-dt.html#terminology",
     "href": "slides/07-basic-dt.html#terminology",
     "title": "Chapter 8 Part 1",
     "section": "Terminology",
-    "text": "Terminology\n\n🌳 The final regions, \\(R_1, R_2, R_3\\) are called terminal nodes\n🎄 You can think of the trees as upside down, the leaves are at the bottom\n🎄 The splits are called internal nodes"
+    "text": "Terminology\n\n🎄 The final regions, \\(R_1, R_2, R_3\\) are called terminal nodes\n🌲 You can think of the trees as upside down, the leaves are at the bottom\n🎋 The splits are called internal nodes"
   },
   {
     "objectID": "slides/07-basic-dt.html#interpretation-of-results",
@@ -8389,7 +8389,7 @@
     "href": "slides/07-2-dt_o.html#where-to-find-out-more-about-packages",
     "title": "Chapter 8 Part 2",
     "section": "Where to find out more about packages",
-    "text": "Where to find out more about packages\n\nVignettes\nJournal Article (R Journal is great)\nRstudio Community\nStackOverflow\nTwitter"
+    "text": "Where to find out more about packages\n\nVignettes\nJournal Article (R Journal is great)\nRstudio Community\nStackOverflow"
   },
   {
     "objectID": "slides/07-2-dt_o.html#rpart.plot",
@@ -8452,7 +8452,7 @@
     "href": "slides/07-2-dt_o.html#fit-the-model-on-the-cross-validation-set",
     "title": "Chapter 8 Part 2",
     "section": "3. Fit the model on the cross validation set",
-    "text": "3. Fit the model on the cross validation set\n\ngrid &lt;- expand_grid(cost_complexity = seq(0.01, 0.05, by = 0.01))\nmodel &lt;- tune_grid(wf,\n                   grid = grid,\n                   resamples = heart_cv,\n                   metrics = metric_set(gain_capture, accuracy)) \n\n. . .\n\nWhat \\(\\alpha\\)s am I trying?"
+    "text": "3. Fit the model on the cross validation set\n\ngrid &lt;- expand_grid(cost_complexity = seq(0.01, 0.05, by = 0.01))\nmodel &lt;- tune_grid(wf,\n                   grid = grid,\n                   resamples = heart_cv,\n                   metrics = metric_set(gain_capture, accuracy)) \n\n. . .\n\nWhat \\(\\alpha\\)’s are we trying?"
   },
   {
     "objectID": "slides/07-2-dt_o.html#choose-alpha-that-minimizes-the-gini-index",
@@ -8501,7 +8501,7 @@
     "href": "slides/07-2-dt_o.html#bagging-2",
     "title": "Chapter 8 Part 2",
     "section": "Bagging",
-    "text": "Bagging\n\nMathematically, why does this work? Let’s go back to intro to stat!\nIf you have a set of \\(n\\) independent observations: \\(Z_1, \\dots, Z_n\\), each with a variance of \\(\\sigma^2\\), what would the variance of the mean, \\(\\bar{Z}\\) be?\nThe variance of \\(\\bar{Z}\\) is \\(\\sigma^2/n\\)\nIn other words, averaging a set of observations reduces the variance.\nThis is generally not practical because we generally do not have multiple training sets"
+    "text": "Bagging\n\nMathematically, how does this work? Let’s go back to intro to stat!\nIf you have a set of \\(n\\) independent observations: \\(Z_1, \\dots, Z_n\\), each with a variance of \\(\\sigma^2\\), what would the variance of the mean, \\(\\bar{Z}\\) be?\nThe variance of \\(\\bar{Z}\\) is \\(\\sigma^2/n\\)\nIn other words, averaging a set of observations reduces the variance.\nThis is generally not practical because we generally do not have multiple training sets"
   },
   {
     "objectID": "slides/07-2-dt_o.html#bagging-3",
@@ -8557,7 +8557,7 @@
     "href": "slides/07-2-dt_o.html#describing-bagging",
     "title": "Chapter 8 Part 2",
     "section": " Describing Bagging",
-    "text": "Describing Bagging\nSee if you can draw a diagram to describe the bagging process to someone who has never heard of this before.\n\n\n\n−+\n05:00"
+    "text": "Describing Bagging\nSee if you can draw a diagram to describe the bagging process to someone who has never heard of this before."
   },
   {
     "objectID": "slides/07-2-dt_o.html#random-forest-process",
@@ -8585,14 +8585,14 @@
     "href": "slides/07-2-dt_o.html#create-model-specification",
     "title": "Chapter 8 Part 2",
     "section": "2. Create model specification",
-    "text": "2. Create model specification\n\nmodel_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = ---\n) |&gt; \n  set_engine(\"ranger\")\n\n. . .\n\nmtry here is m. If we are doing bagging what do you think we set this to?"
+    "text": "2. Create model specification\n\nmodel_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = ---\n    ) |&gt; \n  set_engine(\"ranger\")\n\n\nmtry here is m. If we are doing bagging what do you think we set this to?"
   },
   {
     "objectID": "slides/07-2-dt_o.html#create-bagging-specification",
     "href": "slides/07-2-dt_o.html#create-bagging-specification",
     "title": "Chapter 8 Part 2",
     "section": "2. Create bagging specification",
-    "text": "2. Create bagging specification\n\nbagging_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 13 #&lt;&lt;\n) |&gt; \n  set_engine(\"ranger\")\n\n\nWhat would we change mtry to if we are doing a random forest?"
+    "text": "2. Create bagging specification\n\nbagging_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 13 ) |&gt; #&lt;&lt; \n  set_engine(\"ranger\")\n\n\nWhat would we change mtry to if we are doing a random forest?"
   },
   {
     "objectID": "slides/07-2-dt_o.html#create-random-forest-specification",
@@ -8627,7 +8627,7 @@
     "href": "slides/07-2-dt_o.html#trade-off",
     "title": "Chapter 8 Part 2",
     "section": "Trade Off",
-    "text": "Trade Off\n\nWhat is our final tree?\n\n. . .\n\nWith both bagging and random forests, we have traded interpretability with performance.\nThese approaches will predict better but we no longer have a single represenation fo the tree.\nEven if we wanted to pick the best performing tree, it may have a different subset of variables than other similar trees."
+    "text": "Trade Off\n\nWhat is our final tree?\n\n\nWith both bagging and random forests, we have traded interpretability with performance.\nThese approaches will predict better but we no longer have a single representation fo the tree.\nEven if we wanted to pick the best performing tree, it may have a different subset of variables than other similar trees."
   },
   {
     "objectID": "slides/07-2-dt_o.html#application-exercise",
@@ -8642,5 +8642,705 @@
     "title": "Homework 5",
     "section": "",
     "text": "NoteInstructions\n\n\n\n\n\n\nCreating a new project. and giving it a sensible name such as homework5 and having that project in the course folder you created.\nCreate a new quarto document and give it a sensible name such as hw5.\nIn the YAML add the following (add what you don’t have). The embed-resources component will make your final rendered html self-contained.\n\n\n---\ntitle: \"Document title\"\nauthor: \"Your Name\"\nformat:\n  html:\n    embed-resources: true\n---\n\n\nThough the book used R code for base R, I want you to complete the exercises using functions from tidymodels when possible.\nSet a seed before each problem.\nMake sure your answers print results. If the output is a large table, use the head() function to shorten the output.\n\n\n\n\n\nExercises\n\n(ISLR 8.9) This problem involves the OJ data set which is part of the ISLR2 package.\n\n\nCreate a training set containing 80% of the observations.\nFit a tree to the training data, with Purchase as the response and the other variables as predictors. Use the summary() function to produce summary statistics about the tree, and describe the results obtained. What is the training error rate? How many terminal nodes does the tree have?\nType in the name of the tree object in order to get a detailed text output.\nCreate a plot of the tree, and interpret the results. Pick one of the terminal nodes, and interpret the information displayed.\nPredict the response on the test data, and produce a confusion matrix comparing the test labels to the predicted test labels. What is the test error rate?\nUse cross validation on the training set in order to determine the optimal tree size.\nProduce a plot with tree size on the x-axis and cross-validated classification error rate on the y-axis.\nWhich tree size corresponds to the lowest cross-validated classification error rate?\nProduce a pruned tree corresponding to the optimal tree size obtained using cross-validation. If cross-validation does not lead to selection of a pruned tree, then create a pruned tree with five terminal nodes.\nCompare the training error rates between the pruned and unpruned trees. Which is higher?\nCompare the test error rates between the pruned and unpruned trees. Which is higher?\nFit a bagged tree model using the training data (you do not need to use cross validation). You will need to change the mtry argument and potentially others. What is the test error rate?\nFit a boosted tree model using the training data (you do not need to use cross validation). You will need to consider the mtry argument and potentially others. What is the test error rate?\nFit a random forest model using the training data (you do not need to use cross validation). You will need to change the mtry argument and potentially others. What is the test error rate?\nFit a tree model using cross validation on the training set to tune the mtry argument. With your best mtry value, refit the model on the whole training set. What is the test error rate?\nFinally, create a table that includes the test error for all of the models included above. Give each a name that is clear and include any tuned values. Which model is best and why?\n\n\n\nSubmission\nWhen you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:\n\nFinding the .html file in your File pane (on the bottom right of the screen).\nClick the check box next to the file.\nClick the blue gear above and then click “Export” to download.\nSubmit your final html document to the respective assignment on Moodle."
+  },
+  {
+    "objectID": "slides/07-2-dt.html#setup",
+    "href": "slides/07-2-dt.html#setup",
+    "title": "Chapter 8 Part 2",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\nlibrary(partykit)\nlibrary(rattle)\n#install.packages('ranger')"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#plotting-decision-trees",
+    "href": "slides/07-2-dt.html#plotting-decision-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Plotting decision trees",
+    "text": "Plotting decision trees\nThere are several R packages that assist with tree plotting\n\nrpart.plot\npartykit\nrattle"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#where-to-find-out-more-about-packages",
+    "href": "slides/07-2-dt.html#where-to-find-out-more-about-packages",
+    "title": "Chapter 8 Part 2",
+    "section": "Where to find out more about packages",
+    "text": "Where to find out more about packages\n\nVignettes\nJournal Article (R Journal is great)\nRstudio Community\nStackOverflow"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#rpart.plot",
+    "href": "slides/07-2-dt.html#rpart.plot",
+    "title": "Chapter 8 Part 2",
+    "section": "rpart.plot",
+    "text": "rpart.plot\nWe’re going to focus on rpart.plot, but feel free to try the others!\n\ninstall.packages(\"rpart.plot\")\n\n\nlibrary(rpart.plot)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#rpart.plot-1",
+    "href": "slides/07-2-dt.html#rpart.plot-1",
+    "title": "Chapter 8 Part 2",
+    "section": "rpart.plot",
+    "text": "rpart.plot\n\ntree_spec &lt;- decision_tree(\n  cost_complexity = 0.1,\n  tree_depth = 10,\n  mode = \"regression\") |&gt;\n  set_engine(\"rpart\")\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(Salary ~ Hits + Years + PutOuts + RBI + Walks + Runs,\n                   data = baseball)\n  ) |&gt;\n  add_model(tree_spec)\n\nmodel &lt;- fit(wf, baseball)\n\n\n\nrpart.plot(model$fit$fit$fit,\n           roundint = FALSE)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#rpart.plot-2",
+    "href": "slides/07-2-dt.html#rpart.plot-2",
+    "title": "Chapter 8 Part 2",
+    "section": "rpart.plot",
+    "text": "rpart.plot\n\nrpart.plot(model$fit$fit$fit, \n           roundint = FALSE)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#classification-trees-1",
+    "href": "slides/07-2-dt.html#classification-trees-1",
+    "title": "Chapter 8 Part 2",
+    "section": "Classification Trees",
+    "text": "Classification Trees\n\nVery similar to regression trees except it is used to predict a qualitative response rather than a quantitative one\nWe predict that each observation belongs to the most commonly occuring class of the training observations in a given region"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#fitting-classification-trees",
+    "href": "slides/07-2-dt.html#fitting-classification-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Fitting classification trees",
+    "text": "Fitting classification trees\n\nWe use recursive binary splitting to grow the tree\nInstead of RSS, we can use:\nGini index: \\(G = \\sum_{k=1}^K \\hat{p}_{mk}(1-\\hat{p}_{mk})\\)\nThis is a measure of total variance across the \\(K\\) classes. If all of the \\(\\hat{p}_{mk}\\) values are close to zero or one, this will be small\nThe Gini index is a measure of node purity small values indicate that node contains predominantly observations from a single class\nIn R, this can be estimated using the gain_capture() function."
+  },
+  {
+    "objectID": "slides/07-2-dt.html#classification-tree---heart-disease-example",
+    "href": "slides/07-2-dt.html#classification-tree---heart-disease-example",
+    "title": "Chapter 8 Part 2",
+    "section": "Classification tree - Heart Disease Example",
+    "text": "Classification tree - Heart Disease Example\n\nClassifying whether 303 patients have heart disease based on 13 predictors (Age, Sex, Chol, etc)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#split-the-data-into-a-cross-validation-set",
+    "href": "slides/07-2-dt.html#split-the-data-into-a-cross-validation-set",
+    "title": "Chapter 8 Part 2",
+    "section": "1. Split the data into a cross-validation set",
+    "text": "1. Split the data into a cross-validation set\n\nheart_cv &lt;- vfold_cv(heart, v = 5)\n\n\nHow many folds do I have?"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#create-a-model-specification-that-tunes-based-on-complexity-alpha",
+    "href": "slides/07-2-dt.html#create-a-model-specification-that-tunes-based-on-complexity-alpha",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create a model specification that tunes based on complexity, \\(\\alpha\\)",
+    "text": "2. Create a model specification that tunes based on complexity, \\(\\alpha\\)\n\ntree_spec &lt;- decision_tree(\n  cost_complexity = tune(), \n  tree_depth = 10,\n  mode = \"classification\") %&gt;% \n  set_engine(\"rpart\")\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n                     RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca,\n    data = heart\n    )\n  ) |&gt;\n  add_model(tree_spec)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#fit-the-model-on-the-cross-validation-set",
+    "href": "slides/07-2-dt.html#fit-the-model-on-the-cross-validation-set",
+    "title": "Chapter 8 Part 2",
+    "section": "3. Fit the model on the cross validation set",
+    "text": "3. Fit the model on the cross validation set\n\ngrid &lt;- expand_grid(cost_complexity = seq(0.01, 0.05, by = 0.01))\nmodel &lt;- tune_grid(wf,\n                   grid = grid,\n                   resamples = heart_cv,\n                   metrics = metric_set(gain_capture, accuracy)) \n\n\n\nWhat \\(\\alpha\\)’s are we trying?"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#choose-alpha-that-minimizes-the-gini-index",
+    "href": "slides/07-2-dt.html#choose-alpha-that-minimizes-the-gini-index",
+    "title": "Chapter 8 Part 2",
+    "section": "5. Choose \\(\\alpha\\) that minimizes the Gini Index",
+    "text": "5. Choose \\(\\alpha\\) that minimizes the Gini Index\n\nbest &lt;- model %&gt;%\n  select_best(metric = \"gain_capture\")"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#fit-the-final-model",
+    "href": "slides/07-2-dt.html#fit-the-final-model",
+    "title": "Chapter 8 Part 2",
+    "section": "6. Fit the final model",
+    "text": "6. Fit the final model\n\nfinal_wf &lt;- wf |&gt;\n  finalize_workflow(best)\n\nfinal_model &lt;- fit(final_wf, data = heart)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#examine-how-the-final-model-does-on-the-full-sample",
+    "href": "slides/07-2-dt.html#examine-how-the-final-model-does-on-the-full-sample",
+    "title": "Chapter 8 Part 2",
+    "section": "7. Examine how the final model does on the full sample",
+    "text": "7. Examine how the final model does on the full sample\n\nfinal_model %&gt;%\n  predict(new_data = heart) %&gt;%\n  bind_cols(heart) %&gt;%\n  conf_mat(truth = HD, estimate = .pred_class) %&gt;%\n  autoplot(type = \"heatmap\")"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#decision-trees",
+    "href": "slides/07-2-dt.html#decision-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Decision trees",
+    "text": "Decision trees\n\n\nPros\n\nsimple\neasy to interpret\n\n\nCons\n\nnot often competitive in terms of predictive accuracy\nNext we will discuss how to combine multiple trees to improve accuracy"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#try-classification-trees",
+    "href": "slides/07-2-dt.html#try-classification-trees",
+    "title": "Chapter 8 Part 2",
+    "section": " Try Classification Trees",
+    "text": "Try Classification Trees\n\nFit a classification tree to predict species in the penguins data from the palmerpenguins packages."
+  },
+  {
+    "objectID": "slides/07-2-dt.html#bagging-1",
+    "href": "slides/07-2-dt.html#bagging-1",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging",
+    "text": "Bagging\n\nbagging is a general-purpose procedure for reducing the variance of a statistical learning method (outside of just trees)\nIt is particularly useful and frequently used in the context of decision trees\nAlso called bootstrap aggregation"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#bagging-2",
+    "href": "slides/07-2-dt.html#bagging-2",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging",
+    "text": "Bagging\n\nMathematically, how does this work? Let’s go back to intro to stat!\nIf you have a set of \\(n\\) independent observations: \\(Z_1, \\dots, Z_n\\), each with a variance of \\(\\sigma^2\\), what would the variance of the mean, \\(\\bar{Z}\\) be?\nThe variance of \\(\\bar{Z}\\) is \\(\\sigma^2/n\\)\nIn other words, averaging a set of observations reduces the variance.\nThis is generally not practical because we generally do not have multiple training sets"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#bagging-3",
+    "href": "slides/07-2-dt.html#bagging-3",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging",
+    "text": "Bagging\nAveraging a set of observations reduces the variance. This is generally not practical because we generally do not have multiple training sets.\n\nWhat can we do?\n\n\nBootstrap! We can take repeated samples from the single training data set."
+  },
+  {
+    "objectID": "slides/07-2-dt.html#bagging-process",
+    "href": "slides/07-2-dt.html#bagging-process",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging process",
+    "text": "Bagging process\n\ngenerate \\(B\\) different bootstrapped training sets\nTrain our method on the \\(b\\)th bootstrapped training set to get \\(\\hat{f}^{*b}(x)\\), the prediction at point \\(x\\)\nAverage all predictions to get: \\(\\hat{f}_{bag}(x)=\\frac{1}{B}\\sum_{b=1}^B\\hat{f}^{*b}(x)\\)\nThis is bagging!"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#bagging-regression-trees",
+    "href": "slides/07-2-dt.html#bagging-regression-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging regression trees",
+    "text": "Bagging regression trees\n\ngenerate \\(B\\) different bootstrapped training sets\nFit a regression tree on the \\(b\\)th bootstrapped training set to get \\(\\hat{f}^{*b}(x)\\), the prediction at point \\(x\\)\nAverage all predictions to get: \\(\\hat{f}_{bag}(x)=\\frac{1}{B}\\sum_{b=1}^B\\hat{f}^{*b}(x)\\)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#bagging-classification-trees",
+    "href": "slides/07-2-dt.html#bagging-classification-trees",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging classification trees",
+    "text": "Bagging classification trees\n\nfor each test observation, record the class predicted by the \\(B\\) trees\nTake a majority vote - the overall prediction is the most commonly occuring class among the \\(B\\) predictions"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#out-of-bag-error-estimation",
+    "href": "slides/07-2-dt.html#out-of-bag-error-estimation",
+    "title": "Chapter 8 Part 2",
+    "section": "Out-of-bag Error Estimation",
+    "text": "Out-of-bag Error Estimation\n\nYou can estimate the test error of a bagged model\nThe key to bagging is that trees are repeatedly fit to bootstrapped subsets of the observations\nOn average, each bagged tree makes use of about 2/3 of the observations (you can prove this if you’d like!, not required for this course though)\nThe remaining 1/3 of observations not used to fit a given bagged tree are the out-of-bag (OOB) observations"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#out-of-bag-error-estimation-1",
+    "href": "slides/07-2-dt.html#out-of-bag-error-estimation-1",
+    "title": "Chapter 8 Part 2",
+    "section": "Out-of-bag Error Estimation",
+    "text": "Out-of-bag Error Estimation\nYou can predict the response for the \\(i\\)th observation using each of the trees in which that observation was OOB\n\nHow many predictions do you think this will yield for the \\(i\\)th observation?\n\n\nThis will yield \\(B/3\\) predictions for the \\(i\\)th observations. We can average this!\nThis estimate is essentially the LOOCV error for bagging as long as \\(B\\) is large 🎉"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#bagging-vs-boosting-video",
+    "href": "slides/07-2-dt.html#bagging-vs-boosting-video",
+    "title": "Chapter 8 Part 2",
+    "section": "Bagging (vs Boosting) Video",
+    "text": "Bagging (vs Boosting) Video\nhttps://www.youtube.com/watch?v=tjy0yL1rRRU&t=4s"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#describing-bagging",
+    "href": "slides/07-2-dt.html#describing-bagging",
+    "title": "Chapter 8 Part 2",
+    "section": " Describing Bagging",
+    "text": "Describing Bagging\nSee if you can draw a diagram to describe the bagging process to someone who has never heard of this before."
+  },
+  {
+    "objectID": "slides/07-2-dt.html#random-forest-process",
+    "href": "slides/07-2-dt.html#random-forest-process",
+    "title": "Chapter 8 Part 2",
+    "section": "Random Forest process",
+    "text": "Random Forest process\n\nLike bagging, build a number of decision trees on bootstrapped training samples\nEach time the tree is split, instead of considering all predictors (like bagging), a random selection of \\(m\\) predictors is chosen as split candidates from the full set of \\(p\\) predictors\nThe split is allowed to use only one of those \\(m\\) predictors\nA fresh selection of \\(m\\) predictors is taken at each split\ntypically we choose \\(m \\approx \\sqrt{p}\\)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#choosing-m-for-random-forest",
+    "href": "slides/07-2-dt.html#choosing-m-for-random-forest",
+    "title": "Chapter 8 Part 2",
+    "section": " Choosing m for Random Forest",
+    "text": "Choosing m for Random Forest\nLet’s say you have a dataset with 100 observations and 9 variables, if you were fitting a random forest, what would a good \\(m\\) be?"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#randomly-divide-the-data-in-half-149-training-observations-148-testing",
+    "href": "slides/07-2-dt.html#randomly-divide-the-data-in-half-149-training-observations-148-testing",
+    "title": "Chapter 8 Part 2",
+    "section": "1. Randomly divide the data in half, 149 training observations, 148 testing",
+    "text": "1. Randomly divide the data in half, 149 training observations, 148 testing\n\nset.seed(77)\nheart_split &lt;- initial_split(heart, prop = 0.5)\nheart_train &lt;- training(heart_split)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#create-model-specification",
+    "href": "slides/07-2-dt.html#create-model-specification",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create model specification",
+    "text": "2. Create model specification\n\nmodel_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = ---\n    ) |&gt; \n  set_engine(\"ranger\")\n\n\nmtry here is m. If we are doing bagging what do you think we set this to?"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#create-bagging-specification",
+    "href": "slides/07-2-dt.html#create-bagging-specification",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create bagging specification",
+    "text": "2. Create bagging specification\n\nbagging_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 13 ) |&gt; #&lt;&lt; \n  set_engine(\"ranger\")\n\n\nWhat would we change mtry to if we are doing a random forest?"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#create-random-forest-specification",
+    "href": "slides/07-2-dt.html#create-random-forest-specification",
+    "title": "Chapter 8 Part 2",
+    "section": "2. Create Random Forest specification",
+    "text": "2. Create Random Forest specification\n\nrf_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 3 #&lt;&lt;\n) |&gt; \n  set_engine(\"ranger\")\n\n\nThe default for rand_forest is floor(sqrt(# predictors)) (so 3 in this case)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#create-the-workflow",
+    "href": "slides/07-2-dt.html#create-the-workflow",
+    "title": "Chapter 8 Part 2",
+    "section": "3. Create the workflow",
+    "text": "3. Create the workflow\n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(\n      HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n               RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca + Thal,\n             data = heart_train\n    )\n  ) |&gt;\n  add_model(rf_spec)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#fit-the-model",
+    "href": "slides/07-2-dt.html#fit-the-model",
+    "title": "Chapter 8 Part 2",
+    "section": "4. Fit the model",
+    "text": "4. Fit the model\n\nmodel &lt;- fit(wf, data = heart_train)"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#examine-how-it-looks-in-the-test-data",
+    "href": "slides/07-2-dt.html#examine-how-it-looks-in-the-test-data",
+    "title": "Chapter 8 Part 2",
+    "section": "5. Examine how it looks in the test data",
+    "text": "5. Examine how it looks in the test data\n\nheart_test &lt;- testing(heart_split)\nmodel |&gt;\n  predict(new_data = heart_test) |&gt;\n  bind_cols(heart_test) |&gt;\n  conf_mat(truth = HD, estimate = .pred_class) |&gt;\n  autoplot(type = \"heatmap\")"
+  },
+  {
+    "objectID": "slides/07-2-dt.html#trade-off",
+    "href": "slides/07-2-dt.html#trade-off",
+    "title": "Chapter 8 Part 2",
+    "section": "Trade Off",
+    "text": "Trade Off\n\nWhat is our final tree?\n\n\nWith both bagging and random forests, we have traded interpretability with performance.\nThese approaches will predict better but we no longer have a single representation fo the tree.\nEven if we wanted to pick the best performing tree, it may have a different subset of variables than other similar trees."
+  },
+  {
+    "objectID": "slides/07-2-dt.html#application-exercise",
+    "href": "slides/07-2-dt.html#application-exercise",
+    "title": "Chapter 8 Part 2",
+    "section": " Application Exercise",
+    "text": "Application Exercise\n\nOpen your last application exercise\nRefit your model as a bagged tree and a random forest"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#setup",
+    "href": "slides/07-3-boost.html#setup",
+    "title": "Chapter 8 Part 3",
+    "section": "Setup",
+    "text": "Setup\n\nlibrary(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\n#install.packages('xgboost')"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting",
+    "href": "slides/07-3-boost.html#boosting",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\n\nLike bagging, boosting is an approach that can be applied to many statistical learning methods\nWe will discuss how to use boosting for decision trees"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#bagging",
+    "href": "slides/07-3-boost.html#bagging",
+    "title": "Chapter 8 Part 3",
+    "section": "Bagging",
+    "text": "Bagging\n\nresampling from the original training data to make many bootstrapped training data sets\nfitting a separate decision tree to each bootstrapped training data set\ncombining all trees to make one predictive model\n☝️ Note, each tree is built on a bootstrap dataset, independent of the other trees"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-1",
+    "href": "slides/07-3-boost.html#boosting-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\n\nBoosting is similar, except the trees are grown sequentially, using information from the previously grown trees"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-algorithm-for-regression-trees",
+    "href": "slides/07-3-boost.html#boosting-algorithm-for-regression-trees",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting algorithm for regression trees",
+    "text": "Boosting algorithm for regression trees\nStep 1\n\nSet \\(\\hat{f}(x)= 0\\) and \\(r_i= y_i\\) for all \\(i\\) in the training set"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-algorithm-for-regression-trees-1",
+    "href": "slides/07-3-boost.html#boosting-algorithm-for-regression-trees-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting algorithm for regression trees",
+    "text": "Boosting algorithm for regression trees\nStep 2 For \\(b = 1, 2, \\dots, B\\) repeat:\n\nFit a tree \\(\\hat{f}^b\\) with \\(d\\) splits ( \\(d\\) + 1 terminal nodes) to the training data ( \\(X, r\\) )\nUpdate \\(\\hat{f}\\) by adding in a shrunken version of the new tree: \\(\\hat{f}(x)\\leftarrow \\hat{f}(x)+\\lambda \\hat{f}^b(x)\\)\nUpdate the residuals: \\(r_i \\leftarrow r_i - \\lambda \\hat{f}^b(x_i)\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-algorithm-for-regression-trees-2",
+    "href": "slides/07-3-boost.html#boosting-algorithm-for-regression-trees-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting algorithm for regression trees",
+    "text": "Boosting algorithm for regression trees\nStep 3\n\nOutput the boosted model \\(\\hat{f}(x)=\\sum_{b = 1}^B\\lambda\\hat{f}^b(x)\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#big-picture",
+    "href": "slides/07-3-boost.html#big-picture",
+    "title": "Chapter 8 Part 3",
+    "section": "Big picture",
+    "text": "Big picture\n\nGiven the current model, we are fitting a decision tree to the residuals\nWe then add this new decision tree into the fitted function to update the residuals\nEach of these trees can be small (just a few terminal nodes), determined by \\(d\\)\nInstead of fitting a single large decision tree, which could result in overfitting, boosting learns slowly"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#big-picture-1",
+    "href": "slides/07-3-boost.html#big-picture-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Big Picture",
+    "text": "Big Picture\n\nBy fitting small trees to the residuals we slowly improve \\(\\hat{f}\\) in areas where it does not perform well\nThe shrinkage parameter \\(\\lambda\\) slows the process down even more allowing more and different shaped trees to try to minimize those residuals"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-for-classification",
+    "href": "slides/07-3-boost.html#boosting-for-classification",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting for classification",
+    "text": "Boosting for classification\n\nBoosting for classification is similar, but a bit more complex\ntidymodels will handle this for us, but if you are interested in learning more, you can check out Chapter 10.9 of Elements of Statistical Learning"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#tuning-parameters",
+    "href": "slides/07-3-boost.html#tuning-parameters",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters",
+    "text": "Tuning parameters\n\nWith bagging what could we tune?\n\n\n\\(B\\), the number of bootstrapped training samples (the number of decision trees fit) (trees)\nIt is more efficient to just pick something very large instead of tuning this\nFor \\(B\\), you don’t really risk overfitting if you pick something too big"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#tuning-parameters-1",
+    "href": "slides/07-3-boost.html#tuning-parameters-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters",
+    "text": "Tuning parameters\n\nWith random forest what could we tune?\n\n\nThe depth of the tree, \\(B\\), and m the number of predictors to try (mtry)\nThe default is \\(\\sqrt{p}\\), and this does pretty well"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#tuning-parameters-for-boosting",
+    "href": "slides/07-3-boost.html#tuning-parameters-for-boosting",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\n\\(B\\) the number of bootstraps\n\\(\\lambda\\) the shrinkage parameter\n\\(d\\) the number of splits in each tree"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#tuning-parameters-for-boosting-1",
+    "href": "slides/07-3-boost.html#tuning-parameters-for-boosting-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\nWhat do you think you can use to pick \\(B\\)?\n\n\nUnlike bagging and random forest with boosting you can overfit if \\(B\\) is too large\nCross-validation, of course!"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#tuning-parameters-for-boosting-2",
+    "href": "slides/07-3-boost.html#tuning-parameters-for-boosting-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\nThe shrinkage parameter \\(\\lambda\\) controls the rate at which boosting learn\n\\(\\lambda\\) is a small, positive number, typically 0.01 or 0.001\nIt depends on the problem, but typically a very small \\(\\lambda\\) can require a very large \\(B\\) for good performance"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#tuning-parameters-for-boosting-3",
+    "href": "slides/07-3-boost.html#tuning-parameters-for-boosting-3",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\nThe number of splits, \\(d\\), in each tree controls the complexity of the boosted ensemble\nOften \\(d=1\\) is a good default\nbrace yourself for another tree pun!\nIn this case we call the tree a stump meaning it just has a single split\nThis results in an additive model\nYou can think of \\(d\\) as the interaction depth it controls the interaction order of the boosted model, since \\(d\\) splits can involve at most \\(d\\) variables"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosted-trees-in-r",
+    "href": "slides/07-3-boost.html#boosted-trees-in-r",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosted trees in R",
+    "text": "Boosted trees in R\n\nboost_spec &lt;- boost_tree(\n  mode = \"classification\", \n  tree_depth = 1, \n  trees = 1000, \n  learn_rate = 0.001, \n) |&gt;\n  set_engine(\"xgboost\")  \n\n\nSet the mode as you would with a bagged tree or random forest\ntree_depth here is the depth of each tree, let’s set that to 1\n\ntrees is the number of trees that are fit, this is equivalent to B\nlearn_rate is \\(\\lambda\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#make-a-recipe",
+    "href": "slides/07-3-boost.html#make-a-recipe",
+    "title": "Chapter 8 Part 3",
+    "section": "Make a recipe",
+    "text": "Make a recipe\n\nrec &lt;- recipe(HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n             RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca + Thal,           \n           data = heart) |&gt;\n  step_dummy(all_nominal_predictors())  \n\n\nxgboost wants you to have all numeric data, that means we need to make dummy variables\nbecause HD (the outcome) is also categorical, we can use all_nominal_predictors to make sure we don’t turn the outcome into dummy variables as well"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#fit-the-model",
+    "href": "slides/07-3-boost.html#fit-the-model",
+    "title": "Chapter 8 Part 3",
+    "section": "Fit the model",
+    "text": "Fit the model\n\nwf &lt;- workflow() |&gt;\n  add_recipe(rec) |&gt;\n  add_model(boost_spec)\nmodel &lt;- fit(wf, data = heart)"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-2",
+    "href": "slides/07-3-boost.html#boosting-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\nHow would this code change if I wanted to tune B the number of bootstrapped training samples?\n\nboost_spec &lt;- boost_tree( \n  mode = \"classification\", \n  tree_depth = 1, \n  trees = 1000, \n  learn_rate = 0.001, \n) |&gt;\n  set_engine(\"xgboost\")"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-3",
+    "href": "slides/07-3-boost.html#boosting-3",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\nFit a boosted model to the data from the previous application exercise."
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-vs-bagging",
+    "href": "slides/07-3-boost.html#boosting-vs-bagging",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting Vs Bagging",
+    "text": "Boosting Vs Bagging\nhttps://www.youtube.com/watch?v=tjy0yL1rRRU&t=4s"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#variable-importance-1",
+    "href": "slides/07-3-boost.html#variable-importance-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance",
+    "text": "Variable importance\n\nFor bagged or random forest regression trees, we can record the total RSS that is decreased due to splits of a given predictor \\(X_i\\) averaged over all \\(B\\) trees\nA large value would indicate that that variable is important"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#variable-importance-2",
+    "href": "slides/07-3-boost.html#variable-importance-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance",
+    "text": "Variable importance\n\nFor bagged or random forest classification trees we can add up the total amount that the Gini Index is decreased by splits of a given predictor, \\(X_i\\), averaged over \\(B\\) trees"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#variable-importance-in-r",
+    "href": "slides/07-3-boost.html#variable-importance-in-r",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance in R",
+    "text": "Variable importance in R\n\nrf_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 3\n) |&gt; \n  set_engine(\n    \"ranger\",\n    importance = \"impurity\") \n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n             RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca + Thal,               \n           data = heart)\n  ) |&gt;\n  add_model(rf_spec)\nmodel &lt;- fit(wf, data = heart)\n\n\nranger::importance(model$fit$fit$fit)\n\n       Age        Sex  ChestPain     RestBP       Chol        Fbs    RestECG      MaxHR \n 9.0279261  3.8977009 16.7716081  7.2689153  7.1560856  0.7594073  1.6446268 14.4947813 \n     ExAng    Oldpeak      Slope         Ca       Thal \n 6.1265358 12.8142317  5.7819062 16.7084935 14.5530106"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#variable-importance-3",
+    "href": "slides/07-3-boost.html#variable-importance-3",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance",
+    "text": "Variable importance\n\nlibrary(ranger)\nimportance(model$fit$fit$fit)\n\n       Age        Sex  ChestPain     RestBP       Chol        Fbs    RestECG      MaxHR \n 9.0279261  3.8977009 16.7716081  7.2689153  7.1560856  0.7594073  1.6446268 14.4947813 \n     ExAng    Oldpeak      Slope         Ca       Thal \n 6.1265358 12.8142317  5.7819062 16.7084935 14.5530106 \n\n\n\nvar_imp &lt;- ranger::importance(model$fit$fit$fit)"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#plotting-variable-importance",
+    "href": "slides/07-3-boost.html#plotting-variable-importance",
+    "title": "Chapter 8 Part 3",
+    "section": "Plotting variable importance",
+    "text": "Plotting variable importance\n\nvar_imp_df &lt;- data.frame(\n  variable = names(var_imp),\n  importance = var_imp\n)\n\nvar_imp_df |&gt;\n  ggplot(aes(x = variable, y = importance)) +\n  geom_col()\n\n\n\nHow could we make this plot better?"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#plotting-variable-importance-1",
+    "href": "slides/07-3-boost.html#plotting-variable-importance-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Plotting variable importance",
+    "text": "Plotting variable importance\n\nvar_imp_df |&gt;\n  ggplot(aes(x = variable, y = importance)) +\n  geom_col() + \n  coord_flip()\n\n\n\nHow could we make this plot better?"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#plotting-variable-importance-2",
+    "href": "slides/07-3-boost.html#plotting-variable-importance-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Plotting variable importance",
+    "text": "Plotting variable importance\n\nvar_imp_df |&gt;\n  mutate(variable = factor(variable, \n                           levels = variable[order(var_imp_df$importance)])) |&gt;\n  ggplot(aes(x = variable, y = importance)) +\n  geom_col() + \n  coord_flip()"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#all-at-once",
+    "href": "slides/07-3-boost.html#all-at-once",
+    "title": "Chapter 8 Part 3",
+    "section": "All at Once",
+    "text": "All at Once\n\nSet \\(\\hat{f}(x)= 0\\) and \\(r_i= y_i\\) for all \\(i\\) in the training set\nFor \\(b = 1, 2, \\dots, B\\) repeat:\n\nFit a tree \\(\\hat{f}^b\\) with \\(d\\) splits ( \\(d\\) + 1 terminal nodes) to the training data ( \\(X, r\\) )\nUpdate \\(\\hat{f}\\) by adding in a shrunken version of the new tree: \\(\\hat{f}(x)\\leftarrow \\hat{f}(x)+\\lambda \\hat{f}^b(x)\\)\nUpdate the residuals: \\(r_i \\leftarrow r_i - \\lambda \\hat{f}^b(x_i)\\)\n\nOutput the boosted model \\(\\hat{f}(x)=\\sum_{b = 1}^B\\lambda\\hat{f}^b(x)\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost.html#boosting-for-regression-trees",
+    "href": "slides/07-3-boost.html#boosting-for-regression-trees",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting for Regression Trees",
+    "text": "Boosting for Regression Trees\n\nSet \\(\\hat{f}(x)= 0\\) and \\(r_i= y_i\\) for all \\(i\\) in the training set\nFor \\(b = 1, 2, \\dots, B\\) repeat:\n\nFit a tree \\(\\hat{f}^b\\) with \\(d\\) splits ( \\(d\\) + 1 terminal nodes) to the training data (\\(X\\),\\(r\\))\nUpdate \\(\\hat{f}\\) by adding in a shrunken version of the new tree: \\(\\hat{f}(x)\\leftarrow \\hat{f}(x)+\\lambda \\hat{f}^b(x)\\)\nUpdate the residuals: \\(r_i \\leftarrow r_i - \\lambda \\hat{f}^b(x_i)\\)\n\nOutput the boosted model \\(\\hat{f}(x)=\\sum_{b = 1}^B\\lambda\\hat{f}^b(x)\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html",
+    "href": "slides/07-3-boost_o.html",
+    "title": "Chapter 8 Part 3",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\n#install.packages('xgboost')"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#setup",
+    "href": "slides/07-3-boost_o.html#setup",
+    "title": "Chapter 8 Part 3",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(tidymodels)\nlibrary(ISLR2)\nlibrary(rpart.plot)\n#install.packages('xgboost')"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting",
+    "href": "slides/07-3-boost_o.html#boosting",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\n\nLike bagging, boosting is an approach that can be applied to many statistical learning methods\nWe will discuss how to use boosting for decision trees"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#bagging",
+    "href": "slides/07-3-boost_o.html#bagging",
+    "title": "Chapter 8 Part 3",
+    "section": "Bagging",
+    "text": "Bagging\n\nresampling from the original training data to make many bootstrapped training data sets\nfitting a separate decision tree to each bootstrapped training data set\ncombining all trees to make one predictive model\n☝️ Note, each tree is built on a bootstrap dataset, independent of the other trees"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-1",
+    "href": "slides/07-3-boost_o.html#boosting-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\n\nBoosting is similar, except the trees are grown sequentially, using information from the previously grown trees"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-algorithm-for-regression-trees",
+    "href": "slides/07-3-boost_o.html#boosting-algorithm-for-regression-trees",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting algorithm for regression trees",
+    "text": "Boosting algorithm for regression trees\n\nStep 1\n\nSet \\(\\hat{f}(x)= 0\\) and \\(r_i= y_i\\) for all \\(i\\) in the training set"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-algorithm-for-regression-trees-1",
+    "href": "slides/07-3-boost_o.html#boosting-algorithm-for-regression-trees-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting algorithm for regression trees",
+    "text": "Boosting algorithm for regression trees\n\nStep 2 For \\(b = 1, 2, \\dots, B\\) repeat:\n\nFit a tree \\(\\hat{f}^b\\) with \\(d\\) splits ( \\(d\\) + 1 terminal nodes) to the training data ( \\(X, r\\) )\nUpdate \\(\\hat{f}\\) by adding in a shrunken version of the new tree: \\(\\hat{f}(x)\\leftarrow \\hat{f}(x)+\\lambda \\hat{f}^b(x)\\)\nUpdate the residuals: \\(r_i \\leftarrow r_i - \\lambda \\hat{f}^b(x_i)\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-algorithm-for-regression-trees-2",
+    "href": "slides/07-3-boost_o.html#boosting-algorithm-for-regression-trees-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting algorithm for regression trees",
+    "text": "Boosting algorithm for regression trees\n\nStep 3\n\nOutput the boosted model \\(\\hat{f}(x)=\\sum_{b = 1}^B\\lambda\\hat{f}^b(x)\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#big-picture",
+    "href": "slides/07-3-boost_o.html#big-picture",
+    "title": "Chapter 8 Part 3",
+    "section": "Big picture",
+    "text": "Big picture\n\nGiven the current model, we are fitting a decision tree to the residuals\nWe then add this new decision tree into the fitted function to update the residuals\nEach of these trees can be small (just a few terminal nodes), determined by \\(d\\)\nInstead of fitting a single large decision tree, which could result in overfitting, boosting learns slowly"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#big-picture-1",
+    "href": "slides/07-3-boost_o.html#big-picture-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Big Picture",
+    "text": "Big Picture\n\nBy fitting small trees to the residuals we slowly improve \\(\\hat{f}\\) in areas where it does not perform well\nThe shrinkage parameter \\(\\lambda\\) slows the process down even more allowing more and different shaped trees to try to minimize those residuals"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-for-regression-trees",
+    "href": "slides/07-3-boost_o.html#boosting-for-regression-trees",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting for Regression Trees",
+    "text": "Boosting for Regression Trees\n\nSet \\(\\hat{f}(x)= 0\\) and \\(r_i= y_i\\) for all \\(i\\) in the training set\nFor \\(b = 1, 2, \\dots, B\\) repeat:\n\nFit a tree \\(\\hat{f}^b\\) with \\(d\\) splits ( \\(d\\) + 1 terminal nodes) to the training data (\\(X\\),\\(r\\))\nUpdate \\(\\hat{f}\\) by adding in a shrunken version of the new tree: \\(\\hat{f}(x)\\leftarrow \\hat{f}(x)+\\lambda \\hat{f}^b(x)\\)\nUpdate the residuals: \\(r_i \\leftarrow r_i - \\lambda \\hat{f}^b(x_i)\\)\n\nOutput the boosted model \\(\\hat{f}(x)=\\sum_{b = 1}^B\\lambda\\hat{f}^b(x)\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-for-classification",
+    "href": "slides/07-3-boost_o.html#boosting-for-classification",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting for classification",
+    "text": "Boosting for classification\n\nBoosting for classification is similar, but a bit more complex\ntidymodels will handle this for us, but if you are interested in learning more, you can check out Chapter 10.9 of Elements of Statistical Learning"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#tuning-parameters",
+    "href": "slides/07-3-boost_o.html#tuning-parameters",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters",
+    "text": "Tuning parameters\n\nWith bagging what could we tune?\n\n\n\\(B\\), the number of bootstrapped training samples (the number of decision trees fit) (trees)\nIt is more efficient to just pick something very large instead of tuning this\nFor \\(B\\), you don’t really risk overfitting if you pick something too big"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#tuning-parameters-1",
+    "href": "slides/07-3-boost_o.html#tuning-parameters-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters",
+    "text": "Tuning parameters\n\nWith random forest what could we tune?\n\n\nThe depth of the tree, \\(B\\), and m the number of predictors to try (mtry)\nThe default is \\(\\sqrt{p}\\), and this does pretty well"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#tuning-parameters-for-boosting",
+    "href": "slides/07-3-boost_o.html#tuning-parameters-for-boosting",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\n\\(B\\) the number of bootstraps\n\\(\\lambda\\) the shrinkage parameter\n\\(d\\) the number of splits in each tree"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#tuning-parameters-for-boosting-1",
+    "href": "slides/07-3-boost_o.html#tuning-parameters-for-boosting-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\nWhat do you think you can use to pick \\(B\\)?\n\n\nUnlike bagging and random forest with boosting you can overfit if \\(B\\) is too large\nCross-validation, of course!"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#tuning-parameters-for-boosting-2",
+    "href": "slides/07-3-boost_o.html#tuning-parameters-for-boosting-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\nThe shrinkage parameter \\(\\lambda\\) controls the rate at which boosting learn\n\\(\\lambda\\) is a small, positive number, typically 0.01 or 0.001\nIt depends on the problem, but typically a very small \\(\\lambda\\) can require a very large \\(B\\) for good performance"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#tuning-parameters-for-boosting-3",
+    "href": "slides/07-3-boost_o.html#tuning-parameters-for-boosting-3",
+    "title": "Chapter 8 Part 3",
+    "section": "Tuning parameters for boosting",
+    "text": "Tuning parameters for boosting\n\nThe number of splits, \\(d\\), in each tree controls the complexity of the boosted ensemble\nOften \\(d=1\\) is a good default\nbrace yourself for another tree pun!\nIn this case we call the tree a stump meaning it just has a single split\nThis results in an additive model\nYou can think of \\(d\\) as the interaction depth it controls the interaction order of the boosted model, since \\(d\\) splits can involve at most \\(d\\) variables"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosted-trees-in-r",
+    "href": "slides/07-3-boost_o.html#boosted-trees-in-r",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosted trees in R",
+    "text": "Boosted trees in R\n\nboost_spec &lt;- boost_tree(\n  mode = \"classification\", \n  tree_depth = 1, \n  trees = 1000, \n  learn_rate = 0.001, \n) |&gt;\n  set_engine(\"xgboost\")  \n\n\nSet the mode as you would with a bagged tree or random forest\ntree_depth here is the depth of each tree, let’s set that to 1\n\ntrees is the number of trees that are fit, this is equivalent to B\nlearn_rate is \\(\\lambda\\)"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#make-a-recipe",
+    "href": "slides/07-3-boost_o.html#make-a-recipe",
+    "title": "Chapter 8 Part 3",
+    "section": "Make a recipe",
+    "text": "Make a recipe\n\nrec &lt;- recipe(HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n             RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca + Thal,           \n           data = heart) |&gt;\n  step_dummy(all_nominal_predictors())  \n\n\nxgboost wants you to have all numeric data, that means we need to make dummy variables\nbecause HD (the outcome) is also categorical, we can use all_nominal_predictors to make sure we don’t turn the outcome into dummy variables as well"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#fit-the-model",
+    "href": "slides/07-3-boost_o.html#fit-the-model",
+    "title": "Chapter 8 Part 3",
+    "section": "Fit the model",
+    "text": "Fit the model\n\nwf &lt;- workflow() |&gt;\n  add_recipe(rec) |&gt;\n  add_model(boost_spec)\nmodel &lt;- fit(wf, data = heart)"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-2",
+    "href": "slides/07-3-boost_o.html#boosting-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\nHow would this code change if I wanted to tune B the number of bootstrapped training samples?\n\nboost_spec &lt;- boost_tree( \n  mode = \"classification\", \n  tree_depth = 1, \n  trees = 1000, \n  learn_rate = 0.001, \n) |&gt;\n  set_engine(\"xgboost\")"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-3",
+    "href": "slides/07-3-boost_o.html#boosting-3",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting",
+    "text": "Boosting\nFit a boosted model to the data from the previous application exercise."
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#boosting-vs-bagging",
+    "href": "slides/07-3-boost_o.html#boosting-vs-bagging",
+    "title": "Chapter 8 Part 3",
+    "section": "Boosting Vs Bagging",
+    "text": "Boosting Vs Bagging\nhttps://www.youtube.com/watch?v=tjy0yL1rRRU&t=4s"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#variable-importance-1",
+    "href": "slides/07-3-boost_o.html#variable-importance-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance",
+    "text": "Variable importance\n\nFor bagged or random forest regression trees, we can record the total RSS that is decreased due to splits of a given predictor \\(X_i\\) averaged over all \\(B\\) trees\nA large value would indicate that that variable is important"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#variable-importance-2",
+    "href": "slides/07-3-boost_o.html#variable-importance-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance",
+    "text": "Variable importance\n\nFor bagged or random forest classification trees we can add up the total amount that the Gini Index is decreased by splits of a given predictor, \\(X_i\\), averaged over \\(B\\) trees"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#variable-importance-in-r",
+    "href": "slides/07-3-boost_o.html#variable-importance-in-r",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance in R",
+    "text": "Variable importance in R\n\nrf_spec &lt;- rand_forest(\n  mode = \"classification\",\n  mtry = 3\n) |&gt; \n  set_engine(\n    \"ranger\",\n    importance = \"impurity\") \n\nwf &lt;- workflow() |&gt;\n  add_recipe(\n    recipe(HD ~ Age + Sex + ChestPain + RestBP + Chol + Fbs + \n             RestECG + MaxHR + ExAng + Oldpeak + Slope + Ca + Thal,               \n           data = heart)\n  ) |&gt;\n  add_model(rf_spec)\nmodel &lt;- fit(wf, data = heart)\n\n\nranger::importance(model$fit$fit$fit)\n\n       Age        Sex  ChestPain     RestBP       Chol        Fbs    RestECG      MaxHR \n 9.0279261  3.8977009 16.7716081  7.2689153  7.1560856  0.7594073  1.6446268 14.4947813 \n     ExAng    Oldpeak      Slope         Ca       Thal \n 6.1265358 12.8142317  5.7819062 16.7084935 14.5530106"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#variable-importance-3",
+    "href": "slides/07-3-boost_o.html#variable-importance-3",
+    "title": "Chapter 8 Part 3",
+    "section": "Variable importance",
+    "text": "Variable importance\n\nlibrary(ranger)\nimportance(model$fit$fit$fit)\n\n       Age        Sex  ChestPain     RestBP       Chol        Fbs    RestECG      MaxHR \n 9.0279261  3.8977009 16.7716081  7.2689153  7.1560856  0.7594073  1.6446268 14.4947813 \n     ExAng    Oldpeak      Slope         Ca       Thal \n 6.1265358 12.8142317  5.7819062 16.7084935 14.5530106 \n\n\n\nvar_imp &lt;- ranger::importance(model$fit$fit$fit)"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#plotting-variable-importance",
+    "href": "slides/07-3-boost_o.html#plotting-variable-importance",
+    "title": "Chapter 8 Part 3",
+    "section": "Plotting variable importance",
+    "text": "Plotting variable importance\n\nvar_imp_df &lt;- data.frame(\n  variable = names(var_imp),\n  importance = var_imp\n)\n\nvar_imp_df |&gt;\n  ggplot(aes(x = variable, y = importance)) +\n  geom_col()\n\n\n\n\n\n\n\n\n\nHow could we make this plot better?"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#plotting-variable-importance-1",
+    "href": "slides/07-3-boost_o.html#plotting-variable-importance-1",
+    "title": "Chapter 8 Part 3",
+    "section": "Plotting variable importance",
+    "text": "Plotting variable importance\n\nvar_imp_df |&gt;\n  ggplot(aes(x = variable, y = importance)) +\n  geom_col() + \n  coord_flip()\n\n\n\n\n\n\n\n\n\nHow could we make this plot better?"
+  },
+  {
+    "objectID": "slides/07-3-boost_o.html#plotting-variable-importance-2",
+    "href": "slides/07-3-boost_o.html#plotting-variable-importance-2",
+    "title": "Chapter 8 Part 3",
+    "section": "Plotting variable importance",
+    "text": "Plotting variable importance\n\nvar_imp_df |&gt;\n  mutate(variable = factor(variable, \n                           levels = variable[order(var_imp_df$importance)])) |&gt;\n  ggplot(aes(x = variable, y = importance)) +\n  geom_col() + \n  coord_flip()"
   }
 ]

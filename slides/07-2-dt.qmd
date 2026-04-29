@@ -1,6 +1,6 @@
 ---
 title: "Chapter 8 Part 2"
-subtitle: "Decision Trees"
+subtitle: "Decision Trees: Bagging and Random Forests"
 format: 
   revealjs:
     output-file: "07-2-dt.html"
@@ -46,7 +46,6 @@ There are several R packages that assist with tree plotting
 2. Journal Article (R Journal is great)
 3. Rstudio Community
 4. StackOverflow
-5. Twitter
 
 ## `rpart.plot`
 
@@ -92,7 +91,6 @@ model <- fit(wf, baseball)
 . . .
 
 ```{r, eval = FALSE}
-#| code-line-numbers: "|1|2|"
 rpart.plot(model$fit$fit$fit,
            roundint = FALSE)
 ```
@@ -209,7 +207,7 @@ model <- tune_grid(wf,
 . . .
 
 ::: question
-What $\alpha$s am I trying?
+What $\alpha$'s are we trying?
 :::
 
 
@@ -289,7 +287,7 @@ final_model %>%
 
 ## Bagging {.smaller}
 
-* Mathematically, why does this work? Let's go back to intro to stat!
+* Mathematically, how does this work? Let's go back to intro to stat!
 
 * If you have a set of $n$ independent observations: $Z_1, \dots, Z_n$, each with a variance of $\sigma^2$, what would the variance of the _mean_, $\bar{Z}$ be?
 
@@ -397,7 +395,7 @@ _Do you_ `r emo::ji("red_heart")` _all of the tree puns?_
 ::: question
 If we are using bootstrap samples, how similar do you think the trees will be?
 ::: 
-. . .
+
 
 * Random forests provide an improvement over bagged trees
 by way of a small tweak that _decorrelates_ the trees
@@ -454,19 +452,16 @@ heart_train <- training(heart_split)
 ## 2. Create model specification {.smaller}
 
 ```{r, eval = FALSE}
+#| code-line-numbers: "|3|"
 model_spec <- rand_forest(
   mode = "classification",
   mtry = ---
-) |> 
+    ) |> 
   set_engine("ranger")
 ```
 
-. . .
 
-::: question
-_mtry_ here is _m_. If we are doing _bagging_ what do you think we set this to? 
-:::
-
+- _mtry_ here is _m_. If we are doing _bagging_ what do you think we set this to? 
 
 
 ## 2. Create bagging specification
@@ -474,15 +469,14 @@ _mtry_ here is _m_. If we are doing _bagging_ what do you think we set this to?
 ```{r, eval = FALSE}
 bagging_spec <- rand_forest(
   mode = "classification",
-  mtry = 13 #<<
-) |> 
+  mtry = 13 ) |> #<< 
   set_engine("ranger")
 ```
 
 
 
 ::: question
-What would we change _mtry_ to if we are doing a random forest?
+What would we change *mtry* to if we are doing a random forest?
 :::
 
 
@@ -542,11 +536,9 @@ model |>
 What is our final tree? 
 :::
 
-. . . 
-
 - With both bagging and random forests, we have traded interpretability with performance. 
 
-- These approaches will predict better but we no longer have a single represenation fo the tree. 
+- These approaches will predict better but we no longer have a single representation fo the tree. 
 
 - Even if we wanted to pick the best performing tree, it may have a different subset of variables than other similar trees. 
 

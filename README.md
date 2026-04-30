@@ -1,8 +1,6 @@
 # website
 
-Course website for Sta 362 - Introduction to Statistical Learning - Spring 24 at Cornell College
-
-Course website is live at https://sta-363-s23.github.io/website.
+Course website for Sta 362 - Introduction to Statistical Learning
 
 # Attribution
 

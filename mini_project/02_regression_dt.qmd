@@ -1,0 +1,89 @@
+---
+title: 'Mini Project 2'
+subtitle: 'Regression and Decision Trees'
+execute:
+  eval: false
+---
+
+## Night Before 
+
+Work with your group to choose 3 potential datasets before the morning of the project. Your response must be quantitative your data must have at least 5 potential predictors, with at least 1 of them being quantitative. *You may not use synthetic data*.
+
+
+## Instructions
+
+- Find data with a reasonable quantitative response that you are interested in.
+- Write a research question. 
+- Clean the data. 
+- Fit and interpret models answer the research question(s). 
+- Summarize your findings in a presentation and, afterwards an *executive summary*.
+
+Data Options. Check out Data Links on the [Useful Links](../course-links.qmd) part of the course website. *TidyTuesday* has quickly accessible data.
+
+This project will be in a *workshop* style. The intention is for you to start and finish by the end of class time. We will follow a timeline:
+
+| Task | Timing |
+|--------------------------------------|----------------------------------|
+| Clean Data | 9:10 am - 9:30 am |
+| Perform EDA | 9:30 am - 10:30 am |
+| Fit, Assess, and Compare Regression Models | 10:30 am - 11:00 am, 1:00 pm - 2:00 pm |
+| Prepare presentation | 2:00 pm - 2:20 pm |
+| Present your findings | 2:20 pm - 2:40 pm |
+| Submit your Executive Summary | Submit HTML 5/3 at 11:59 pm |
+
+### What is an Excutive Summary? 
+
+#### Suggested Sections:
+
+- Project question: What were you trying to predict, classify, or understand?
+- Data and approach: What data did you use, and what models did you compare?
+- Key findings: What are the 2–4 most important results?
+- Model performance: How well did the model work, using an appropriate validation/test metric?
+- Interpretation and recommendation: What should the reader take away?
+- Limitations: What should we be careful about?
+
+- Your report should have a *maximum of two pages* including graphs and tables, but not including the code appendix.  
+
+#### External Examples
+
+- A brief definition: <https://openstax.org/books/principles-data-science/pages/10-3-effective-executive-summaries>.
+- Some short examples: <https://evalu-ate.org/one-page-reports-toolkit/examples/>.
+- A longer form (than what is expected in this submission): <https://www.stat.cmu.edu/~brian/701/notes/paper-structure.pdf>.
+
+
+### Grading
+
+Each Mini Project is worth 50 points (Labs are 10 points each).
+
+| Category | Points |
+|---------------------------------------------------------|---------------|
+| The data chosen is appropriate, and the cleaning steps are correct and explained. | 5 |
+| The research question is clear and *can* be answered with the chosen data. | 5 |
+| EDA is thorough. All included graphs and tables are paired with a discussion. EDA supports the choice of modeling technique. | 5 |
+| The model fitting process has a logical flow. Multiple models are considered and compared using statistical tests and multiple metrics. Any model that is interpreted has been assessed. | 15 |
+| The code in in an appendix, follows a sensible order, and has been appropriately commented on. | 5 |
+| The presentation is concise (5 minutes), 1) highlights key parts of the EDA, 2) at minimum described the final model, 3) includes some interpretation of the variables to answer the research question, and 4) discusses limitations and potential future work. | 10 |
+| The executive summary is well written, with correct spelling and grammar, and includes the content mentioned above. | 5 |
+
+### Submission
+
+Add format part of your final report document and then re-render:
+
+```{{r}}
+#| label: yaml_example
+#| eval: false
+---
+title: "Document title"
+author: "my name"
+format:
+  html:
+    embed-resources: true
+---
+```
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen)
+-   Click the check box next to the file
+-   Click the blue gear above and then click "Export" to download
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}})

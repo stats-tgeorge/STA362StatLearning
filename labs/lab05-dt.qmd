@@ -35,7 +35,7 @@ format:
 
 ## Packages
 
-In this lab we will work with four packages: `ISLR` for the data, `visdat` to visualize the dataset, `tidyverse` which is a collection of packages for doing data analysis in a "tidy" way, and `tidymodels` for statistical modeling.
+In this lab, we will work with four packages: `ISLR` for the data, `visdat` to visualize the dataset, `tidyverse`, which is a collection of packages for doing data analysis in a "tidy" way, and `tidymodels` for statistical modeling.
 
 ```{r}
 library(tidyverse) 
@@ -48,8 +48,9 @@ library(visdat)
 You may need to install the package to perform boosting. You can do this by running the following **once** in the console:
 
 ```{r, eval = FALSE}
-#install.packages("xgboost")
-#install.packages("visdat")
+install.packages("xgboost")
+install.packages("visdat")
+install.packages('baguette')
 ```
 
 
@@ -67,14 +68,14 @@ For this lab, we are using `Carseats` data from the `ISLR` package.
 
 3. Set a seed to `777`. Split your data appropriately. 
 
-4. Create a recipe to predict `Sales` from the remain variables. We are going to be fitting regular decision tree, bagged decision trees, random forests, boosted decision trees, and penalized regression. Make sure to perform any preprocessing steps necessary for each of these models (i.e. normalizing the data, creating dummy variables, etc.). Add this recipe to a workflow.
+4. Create a recipe to predict `Sales` from the remaining variables. We are going to be fitting regular decision tree, bagged decision trees, random forests, boosted decision trees, and penalized regression. Make sure to perform any preprocessing steps necessary for each of these models (i.e. normalizing the data, creating dummy variables, etc.). Add this recipe to a workflow.
 
-5.  Fit a decision true, pruning the tree using cost complexity.  Add this model specification to your workflow and fit the model. Report the RMSE on a test set. 
+5.  Fit a decision tree, pruning the tree using cost complexity.  Add this model specification to your workflow and fit the model. Report the RMSE on a test set. 
 
-6.  Update the model in your workflow to fit a **bagged** decision tree estimating the car seat `Sales` using the remaining 10 variables. You may specify the parameters in any way that you'd like, but **tune** the tree depth (`tree_depth`) to find the best bagged decision tree. (See `update_model`).
+6.  Update the model in your workflow to fit a **bagged** decision tree, estimating the car seat `Sales` using the remaining 10 variables. You will need to use the `bag_tree()` function that we have not used before. You may specify the parameters however you'd like, but **tune** the tree depth (`tree_depth`) to find the best bagged decision tree. (See `update_model`).
 
 
-7. Collect the metrics from the bagged tree and filter them to only include the root mean squared error. Create a plot to compare the tree depth to the RMSE. Some code is provided below. 
+7. Collect the metrics from the bagged tree and filter them to only include the root mean squared error. Create a plot comparing tree depth to RMSE. Some code is provided below.
 
 
 ```{r, eval = FALSE}
@@ -84,11 +85,11 @@ ggplot(---, aes(x = tree_depth, y = mean)) +
   labs(y = ---)
 ```
 
-8. Update the model in your workflow to fit a **random forest** estimating the car seat `Sales` using the remaining 10 variables. You may specify the parameters in any way that you'd like, but **tune** the number of variables to consider at each split (`mtry`). (See `update_model`).
+8. Update the model in your workflow to fit a **random forest**, estimating the car seat `Sales` using the remaining 10 variables. You may specify the parameters however you'd like, but **tune** the number of variables to consider at each split (`mtry`). (See `update_model`).
 
 9. Collect the metrics from the random forest tree and filter them to only include the root mean squared error. Using similar code as before, plot these results. Describe what you see.
 
-10. Update the model in your workflow to fit a **boosted tree** estimating the car seat `Sales` using the remaining 10 variables. Specify the tree depth to be 1, the learn rate to 0.1, and **tune** the number of trees (`trees`), examining 10, 25, 50, 100, 200, 300, and 1000 trees. (See `update_model`).
+10. Update the model in your workflow to fit a **boosted tree**, estimating the car seat `Sales` using the remaining 10 variables. Specify the tree depth to be 1, the learn rate to 0.1, and **tune** the number of trees (`trees`), examining 10, 25, 50, 100, 200, 300, and 1000 trees. (See `update_model`).
 
 11. Collect the metrics from the boosted tree and filter them to only include the root mean squared error. Using similar code as in Exercise 5, plot these results. Describe what you see.
 

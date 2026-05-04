@@ -1,0 +1,147 @@
+---
+title: "Homework 6"
+subtitle: "Clustering"
+format: html
+---
+
+```{r include=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(ISLR)
+hw_num <- 6
+```
+
+::: {.callout-note collapse="false" appearance="Instructions"}
+
+# Instructions
+
+-   Creating a new *project.* and giving it a sensible name such as `r paste0("homework",hw_num)` and having that project in the course folder you created.
+
+-   Create a new quarto document and give it a sensible name such as `r paste0("hw",hw_num)`.
+
+-   In the `YAML` add the following (add what you don't have). The embed-resources component will make your final rendered `html` self-contained.
+
+```{r}
+#| label: yaml_example
+#| eval: false
+---
+title: "Document title"
+author: "Your Name"
+format:
+  html:
+    embed-resources: true
+---
+```
+    
+-   Though the book used R code for base R, I want you to complete the exercises using functions from *tidymodels* when possible.
+-   Set a seed before each problem.
+-   Make sure your answers print results. If the output is a large table, use the head() function to shorten the output. 
+
+:::
+
+# Exercises
+
+1. (ISLR2 12.2) Suppose we have four observations, and the pairwise dissimilarities among them are given by the following matrix:
+
+$$
+\begin{pmatrix}
+0 & 0.3 & 0.4 & 0.7 \\
+0.3 & 0 & 0.5 & 0.8 \\
+0.4 & 0.5 & 0 & 0.45 \\
+0.7 & 0.8 & 0.45 & 0
+\end{pmatrix}
+$$
+
+For example, the dissimilarity between observations 1 and 2 is $0.3$, and the dissimilarity between observations 2 and 4 is $0.8$.
+
+a. Using **complete linkage**, sketch the dendrogram that results from hierarchically clustering these four observations. Be sure to indicate the **height** at which each fusion occurs, and label the leaves with the observation numbers.
+
+b. Repeat part (a) using **single linkage** clustering.
+
+c. Suppose the dendrogram from part (a) is cut so that **two clusters** result. Which observations belong to each cluster?
+
+d. Suppose the dendrogram from part (b) is cut so that **two clusters** result. Which observations belong to each cluster?
+
+e. The chapter notes that at each fusion in a dendrogram, the two branches being joined can be swapped without changing the meaning of the dendrogram. Draw a dendrogram that is **equivalent** to your answer in part (a), but with two or more leaves repositioned.
+
+
+2. (ISLR2 12.3) In this problem, you will perform **K-means clustering manually** with $K = 2$ on a small example with $n = 6$ observations and $p = 2$ features.
+
+The observations are given below.
+
+| Observation | $X_1$ | $X_2$ |
+|---|---:|---:|
+| 1 | 1 | 4 |
+| 2 | 1 | 3 |
+| 3 | 0 | 4 |
+| 4 | 5 | 1 |
+| 5 | 6 | 2 |
+| 6 | 4 | 0 |
+
+a. Plot the observations.
+
+b. Randomly assign each observation to one of the two clusters. You may use the `sample()` function in R to do this. Report the initial cluster label for each observation.
+
+c. Compute the centroid for each cluster.
+
+d. Reassign each observation to the cluster whose centroid is closest in Euclidean distance. Report the updated cluster label for each observation.
+
+e. Repeat parts (c) and (d) until the cluster assignments no longer change.
+
+f. Return to your plot from part (a) and color the observations according to the final cluster labels you obtained.
+
+3. (ISLR2 12.13) On the book website, `www.statlearning.com`, and on Moodle, there is a gene expression data set (`Ch12Ex13.csv`) consisting of 40 tissue samples with measurements on 1,000 genes. The first 20 samples are from **healthy** patients, and the second 20 are from a **diseased** group.
+
+:::{.callout-tip}
+Use the following code because the data will not read in a tidy format:
+
+```{r} 
+#| eval: false
+gene_df <- read.csv("hw/data/Ch12Ex13.csv", header = FALSE) |> 
+  t()|>
+  as.data.frame()
+```
+:::
+
+a. Load the data into R using `read.csv()`. You will need to use `header = FALSE`.
+
+b. Apply **hierarchical clustering** to the samples using a **correlation-based distance**, and plot the resulting dendrogram. 
+
+c. Do the genes separate the samples into the two groups? Do your results depend on the type of linkage used?
+
+d. Your collaborator wants to know which genes differ the most between the two groups. Propose a reasonable way to answer this question, and apply your method to this data.
+
+e. Now use K-Mean clustering with $K=2$ to cluster the data. Do your results agree with those in the prior questions?
+
+:::{.callout-tip}
+Answer this in terms of which cluster each observation ended up in. I suggest comparing a column with the determined cluster from one method to a column with the determined cluster from another method and then counting when they agree/disagree. 
+
+Something like this:
+
+```{r}
+#| eval: false
+# You may save these earlier in your file. 
+pred1 <- model_cluster_method_1 |> predict(data_name)
+pred2 <- model_cluster_method_2 |> predict(data_name)   
+```
+
+The following code could give you how often they agree. Note that cluster names are not unique, if this is really low, it is likely that the method labeled the clusters opposite
+
+```{r}
+#| eval: false
+sum(pred1$.pred_cluster == pred2$.pred_cluster)
+
+```
+
+:::
+
+
+
+# Submission
+
+When you are finished with your homework, be sure to Render the final document. Once rendered, you can download your file by:
+
+-   Finding the .html file in your File pane (on the bottom right of the screen).
+-   Click the check box next to the file.
+-   Click the blue gear above and then click "Export" to download.
+-   Submit your final html document to the respective assignment on [Moodle]({{< var course.moodle >}}).

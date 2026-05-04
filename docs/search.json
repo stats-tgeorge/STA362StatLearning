@@ -2122,7 +2122,7 @@
     "href": "index.html",
     "title": "Introduction to Statistical Learning Schedule",
     "section": "",
-    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - PCA & Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
+    "text": "Note: The timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\nDay\nDate\nTopic\nNotes\nOutline\nNotes 2\nOutline 2\nProject\nLab\nHomework\nExam\n\n\n\n\n1\n13 April\nCourse Intro, Ch 1 - Stat Learning Examples, Ch 2 - SL, Bias-Variance Tradeoff\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2\n14 April\nCh 5 - Cross Validation, Tidy Models\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n3\n15 April\nCh 5 - Cross Validation, Tidy Models, Ch 3 - LR\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n4\n16 April\nCh 4 - Logistic Regression\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n5\n17 April\nCh 4 - Multinomial Logistic, LDA\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n6\n20 April\nCh 4 - Naive Bayes, KMeans Classification\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n7\n21 April\nMini Project 1\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n8\n22 April\nExam\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n9\n23 April\nCh 6 - Subset Selection\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n10\n24 April\nCh 6 - Shrinkage Methods & Tidymodels Recipes\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n11\n27 April\nCh 6 - Dimension Reduction\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n12\n28 April\nCh 8 - Decision Trees\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n13\n29 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n14\n30 April\nCh 8 - Bagging, RF, Boosting\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n15\n1 May\nMini Project 2\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n16\n4 May\nCh 12 - Unsupervised Clustering\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n17\n5 May\nFinish Up, surveys etc, take home posted\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n18\n6 May\nExam",
     "crumbs": [
       "Course Contents",
       "Schedule & Assignments"
@@ -9502,7 +9502,7 @@
     "href": "slides/08-un_sup.html#evaluating-clustering-which-k",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Evaluating clustering (which \\(k\\)?)",
-    "text": "Evaluating clustering (which \\(k\\)?)\n\nSilhouette Width (use \\(k\\) with smallest silhouette width)\nElbow plot (use \\(k\\) at elbow on plot of \\(k\\) vs. within cluster sum of squares)\nThe silhouette of a single observation is proportional to the average distance from that observation to within-cluster observations minus the average distance to outside-cluster observations; normalized by the greater of these two average.\nA large silhouette (close to 1) suggests that an observation is more similar to those within its cluster than those outside its cluster.\nWe can average all silhouettes to get a metric for the full clustering fit."
+    "text": "Evaluating clustering (which \\(k\\)?)\n\nSilhouette Width (use \\(k\\) with smallest silhouette width)\nElbow plot (use \\(k\\) at elbow on plot of \\(k\\) vs. within cluster sum of squares)\nThe silhouette of a single observation is proportional to the average distance from that observation to within-cluster observations minus the average distance to outside-cluster observations; normalized by the greater of these two averages.\nA large silhouette (close to 1) suggests that an observation is more similar to those within its cluster than those outside its cluster.\nWe can average all silhouettes to get a metric for the full clustering fit."
   },
   {
     "objectID": "slides/08-un_sup.html#silhouette-width",
@@ -9558,7 +9558,7 @@
     "href": "slides/08-un_sup.html#correlation-distance-isnt-a-distance-metric",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Correlation distance isn’t a distance metric!",
-    "text": "Correlation distance isn’t a distance metric!\n\nx1 &lt;- c(1,2,3)\nx2 &lt;- c(1, 4, 10)\nx3 &lt;- c(9, 2, 2)\n\n# d(1,2)\n1 - cor(x1, x2)\n\n[1] 0.01801949\n\n# d(1,3)\n1 - cor(x1, x3)\n\n[1] 1.866025\n\n# d(2,3)\n1 - cor(x2, x3)\n\n[1] 1.755929\n\n# d(1,3) &gt; d(1,2) + d(2,3)\n1 - cor(x1, x2) + 1 - cor(x2, x3)\n\n[1] 1.773948"
+    "text": "Correlation distance isn’t a distance metric!\n\nx1 &lt;- c(1,2,3)\nx2 &lt;- c(1, 4, 10)\nx3 &lt;- c(9, 2, 2)\n\n# d(1,2)\n1 - cor(x1, x2)\n\n[1] 0.01801949\n\n\n\n\n# d(1,3)\n1 - cor(x1, x3)\n\n[1] 1.866025\n\n\n\n\n\n# d(2,3)\n1 - cor(x2, x3)\n\n[1] 1.755929\n\n\n\n\n\n# d(1,3) &gt; d(1,2) + d(2,3)\n1 - cor(x1, x2) + 1 - cor(x2, x3)\n\n[1] 1.773948"
   },
   {
     "objectID": "slides/08-un_sup.html#correlation-distance-isnt-a-distance-metric-1",
@@ -9572,7 +9572,7 @@
     "href": "slides/08-un_sup.html#cosine-distance-for-clustering",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Cosine Distance (for clustering)",
-    "text": "Cosine Distance (for clustering)\n\\[d_C({\\bf x}, {\\bf y}) =  \\frac{{\\bf x} \\cdot {\\bf y}}{|| {\\bf x} ||  ||{\\bf y}||}\\] \\[= \\frac{\\sum_{i=1}^p x_i y_i}{\\sqrt{\\sum_{i=1}^p x_i^2 \\sum_{i=1}^p y_i^2}}\\] \\[= 1 - r_P ({\\bf x}, {\\bf y})  \\ \\ \\ \\ \\mbox{if } \\overline{\\bf x} = \\overline{\\bf y} = 0\\] * Hamming Distance\n\\[\\begin{align}\nd_H({\\bf x}, {\\bf y}) = \\sum_{i=1}^p I(x_i \\ne y_i)\n\\end{align}\\]\n\nThe Hamming distance across the two DNA strands is 7."
+    "text": "Cosine Distance (for clustering)\n\\[d_C({\\bf x}, {\\bf y}) =  \\frac{{\\bf x} \\cdot {\\bf y}}{|| {\\bf x} ||  ||{\\bf y}||}\\] \\[= \\frac{\\sum_{i=1}^p x_i y_i}{\\sqrt{\\sum_{i=1}^p x_i^2 \\sum_{i=1}^p y_i^2}}\\] \\[= 1 - r_P ({\\bf x}, {\\bf y})  \\ \\ \\ \\ \\mbox{if } \\overline{\\bf x} = \\overline{\\bf y} = 0\\]"
   },
   {
     "objectID": "slides/08-un_sup.html#dist-function-in-r",
@@ -9600,7 +9600,7 @@
     "href": "slides/08-un_sup.html#partitioning-around-medoids-pam",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Partitioning Around Medoids (PAM)",
-    "text": "Partitioning Around Medoids (PAM)\nFind the observations (data values!) \\(m_k\\) that solve:\n\\[\\text{arg}\\,\\min\\limits_{C_1, \\ldots, C_k} \\Bigg\\{ \\sum_{k=1}^K \\sum_{i \\in C_k}d(x_i, m_k) \\Bigg\\}\\]\n\nNot well implemented in R"
+    "text": "Partitioning Around Medoids (PAM)\nFind the observations (data values!) \\(m_k\\) that solve:\n\\[\\text{arg}\\,\\min\\limits_{C_1, \\ldots, C_k} \\Bigg\\{ \\sum_{k=1}^K \\sum_{i \\in C_k}d(x_i, m_k) \\Bigg\\}\\]\n\nNot implemented in tidymodels\nCan be done with pam() function from the cluster package"
   },
   {
     "objectID": "slides/08-un_sup.html#hierarchical-clustering",
@@ -9614,14 +9614,14 @@
     "href": "slides/08-un_sup.html#algorithm-agglomerative-hierarchical-clustering-algorithm",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Algorithm: Agglomerative Hierarchical Clustering Algorithm",
-    "text": "Algorithm: Agglomerative Hierarchical Clustering Algorithm\n\nBegin with \\(n\\) observations and a measure (such as Euclidean distance) of all the \\({n \\choose 2} = n(n-1)/2\\) pairwise dissimilarities. Treat each observation as its own cluster.\n\n\n\nFor \\(i = n, n - 1, \\ldots , 2\\):\n\nExamine all pairwise inter-cluster dissimilarities among the \\(i\\) clusters and identify the pair of clusters that are least dissimilar (that is, most similar). Fuse these two clusters. The dissimilarity between these two clusters indicates the height in the dendrogram at which the fusion should be placed.\n\n\n\n\n\nCompute the new pairwise inter-cluster dissimilarities among the \\(i - 1\\) remaining clusters."
+    "text": "Algorithm: Agglomerative Hierarchical Clustering Algorithm\n\nBegin with \\(n\\) observations and a measure (such as Euclidean distance) of all the \\({n \\choose 2} = n(n-1)/2\\) pairwise dissimilarities. Treat each observation as its own cluster.\nFor \\(i = n, n - 1, \\ldots , 2\\):\n\nExamine all pairwise inter-cluster dissimilarities among the \\(i\\) clusters and identify the pair of clusters that are least dissimilar (that is, most similar). Fuse these two clusters. The dissimilarity between these two clusters indicates the height in the dendrogram at which the fusion should be placed.\nCompute the new pairwise inter-cluster dissimilarities among the \\(i - 1\\) remaining clusters."
   },
   {
     "objectID": "slides/08-un_sup.html#definitions",
     "href": "slides/08-un_sup.html#definitions",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Definitions",
-    "text": "Definitions\nAgglomerative methods start with each object (e.g., gene, penguin, etc.) in its own group. Groups are merged until all objects are together in one group.\nDivisive methods start with all objects in one group and break up the groups sequentially until all objects are individuals.\nSingle Linkage algorithm defines the distance between groups as that of the closest pair of individuals.\nComplete Linkage algorithm defines the distance between groups as that of the farthest pair of individuals.\nAverage Linkage algorithm defines the distance between groups as the average of the distances between all pairs of individuals across the groups."
+    "text": "Definitions\nAgglomerative methods start with each object (e.g., gene, penguin, etc.) in its own group. Groups are merged until all objects are together in one group.\nDivisive methods start with all objects in one group and break up the groups sequentially until all objects are individuals."
   },
   {
     "objectID": "slides/08-un_sup.html#hierarchical-clustering-in-r---tidymodels",
@@ -9761,7 +9761,7 @@
     "href": "slides/08-un_sup_o.html#evaluating-clustering-which-k",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Evaluating clustering (which \\(k\\)?)",
-    "text": "Evaluating clustering (which \\(k\\)?)\n\nSilhouette Width (use \\(k\\) with smallest silhouette width)\nElbow plot (use \\(k\\) at elbow on plot of \\(k\\) vs. within cluster sum of squares)\nThe silhouette of a single observation is proportional to the average distance from that observation to within-cluster observations minus the average distance to outside-cluster observations; normalized by the greater of these two average.\nA large silhouette (close to 1) suggests that an observation is more similar to those within its cluster than those outside its cluster.\nWe can average all silhouettes to get a metric for the full clustering fit."
+    "text": "Evaluating clustering (which \\(k\\)?)\n\nSilhouette Width (use \\(k\\) with smallest silhouette width)\nElbow plot (use \\(k\\) at elbow on plot of \\(k\\) vs. within cluster sum of squares)\nThe silhouette of a single observation is proportional to the average distance from that observation to within-cluster observations minus the average distance to outside-cluster observations; normalized by the greater of these two averages.\nA large silhouette (close to 1) suggests that an observation is more similar to those within its cluster than those outside its cluster.\nWe can average all silhouettes to get a metric for the full clustering fit."
   },
   {
     "objectID": "slides/08-un_sup_o.html#silhouette-width",
@@ -9817,7 +9817,7 @@
     "href": "slides/08-un_sup_o.html#correlation-distance-isnt-a-distance-metric",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Correlation distance isn’t a distance metric!",
-    "text": "Correlation distance isn’t a distance metric!\n\nx1 &lt;- c(1,2,3)\nx2 &lt;- c(1, 4, 10)\nx3 &lt;- c(9, 2, 2)\n\n# d(1,2)\n1 - cor(x1, x2)\n\n[1] 0.01801949\n\n# d(1,3)\n1 - cor(x1, x3)\n\n[1] 1.866025\n\n# d(2,3)\n1 - cor(x2, x3)\n\n[1] 1.755929\n\n# d(1,3) &gt; d(1,2) + d(2,3)\n1 - cor(x1, x2) + 1 - cor(x2, x3)\n\n[1] 1.773948"
+    "text": "Correlation distance isn’t a distance metric!\n\nx1 &lt;- c(1,2,3)\nx2 &lt;- c(1, 4, 10)\nx3 &lt;- c(9, 2, 2)\n\n# d(1,2)\n1 - cor(x1, x2)\n\n[1] 0.01801949\n\n\n. . .\n\n# d(1,3)\n1 - cor(x1, x3)\n\n[1] 1.866025\n\n\n. . .\n\n# d(2,3)\n1 - cor(x2, x3)\n\n[1] 1.755929\n\n\n. . .\n\n# d(1,3) &gt; d(1,2) + d(2,3)\n1 - cor(x1, x2) + 1 - cor(x2, x3)\n\n[1] 1.773948"
   },
   {
     "objectID": "slides/08-un_sup_o.html#correlation-distance-isnt-a-distance-metric-1",
@@ -9831,7 +9831,7 @@
     "href": "slides/08-un_sup_o.html#cosine-distance-for-clustering",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Cosine Distance (for clustering)",
-    "text": "Cosine Distance (for clustering)\n\\[d_C({\\bf x}, {\\bf y}) =  \\frac{{\\bf x} \\cdot {\\bf y}}{|| {\\bf x} ||  ||{\\bf y}||}\\] \\[= \\frac{\\sum_{i=1}^p x_i y_i}{\\sqrt{\\sum_{i=1}^p x_i^2 \\sum_{i=1}^p y_i^2}}\\] \\[= 1 - r_P ({\\bf x}, {\\bf y})  \\ \\ \\ \\ \\mbox{if } \\overline{\\bf x} = \\overline{\\bf y} = 0\\] * Hamming Distance\n\\[\\begin{align}\nd_H({\\bf x}, {\\bf y}) = \\sum_{i=1}^p I(x_i \\ne y_i)\n\\end{align}\\]\n\n\n\n\n\nThe Hamming distance across the two DNA strands is 7."
+    "text": "Cosine Distance (for clustering)\n\\[d_C({\\bf x}, {\\bf y}) =  \\frac{{\\bf x} \\cdot {\\bf y}}{|| {\\bf x} ||  ||{\\bf y}||}\\] \\[= \\frac{\\sum_{i=1}^p x_i y_i}{\\sqrt{\\sum_{i=1}^p x_i^2 \\sum_{i=1}^p y_i^2}}\\] \\[= 1 - r_P ({\\bf x}, {\\bf y})  \\ \\ \\ \\ \\mbox{if } \\overline{\\bf x} = \\overline{\\bf y} = 0\\]"
   },
   {
     "objectID": "slides/08-un_sup_o.html#dist-function-in-r",
@@ -9859,7 +9859,7 @@
     "href": "slides/08-un_sup_o.html#partitioning-around-medoids-pam",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Partitioning Around Medoids (PAM)",
-    "text": "Partitioning Around Medoids (PAM)\nFind the observations (data values!) \\(m_k\\) that solve:\n\\[\\text{arg}\\,\\min\\limits_{C_1, \\ldots, C_k} \\Bigg\\{ \\sum_{k=1}^K \\sum_{i \\in C_k}d(x_i, m_k) \\Bigg\\}\\]\n\nNot well implemented in R"
+    "text": "Partitioning Around Medoids (PAM)\nFind the observations (data values!) \\(m_k\\) that solve:\n\\[\\text{arg}\\,\\min\\limits_{C_1, \\ldots, C_k} \\Bigg\\{ \\sum_{k=1}^K \\sum_{i \\in C_k}d(x_i, m_k) \\Bigg\\}\\]\n\nNot implemented in tidymodels\nCan be done with pam() function from the cluster package"
   },
   {
     "objectID": "slides/08-un_sup_o.html#hierarchical-clustering",
@@ -9873,14 +9873,14 @@
     "href": "slides/08-un_sup_o.html#algorithm-agglomerative-hierarchical-clustering-algorithm",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Algorithm: Agglomerative Hierarchical Clustering Algorithm",
-    "text": "Algorithm: Agglomerative Hierarchical Clustering Algorithm\n\nBegin with \\(n\\) observations and a measure (such as Euclidean distance) of all the \\({n \\choose 2} = n(n-1)/2\\) pairwise dissimilarities. Treat each observation as its own cluster.\n\n. . .\n\nFor \\(i = n, n - 1, \\ldots , 2\\):\n\nExamine all pairwise inter-cluster dissimilarities among the \\(i\\) clusters and identify the pair of clusters that are least dissimilar (that is, most similar). Fuse these two clusters. The dissimilarity between these two clusters indicates the height in the dendrogram at which the fusion should be placed.\n\n\n. . .\n\nCompute the new pairwise inter-cluster dissimilarities among the \\(i - 1\\) remaining clusters."
+    "text": "Algorithm: Agglomerative Hierarchical Clustering Algorithm\n\nBegin with \\(n\\) observations and a measure (such as Euclidean distance) of all the \\({n \\choose 2} = n(n-1)/2\\) pairwise dissimilarities. Treat each observation as its own cluster.\nFor \\(i = n, n - 1, \\ldots , 2\\):\n\nExamine all pairwise inter-cluster dissimilarities among the \\(i\\) clusters and identify the pair of clusters that are least dissimilar (that is, most similar). Fuse these two clusters. The dissimilarity between these two clusters indicates the height in the dendrogram at which the fusion should be placed.\nCompute the new pairwise inter-cluster dissimilarities among the \\(i - 1\\) remaining clusters."
   },
   {
     "objectID": "slides/08-un_sup_o.html#definitions",
     "href": "slides/08-un_sup_o.html#definitions",
     "title": "Chapter 12 - Unsupervised Learning",
     "section": "Definitions",
-    "text": "Definitions\nAgglomerative methods start with each object (e.g., gene, penguin, etc.) in its own group. Groups are merged until all objects are together in one group.\nDivisive methods start with all objects in one group and break up the groups sequentially until all objects are individuals.\nSingle Linkage algorithm defines the distance between groups as that of the closest pair of individuals.\nComplete Linkage algorithm defines the distance between groups as that of the farthest pair of individuals.\nAverage Linkage algorithm defines the distance between groups as the average of the distances between all pairs of individuals across the groups."
+    "text": "Definitions\nAgglomerative methods start with each object (e.g., gene, penguin, etc.) in its own group. Groups are merged until all objects are together in one group.\nDivisive methods start with all objects in one group and break up the groups sequentially until all objects are individuals."
   },
   {
     "objectID": "slides/08-un_sup_o.html#hierarchical-clustering-in-r---tidymodels",
@@ -9909,5 +9909,103 @@
     "title": "Chapter 12 - Unsupervised Learning",
     "section": " Application Exercise: Clustering",
     "text": "Application Exercise: Clustering\n\nPerform Kmeans and Hierarchical Clustering on the iris dataset (use data(\"iris\"))"
+  },
+  {
+    "objectID": "slides/08-un_sup.html#euclidean-distance",
+    "href": "slides/08-un_sup.html#euclidean-distance",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Euclidean Distance",
+    "text": "Euclidean Distance\n\\[d_E({\\bf x}, {\\bf y}) = \\sqrt{\\sum_{i=1}^p (x_i - y_i)^2}\\]"
+  },
+  {
+    "objectID": "slides/08-un_sup.html#pearson-correlation-distance",
+    "href": "slides/08-un_sup.html#pearson-correlation-distance",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Pearson Correlation Distance",
+    "text": "Pearson Correlation Distance\n\\[d_P({\\bf x}, {\\bf y}) = 1 - r_P ({\\bf x}, {\\bf y})\\] \\[\\mbox{ or } d_P({\\bf x}, {\\bf y}) =  1 - |r_P ({\\bf x}, {\\bf y})|\\] \\[\\mbox{ or } d_P({\\bf x}, {\\bf y}) =  1 - (r_P ({\\bf x}, {\\bf y}))^2\\]"
+  },
+  {
+    "objectID": "slides/08-un_sup.html#hamming-distance",
+    "href": "slides/08-un_sup.html#hamming-distance",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Hamming Distance",
+    "text": "Hamming Distance\n\\[\\begin{align}\nd_H({\\bf x}, {\\bf y}) = \\sum_{i=1}^p I(x_i \\ne y_i)\n\\end{align}\\]\n\nThe Hamming distance across the two DNA strands is 7."
+  },
+  {
+    "objectID": "slides/08-un_sup.html#dendograms",
+    "href": "slides/08-un_sup.html#dendograms",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Dendograms",
+    "text": "Dendograms\n\n\nBuild bottom to top\nPoints “closeness” is shown with vertical axis"
+  },
+  {
+    "objectID": "slides/08-un_sup.html#clusters",
+    "href": "slides/08-un_sup.html#clusters",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Clusters",
+    "text": "Clusters\n\nHow do we get clusters of points?\n\n\nThe height of the cut play’s the same role as \\(K\\) in \\(K\\)-means clustering."
+  },
+  {
+    "objectID": "slides/08-un_sup.html#linkage",
+    "href": "slides/08-un_sup.html#linkage",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Linkage",
+    "text": "Linkage\nSingle Linkage algorithm defines the distance between groups as that of the closest pair of individuals.\nComplete Linkage algorithm defines the distance between groups as that of the farthest pair of individuals.\nAverage Linkage algorithm defines the distance between groups as the average of the distances between all pairs of individuals across the groups.\nCentroid algorithm uses centroid dissimilarity; the centroid for cluster A (a mean vector of length \\(p\\)) and the centroid for cluster B. Common in genomocis."
+  },
+  {
+    "objectID": "slides/08-un_sup.html#comparisons",
+    "href": "slides/08-un_sup.html#comparisons",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Comparisons",
+    "text": "Comparisons"
+  },
+  {
+    "objectID": "slides/08-un_sup_o.html#euclidean-distance",
+    "href": "slides/08-un_sup_o.html#euclidean-distance",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Euclidean Distance",
+    "text": "Euclidean Distance\n\\[d_E({\\bf x}, {\\bf y}) = \\sqrt{\\sum_{i=1}^p (x_i - y_i)^2}\\]"
+  },
+  {
+    "objectID": "slides/08-un_sup_o.html#pearson-correlation-distance",
+    "href": "slides/08-un_sup_o.html#pearson-correlation-distance",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Pearson Correlation Distance",
+    "text": "Pearson Correlation Distance\n\\[d_P({\\bf x}, {\\bf y}) = 1 - r_P ({\\bf x}, {\\bf y})\\] \\[\\mbox{ or } d_P({\\bf x}, {\\bf y}) =  1 - |r_P ({\\bf x}, {\\bf y})|\\] \\[\\mbox{ or } d_P({\\bf x}, {\\bf y}) =  1 - (r_P ({\\bf x}, {\\bf y}))^2\\]"
+  },
+  {
+    "objectID": "slides/08-un_sup_o.html#hamming-distance",
+    "href": "slides/08-un_sup_o.html#hamming-distance",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Hamming Distance",
+    "text": "Hamming Distance\n\\[\\begin{align}\nd_H({\\bf x}, {\\bf y}) = \\sum_{i=1}^p I(x_i \\ne y_i)\n\\end{align}\\]\n\n\n\n\n\nThe Hamming distance across the two DNA strands is 7."
+  },
+  {
+    "objectID": "slides/08-un_sup_o.html#dendograms",
+    "href": "slides/08-un_sup_o.html#dendograms",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Dendograms",
+    "text": "Dendograms\n\n\nBuild bottom to top\nPoints “closeness” is shown with vertical axis"
+  },
+  {
+    "objectID": "slides/08-un_sup_o.html#clusters",
+    "href": "slides/08-un_sup_o.html#clusters",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Clusters",
+    "text": "Clusters\n\nHow do we get clusters of points?\n\n. . .\nThe height of the cut play’s the same role as \\(K\\) in \\(K\\)-means clustering."
+  },
+  {
+    "objectID": "slides/08-un_sup_o.html#linkage",
+    "href": "slides/08-un_sup_o.html#linkage",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Linkage",
+    "text": "Linkage\nSingle Linkage algorithm defines the distance between groups as that of the closest pair of individuals.\nComplete Linkage algorithm defines the distance between groups as that of the farthest pair of individuals.\nAverage Linkage algorithm defines the distance between groups as the average of the distances between all pairs of individuals across the groups.\nCentroid algorithm uses centroid dissimilarity; the centroid for cluster A (a mean vector of length \\(p\\)) and the centroid for cluster B. Common in genomocis."
+  },
+  {
+    "objectID": "slides/08-un_sup_o.html#comparisons",
+    "href": "slides/08-un_sup_o.html#comparisons",
+    "title": "Chapter 12 - Unsupervised Learning",
+    "section": "Comparisons",
+    "text": "Comparisons"
   }
 ]

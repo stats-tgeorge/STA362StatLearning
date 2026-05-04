@@ -1,6 +1,6 @@
 ---
 title: "Chapter 12 - Unsupervised Learning"
-subtitle: "Clustering and PCA"
+subtitle: "Clustering"
 format: 
   revealjs:
     output-file: "08-un_sup.html"
@@ -36,7 +36,6 @@ library(tidyclust)
 3. k-medoids clustering
 4. distance metrics
 5. hierarchical clustering
-6. PCA
 
 
 ## Unsupervised learning
@@ -255,7 +254,7 @@ km_fit |> sse_within()
 
 - Elbow plot (use $k$ at elbow on plot of $k$ vs. within cluster sum of squares)
 
-- The silhouette of a single observation is proportional to the average distance from that observation to within-cluster observations minus the average distance to outside-cluster observations; normalized by the greater of these two average.
+- The silhouette of a single observation is proportional to the average distance from that observation to within-cluster observations minus the average distance to outside-cluster observations; normalized by the greater of these two averages.
 
 - A large silhouette (close to 1) suggests that an observation is more similar to those within its cluster than those outside its cluster.
 
@@ -285,7 +284,7 @@ km_fit |>
   silhouette_avg(penguins_drop_na)
 ```
 
-## K Means Clustering, find K
+## K Means Clustering, find K {.smaller}
 
 ```{r}
 
@@ -312,17 +311,16 @@ res <- tune_cluster(
   metrics = cluster_metric_set(sse_within_total, sse_total, sse_ratio, silhouette_avg))
 ```
 
-## K Means Clustering, find K
+## K Means Clustering, find K {.smaller}
 
 ```{r}
 res_metrics <- res |> collect_metrics()
 res_metrics
 ```
 
-## K Means Clustering, find K
+## K Means Clustering, find K {.smaller}
 
 ```{r}
-
 res_metrics |>
   filter(.metric == "silhouette_avg") |>
   ggplot(aes(x = num_clusters, y = mean)) +
@@ -344,17 +342,15 @@ res_metrics |>
 
 
 
-## Distance measures (clustering) {.smaller}
+# Distance measures (clustering)
 
-* Euclidean Distance
+## Euclidean Distance
 
-. . .
 
 $$d_E({\bf x}, {\bf y}) = \sqrt{\sum_{i=1}^p (x_i - y_i)^2}$$
 
-* Pearson Correlation Distance
+## Pearson Correlation Distance
 
-. . . 
 
 $$d_P({\bf x}, {\bf y}) = 1 - r_P ({\bf x}, {\bf y})$$
 $$\mbox{ or } d_P({\bf x}, {\bf y}) =  1 - |r_P ({\bf x}, {\bf y})|$$
@@ -370,11 +366,25 @@ x3 <- c(9, 2, 2)
 
 # d(1,2)
 1 - cor(x1, x2)
+```
+
+. . . 
+
+```{r}
 # d(1,3)
 1 - cor(x1, x3)
+```
+
+. . . 
+
+```{r}
 # d(2,3)
 1 - cor(x2, x3)
+```
 
+. . . 
+
+```{r}
 # d(1,3) > d(1,2) + d(2,3)
 1 - cor(x1, x2) + 1 - cor(x2, x3)
 ```
@@ -403,7 +413,8 @@ Using absolute distance doesn't fix things.
 $$d_C({\bf x}, {\bf y}) =  \frac{{\bf x} \cdot {\bf y}}{|| {\bf x} ||  ||{\bf y}||}$$
 $$= \frac{\sum_{i=1}^p x_i y_i}{\sqrt{\sum_{i=1}^p x_i^2 \sum_{i=1}^p y_i^2}}$$
 $$= 1 - r_P ({\bf x}, {\bf y})  \ \ \ \ \mbox{if } \overline{\bf x} = \overline{\bf y} = 0$$
-* Hamming Distance
+
+## Hamming Distance
 
 \begin{align}
 d_H({\bf x}, {\bf y}) = \sum_{i=1}^p I(x_i \ne y_i)
@@ -450,7 +461,8 @@ Find the observations (data values!) $m_k$ that solve:
 
 $$\text{arg}\,\min\limits_{C_1, \ldots, C_k} \Bigg\{ \sum_{k=1}^K \sum_{i \in C_k}d(x_i, m_k) \Bigg\}$$
 
-- Not well implemented in R
+- Not implemented in `tidymodels`
+- Can be done with `pam()` function from the `cluster` package
 
 ## Hierarchical Clustering
 
@@ -458,20 +470,33 @@ $$\text{arg}\,\min\limits_{C_1, \ldots, C_k} \Bigg\{ \sum_{k=1}^K \sum_{i \in C_
 
 Stat Quest: <https://www.youtube.com/watch?v=7xHsRkOdVwo>
 
+## Dendograms
+
+![](img/ISLRCh12Figures12.12.png)
+
+- Build bottom to top
+- Points "closeness" is shown with vertical axis
+
+## Clusters
+
+::: question
+How do we get clusters of points? 
+:::
+
+. . . 
+
+The height of the cut play's the same role as $K$ in $K$-means clustering.
 
 ## **Algorithm**:  Agglomerative Hierarchical Clustering Algorithm {.smaller}
 
 1. Begin with $n$ observations and a measure (such as Euclidean distance) of all the ${n \choose 2} = n(n-1)/2$ pairwise dissimilarities. Treat each observation as its own cluster.
 
-. . .
 
 2. For $i = n, n - 1, \ldots , 2$:  
    a. Examine all pairwise inter-cluster dissimilarities among the $i$ clusters and identify the pair of clusters that are least dissimilar (that is, most similar). Fuse these two clusters. The dissimilarity between these two clusters indicates the height in the dendrogram at which the fusion should be placed. 
    
-. . .
 
    b. Compute the new pairwise inter-cluster dissimilarities among the $i - 1$ remaining clusters.
-
 
 
 
@@ -481,12 +506,19 @@ Stat Quest: <https://www.youtube.com/watch?v=7xHsRkOdVwo>
 
 **Divisive** methods start with all objects in one group and break up the groups sequentially until all objects are individuals.
 
+## Linkage {.smaller}
+
 **Single Linkage** algorithm defines the distance between groups as that of the closest pair of individuals.
 
 **Complete Linkage** algorithm defines the distance between groups as that of the farthest pair of individuals.
 
 **Average Linkage** algorithm defines the distance between groups as the average of the distances between all pairs of individuals across the groups.
 
+**Centroid** algorithm uses centroid dissimilarity; the centroid for cluster A (a mean vector of length $p$) and the centroid for cluster B. Common in genomocis. 
+
+## Comparisons
+
+![](img/ISLR2FiguresCh12.14.png)
 
 
 ## Hierarchical clustering in R - tidymodels {.smaller}

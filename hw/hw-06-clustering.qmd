@@ -98,7 +98,6 @@ Use the following code because the data will not read in a tidy format:
 ```{r} 
 #| eval: false
 gene_df <- read.csv("hw/data/Ch12Ex13.csv", header = FALSE) |> 
-  t()|>
   as.data.frame()
 ```
 :::
